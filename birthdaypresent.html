@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>.::Balešević Srđan:: - ::Rođendanski poklon::.</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid align-self-center mb-0 overflow-hidden">
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="images/logo.png" class="mx-auto d-block img-fluid" alt="Moj logo">
+            </div>
+            <div class="col-sm-10">
+                <h2>Dobro došli na sajt</h2>
+                <p>Na ovom sajt možete saznati mnogo dodatni informacija o meni</p>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Početna</a></li>
+                <li class="nav-item"><a class="nav-link active" href="birthdaypresent.html"><i class="fas fa-gift"></i> Rođendanski poklon</a></li>
+                <li class="nav-item"><a class="nav-link" href="favmovie.html"><i class="fas fa-film"></i> Omiljeni film</a></li>
+                <li class="nav-item"><a class="nav-link" href="favtown.html"><i class="fas fa-city"></i> Omiljeni grad</a></li>
+                <li class="nav-item"><a class="nav-link" href="hobby.html"><i class="fas fa-wrench"></i> Hobi</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="far fa-images"></i> Galerija</a></li>
+                <li class="nav-item"><a class="nav-link" href="quiz.html"><i class="fas fa-gamepad"></i> Kviz</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid h-100 py-2">
+        <h5 class="text-center">Ostalo je još <span id="bday"></span> do mog rođendana</h5>
+            <script>
+                $("#bday")
+                .countdown ("2019/09/07 05:55:00", function(event) {$(this).text(event.strftime('%D dana i %H:%M:%S'));});
+            </script>
+        <div class="card-deck mx-auto">
+            <div class="card">
+                <img class="card-img-top" src="images/bdaypresent/lenovo_thinkpad_x230.png" alt="Lenovo ThinkPad X230">
+                <div class="card-body">
+                    <h4 class="card-title">Lenovo ThinkPad X230</h4>
+                    <a href="https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-detail" class="card-link">Pročitajte detalje proizvoda</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="images/bdaypresent/fsc_lifebook_s752.png" alt="FSC LifeBook S752">
+                <div class="card-body">
+                    <h4 class="card-title">FSC LifeBook S752</h4>
+                    <a href="https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsclifebooks752-detail" class="card-link">Pročitajte detalje proizvoda</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="images/bdaypresent/fsc_lifebook_s761.png" alt="FSC LifeBook S761">
+                <div class="card-body">
+                    <h4 class="card-title">FSC LifeBook S761</h4>
+                    <a href="https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsclifebooks761-detail" class="card-link">Pročitajte detalje proizvoda</a>
+                </div>
+            </div>
+        </div>
+            <h6 class="text-center pt-2">Poklon možete kupiti u radnji koja je prikazana na Google Maps</h6>
+            <iframe class="gmaps w-100 border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.368911992139!2d17.197519563244374!3d44.7732838488763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475e0310868537bf%3A0x941646f4b4be868c!2sMediaMarket!5e0!3m2!1shr!2sba!4v1563889665089!5m2!1shr!2sba" allowfullscreen></iframe>
+    </div>
+    <div class="container-fluid text-center text-white bg-primary footer mb-0 pb-0 overflow-hidden">
+            <h3>Balešević Srđan</h3>
+            <a href="https://www.facebook.com/srdjan.balesevic" class="fab fa-facebook-square fa-2x text-decoration-none" target="_blank"></a>
+            <a href="https://github.com/BaleshSrle" class="fab fa-github fa-2x text-decoration-none" target="_blank"></a>
+            <a href="https://instagram.com/srlebaleshpuhovski" class="fab fa-instagram fa-2x text-decoration-none" target="_blank"></a>
+            <a href="https://ba.linkedin.com/in/srdjanbaleshevich" class="fab fa-linkedin fa-2x text-decoration-none" target="_blank"></a>
+            <a href="https://m.me/srdjan.balesevic" class="fab fa-facebook-messenger fa-2x text-decoration-none" target="_blank"></a>
+            <a href="https://scribd.com/dr_djidjimilovich" class="fab fa-scribd fa-2x text-decoration-none" target="_blank"></a>
+            <a href="skype:srdjan.baleshevich" class="fab fa-skype fa-2x text-decoration-none"></a>
+            <a href="https://t.me/BaleshSrle" class="fab fa-telegram fa-2x text-decoration-none" target="_blank"></a>
+            <a href="https://twitter.com/BaleshSrle" rel="me" class="fab fa-twitter fa-2x text-decoration-none" target="_blank"></a>
+            <a href="https://vk.com/baleshsrle" class="fab fa-vk fa-2x text-decoration-none" target="_blank"></a>
+            <a href="https://wa.me/38766340286" class="fab fa-whatsapp fa-2x text-decoration-none" target="_blank"></a>
+            <a href="https://wp.me/2brNg" class="fab fa-wordpress fa-2x text-decoration-none" target="_blank"></a>
+                <p class="pb-0 mb-0"><script>
+                    var today = new Date();
+                    var dd = String(today.getDate()).padStart(2, '0');
+                    var mm = String(today.getMonth() + 1).padStart(2, '0');
+                    var yyyy = today.getFullYear();
+            
+                    today = dd + '/' + mm + '/' + yyyy;
+                    document.write(today)
+                </script></p>
+        </div>
+</body>
+</html>
