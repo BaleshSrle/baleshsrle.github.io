@@ -1,5 +1,5 @@
 # ICBL_Project_Assignment_01
-My first assignment @ ITRetraining100.
+My first assignment on ITRetraining100 for [Innovation Centre Banja Luka](https://icbl.ba/).
 You can visit this site by clicking on [this](https://bit.ly/33SdRyL) link.
 
 ## Built With
