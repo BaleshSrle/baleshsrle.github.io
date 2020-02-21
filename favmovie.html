@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="sr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>.::Balešević Srđan:: - ::Omiljeni film::.</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/movie_question.js"></script>
 </head>
+
 <body>
     <div class="jumbotron jumbotron-fluid align-self-center mb-0 py-4 overflow-hidden">
         <div class="row">
@@ -26,103 +29,180 @@
         </div>
     </div>
     <nav class="navbar navbar-expand-md bg-primary navbar-dark">
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span></button>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"><span
+                class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Početna</a></li>
-                <li class="nav-item"><a class="nav-link" href="birthdaypresent.html"><i class="fas fa-gift"></i> Rođendanski poklon</a></li>
-                <li class="nav-item"><a class="nav-link active" href="favmovie.html"><i class="fas fa-film"></i> Omiljeni film</a></li>
-                <li class="nav-item"><a class="nav-link" href="favtown.html"><i class="fas fa-city"></i> Omiljeni grad</a></li>
-                <li class="nav-item"><a class="nav-link" href="hobby.html"><i class="fas fa-wrench"></i> Hobi</a></li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="far fa-images"></i> Galerija</a></li>
-                <li class="nav-item"><a class="nav-link" href="quiz.html"><i class="fas fa-gamepad"></i> Kviz</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html"><i
+                            class="fas fa-home fa-lg pr-2"></i>Početna</a></li>
+                <li class="nav-item"><a class="nav-link" href="birthdaypresent.html"><i
+                            class="fas fa-gift fa-lg pr-2"></i>Rođendanski poklon</a></li>
+                <li class="nav-item"><a class="nav-link active" href="favmovie.html"><i
+                            class="fas fa-film fa-lg pr-2"></i>Omiljeni
+                        film</a></li>
+                <li class="nav-item"><a class="nav-link" href="favtown.html"><i
+                            class="fas fa-city fa-lg pr-2"></i>Omiljeni
+                        grad</a></li>
+                <li class="nav-item"><a class="nav-link" href="hobby.html"><i
+                            class="fas fa-wrench fa-lg pr-2"></i>Hobi</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html"><i
+                            class="far fa-images fa-lg pr-2"></i>Galerija</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="quiz.html"><i
+                            class="fas fa-gamepad fa-lg pr-2"></i>Kviz</a></li>
             </ul>
         </div>
     </nav>
-    <div class="container-fluid mx-auto h-100 py-2">
+    <div class="container-fluid mx-auto h-100 my-2 overflow-hidden">
         <div class="row">
             <div class="col-sm-4">
-                <div><img src="images/End_Of_Days.jpg" class="img-fluid w-100" alt="'End of Days' Movie Poster"></div>
-                <div class="row align-self-center">
-                    <div class="col-auto"><h3>Uloge</h3>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Arnold Schwarzenegger</li>
-                        <li class="list-group-item">Robin Tunney</li>
-                        <li class="list-group-item">Rod Steiger</li>
-                        <li class="list-group-item">Kevin Pollak</li>
-                        <li class="list-group-item">CCH Pounder</li>
-                        <li class="list-group-item">Udo Kier</li>
-                        <li class="list-group-item">Gabriel Byrn</li>
-                        <li class="list-group-item">Miriam Margolyes</li>
-                    </ul>
+                <div class="card my-2 w-100">
+                    <div class="card-header">
+                        <h5 class="font-weight-bold">End of Days</h5>
                     </div>
-                    <div class="col-auto text-center">
-                        <p><h6>Ocjena filma</h6><i class="fas fa-star fa-1x text-warning"></i> 5,7</p>
-                        <hr>
-                        <p><h6>Godina objavljivanja filma</h6> 1999.</p>
-                        <hr>
-                        <a href="https://www.imdb.com/title/tt0146675/" target="_blank" class="fab fa-imdb fa-3x text-decoration-none"></a>
-                        <a href="https://en.wikipedia.org/wiki/End_of_Days_(film)" target="_blank" class="fab fa-wikipedia-w fa-3x text-decoration-none pt-3 pl-sm-3"></a>
+                    <img src="images/End_Of_Days.jpg" class="card-img-top" alt="'End of Days' Movie Poster">
+                    <p class="card-text pl-2"><span class="font-weight-bold h6">Ocjena filma</span><i
+                            class="fas fa-star fa-1x text-warning px-2"></i>5,7</p>
+                    <p class="card-text pl-2"><span class="font-weight-bold h6 pr-2">Godina objavljivanja filma</span>1999.</p>
+                    <div class="btn-group m-2">
+                        <a href="https://www.imdb.com/title/tt0146675/" target="_blank" class="btn btn-light"><i
+                                class="fab fa-imdb fa-3x pr-1 align-middle" style="color: #e6b91e;"></i>IMDb</a>
+                        <a href="https://en.wikipedia.org/wiki/End_of_Days_(film)" target="_blank"
+                            class="btn btn-light"><i
+                                class="fab fa-wikipedia-w fa-3x pr-1 align align-middle"></i>Wikipedia</a>
+                    </div>
+                </div>
+                <div class="card my-2 w-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Pitanje vezano za ovaj film</h5>
+                        <p class="card-text">U koji žanr spada ovaj film?</p>
+                        <form>
+                            <input type="text" name="odgovor" id="odgovor"></br>
+                            <input type="button" class="btn btn-primary mt-2" onclick="results()"
+                                value="Pošalji"></input>
+                        </form>
+                        <p id="rezultat"></p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-8">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://www.youtube.com/embed/_a_mquMR6-Y" style="border: 0 none;" class="embed-responsive-item" allowfullscreen></iframe>
+                <div class="my-2 embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.youtube.com/embed/_a_mquMR6-Y" style="border: 0 none;"
+                        class="embed-responsive-item" allowfullscreen></iframe>
                 </div>
-                <div>
-                    <h3>Kratak sadržaj</h3>
-                    <p class="text-justify">Godina je 1979. i u jednoj njujorškoj bolnici na Menhetnu se rodila djevojčica. Istog dana, mladi sveštenik na nebu primjećuje lučnu putanju komete iznad mjeseca (što je u filmu opisano kao &quot;Božije Oko&quot;), i o toj pojavi obavještava papu. Katolička crkva već vjekovima strahuje od ovog događaja, a njihovi strahovi se potvrđuju kada se otkrije da novorođena djevojčica imenom Kristina, na tijelu nosi obilježje Antihrista.</p>
-                    <p class="text-justify">Njujork, 28.12.1999. Ljudi se spremaju za dolazak novog milenijuma. Džeriko Kejn, suicidalni bivši policajac i alkoholičar, depresivan nakon ugovorenog ubistva njegove supruge i kćerke, radi za privatnu sigurnosnu kompaniju i krivi Boga za njegovu patnju. Zajedno sa partnerom Bobijem Čikagom radi kao obezbjeđenje bankara, u čije je tjelo ušao Đavo.</p>
-                    <p class="text-justify">Jednom prilikom uspije spasiti mladu ženu od napadača koji su joj provalili u dom. Uskoro donaznaje da se zove Kristina, te da cijeloga života pati od uznemirujućih vizija koja je progone. Uoči dočeka Nove godine te vizije su se pretvorile u jezivu javu. Proganja je tajanstveni muškarac, utjelovljenje samog Đavola, a jedini koji joj može pomoći je Kejn koji je odavno izgubio vjeru.</p>
+                <div class="card w-100 my-2">
+                    <div class="card-header">
+                        <h5 class="font-weight-bold">Kratak sadržaj</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-justify">Godina je 1979. i u jednoj njujorškoj bolnici na Menhetnu se rodila
+                            djevojčica. Istog dana, mladi sveštenik na nebu primjećuje lučnu putanju komete iznad
+                            mjeseca
+                            (što je u filmu opisano kao &quot;Božije Oko&quot;), i o toj pojavi obavještava papu.
+                            Katolička
+                            crkva već vjekovima strahuje od ovog događaja, a njihovi strahovi se potvrđuju kada se
+                            otkrije
+                            da novorođena djevojčica imenom Kristina, na tijelu nosi obilježje Antihrista.</p>
+                        <p class="card-text text-justify">Njujork, 28.12.1999. Ljudi se spremaju za dolazak novog milenijuma. Džeriko
+                            Kejn, suicidalni bivši policajac i alkoholičar, depresivan nakon ugovorenog ubistva njegove
+                            supruge i kćerke, radi za privatnu sigurnosnu kompaniju i krivi Boga za njegovu patnju.
+                            Zajedno
+                            sa partnerom Bobijem Čikagom radi kao obezbjeđenje bankara, u čije je tjelo ušao Đavo.</p>
+                        <p class="card-text text-justify">Jednom prilikom uspije spasiti mladu ženu od napadača koji su joj provalili
+                            u dom. Uskoro donaznaje da se zove Kristina, te da cijeloga života pati od uznemirujućih
+                            vizija
+                            koja je progone. Uoči dočeka Nove godine te vizije su se pretvorile u jezivu javu. Proganja
+                            je
+                            tajanstveni muškarac, utjelovljenje samog Đavola, a jedini koji joj može pomoći je Kejn koji
+                            je
+                            odavno izgubio vjeru.</p>
+                    </div>
                 </div>
-                <hr>
-                <h4>Pitanje vezano za ovaj film</h4>
-                <p>U koji žanr spada ovaj film?</p>
-                <form >
-                    <input type="text" name="odgovor" id="odgovor"></br>
-                    <input type="button" class="btn btn-primary mt-2" onclick="results()" value="Pošalji"></input>
-                </form>
-                <script>
-                        function results() {
-                        var odgovor = document.getElementById('odgovor').value;
-                
-                        if (odgovor == "akcioni horor") {
-                            document.getElementById("rezultat").innerHTML="Odgovor je tačan.";
-                            document.getElementById("rezultat").className="alert alert-success w-75 text-center mt-2";
-                        } else  {
-                            document.getElementById("rezultat").innerHTML="Odgovor je netačan. <br> Upišite neki drugi odgovor (ili pronađite rješenje na Wikipediji ili IMDB-u).";
-                            document.getElementById("rezultat").className="alert alert-danger w-75 text-center mt-2";
-                        }  
-                    }
-                </script>
-                <p id="rezultat"></p>
+                <div class="card w-100 my-2 d-none d-md-block">
+                    <div class="card-header">
+                        <h5 class="font-weight-bold">Uloge</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group list-group-horizontal">
+                            <a href="https://www.imdb.com/name/nm0000216/" target="_blank"
+                                class="list-group-item list-group-item-action">Arnold Schwarzenegger</a>
+                            <a href="https://www.imdb.com/name/nm0000677/" target="_blank"
+                                class="list-group-item list-group-item-action">Robin Tunney</a>
+                            <a href="https://www.imdb.com/name/nm0001768/" target="_blank"
+                                class="list-group-item list-group-item-action">Rod Steiger</a>
+                            <a href="https://www.imdb.com/name/nm0001629/" target="_blank"
+                                class="list-group-item list-group-item-action">Kevin Pollak</a>
+                            <a href="https://www.imdb.com/name/nm0001634/" target="_blank"
+                                class="list-group-item list-group-item-action">CCH Pounder</a>
+                            <a href="https://www.imdb.com/name/nm0001424/" target="_blank"
+                                class="list-group-item list-group-item-action">Udo Kier</a>
+                            <a href="https://www.imdb.com/name/nm0000312/" target="_blank"
+                                class="list-group-item list-group-item-action">Gabriel Byrn</a>
+                            <a href="https://www.imdb.com/name/nm0546816/" target="_blank"
+                                class="list-group-item list-group-item-action">Miriam Margolyes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-100 my-2 d-md-none">
+                    <div class="card-header">
+                        <h5 class="font-weight-bold">Uloge</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group">
+                            <a href="https://www.imdb.com/name/nm0000216/" target="_blank"
+                                class="list-group-item list-group-item-action">Arnold Schwarzenegger</a>
+                            <a href="https://www.imdb.com/name/nm0000677/" target="_blank"
+                                class="list-group-item list-group-item-action">Robin Tunney</a>
+                            <a href="https://www.imdb.com/name/nm0001768/" target="_blank"
+                                class="list-group-item list-group-item-action">Rod Steiger</a>
+                            <a href="https://www.imdb.com/name/nm0001629/" target="_blank"
+                                class="list-group-item list-group-item-action">Kevin Pollak</a>
+                            <a href="https://www.imdb.com/name/nm0001634/" target="_blank"
+                                class="list-group-item list-group-item-action">CCH Pounder</a>
+                            <a href="https://www.imdb.com/name/nm0001424/" target="_blank"
+                                class="list-group-item list-group-item-action">Udo Kier</a>
+                            <a href="https://www.imdb.com/name/nm0000312/" target="_blank"
+                                class="list-group-item list-group-item-action">Gabriel Byrn</a>
+                            <a href="https://www.imdb.com/name/nm0546816/" target="_blank"
+                                class="list-group-item list-group-item-action">Miriam Margolyes</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="container-fluid bg-primary text-center text-white bg-primary footer mb-0 pb-0">
         <h3>Balešević Srđan</h3>
-        <a href="https://www.facebook.com/srdjan.balesevic" class="fab fa-facebook-square fa-2x text-decoration-none" target="_blank"></a>
+        <a href="https://www.facebook.com/srdjan.balesevic" class="fab fa-facebook-square fa-2x text-decoration-none"
+            target="_blank"></a>
         <a href="https://github.com/BaleshSrle" class="fab fa-github fa-2x text-decoration-none" target="_blank"></a>
-        <a href="https://instagram.com/srlebaleshpuhovski" class="fab fa-instagram fa-2x text-decoration-none" target="_blank"></a>
-        <a href="https://ba.linkedin.com/in/srdjanbaleshevich" class="fab fa-linkedin fa-2x text-decoration-none" target="_blank"></a>
-        <a href="https://m.me/srdjan.balesevic" class="fab fa-facebook-messenger fa-2x text-decoration-none" target="_blank"></a>
-        <a href="https://scribd.com/dr_djidjimilovich" class="fab fa-scribd fa-2x text-decoration-none" target="_blank"></a>
+        <a href="https://instagram.com/srlebaleshpuhovski" class="fab fa-instagram fa-2x text-decoration-none"
+            target="_blank"></a>
+        <a href="https://ba.linkedin.com/in/srdjanbaleshevich" class="fab fa-linkedin fa-2x text-decoration-none"
+            target="_blank"></a>
+        <a href="https://m.me/srdjan.balesevic" class="fab fa-facebook-messenger fa-2x text-decoration-none"
+            target="_blank"></a>
+        <a href="https://scribd.com/dr_djidjimilovich" class="fab fa-scribd fa-2x text-decoration-none"
+            target="_blank"></a>
         <a href="skype:srdjan.baleshevich" class="fab fa-skype fa-2x text-decoration-none"></a>
         <a href="https://t.me/BaleshSrle" class="fab fa-telegram fa-2x text-decoration-none" target="_blank"></a>
-        <a href="https://twitter.com/BaleshSrle" rel="me" class="fab fa-twitter fa-2x text-decoration-none" target="_blank"></a>
+        <a href="https://twitter.com/BaleshSrle" rel="me" class="fab fa-twitter fa-2x text-decoration-none"
+            target="_blank"></a>
         <a href="https://vk.com/baleshsrle" class="fab fa-vk fa-2x text-decoration-none" target="_blank"></a>
         <a href="https://wa.me/38766340286" class="fab fa-whatsapp fa-2x text-decoration-none" target="_blank"></a>
         <a href="https://wp.me/2brNg" class="fab fa-wordpress fa-2x text-decoration-none" target="_blank"></a>
-            <p class="pb-0 mb-0"><script>
+        <p class="pb-0 mb-0">
+            <script>
                 var today = new Date();
                 var dd = String(today.getDate()).padStart(2, '0');
                 var mm = String(today.getMonth() + 1).padStart(2, '0');
                 var yyyy = today.getFullYear();
-            
+
                 today = dd + '/' + mm + '/' + yyyy;
-                    document.write(today)
-                </script></p>
-        </div>
+                document.write(today)
+            </script>
+        </p>
+    </div>
 </body>
+
 </html>
