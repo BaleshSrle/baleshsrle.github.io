@@ -7,17 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" id="fontawesome">
+    <link rel="stylesheet" href="styles/style.css">
     <title>.::Balešević Srđan:: - ::Omiljeni film::.</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="js/movie_question.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid align-self-center mb-0 py-2 overflow-hidden">
+    <header class="jumbotron jumbotron-fluid align-self-center mb-0 py-2 overflow-hidden">
         <div class="row">
             <div class="col-sm-2">
                 <img src="images/logo.png" class="mx-auto d-block img-fluid" alt="Moj logo">
@@ -27,7 +27,7 @@
                 <p>Na ovom sajt možete saznati mnogo dodatni informacija o meni</p>
             </div>
         </div>
-    </div>
+    </header>
     <nav class="navbar navbar-expand-md bg-primary navbar-dark">
         <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"><span
                 class="navbar-toggler-icon"></span></button>
@@ -50,6 +50,8 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="quiz.html"><i
                             class="fas fa-gamepad fa-lg pr-2"></i>Kviz</a></li>
+                <li class="nav-item"><a class="nav-link" href="sitemap.xml"><i
+                            class="fas fa-sitemap fa-lg pr-2"></i>Mapa sajta</a></li>
             </ul>
         </div>
     </nav>
@@ -63,7 +65,8 @@
                     <img src="images/End_Of_Days.jpg" class="card-img-top" alt="'End of Days' Movie Poster">
                     <p class="card-text pl-2"><span class="font-weight-bold h6">Ocjena filma</span><i
                             class="fas fa-star fa-1x text-warning px-2"></i>5,7</p>
-                    <p class="card-text pl-2"><span class="font-weight-bold h6 pr-2">Godina objavljivanja filma</span>1999.</p>
+                    <p class="card-text pl-2"><span class="font-weight-bold h6 pr-2">Godina objavljivanja
+                            filma</span>1999.</p>
                     <div class="btn-group m-2">
                         <a href="https://www.imdb.com/title/tt0146675/" target="_blank" class="btn btn-light"><i
                                 class="fab fa-imdb fa-3x pr-1 align-middle" style="color: #e6b91e;"></i>IMDb</a>
@@ -78,7 +81,7 @@
                         <p class="card-text">U koji žanr spada ovaj film?</p>
                         <form>
                             <input type="text" name="odgovor" id="odgovor"></br>
-                            <input type="button" class="btn btn-primary mt-2" onclick="results()"
+                            <input type="button" class="btn btn-primary mt-2" onclick="mqResults()"
                                 value="Pošalji"></input>
                         </form>
                         <p id="rezultat"></p>
@@ -95,7 +98,8 @@
                         <h5 class="font-weight-bold">Kratak sadržaj</h5>
                     </div>
                     <div class="card-body">
-                        <p class="card-text text-justify">Godina je 1979. i u jednoj njujorškoj bolnici na Menhetnu se rodila
+                        <p class="card-text text-justify">Godina je 1979. i u jednoj njujorškoj bolnici na Menhetnu se
+                            rodila
                             djevojčica. Istog dana, mladi sveštenik na nebu primjećuje lučnu putanju komete iznad
                             mjeseca
                             (što je u filmu opisano kao &quot;Božije Oko&quot;), i o toj pojavi obavještava papu.
@@ -103,12 +107,14 @@
                             crkva već vjekovima strahuje od ovog događaja, a njihovi strahovi se potvrđuju kada se
                             otkrije
                             da novorođena djevojčica imenom Kristina, na tijelu nosi obilježje Antihrista.</p>
-                        <p class="card-text text-justify">Njujork, 28.12.1999. Ljudi se spremaju za dolazak novog milenijuma. Džeriko
+                        <p class="card-text text-justify">Njujork, 28.12.1999. Ljudi se spremaju za dolazak novog
+                            milenijuma. Džeriko
                             Kejn, suicidalni bivši policajac i alkoholičar, depresivan nakon ugovorenog ubistva njegove
                             supruge i kćerke, radi za privatnu sigurnosnu kompaniju i krivi Boga za njegovu patnju.
                             Zajedno
                             sa partnerom Bobijem Čikagom radi kao obezbjeđenje bankara, u čije je tjelo ušao Đavo.</p>
-                        <p class="card-text text-justify">Jednom prilikom uspije spasiti mladu ženu od napadača koji su joj provalili
+                        <p class="card-text text-justify">Jednom prilikom uspije spasiti mladu ženu od napadača koji su
+                            joj provalili
                             u dom. Uskoro donaznaje da se zove Kristina, te da cijeloga života pati od uznemirujućih
                             vizija
                             koja je progone. Uoči dočeka Nove godine te vizije su se pretvorile u jezivu javu. Proganja
@@ -171,7 +177,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-primary text-center text-white bg-primary footer mb-0 pb-0">
+    <footer class="container-fluid bg-primary text-center text-white bg-primary mb-0 pb-0 overflow-hidden">
         <h3 class="font-italic">Balešević Srđan</h3>
         <p class="pb-0 mb-0">
             <script>
@@ -180,11 +186,11 @@
                 var mm = String(today.getMonth() + 1).padStart(2, '0');
                 var yyyy = today.getFullYear();
 
-                today = dd + '.' + mm + '.' + yyyy;
+                today = dd + '.' + mm + '.' + yyyy + '.';
                 document.write(today)
             </script>
         </p>
-    </div>
+    </footer>
 </body>
 
 </html>

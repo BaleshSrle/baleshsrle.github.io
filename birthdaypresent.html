@@ -7,17 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" id="fontawesome">
+    <link rel="stylesheet" href="styles/style.css">
     <title>.::Balešević Srđan:: - ::Rođendanski poklon::.</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid align-self-center mb-0 py-2 overflow-hidden">
+    <header class="jumbotron jumbotron-fluid align-self-center mb-0 py-2 overflow-hidden">
         <div class="row">
             <div class="col-sm-2">
                 <img src="images/logo.png" class="mx-auto d-block img-fluid" alt="Moj logo">
@@ -27,7 +28,7 @@
                 <p>Na ovom sajt možete saznati mnogo dodatni informacija o meni</p>
             </div>
         </div>
-    </div>
+    </header>
     <nav class="navbar navbar-expand-md bg-primary navbar-dark">
         <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"><span
                 class="navbar-toggler-icon"></span></button>
@@ -50,6 +51,8 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="quiz.html"><i
                             class="fas fa-gamepad fa-lg pr-2"></i>Kviz</a></li>
+                <li class="nav-item"><a class="nav-link" href="sitemap.xml"><i
+                            class="fas fa-sitemap fa-lg pr-2"></i>Mapa sajta</a></li>
             </ul>
         </div>
     </nav>
@@ -90,7 +93,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.368911992139!2d17.197519563244374!3d44.7732838488763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475e0310868537bf%3A0x941646f4b4be868c!2sMediaMarket!5e0!3m2!1shr!2sba!4v1563889665089!5m2!1shr!2sba"
             allowfullscreen></iframe>
     </div>
-    <div class="container-fluid text-center text-white bg-primary footer mb-0 pb-0 overflow-hidden">
+    <footer class="container-fluid text-center text-white bg-primary mb-0 pb-0 overflow-hidden">
         <h3 class="font-italic">Balešević Srđan</h3>
         <p class="pb-0 mb-0">
             <script>
@@ -99,11 +102,11 @@
                 var mm = String(today.getMonth() + 1).padStart(2, '0');
                 var yyyy = today.getFullYear();
 
-                today = dd + '.' + mm + '.' + yyyy;
+                today = dd + '.' + mm + '.' + yyyy + '.';
                 document.write(today)
             </script>
         </p>
-    </div>
+    </footer>
 </body>
 
 </html>
