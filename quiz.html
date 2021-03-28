@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" id="fontawesome">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
     <title>.::Balešević Srđan:: - ::Kviz::.</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </head>
 
-<body>
-    <header class="jumbotron jumbotron-fluid align-self-center mb-0 py-2 overflow-hidden">
+<body class="d-flex flex-column h-100">
+    <header class="jumbotron jumbotron-fluid mb-0 py-0 overflow-hidden">
         <div class="row">
             <div class="col-sm-2">
                 <img src="images/logo.png" class="mx-auto d-block img-fluid" alt="Moj logo">
@@ -50,72 +52,76 @@
                 </li>
                 <li class="nav-item"><a class="nav-link active" href="quiz.html"><i
                             class="fas fa-gamepad fa-lg pr-2"></i>Kviz</a></li>
+                <li class="nav-item"><a class="nav-link" href="sitemap.xml"><i
+                            class="fas fa-sitemap fa-lg pr-2"></i>Mapa sajta</a></li>
             </ul>
         </div>
     </nav>
     <div class="container-fluid h-100 w-100 py-2">
         <p class="text-center;">
 
-            <p style="font: 25px Arial;">Koliko dobro me poznajete?</p>
+        <p style="font: 25px Arial;">Koliko dobro me poznajete?</p>
 
-            <form action="javascript:provjeraOdgovora()">
+        <form action="javascript:provjeraOdgovora()">
 
-                <p class="font-weight-bold mb-0">1) Moj omiljeni grad?</p>
-                <input type="radio" name="pitanje1" value="BL" /> Banja Luka<br>
-                <input type="radio" name="pitanje1" value="BP" /> Bačka Palanka<br>
-                <input type="radio" name="pitanje1" value="BGD" /> Beograd<br>
+            <p class="font-weight-bold mb-0">1) Moj omiljeni grad?</p>
+            <input type="radio" name="pitanje1" value="BL" /> Banja Luka<br>
+            <input type="radio" name="pitanje1" value="BP" /> Bačka Palanka<br>
+            <input type="radio" name="pitanje1" value="BGD" /> Beograd<br>
 
-                <br>
+            <br>
 
-                <p class="font-weight-bold mb-0">2) Koliko posjedujem diploma iz srednje škole?</p>
-                <input type="radio" name="pitanje2" value="Tri" /> Tri<br>
-                <input type="radio" name="pitanje2" value="Jednu" /> Jednu<br>
-                <input type="radio" name="pitanje2" value="Dvije" /> Dvije<br>
+            <p class="font-weight-bold mb-0">2) Koliko posjedujem diploma iz srednje škole?</p>
+            <input type="radio" name="pitanje2" value="Tri" /> Tri<br>
+            <input type="radio" name="pitanje2" value="Jednu" /> Jednu<br>
+            <input type="radio" name="pitanje2" value="Dvije" /> Dvije<br>
 
-                <br>
+            <br>
 
-                <p class="font-weight-bold mb-0">3) Koji od tri ponuđena računara mogu izabrati?</p>
-                <input type="radio" name="pitanje3" value="Lenovo" /> Lenovo<br>
-                <input type="radio" name="pitanje3" value="Bilo koji" /> Bilo koji<br>
-                <input type="radio" name="pitanje3" value="FSC" /> Neki od FSC (skr. od Fujitsu Siemens Computers)<br>
+            <p class="font-weight-bold mb-0">3) Koji od tri ponuđena računara mogu izabrati?</p>
+            <input type="radio" name="pitanje3" value="Lenovo" /> Lenovo<br>
+            <input type="radio" name="pitanje3" value="Bilo koji" /> Bilo koji<br>
+            <input type="radio" name="pitanje3" value="FSC" /> Neki od <abbr
+                title="Fujitsu Siemens Computers (1999-2009.)">FSC</abbr><br>
 
-                <br>
+            <br>
 
-                <p class="font-weight-bold mb-0">4) Koje mjesto sam osvojio u takmičenju m:tel AppBuilder Lige za 2014.
-                    godinu?</p>
-                <input type="radio" name="pitanje4" value="Trece" /> Treće<br>
-                <input type="radio" name="pitanje4" value="Prvo" /> Prvo<br>
-                <input type="radio" name="pitanje4" value="Drugo" /> Drugo<br>
+            <p class="font-weight-bold mb-0">4) Koje mjesto sam osvojio u takmičenju m:tel AppBuilder Lige za 2014.
+                godinu?</p>
+            <input type="radio" name="pitanje4" value="Trece" /> Treće<br>
+            <input type="radio" name="pitanje4" value="Prvo" /> Prvo<br>
+            <input type="radio" name="pitanje4" value="Drugo" /> Drugo<br>
 
-                <br>
+            <br>
 
-                <p class="font-weight-bold mb-0">5) Koje godine je objavljen moj omiljeni film?</p>
-                <input type="radio" name="pitanje5" value="1999" /> 1999.<br>
-                <input type="radio" name="pitanje5" value="1996" /> 1996.<br>
-                <input type="radio" name="pitanje5" value="1998" /> 1998.<br>
+            <p class="font-weight-bold mb-0">5) Koje godine je objavljen moj omiljeni film?</p>
+            <input type="radio" name="pitanje5" value="1999" /> 1999.<br>
+            <input type="radio" name="pitanje5" value="1996" /> 1996.<br>
+            <input type="radio" name="pitanje5" value="1998" /> 1998.<br>
 
-                <br>
+            <br>
 
-                <input type="submit" class="btn btn-primary" value="Sačuvaj" />
-            </form>
+            <p class="font-weight-bold mb-0">6) Koliko puta su me šili na hirurškom odjeljenju dobojske bolnice?</p>
+            <input type="radio" name="pitanje6" value="Cetiri" /> Četiri<br>
+            <input type="radio" name="pitanje6" value="Dva" /> Dva<br>
+            <input type="radio" name="pitanje6" value="Tri" /> Tri<br>
+
+            <br>
+
+            <input type="submit" class="btn btn-primary" value="Sačuvaj" />
+        </form>
         </p>
         <p></p>
         <p id="rezultat"></p>
     </div>
-    <footer class="container-fluid bg-primary text-center text-white mb-0 pb-0 overflow-hidden">
+    <footer class="container-fluid bg-primary text-center text-white mt-auto py-0 overflow-hidden">
         <h3 class="font-italic">Balešević Srđan</h3>
-        <p class="pb-0 mb-0">
-            <script>
-                var today = new Date();
-                var dd = String(today.getDate()).padStart(2, '0');
-                var mm = String(today.getMonth() + 1).padStart(2, '0');
-                var yyyy = today.getFullYear();
-
-                today = dd + '.' + mm + '.' + yyyy + '.';
-                document.write(today)
-            </script>
-        </p>
+        <div id="datum"></div>
     </footer>
 </body>
+<script>
+    var d = new Date()
+    document.getElementById("datum").innerHTML = d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear() + ".";
+</script>
 
 </html>

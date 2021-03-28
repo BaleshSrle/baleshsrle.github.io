@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" id="fontawesome">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
     <title>.::Balešević Srđan:: - ::Omiljeni film::.</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </head>
 
-<body>
-    <header class="jumbotron jumbotron-fluid align-self-center mb-0 py-2 overflow-hidden">
+<body class="d-flex flex-column h-100">
+    <header class="jumbotron jumbotron-fluid mb-0 py-0 overflow-hidden">
         <div class="row">
             <div class="col-sm-2">
                 <img src="images/logo.png" class="mx-auto d-block img-fluid" alt="Moj logo">
@@ -50,6 +52,8 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="quiz.html"><i
                             class="fas fa-gamepad fa-lg pr-2"></i>Kviz</a></li>
+                <li class="nav-item"><a class="nav-link" href="sitemap.xml"><i
+                            class="fas fa-sitemap fa-lg pr-2"></i>Mapa sajta</a></li>
             </ul>
         </div>
     </nav>
@@ -58,7 +62,7 @@
             <div class="col-sm-4">
                 <div class="card my-2 w-100">
                     <div class="card-header">
-                        <h5 class="font-weight-bold">End of Days</h5>
+                        <h5 class="font-weight-bold mb-0">End of Days</h5>
                     </div>
                     <img src="images/End_Of_Days.jpg" class="card-img-top" alt="'End of Days' Movie Poster">
                     <p class="card-text pl-2"><span class="font-weight-bold h6">Ocjena filma</span><i
@@ -77,23 +81,24 @@
                     <div class="card-body">
                         <h5 class="card-title">Pitanje vezano za ovaj film</h5>
                         <p class="card-text">U koji žanr spada ovaj film?</p>
-                        <form>
-                            <input type="text" name="odgovor" id="odgovor"></br>
-                            <input type="button" class="btn btn-primary mt-2" onclick="mqResults()"
-                                value="Pošalji"></input>
+                        <form class="input-group mb-3 mx-auto">
+                            <input type="text" id="odgovor" class="form-control">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-primary" onclick="mqResults()">Pošalji</button>
+                            </div>
                         </form>
-                        <p id="rezultat"></p>
+                        <p id="rezultat" class="mx-auto"></p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-8">
                 <div class="my-2 embed-responsive embed-responsive-16by9">
-                    <iframe src="https://www.youtube.com/embed/_a_mquMR6-Y" style="border: 0 none;"
-                        class="embed-responsive-item" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/_a_mquMR6-Y" class="embed-responsive-item border-0"
+                        allowfullscreen></iframe>
                 </div>
                 <div class="card w-100 my-2">
                     <div class="card-header">
-                        <h5 class="font-weight-bold">Kratak sadržaj</h5>
+                        <h5 class="font-weight-bold mb-0">Kratak sadržaj</h5>
                     </div>
                     <div class="card-body">
                         <p class="card-text text-justify">Godina je 1979. i u jednoj njujorškoj bolnici na Menhetnu se
@@ -122,11 +127,11 @@
                             odavno izgubio vjeru.</p>
                     </div>
                 </div>
-                <div class="card w-100 my-2 d-none d-md-block">
+                <div class="card w-100 my-2">
                     <div class="card-header">
-                        <h5 class="font-weight-bold">Uloge</h5>
+                        <h5 class="font-weight-bold mb-0">Uloge</h5>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body d-none d-md-block">
                         <div class="list-group list-group-horizontal">
                             <a href="https://www.imdb.com/name/nm0000216/" target="_blank"
                                 class="list-group-item list-group-item-action">Arnold Schwarzenegger</a>
@@ -146,12 +151,7 @@
                                 class="list-group-item list-group-item-action">Miriam Margolyes</a>
                         </div>
                     </div>
-                </div>
-                <div class="card w-100 my-2 d-md-none">
-                    <div class="card-header">
-                        <h5 class="font-weight-bold">Uloge</h5>
-                    </div>
-                    <div class="card-body">
+                    <div class="card-body d-md-none">
                         <div class="list-group">
                             <a href="https://www.imdb.com/name/nm0000216/" target="_blank"
                                 class="list-group-item list-group-item-action">Arnold Schwarzenegger</a>
@@ -175,20 +175,14 @@
             </div>
         </div>
     </div>
-    <footer class="container-fluid bg-primary text-center text-white bg-primary mb-0 pb-0 overflow-hidden">
+    <footer class="container-fluid bg-primary text-center text-white mt-auto py-0 overflow-hidden">
         <h3 class="font-italic">Balešević Srđan</h3>
-        <p class="pb-0 mb-0">
-            <script>
-                var today = new Date();
-                var dd = String(today.getDate()).padStart(2, '0');
-                var mm = String(today.getMonth() + 1).padStart(2, '0');
-                var yyyy = today.getFullYear();
-
-                today = dd + '.' + mm + '.' + yyyy + '.';
-                document.write(today)
-            </script>
-        </p>
+        <div id="datum"></div>
     </footer>
 </body>
+<script>
+    var d = new Date()
+    document.getElementById("datum").innerHTML = d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear() + ".";
+</script>
 
 </html>

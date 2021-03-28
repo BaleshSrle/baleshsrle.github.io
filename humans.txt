@@ -1,0 +1,20 @@
+/* TEAM */
+		Owner: Srdjan Baleshevich
+		Twitter: @BaleshSrle
+		From: Doboj, Republic of Srpska, Bosnia and Herzegovina
+	
+/* THANKS */
+		First: Innovation Centre Banja Luka
+		Twitter: @_ICBL_
+		Location: Banja Luka, Republic of Srpska, Bosnia and Herzegovina
+		
+		Secound: Government of Republic of Srpska - Ministry for Scientific and Technological Development, Higher Education and Information Society
+		Twitter: @mnrvoid_rs
+		Location: Banja Luka, Republic of Srpska, Bosnia and Herzegovina
+	
+/* SITE */
+		Last update: 2021/03/07
+		Language: Serbian
+		Standards: HTML5, CSS, JavaScript
+		Components: jQuery, Bootstrap
+		Software: Visual Studio Code, Notepad++, FileZilla, Photoshop
