@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
         crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
     <title>.::Balešević Srđan:: - ::Omiljeni film::.</title>
+    <style>
+        @media only screen and (min-height: 1366px) {
+            body {
+                min-height: 1366px;
+            }
+        }
+    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
         crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </head>
@@ -131,28 +138,8 @@
                     <div class="card-header">
                         <h5 class="font-weight-bold mb-0">Uloge</h5>
                     </div>
-                    <div class="card-body d-none d-md-block">
-                        <div class="list-group list-group-horizontal">
-                            <a href="https://www.imdb.com/name/nm0000216/" target="_blank"
-                                class="list-group-item list-group-item-action">Arnold Schwarzenegger</a>
-                            <a href="https://www.imdb.com/name/nm0000677/" target="_blank"
-                                class="list-group-item list-group-item-action">Robin Tunney</a>
-                            <a href="https://www.imdb.com/name/nm0001768/" target="_blank"
-                                class="list-group-item list-group-item-action">Rod Steiger</a>
-                            <a href="https://www.imdb.com/name/nm0001629/" target="_blank"
-                                class="list-group-item list-group-item-action">Kevin Pollak</a>
-                            <a href="https://www.imdb.com/name/nm0001634/" target="_blank"
-                                class="list-group-item list-group-item-action">CCH Pounder</a>
-                            <a href="https://www.imdb.com/name/nm0001424/" target="_blank"
-                                class="list-group-item list-group-item-action">Udo Kier</a>
-                            <a href="https://www.imdb.com/name/nm0000312/" target="_blank"
-                                class="list-group-item list-group-item-action">Gabriel Byrn</a>
-                            <a href="https://www.imdb.com/name/nm0546816/" target="_blank"
-                                class="list-group-item list-group-item-action">Miriam Margolyes</a>
-                        </div>
-                    </div>
-                    <div class="card-body d-md-none">
-                        <div class="list-group">
+                    <div class="list-group list-group-horizontal-md">
+                        <div class="d-flex flex-wrap flex-lg-nowrap">
                             <a href="https://www.imdb.com/name/nm0000216/" target="_blank"
                                 class="list-group-item list-group-item-action">Arnold Schwarzenegger</a>
                             <a href="https://www.imdb.com/name/nm0000677/" target="_blank"
@@ -177,12 +164,8 @@
     </div>
     <footer class="container-fluid bg-primary text-center text-white mt-auto py-0 overflow-hidden">
         <h3 class="font-italic">Balešević Srđan</h3>
-        <div id="datum"></div>
+        <span id="datum"></span>
     </footer>
 </body>
-<script>
-    var d = new Date()
-    document.getElementById("datum").innerHTML = d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear() + ".";
-</script>
 
 </html>

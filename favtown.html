@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
         crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
     <title>.::Balešević Srđan:: - ::Omiljeni grad::.</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
         crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </head>
@@ -70,7 +70,7 @@
                 target="_blank">Wikipedia HR</a>, <a href="https://en.wikipedia.org/wiki/Ba%C4%8Dka_Palanka"
                 target="_blank">Wikipedia ENG</a> i <a href="https://backapalanka.rs/" target="_blank">Zvaničnu
                 prezentaciju opštine Bačka Palanaka</a>.</p>
-        <table class="table table-sm table-striped table-hover mx-auto">
+        <table class="table table-sm table-striped table-hover m-auto text-center">
             <thead>
                 <tr>
                     <th>Naziv znamenitosti</th>
@@ -133,12 +133,8 @@
     </div>
     <footer class="container-fluid bg-primary text-center text-white mt-auto py-0 overflow-hidden">
         <h3 class="font-italic">Balešević Srđan</h3>
-        <div id="datum"></div>
+        <span id="datum"></span>
     </footer>
 </body>
-<script>
-    var d = new Date()
-    document.getElementById("datum").innerHTML = d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear() + ".";
-</script>
 
 </html>

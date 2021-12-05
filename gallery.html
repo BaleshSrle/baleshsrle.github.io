@@ -6,14 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
         crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
     <title>.::Balešević Srđan:: - ::Galerija::.</title>
+    <style>
+        @media only screen and (min-height: 1024px) {
+            body {
+                min-height: 1024px;
+            }
+        }
+
+        @media only screen and (min-height: 1366px) {
+            body {
+                min-height: 1366px;
+            }
+        }
+    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
         crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </head>
@@ -57,7 +70,7 @@
             </ul>
         </div>
     </nav>
-    <div class="container h-100 py-2">
+    <div class="container h-100 pt-2 pb-5 mb-5">
         <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
 
             <!-- Indicators -->
@@ -118,14 +131,10 @@
 
         </div>
     </div>
-    <footer class="container-fluid bg-primary text-center text-white mt-auto py-0 overflow-hidden">
+    <footer class="container-fluid bg-primary text-center text-white mt-auto py-0 overflow-hidden fixed-bottom">
         <h3 class="font-italic">Balešević Srđan</h3>
-        <div id="datum"></div>
+        <span id="datum"></span>
     </footer>
 </body>
-<script>
-    var d = new Date()
-    document.getElementById("datum").innerHTML = d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear() + ".";
-</script>
 
 </html>

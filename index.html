@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css"
         crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
     <title>.::Balešević Srđan:: - ::Početna::.</title>
+    <style>
+        @media only screen and (min-height: 1366px) {
+            body {
+                min-height: 1366px;
+            }
+        }
+    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
         crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </head>
@@ -60,13 +67,6 @@
         </div>
     </nav>
     <div class="container-fluid h-100 w-100 my-1">
-        <div>
-            <div class="alert alert-info alert-dismissible mx-auto text-center my-1 w-50">
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                HTML kod ove stranice možete pronaći na <a
-                    href="https://github.com/BaleshSrle/ICBL_Project_Assignment_01" target="_blank">ovom linku</a>.
-            </div>
-        </div>
         <div class="card mb-3 w-100 mx-auto">
             <div class="row no-gutters">
                 <div class="col-sm-5">
@@ -74,7 +74,7 @@
                 </div>
                 <div class="col-sm-7">
                     <div class="card-body table-responsive">
-                        <table class="table table-bordered table-sm text-left">
+                        <table class="table table-bordered table-sm text-left m-auto">
                             <tbody>
                                 <tr>
                                     <td class="font-weight-bold">Ime i prezime</td>
@@ -173,12 +173,8 @@
     </div>
     <footer class="container-fluid bg-primary text-center text-white mt-auto py-0 overflow-hidden">
         <h3 class="font-italic">Balešević Srđan</h3>
-        <div id="datum"></div>
+        <span id="datum"></span>
     </footer>
 </body>
-<script>
-    var d = new Date()
-    document.getElementById("datum").innerHTML = d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear() + ".";
-</script>
 
 </html>

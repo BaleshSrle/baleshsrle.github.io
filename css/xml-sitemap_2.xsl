@@ -13,9 +13,9 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta name="robots" content="index, nofollow" />
 				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" crossorigin="anonymous" />
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" crossorigin="anonymous" />
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 			</head>
 			<body>
 				<div class="container-fluid">
@@ -45,24 +45,24 @@
 							<xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
 							<xsl:for-each select="sitemap:urlset/sitemap:url">
 								<tr>
-									<td>
+									<td class="align-middle">
 										<xsl:variable name="itemURL">
 											<xsl:value-of select="sitemap:loc"/>
 										</xsl:variable>
-										<a href="{$itemURL}">
+										<a href="{$itemURL}" target="_blank">
 											<xsl:value-of select="sitemap:loc"/>
 										</a>
 									</td>										
-									<td class="text-center">
+									<td class="align-middle text-center">
 										<xsl:value-of select="concat(sitemap:priority*100,'%')"/>
 									</td>
-									<td class="text-center">
+									<td class="align-middle text-center">
 										<xsl:value-of select="count(image:image)"/>
 									</td>
-									<td class="text-center">
+									<td class="align-middle text-center">
 										<xsl:value-of select="concat(translate(substring(sitemap:changefreq, 1, 1),concat($lower, $upper),concat($upper, $lower)),substring(sitemap:changefreq, 2))"/>
 									</td>
-									<td class="text-center">
+									<td class="align-middle text-center">
 										<xsl:value-of select="concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)))"/>
 									</td>
 								</tr>
