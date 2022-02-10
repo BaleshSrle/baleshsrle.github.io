@@ -1,1 +1,26 @@
-.card{width:300px;}.map-responsive{padding-bottom:50%;height:0;}.gmaps{left:0;top:0;}.img-thumbnail{width:250px;}.mw-33{max-width:33%!important;}.carousel-inner img{width:100%;height:auto;}
+.card {
+    width:300px;
+}
+
+.map-responsive {
+    padding-bottom: 50%;
+    height: 0;
+}
+
+.gmaps {
+    left: 0;
+    top: 0;
+}
+
+.img-thumbnail {
+    width:250px;
+}
+
+.mw-33 {
+    max-width: 33%!important;
+}
+
+.carousel-inner img{
+    width:100%;
+    height:auto;
+}
