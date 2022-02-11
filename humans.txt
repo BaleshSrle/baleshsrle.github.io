@@ -13,7 +13,7 @@
 		Location: Banja Luka, Republic of Srpska, Bosnia and Herzegovina
 	
 /* SITE */
-		Last update: 2021/02/10
+		Last update: 2021/02/11
 		Language: Serbian
 		Standards: HTML5, CSS, JavaScript
 		Components: jQuery, Bootstrap
