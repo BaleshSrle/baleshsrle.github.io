@@ -26,6 +26,7 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/6ad2500faa.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/js/main.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/spamguard.js/dist/spamguard.min.js"></script>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -77,10 +78,10 @@
         </div>
         <div class="card mb-3 w-100 mx-auto rounded-lg">
             <div class="row no-gutters">
-                <div class="col-sm-5">
+                <div class="col-sm-5 col-lg-4">
                     <img src="images/me.jpg" class="card-img rounded-lg" alt="Moja slika">
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-7 col-lg-8">
                     <div class="card-body table-responsive">
                         <table class="table table-bordered table-sm m-auto text-left">
                             <tbody>
@@ -95,11 +96,8 @@
                                 <tr>
                                     <td class="font-weight-bold">E-mail adresa</td>
                                     <td class="align-middle">
-                                        <script>
-                                            var name = "srdjan.baleshevich";
-                                            var domain = "engineer.com";
-                                            document.write('<a href=\"mailto:' + name + '%40' + domain + '\" rel="nofollow">' + name + '@' + domain + '</a>');
-                                        </script>
+                                        <a href="#" class="protect-me" data-name="srdjan.baleshevich"
+                                            data-domain="engineer" data-tld="com" data-mailto="true" rel="nofollow"></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -185,5 +183,8 @@
         <span id="datum"></span>
     </footer>
 </body>
+<script>
+    spamguard(".protect-me");
+</script>
 
 </html>
