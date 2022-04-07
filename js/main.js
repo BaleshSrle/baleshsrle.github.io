@@ -1,3 +1,4 @@
+$("html").attr("lang", navigator.language);
 $("head").append("<link rel='icon' href='images/logo.png' type='image/png'>");
 $("#datum").text(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
 function mqResults() { "akcioni horor" == $('#odgovor').val() ? ($("#rezultat").text("Odgovor je tačan."), $("#rezultat").addClass("alert alert-success w-75 text-center mt-2")) : ($("#rezultat").html("Odgovor je netačan. <br> Upišite neki drugi odgovor (ili pronađite rješenje na Wikipediji ili IMDB-u)."), $("#rezultat").addClass("alert alert-danger w-75 text-center mt-2")) }
