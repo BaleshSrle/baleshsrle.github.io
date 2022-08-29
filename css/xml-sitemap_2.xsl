@@ -13,9 +13,9 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta name="robots" content="index, nofollow" />
 				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" crossorigin="anonymous" />
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" crossorigin="anonymous" />
+				<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" crossorigin="anonymous"></script>
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 			</head>
 			<body>
 				<div class="container-fluid">
