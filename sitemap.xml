@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="styles/xml-sitemap_2.xsl"?>
-<urlset xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9 https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="https://www.google.com/schemas/sitemap-image/1.1" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
+<urlset xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9 https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:image="https://www.google.com/schemas/sitemap-image/1.1" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
     <url>
         <loc>https://baleshevich.dobojcaffe.com/itp100/</loc>
         <lastmod>2022-09-03</lastmod>
@@ -38,6 +38,13 @@
         <lastmod>2022-09-04</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:thumbnail_loc>https://i.ytimg.com/vi/_a_mquMR6-Y/hqdefault.jpg</video:thumbnail_loc>
+            <video:title>End of Days - Trailer</video:title>
+            <video:description>Arnold Schwarzenegger battles the ultimate evil in this chilling supernatural action thriller about a former New York City cop who is assigned to security detail for a mysterious stranger.</video:description>
+            <video:player_loc>https://www.youtube.com/embed/_a_mquMR6-Y</video:player_loc>
+            <video:duration>77</video:duration>
+        </video:video>
         <image:image>
             <image:loc>https://baleshevich.dobojcaffe.com/itp100/images/logo.png</image:loc>
         </image:image>		
@@ -79,7 +86,7 @@
     </url>
     <url>
         <loc>https://baleshevich.dobojcaffe.com/itp100/hobby.html</loc>
-        <lastmod>2022-10-08</lastmod>
+        <lastmod>2022-11-27</lastmod>
         <changefreq>always</changefreq>
         <priority>0.7</priority>
         <image:image>
