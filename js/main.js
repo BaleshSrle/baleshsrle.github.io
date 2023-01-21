@@ -2,9 +2,9 @@ $("html").attr("lang", navigator.language);
 $("head").append("<link rel='icon' href='images/logo.png' type='image/png'>");
 $("head").append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css'crossorigin='anonymous'>");
 $("#datum").text(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
-$("#lenovoThinkPadX230_link").attr("href","https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-434-detail");
-$("#fujitsuLifeBookS752_link").attr("href","https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsclifebooks752-529-detail");
-$("#fujitsuLifeBookS761_link").attr("href","https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
+$("#lenovoThinkPadX230_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-434-detail");
+$("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsclifebooks752-529-detail");
+$("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
 
 function mqResults() {
     var a = $('#odgovor').val();
