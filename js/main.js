@@ -6,6 +6,13 @@ $("#lenovoThinkPadX230_link").attr("href", "https://mediamarket.rs.ba/index.php/
 $("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsclifebooks752-529-detail");
 $("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
 
+$(".carousel").carousel({
+    interval: 3500,
+    keyboard: false,
+    pause: false,
+    touch: false
+});
+
 function mqResults() {
     var a = $('#odgovor').val();
 
