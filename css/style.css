@@ -2,15 +2,15 @@
     width:300px;
 }
 
-.map-responsive {
+/*.map-responsive {
     padding-bottom: 50%;
     height: 0;
-}
+}*/
 
-.gmaps {
+/* .gmaps {
     left: 0;
     top: 0;
-}
+} */
 
 .img-thumbnail {
     width:250px;
