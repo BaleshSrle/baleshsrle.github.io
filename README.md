@@ -10,9 +10,9 @@ My first assignment on ITRetraining100 for [Innovation Centre Banja Luka](https:
 This site is up and running and you can visit it by clicking on [this](https://bit.ly/33SdRyL) link.
 
 ## Built With
-This project assignment is created by ![Static Badge](https://img.shields.io/badge/Visual_Studio_Code-7952B3?logo=bootstrap&logoColor=white&labelColor=555555&link=https%3A%2F%2Fgithub.com%2Ftwb)
- , ![Static Badge](https://img.shields.io/badge/jQuery-0769AD?logo=jquery&logoColor=white&labelColor=555555&link=https%3A%2F%2Fgithub.com%2Fjquery)
- & ![Static Badge](https://img.shields.io/badge/Font_Awesome-528DD7?logo=fontawesome&logoColor=white&labelColor=555555&link=https%3A%2F%2Fgithub.com%2FFortAwesome%2FFont-Awesome)
- via ![Static Badge](https://img.shields.io/badge/jsDelivr-E84D3D?logo=jsdelivr&logoColor=white&labelColor=555555&link=https%3A%2F%2Fgithub.com%2Fjsdelivr%2Fjsdelivr)
+This project assignment is created by [![Bootstrap Badge](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white&labelColor=555555)](https://github.com/twbs)
+ , [![jQuery Badge](https://img.shields.io/badge/jQuery-0769AD?logo=jquery&logoColor=white&labelColor=555555)](https://github.com/jquery)
+ & [![Font Awesome Badge](https://img.shields.io/badge/Font_Awesome-528DD7?logo=fontawesome&logoColor=white&labelColor=555555)](https://github.com/FortAwesome/Font-Awesome)
+ via [![jsDelivr Badge](https://img.shields.io/badge/jsDelivr-E84D3D?logo=jsdelivr&logoColor=white&labelColor=555555)](https://github.com/jsdelivr/jsdelivr)
  CDN servers.
 
