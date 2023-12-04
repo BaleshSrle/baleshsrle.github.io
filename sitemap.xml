@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/css/xml-sitemap_2.xsl"?>
+<?xml-stylesheet type="text/xsl" href="css/xml-sitemap_2.xsl"?>
 <urlset xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9 https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:image="https://www.google.com/schemas/sitemap-image/1.1" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
     <url>
         <loc>https://baleshevich.dobojcaffe.com/itp100/</loc>
