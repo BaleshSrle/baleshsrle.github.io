@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://cdn.jsdelivr.net/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6/dist/css/bootstrap.min.css"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-social@5/bootstrap-social.min.css"
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-social@5/bootstrap-social.min.css"
+        crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-typewriter@1/dist/css/cursor.css"
         crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/css/style.min.css">
     <title>.::Balešević Srđan:: - ::Početna::.</title>
-    <style>
-        @media only screen and (min-height: 1366px) {
+    <!-- <style>
+        @media only screen and (min-height: 1366px) {s
             body {
                 min-height: 1366px;
             }
         }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"
+    </style> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-typewriter@1.2.8/dist/js/jquery.typewriter.min.js"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/js/main.min.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/spamguard.js/dist/spamguard.min.js"></script>
@@ -35,161 +39,190 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-    <header class="jumbotron jumbotron-fluid mb-0 py-0 overflow-hidden">
-        <div class="row">
-            <div class="col-sm-2">
-                <img src="images/logo.png" class="mx-auto d-block img-fluid" alt="Moj logo">
+    <main role="main" class="flex-shrink-0 pb-1">
+        <header class="jumbotron jumbotron-fluid mb-0 py-0 overflow-hidden">
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/images/logo.png"
+                        class="mx-auto d-block img-fluid" alt="Moj logo">
+                </div>
+                <div class="col-sm-10 py-md-4">
+                    <h2>Dobro došli na sajt</h2>
+                    <p>Na ovom sajt možete saznati mnogo dodatni informacija o meni</p>
+                </div>
             </div>
-            <div class="col-sm-10 py-md-4">
-                <h2>Dobro došli na sajt</h2>
-                <p>Na ovom sajt možete saznati mnogo dodatni informacija o meni</p>
+        </header>
+        <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><i
+                                class="fa-solid fa-home fa-lg pr-2"></i>Početna</a></li>
+                    <li class="nav-item"><a class="nav-link" href="birthdaypresent.html"><i
+                                class="fa-solid fa-gift fa-lg pr-2"></i>Rođendanski poklon</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favmovie.html"><i
+                                class="fa-solid fa-film fa-lg pr-2"></i>Omiljeni
+                            film</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favtown.html"><i
+                                class="fa-solid fa-city fa-lg pr-2"></i>Omiljeni
+                            grad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hobby.html"><i
+                                class="fa-solid fa-wrench fa-lg pr-2"></i>Hobi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html"><i
+                                class="fa-regular fa-images fa-lg pr-2"></i>Galerija</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="quiz.html"><i
+                                class="fa-solid fa-gamepad fa-lg pr-2"></i>Kviz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sitemap.xml"><i
+                                class="fa-solid fa-sitemap fa-lg pr-2"></i>Mapa sajta</a></li>
+                </ul>
             </div>
-        </div>
-    </header>
-    <nav class="navbar navbar-expand-md bg-primary navbar-dark">
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" href="index.html"><i
-                            class="fa-solid fa-home fa-lg pr-2"></i>Početna</a></li>
-                <li class="nav-item"><a class="nav-link" href="birthdaypresent.html"><i
-                            class="fa-solid fa-gift fa-lg pr-2"></i>Rođendanski poklon</a></li>
-                <li class="nav-item"><a class="nav-link" href="favmovie.html"><i
-                            class="fa-solid fa-film fa-lg pr-2"></i>Omiljeni
-                        film</a></li>
-                <li class="nav-item"><a class="nav-link" href="favtown.html"><i
-                            class="fa-solid fa-city fa-lg pr-2"></i>Omiljeni
-                        grad</a></li>
-                <li class="nav-item"><a class="nav-link" href="hobby.html"><i
-                            class="fa-solid fa-wrench fa-lg pr-2"></i>Hobi</a></li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html"><i
-                            class="fa-regular fa-images fa-lg pr-2"></i>Galerija</a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="quiz.html"><i
-                            class="fa-solid fa-gamepad fa-lg pr-2"></i>Kviz</a></li>
-                <li class="nav-item"><a class="nav-link" href="sitemap.xml"><i
-                            class="fa-solid fa-sitemap fa-lg pr-2"></i>Mapa sajta</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container-fluid h-100 w-100 my-1">
-        <div>
-            <div class="alert alert-info alert-dismissible mx-auto text-center my-1" style="max-width: 470px;">
+        </nav>
+        <div class="container-fluid py-2 mx-auto">
+            <div class="alert alert-info alert-dismissible fade show text-center mb-1 mx-auto"
+                style="max-width: 470px;">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 HTML kod ove stranice možete pronaći na <a
                     href="https://github.com/BaleshSrle/ICBL_Project_Assignment_01" target="_blank">ovom linku</a>.
             </div>
-        </div>
-        <div class="card mb-3 w-100 mx-auto rounded-lg">
-            <div class="row no-gutters">
-                <div class="col-sm-5 col-lg-4">
-                    <img src="images/me.jpg" class="card-img rounded-lg" alt="Moja slika">
-                </div>
-                <div class="col-sm-7 col-lg-8">
-                    <div class="card-body table-responsive">
-                        <table class="table table-bordered table-sm m-auto text-left">
-                            <tbody>
-                                <tr>
-                                    <td class="font-weight-bold">Ime i prezime</td>
-                                    <td class="align-middle h5">BALEŠEVIČ SRĐAN</td>
-                                </tr>
-                                <tr>
-                                    <td class="font-weight-bold">Datum rođenja</td>
-                                    <td class="align-middle" id="bdayDate">07. septembar 1988.</td>
-                                </tr>
-                                <tr>
-                                    <td class="font-weight-bold">E-mail adresa</td>
-                                    <td class="align-middle">
-                                        <a href="#" class="protect-me" data-name="srdjan.baleshevich"
-                                            data-domain="engineer" data-tld="com" data-mailto="true" rel="nofollow"></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="font-weight-bold">Kratka biografija</td>
-                                    <td class="text-justify">
-                                        <p>Rođeni Dobojlija. U rodnom gradu završio osnovu, srednju elektro školu
-                                            (posjeduje
-                                            dvije diplome iz srednje) i Saobraćajni fakultet u Doboju - smjer Logistika.
-                                        </p>
-                                        <p>Od svoje 10. godine (možda čak i ranije) pokazivao afinitete prema
-                                            infomaciono-komunikacionim tehnologijama.</p>
-                                        <p>Od 2007. se amaterski bavim pravljenjem web-sajtova (prvo u Simple Machines
-                                            Forum-u, pa u WordPress-u,
-                                            da bi kasnije prešao na Joomla-u).</p>
-                                        <p>U periodu avgust - oktobar 2014. učestvovao u takmičenju <span
-                                                class="font-weight-bold">m:tel AppBuilder Liga</span>, gdje je osvojio
-                                            3. mjesto
-                                            u kategoriji &quot;Edukacija i društvena odgovornost&quot;.</p>
-                                        <p>Od februara 2012. ponosni ujak jednom preslatkom djevojčurku.</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="text-center"><a href="documents/cv.pdf" target="_blank"><i
-                                                class="fa-regular fa-file-pdf fa-2x align-middle pr-1"></i>Moja
-                                            biografija</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="text-center">
-                                        <a href="https://www.facebook.com/srdjan.balesevic"
-                                            class="btn btn-social-icon btn-lg btn-facebook m-1" target="_blank"><span
-                                                class="fa-brands fa-facebook-f"></span></a>
-                                        <a href="https://github.com/BaleshSrle"
-                                            class="btn btn-social-icon btn-lg btn-github m-1" target="_blank"><span
-                                                class="fa-brands fa-github"></span></a>
-                                        <a href="https://instagram.com/srlebaleshpuhovski"
-                                            class="btn btn-social-icon btn-lg btn-instagram m-1" target="_blank"><span
-                                                class="fa-brands fa-instagram"></span></a>
-                                        <a href="https://ba.linkedin.com/in/srdjanbaleshevich"
-                                            class="btn btn-social-icon btn-lg btn-linkedin m-1" target="_blank"><span
-                                                class="fa-brands fa-linkedin-in"></span></a>
-                                        <a href="https://m.me/srdjan.balesevic"
-                                            class="btn btn-social-icon btn-lg btn-primary m-1" target="_blank"><span
-                                                class="fa-brands fa-facebook-messenger"></span></a>
-                                        <a href="skype:srdjan.baleshevich?call"
-                                            class="btn btn-social-icon btn-lg btn-primary m-1" target="_blank"><span
-                                                class="fa-brands fa-skype"></span></a>
-                                        <a href="https://open.spotify.com/user/bvfuuxdysiks1nnpwal3iyaa2?si=msIIL4yHQ0SpK5m6jjFWWw"
-                                            class="btn btn-social-icon btn-lg btn-success m-1" target="_blank"><span
-                                                class="fa-brands fa-spotify"></span></a>
-                                        <a href="https://steamcommunity.com/id/BaleshSrle"
-                                            class="btn btn-social-icon btn-lg btn-dark m-1" target="_blank"><span
-                                                class="fa-brands fa-steam"></span></a>
-                                        <a href="https://t.me/BaleshSrle"
-                                            class="btn btn-social-icon btn-lg btn-primary m-1" target="_blank"><span
-                                                class="fa-brands fa-telegram"></span></a>
-                                        <a href="https://twitter.com/BaleshSrle" rel="me"
-                                            class="btn btn-social-icon btn-lg btn-twitter m-1" target="_blank"><span
-                                                class="fa-brands fa-twitter"></span></a>
-                                        <a href="https://vk.com/baleshsrle"
-                                            class="btn btn-social-icon btn-lg btn-vk m-1" target="_blank"><span
-                                                class="fa-brands fa-vk"></span></a>
-                                        <a href="https://wa.me/38766340286"
-                                            class="btn btn-social-icon btn-lg btn-success m-1" target="_blank"><span
-                                                class="fa-brands fa-whatsapp"></span></a>
-                                        <a href="https://wp.me/2brNg"
-                                            class="btn btn-social-icon btn-lg btn-secondary m-1" target="_blank"><span
-                                                class="fa-brands fa-wordpress"></span></a>
-                                        <a href="https://www.youtube.com/c/Bale%C5%A1evi%C4%87Sr%C4%91an"
-                                            class="btn btn-social-icon btn-lg btn-danger m-1 d-none"
-                                            target="_blank"><span class="fa-brands fa-youtube"></span></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+            <div class="card my-2 w-100 mx-auto rounded-lg">
+                <div class="row no-gutters align-items-center">
+                    <div class="col-sm-5 col-lg-4">
+                        <img src="https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/images/me.jpg"
+                            class="card-img rounded-lg" style="max-width: 580px;" alt="Moja slika">
+                    </div>
+                    <div class="col-sm-7 col-lg-8">
+                        <div class="card-body table-responsive">
+                            <table class="table table-bordered table-sm m-auto text-left">
+                                <tbody>
+                                    <tr>
+                                        <td class="font-weight-bold">Ime i prezime</td>
+                                        <td class="align-middle h5">BALEŠEVIĆ SRĐAN</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-weight-bold">Datum rođenja</td>
+                                        <td class="align-middle">07. septembar 1988.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-weight-bold">E-mail adresa</td>
+                                        <td class="align-middle">
+                                            <a href="#" class="protect-me" data-name="srdjan.baleshevich"
+                                                data-domain="engineer" data-tld="com" data-mailto="true"
+                                                rel="nofollow"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-weight-bold">Kratka biografija</td>
+                                        <td class="text-justify">
+                                            <p>Rođeni Dobojlija. U rodnom gradu završio osnovu, srednju elektro školu
+                                                (posjeduje
+                                                dvije diplome iz srednje) i Saobraćajni fakultet u Doboju - smjer
+                                                Logistika.
+                                            </p>
+                                            <p>Od svoje 10. godine (možda čak i ranije) pokazivao afinitete prema
+                                                infomaciono-komunikacionim tehnologijama.</p>
+                                            <p>Od 2007. se amaterski bavim pravljenjem web-sajtova (prvo u Simple
+                                                Machines
+                                                Forum-u, pa u WordPress-u,
+                                                da bi kasnije prešao na Joomla-u).</p>
+                                            <p>U periodu avgust - oktobar 2014. učestvovao u takmičenju <span
+                                                    class="font-weight-bold">m:tel AppBuilder Liga</span>, gdje je
+                                                osvojio
+                                                3. mjesto
+                                                u kategoriji &quot;Edukacija i društvena odgovornost&quot;.</p>
+                                            <p>Od februara 2012. ponosni ujak jednom preslatkom djevojčurku.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="text-center"><a href="documents/cv.pdf"
+                                                target="_blank"><i
+                                                    class="fa-regular fa-file-pdf fa-2x align-middle pr-1"></i>Moja
+                                                biografija</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="text-center">
+                                            <a href="https://www.facebook.com/srdjan.balesevic" target="_blank"
+                                                rel="me"><img src="https://cdn.simpleicons.org/facebook"
+                                                    alt="Facebook"></a>
+                                            <a href="https://github.com/BaleshSrle" target="_blank"><img
+                                                    src="https://cdn.simpleicons.org/github" alt="GitHub"></a>
+                                            <a href="https://www.goodreads.com/baleshsrle" target="_blank"><img
+                                                    src="https://cdn.simpleicons.org/goodreads" alt="Goodreads"></a>
+                                            <a href="https://instagram.com/srlebaleshpuhovski" target="_blank"
+                                                rel="me"><img src="https://cdn.simpleicons.org/instagram"
+                                                    alt="Instagram"></a>
+                                            <a href="https://ba.linkedin.com/in/srdjanbaleshevich" target="_blank"><img
+                                                    src="https://cdn.simpleicons.org/linkedin" alt="LinkedIn"></a>
+                                            <a href="https://social.vivaldi.net/@baleshsrle" rel="me"
+                                                target="_blank"><img src="https://cdn.simpleicons.org/mastodon"
+                                                    alt="Vivaldi Social by Mastodon"></a>
+                                            <a href="https://m.me/srdjan.balesevic" target="_blank"><img
+                                                    src="https://cdn.simpleicons.org/messenger" alt="Messenger"></a>
+                                            <a href="skype:srdjan.baleshevich?call" target="_blank"><img
+                                                    src="https://cdn.simpleicons.org/skype" alt="Skype"></a>
+                                            <a href="https://www.snapchat.com/add/baleshsrle?locale=sr-Latn-BA"
+                                                target="_blank"><img src="https://cdn.simpleicons.org/snapchat"
+                                                    alt="Snapchat"></a>
+                                            <a href="https://open.spotify.com/user/bvfuuxdysiks1nnpwal3iyaa2?si=msIIL4yHQ0SpK5m6jjFWWw"
+                                                target="_blank"><img src="https://cdn.simpleicons.org/spotify"
+                                                    alt="Spotify"></a>
+                                            <a href="https://steamcommunity.com/id/BaleshSrle" target="_blank"><img
+                                                    src="https://cdn.simpleicons.org/steam" alt="Steam"></a>
+                                            <a href="https://baleshsrle.t.me/" target="_blank"><img
+                                                    src="https://cdn.simpleicons.org/telegram" alt="Telegram"></a>
+                                            <a href="https://threads.net/@srlebaleshpuhovski" target="_blank"><img
+                                                    src="https://cdn.simpleicons.org/threads" alt="Threads"></a>
+                                            <a href="https://twitter.com/BaleshSrle" rel="me" target="_blank"><img
+                                                    src="https://cdn.simpleicons.org/x" alt="X (former Twitter)"></a>
+                                            <a href="https://vk.com/baleshsrle" target="_blank"><img
+                                                    src="https://cdn.simpleicons.org/vk" alt="VK"></a>
+                                            <a href="https://wa.me/38766340286" target="_blank"><img
+                                                    src="https://cdn.simpleicons.org/whatsapp" alt="WhatsApp"></a>
+                                            <a href="https://wp.me/2brNg" target="_blank"><img
+                                                    src="https://cdn.simpleicons.org/wordpress" alt="Wordpress"></a>
+                                            <a href="https://www.youtube.com/c/Bale%C5%A1evi%C4%87Sr%C4%91an"
+                                                class="d-none"><img src="https://cdn.simpleicons.org/youtube"
+                                                    alt="YouTube"></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <footer class="container-fluid bg-primary text-center text-white mt-auto py-0 overflow-hidden">
+    </main>
+    <footer class="container-fluid bg-primary text-center text-white mt-auto mb-0 py-0 overflow-hidden position-fixed"
+        style="right:0; bottom:0; left:0;">
         <h3 class="font-italic">Balešević Srđan</h3>
         <span id="datum"></span>
     </footer>
     <script>
         spamguard(".protect-me");
     </script>
+    <script>
+        $(".h5").typeWrite({
+            speed: 40,
+            repeat: false,
+            cursor: true,
+            color: 'black'
+        });
+        $("a img").height(32).width(32).addClass("m-1");
+    </script>
+    <!-- <script>
+        $(window).resize(function () {
+            if (screen.availHeight == 1040) {
+                $("footer").addClass("fixed-bottom");
+            }
+        });
+        // switch (screen.availHeight) {
+        //     case 1040:
+        //         $("footer").toggleClass("fixed-bottom");
+        // }
+    </script> -->
 </body>
 
 </html>

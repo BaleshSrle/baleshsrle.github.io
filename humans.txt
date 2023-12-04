@@ -11,9 +11,13 @@
 		Secound: Government of Republic of Srpska - Ministry for Scientific and Technological Development, Higher Education and Information Society
 		Twitter: @mnrvoid_rs
 		Location: Banja Luka, Republic of Srpska, Bosnia and Herzegovina
+
+		Third: jsDelivr - A free, fast, and reliable CDN for JS and open source
+		Twitter: @mjsDelivr
+		Location: Deutschland / Germany
 	
 /* SITE */
-		Last update: 2023/04/25
+		Last update: 2023/12/04
 		Language: Serbian
 		Standards: HTML5, CSS, JavaScript
 		Components: jQuery, Bootstrap

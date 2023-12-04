@@ -1,5 +1,5 @@
 .card {
-    width:300px;
+    width: 300px;
 }
 
 /*.map-responsive {
@@ -13,14 +13,14 @@
 } */
 
 .img-thumbnail {
-    width:250px;
+    width: 250px;
 }
 
 .mw-33 {
-    max-width: 33%!important;
+    max-width: 33% !important;
 }
 
-.carousel-inner img{
-    width:100%;
-    height:auto;
+.carousel-inner img {
+    width: 100%;
+    height: auto;
 }
