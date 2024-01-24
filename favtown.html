@@ -211,12 +211,12 @@
         <h3 class="font-italic">Balešević Srđan</h3>
         <span id="datum"></span>
     </footer>
+    <script>
+        $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
+        $("div.modal-dialog:eq(2),div.modal-dialog:eq(3)").removeClass("modal-lg");
+        $("td").addClass("align-middle");
+        $("td:eq(1),td:eq(4),td:eq(7),td:eq(10),td:eq(13)").html("<i class='fa-sharp fa-solid fa-xmark fa-1x text-danger'></i>");
+    </script>
 </body>
-<script>
-    $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
-    $("div.modal-dialog:eq(2),div.modal-dialog:eq(3)").removeClass("modal-lg");
-    $("td").addClass("align-middle");
-    $("td:eq(1),td:eq(4),td:eq(7),td:eq(10),td:eq(13)").html("<i class='fa-sharp fa-solid fa-xmark fa-1x text-danger'></i>");
-</script>
 
 </html>
