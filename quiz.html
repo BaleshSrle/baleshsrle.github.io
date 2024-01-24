@@ -8,8 +8,6 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6/dist/css/bootstrap.min.css"
         crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/css/style.min.css">
     <title>.::Balešević Srđan:: - ::Kviz::.</title>
     <!-- <style>
         @media only screen and (min-height: 1366px) {
@@ -21,7 +19,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/js/main.min.js" async></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/js/main.min.js" async></script> -->
+    <script src="js/main.js"></script>
     <script>
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -31,168 +30,177 @@
     </script>
 </head>
 
-<body class="d-flex flex-column h-100">
-    <header class="jumbotron jumbotron-fluid mb-0 py-0 overflow-hidden">
-        <div class="row">
-            <div class="col-sm-2">
-                <img src="https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/images/logo.png"
-                    class="mx-auto d-block img-fluid" alt="Moj logo">
+<body>
+    <main>
+        <header class="jumbotron jumbotron-fluid">
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="https://cdn.jsdelivr.net/gh/BaleshSrle/ICBL_Project_Assignment_01@main/images/logo.png"
+                        class="mx-auto d-block img-fluid" alt="Moj logo">
+                </div>
+                <div class="col-sm-10">
+                    <h2>Dobro došli na sajt</h2>
+                    <p>Na ovom sajt možete saznati mnogo dodatni informacija o meni</p>
+                </div>
             </div>
-            <div class="col-sm-10 py-md-4">
-                <h2>Dobro došli na sajt</h2>
-                <p>Na ovom sajt možete saznati mnogo dodatni informacija o meni</p>
+        </header>
+        <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i
+                                class="fas fa-home fa-lg"></i>Početna</a></li>
+                    <li class="nav-item"><a class="nav-link" href="birthdaypresent.html"><i
+                                class="fas fa-gift fa-lg"></i>Rođendanski poklon</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favmovie.html"><i
+                                class="fas fa-film fa-lg"></i>Omiljeni
+                            film</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favtown.html"><i
+                                class="fas fa-city fa-lg"></i>Omiljeni
+                            grad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hobby.html"><i
+                                class="fas fa-wrench fa-lg"></i>Hobi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html"><i
+                                class="far fa-images fa-lg"></i>Galerija</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="quiz.html"><i
+                                class="fas fa-gamepad fa-lg"></i>Kviz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sitemap.xml"><i class="fas fa-sitemap fa-lg"></i>Mapa
+                            sajta</a></li>
+                </ul>
             </div>
+        </nav>
+        <div class="container-fluid">
+            <p style="font: 25px Arial;">Koliko dobro me poznajete?</p>
+
+            <form class="card-columns">
+
+                <div class="card">
+                    <div class="card-header">1&#10089; Moj omiljeni grad?</div>
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje1" id="ogrovor11" value="BL">
+                            <label for="ogrovor11" class="form-check-label">Banja Luka</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje1" id="ogrovor12" value="BP">
+                            <label for="ogrovor12" class="form-check-label">Bačka Palanka</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje1" id="ogrovor13" value="BGD">
+                            <label for="ogrovor13" class="form-check-label">Beograd</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">2&#10089; Koliko posjedujem diploma iz srednje škole?
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje2" id="ogrovor21" value="Tri">
+                            <label for="ogrovor21" class="form-check-label">Tri</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje2" id="ogrovor22" value="Jednu">
+                            <label for="ogrovor22" class="form-check-label">Jednu</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje2" id="ogrovor23" value="Dvije">
+                            <label for="ogrovor23" class="form-check-label">Dvije</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">3&#10089; Koji od tri ponuđena računara mogu izabrati?
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje3" id="ogrovor31" value="Lenovo">
+                            <label for="ogrovor31" class="form-check-label">Lenovo</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje3" id="ogrovor32"
+                                value="Bilo koji">
+                            <label for="ogrovor32" class="form-check-label">Bilo koji</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje3" id="ogrovor33" value="FSC">
+                            <label for="ogrovor33" class="form-check-label">Neki od <abbr
+                                    title="Kompanija koja je u periodu od 1999. do 2009. poslovala pod imenom &quot;Fujitsu Siemens Computers&quot;">FSC</abbr></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">4&#10089; Koje mjesto sam osvojio u takmičenju m:tel
+                        AppBuilder Lige za 2014. godinu?</div>
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje4" id="ogrovor41" value="Trece">
+                            <label for="ogrovor41" class="form-check-label">Treće</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje4" id="ogrovor42" value="Prvo">
+                            <label for="ogrovor42" class="form-check-label">Prvo</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje4" id="ogrovor43" value="Drugo">
+                            <label for="ogrovor43" class="form-check-label">Drugo</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">5&#10089; Koje godine je objavljen moj omiljeni film?
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje5" id="ogrovor51" value="1999">
+                            <label for="ogrovor51" class="form-check-label">1999.</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje5" id="ogrovor52" value="1996">
+                            <label for="ogrovor52" class="form-check-label">1996.</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje5" id="ogrovor53" value="1998">
+                            <label for="ogrovor53" class="form-check-label">1998.</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">6&#10089; Koliko puta su me šili na hirurškom odjeljenju
+                        dobojske bolnice?</div>
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje6" id="ogrovor61" value="Cetiri">
+                            <label for="ogrovor51" class="form-check-label">Četiti</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje6" id="ogrovor62" value="Dva">
+                            <label for="ogrovor52" class="form-check-label">Dva</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="pitanje6" id="ogrovor63" value="Tri">
+                            <label for="ogrovor53" class="form-check-label">Tri</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="provjeraOdgovora()">Sačuvaj</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </form>
+            <p></p>
+            <p id="rezultat"></p>
         </div>
-    </header>
-    <nav class="navbar navbar-expand-md bg-primary navbar-dark">
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html"><i
-                            class="fas fa-home fa-lg pr-2"></i>Početna</a></li>
-                <li class="nav-item"><a class="nav-link" href="birthdaypresent.html"><i
-                            class="fas fa-gift fa-lg pr-2"></i>Rođendanski poklon</a></li>
-                <li class="nav-item"><a class="nav-link" href="favmovie.html"><i
-                            class="fas fa-film fa-lg pr-2"></i>Omiljeni
-                        film</a></li>
-                <li class="nav-item"><a class="nav-link" href="favtown.html"><i
-                            class="fas fa-city fa-lg pr-2"></i>Omiljeni
-                        grad</a></li>
-                <li class="nav-item"><a class="nav-link" href="hobby.html"><i
-                            class="fas fa-wrench fa-lg pr-2"></i>Hobi</a></li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html"><i
-                            class="far fa-images fa-lg pr-2"></i>Galerija</a>
-                </li>
-                <li class="nav-item"><a class="nav-link active" href="quiz.html"><i
-                            class="fas fa-gamepad fa-lg pr-2"></i>Kviz</a></li>
-                <li class="nav-item"><a class="nav-link" href="sitemap.xml"><i
-                            class="fas fa-sitemap fa-lg pr-2"></i>Mapa sajta</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container-fluid h-100 w-100 py-2">
-        <p style="font: 25px Arial;">Koliko dobro me poznajete?</p>
-
-        <form class="card-columns">
-
-            <div class="card">
-                <div class="card-header font-weight-bold">1&#10089; Moj omiljeni grad?</div>
-                <div class="card-body py-2">
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje1" id="ogrovor11" value="BL">
-                        <label for="ogrovor11" class="form-check-label">Banja Luka</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje1" id="ogrovor12" value="BP">
-                        <label for="ogrovor12" class="form-check-label">Bačka Palanka</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje1" id="ogrovor13" value="BGD">
-                        <label for="ogrovor13" class="form-check-label">Beograd</label>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header font-weight-bold">2&#10089; Koliko posjedujem diploma iz srednje škole?</div>
-                <div class="card-body py-2">
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje2" id="ogrovor21" value="Tri">
-                        <label for="ogrovor21" class="form-check-label">Tri</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje2" id="ogrovor22" value="Jednu">
-                        <label for="ogrovor22" class="form-check-label">Jednu</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje2" id="ogrovor23" value="Dvije">
-                        <label for="ogrovor23" class="form-check-label">Dvije</label>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header font-weight-bold">3&#10089; Koji od tri ponuđena računara mogu izabrati?</div>
-                <div class="card-body py-2">
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje3" id="ogrovor31" value="Lenovo">
-                        <label for="ogrovor31" class="form-check-label">Lenovo</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje3" id="ogrovor32" value="Bilo koji">
-                        <label for="ogrovor32" class="form-check-label">Bilo koji</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje3" id="ogrovor33" value="FSC">
-                        <label for="ogrovor33" class="form-check-label">Neki od <abbr
-                                title="Fujitsu Siemens Computers (1999-2009.)">FSC</abbr></label>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header font-weight-bold">4&#10089; Koje mjesto sam osvojio u takmičenju m:tel
-                    AppBuilder Lige za 2014. godinu?</div>
-                <div class="card-body py-2">
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje4" id="ogrovor41" value="Trece">
-                        <label for="ogrovor41" class="form-check-label">Treće</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje4" id="ogrovor42" value="Prvo">
-                        <label for="ogrovor42" class="form-check-label">Prvo</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje4" id="ogrovor43" value="Drugo">
-                        <label for="ogrovor43" class="form-check-label">Drugo</label>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header font-weight-bold">5&#10089; Koje godine je objavljen moj omiljeni film?</div>
-                <div class="card-body py-2">
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje5" id="ogrovor51" value="1999">
-                        <label for="ogrovor51" class="form-check-label">1999.</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje5" id="ogrovor52" value="1996">
-                        <label for="ogrovor52" class="form-check-label">1996.</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje5" id="ogrovor53" value="1998">
-                        <label for="ogrovor53" class="form-check-label">1998.</label>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header font-weight-bold">6&#10089; Koliko puta su me šili na hirurškom odjeljenju
-                    dobojske bolnice?</div>
-                <div class="card-body py-2">
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje6" id="ogrovor61" value="Cetiri">
-                        <label for="ogrovor51" class="form-check-label">Četiti</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje6" id="ogrovor62" value="Dva">
-                        <label for="ogrovor52" class="form-check-label">Dva</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="pitanje6" id="ogrovor63" value="Tri">
-                        <label for="ogrovor53" class="form-check-label">Tri</label>
-                    </div>
-                </div>
-            </div>
-
-            <button type="button" class="btn btn-primary" onclick="provjeraOdgovora()">Sačuvaj</button>
-            <button type="reset" class="btn btn-secondary">Reset</button>
-        </form>
-        <p></p>
-        <p id="rezultat"></p>
-    </div>
-    <footer class="container-fluid bg-primary text-center text-white mt-auto mb-0 py-0 overflow-hidden position-fixed"
-        style="right:0; bottom:0; left:0;">
+    </main>
+    <footer>
         <h3 class="font-italic">Balešević Srđan</h3>
         <span id="datum"></span>
     </footer>
 </body>
+<script>
+    $("div.card-header").addClass("font-weight-bold");
+    $("div.card-body").addClass("py-2");
+</script>
 
 </html>
