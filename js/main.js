@@ -1,9 +1,26 @@
 $(document).ready(function () {
     $("html").attr("lang", navigator.language);
+    $("head").append("<meta name='author' content='Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com'>");
+    $("head").append("<meta name='designer' content='BaleshSrle'>");
+    $("head").append("<meta name='reply-to' content='srdjan.balesevic%40yahoo.com'>");
+    $("head").append("<meta name='language' content='sr'>");
+    $("head").append("<meta name='host' content='pages.github.com'>");
+    $("head").append("<meta name='MSThemeCompatible' content='yes'>");
+    $("head").append("<meta name='geo.region' content='BA-SRP'>");
+    $("head").append("<meta name='geo.placename' content='Добој'>");
+    $("head").append("<meta name='twitter:creator' content='@BaleshSrle'>");
+    $("head").append("<meta name='twitter:site' content='@BaleshSrle'>");
+    $("head").append("<meta http-eguiv='content-language' content='sr-BA'>");
+    $("head").append("<meta http-equiv='cleartype' content='on'>");
+    $("head").append("<meta http-equiv='x-dns-prefetch-control' content='on'>");
+    $("head").append("<meta http-equiv='Cache-control' content='no-cache'>");
+    $("head").append("<meta http-equiv='Pragma' content='no-cache'>");  
+    $("head").append("<meta http-equiv='Expires' content='-1'>");
     $("head").append("<link rel='dns-prefetch' href='https://cdn.jsdelivr.net/'>");
     $("head").append("<link rel='preconnect' href='https://cdn.jsdelivr.net/'>");
     $("head").append("<link rel='icon' href='images/logo.png' type='image/png'>");
-    $("head").append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css'crossorigin='anonymous'>");
+    $("head").append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css'>");
+    $("[rel~='preconnect'],[rel~='stylesheet'],[src$='jquery.slim.min.js'],[src$='bootstrap.bundle.min.js'],[src$='jquery.typewriter.min.js'],[src$='jquery.countdown.min.js']").attr("crossorigin", "anonymous");
     $("body").addClass("d-flex flex-column h-100");
     $("main").addClass("flex-shrink-0 mb-3 pb-5");
     $("header.jumbotron.jumbotron-fluid").addClass("mb-0 py-0 overflow-hidden");
