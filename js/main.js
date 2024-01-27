@@ -1,5 +1,19 @@
 $(document).ready(function () {
     $("html").attr("lang", navigator.language);
+    switch (navigator.pathname) {
+        case "/birthdaypresent.html":
+        case "/favmovie.html":
+        case "/favtown.html":
+        case "/hobby.html":
+        case "/gallery.html":
+        case "/quiz.html":
+            $("head").prepend("<meta http-equiv='Content-Security-Policy' content='default-src https:'>");
+            $("head").prepend("<meta name='google-site-verification' content='HcgjQ9u13iaWAG1FyF9yFp6-f9QYrwstKoKPNrRbbqM'>");
+            $("head").prepend("<meta name='google-site-verification' content='YXXACXsZjuu041kl41yKLww4xdiiudN1S0IEtdEeGSE'>");
+            $("head").prepend("<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>");
+            $("head").prepend("<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>");
+            $("head").prepend("<meta name='wot-verification' content='cee6cf583ee362cd666b'>");
+    }
     $("head").append("<meta name='author' content='Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com'>");
     $("head").append("<meta name='designer' content='BaleshSrle'>");
     $("head").append("<meta name='reply-to' content='srdjan.balesevic%40yahoo.com'>");
@@ -10,11 +24,10 @@ $(document).ready(function () {
     $("head").append("<meta name='geo.placename' content='Добој'>");
     $("head").append("<meta name='twitter:creator' content='@BaleshSrle'>");
     $("head").append("<meta name='twitter:site' content='@BaleshSrle'>");
-    $("head").append("<meta http-eguiv='content-language' content='sr-BA'>");
     $("head").append("<meta http-equiv='cleartype' content='on'>");
     $("head").append("<meta http-equiv='x-dns-prefetch-control' content='on'>");
     $("head").append("<meta http-equiv='Cache-control' content='no-cache'>");
-    $("head").append("<meta http-equiv='Pragma' content='no-cache'>");  
+    $("head").append("<meta http-equiv='Pragma' content='no-cache'>");
     $("head").append("<meta http-equiv='Expires' content='-1'>");
     $("head").append("<link rel='dns-prefetch' href='https://cdn.jsdelivr.net/'>");
     $("head").append("<link rel='preconnect' href='https://cdn.jsdelivr.net/'>");
