@@ -10,10 +10,10 @@ My first assignment on ITRetraining100 for [Innovation Centre Banja Luka](https:
 This site is ![Website](https://img.shields.io/website?url=https%3A%2F%2Fbaleshsrle.github.io%2F&logo=bootstrap&logoColor=white&labelColor=7952B3) and you can visit it by clicking on this [![Bitly](https://img.shields.io/badge/Bitly-ee6123?&logo=bitly&logoColor=white&labelColor=555555)](https://bit.ly/3S3rPY8) link.
 
 ## Built With
-This project assignment is created by [![Bootstrap Badge](https://img.shields.io/github/v/release/twbs/bootstrap?filter=*v4*&logo=bootstrap&logoColor=white&label=Bootstrap&color=7952b3
-)](@twbs)
- , [![jQuery Badge](https://img.shields.io/badge/jQuery-0769ad?logo=jquery&logoColor=white&labelColor=555555)](https://github.com/jquery)
- & [![Font Awesome Badge](https://img.shields.io/badge/Font_Awesome-528dd7?logo=fontawesome&logoColor=white&labelColor=555555)](https://github.com/FortAwesome/Font-Awesome)
+This project assignment is created by [![Bootstrap Badge](https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&color=7952b3
+)](https://github.com/twbs/bootstrap)
+ , [![jQuery Badge](https://img.shields.io/github/v/release/jquery/jquery?filter=3.7.*&logo=jquery&logoColor=white&label=jQuery&color=0769ad)](https://github.com/jquery/jquery)
+ & [![Font Awesome Badge](https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&label=Font%20Awesome&color=528dd7)](https://github.com/FortAwesome/Font-Awesome)
  via [![jsDelivr Badge](https://img.shields.io/badge/jsDelivr-e84d3d?logo=jsdelivr&logoColor=white&labelColor=555555)](https://github.com/jsdelivr/jsdelivr)
  CDN servers and hosted by [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?logo=github&logoColor=white&labelColor=555555)](https://github.com/pages).
 
