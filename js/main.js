@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("html").attr("lang", navigator.language);
+    //$("html").attr("lang", navigator.language);
     switch (navigator.pathname) {
         case "/birthdaypresent.html":
         case "/favmovie.html":
