@@ -1,18 +1,18 @@
 $(document).ready(function () {
     //$("html").attr("lang", navigator.language);
-    switch (navigator.pathname) {
+    switch (location.pathname) {
         case "/birthdaypresent.html":
         case "/favmovie.html":
         case "/favtown.html":
         case "/hobby.html":
         case "/gallery.html":
         case "/quiz.html":
-            $("head").prepend("<meta name='google-site-verification' content='HcgjQ9u13iaWAG1FyF9yFp6-f9QYrwstKoKPNrRbbqM'>");
-            $("head").prepend("<meta name='google-site-verification' content='YXXACXsZjuu041kl41yKLww4xdiiudN1S0IEtdEeGSE'>");
-            $("head").prepend("<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>");
-            $("head").prepend("<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>");
-            $("head").prepend("<meta name='wot-verification' content='cee6cf583ee362cd666b'>");
             $("head").prepend("<meta name='norton-safeweb-site-verification' content='AE1KUNZ8BFEIRXCIVRMN7804CZR-WK4ER0C3CPJO8W9N0ZVGHX9R2BJ4RNAG2DCL6SBHR6U7BDTD9VH3JKZG3FLO1EGE5E3CVLLQO4E1FM13PDFWE0RX9GUQ8SJWKLEW'>");
+            $("head").prepend("<meta name='wot-verification' content='cee6cf583ee362cd666b'>");
+            $("head").prepend("<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>");
+            $("head").prepend("<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>");
+            $("head").prepend("<meta name='google-site-verification' content='YXXACXsZjuu041kl41yKLww4xdiiudN1S0IEtdEeGSE'>");
+            $("head").prepend("<meta name='google-site-verification' content='HcgjQ9u13iaWAG1FyF9yFp6-f9QYrwstKoKPNrRbbqM'>");
     }
     $("head").append("<meta name='author' content='Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com'>");
     $("head").append("<meta name='designer' content='BaleshSrle'>");
@@ -77,6 +77,7 @@ function provjeraOdgovora() {
     var e = form.pitanje4.value;
     var f = form.pitanje5.value;
     var g = form.pitanje6.value;
+    var h = form.pitanje7.value;
     var correct = 0;
     var incorrect = 0;
 
@@ -106,6 +107,11 @@ function provjeraOdgovora() {
         incorrect++
     }
     if (g == "Tri") {
+        correct++
+    } else {
+        incorrect++
+    }
+    if (h != "VladaArsic") {
         correct++
     } else {
         incorrect++
