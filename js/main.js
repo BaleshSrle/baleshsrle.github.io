@@ -12,6 +12,7 @@ $(document).ready(function () {
             $("head").prepend("<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>");
             $("head").prepend("<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>");
             $("head").prepend("<meta name='wot-verification' content='cee6cf583ee362cd666b'>");
+            $("head").prepend("<meta name='norton-safeweb-site-verification' content='AE1KUNZ8BFEIRXCIVRMN7804CZR-WK4ER0C3CPJO8W9N0ZVGHX9R2BJ4RNAG2DCL6SBHR6U7BDTD9VH3JKZG3FLO1EGE5E3CVLLQO4E1FM13PDFWE0RX9GUQ8SJWKLEW'>");
     }
     $("head").append("<meta name='author' content='Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com'>");
     $("head").append("<meta name='designer' content='BaleshSrle'>");
