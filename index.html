@@ -84,8 +84,8 @@
             <div class="alert alert-info alert-dismissible fade show text-center mb-1 mx-auto"
                 style="max-width: 470px;">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                HTML kod ove stranice možete pronaći na <a href="https://github.com/BaleshSrle/baleshsrle.github.io"
-                    target="_blank">ovom linku</a>.
+                HTML kod ove stranice možete vidjeti na<a href="https://github.com/BaleshSrle/baleshsrle.github.io"
+                    target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?logo=github&labelColor=555555" alt="GitHub" class="px-1"></a>.
             </div>
             <div class="card my-2 w-100 mx-auto rounded-lg">
                 <div class="row no-gutters align-items-center">
@@ -206,8 +206,8 @@
             cursor: true,
             color: 'black'
         });
-        $("td:eq(0),td:eq(2),td:eq(4),td:eq(6)").addClass("font-weight-bold");
-        $("td:eq(1),td:eq(3),td:eq(5)").addClass("align-middle");
+        $("td:even").addClass("font-weight-bold");
+        $("img[alt='GitHub'],td:eq(1),td:eq(3),td:eq(5)").addClass("align-middle");
         $("td:gt(7)").addClass("text-center");
         $("img[src*='simpleicons']").addClass("m-1");
     </script>
