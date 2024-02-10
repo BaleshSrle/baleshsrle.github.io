@@ -1,8 +1,8 @@
 [![](https://data.jsdelivr.com/v1/package/gh/BaleshSrle/baleshsrle.github.io/badge?style=rounded)](https://www.jsdelivr.com/package/gh/BaleshSrle/baleshsrle.github.io)
-[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/BaleshSrle/baleshsrle.github.io)
+[![Open in Visual Studio Code](https://img.shields.io/badge/Open_in_Visual_Studio_Code-007acc?logo=visualstudiocode&logoColor=007acc&labelColor=2c2c32)](https://open.vscode.dev/BaleshSrle/baleshsrle.github.io)
 ![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fbaleshsrle.github.io%2F)
 [![pages-build-deployment](https://github.com/BaleshSrle/baleshsrle.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/BaleshSrle/baleshsrle.github.io/actions/workflows/pages/pages-build-deployment)
-
+![GitHub repo size](https://img.shields.io/github/repo-size/baleshsrle/baleshsrle.github.io?logo=github)
 
 # ICBL_Project_Assignment_01
 My first assignment on ITRetraining100 for [Innovation Centre Banja Luka](https://icbl.ba/).
