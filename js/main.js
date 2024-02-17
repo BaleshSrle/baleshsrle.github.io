@@ -52,8 +52,10 @@ $(document).ready(function () {
         interval: 3500,
         keyboard: false,
         pause: false,
+        ride: 'carousel',
         touch: false
     });
+    $(".carousel-item:first").addClass("active");
     $("img[src*='slika']").addClass("d-block w-100 h-auto rounded-lg");
     $("footer").addClass("container-fluid bg-primary text-center text-white mt-auto mb-0 py-0 overflow-hidden fixed-bottom");
     $("#datum").text(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
