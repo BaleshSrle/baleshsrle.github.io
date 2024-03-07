@@ -37,7 +37,7 @@ $(document).ready(function () {
     $("body").addClass("d-flex flex-column h-100");
     $("main").addClass("flex-shrink-0 mb-3 pb-5");
     $("header.jumbotron.jumbotron-fluid").addClass("mb-0 py-0 overflow-hidden");
-    $("div.col-sm-10").addClass("py-md-4");
+    $("div.col-sm-10:first").addClass("py-md-4");
     $("i.fa-home,i.fa-gift,i.fa-film,i.fa-city,i.fa-wrench,i.fa-images,i.fa-gamepad,i.fa-sitemap").addClass("pr-2");
     $("div[class*='container']").addClass("py-2 mx-auto");
     $("img[src*='simpleicons']").width(32).height(32);
@@ -65,9 +65,9 @@ function mqResults() {
     var a = $('#odgovor').val();
 
     if (a == "akcioni horor") {
-        $("#rezultat").text("Odgovor je tačan.").addClass("alert alert-success w-75 text-center mt-2");
+        $("#rezultat").text("Odgovor je tačan.").addClass("alert alert-success mw-100 text-center mt-2");
     } else {
-        $("#rezultat").html("Odgovor je netačan. <br> Upišite neki drugi odgovor (ili pronađite rješenje na Wikipediji ili IMDb-u).").addClass("alert alert-danger w-75 text-center mt-2");
+        $("#rezultat").html("Odgovor je netačan. <br> Upišite neki drugi odgovor (ili pronađite rješenje na Wikipediji ili IMDb-u).").addClass("alert alert-danger mw-100 text-center mt-2");
     }
 }
 
