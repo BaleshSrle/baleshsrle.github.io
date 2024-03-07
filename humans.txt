@@ -12,12 +12,16 @@
 		Twitter: @mnrvoid_rs
 		Location: Banja Luka, Republic of Srpska, Bosnia and Herzegovina
 
-		Third: jsDelivr - A free, fast, and reliable CDN for JS and open source
-		Twitter: @mjsDelivr
-		Location: Deutschland / Germany
+		Third: GitHub - The AI-powered developer platform to build, scale, and deliver secure software
+		Twitter: @github
+		Location: San Francisco , California, USA
+		
+		Fourth: jsDelivr - A free, fast, and reliable Open Source CDN
+		Twitter: @jsDelivr
+		Location: Deutschland / Germany	
 	
 /* SITE */
-		Last update: 2024/01/27
+		Last update: 2024/03/07
 		Language: Serbian
 		Standards: HTML5, CSS, JavaScript
 		Components: jQuery, Bootstrap
