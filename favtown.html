@@ -158,7 +158,7 @@
                 <tbody>
                     <tr>
                         <td>Gradska vijećnica</td>
-                        <td></td>
+                        <td><i></i></td>
                         <td><a href="#" class="btn btn-link" role="button" data-toggle="modal"
                                 data-target="#Modal01"><img class="img-thumbnail rounded-lg"
                                     src="images/favtown/city_hall.jpg" alt="Gradska vijećnica"></a>
@@ -166,7 +166,7 @@
                     </tr>
                     <tr>
                         <td>Glavna pješačka ulica</td>
-                        <td></td>
+                        <td><i></i></td>
                         <td><a href="#" class="btn btn-link" role="button" data-toggle="modal"
                                 data-target="#Modal02"><img class="img-thumbnail rounded-lg"
                                     src="images/favtown/main_pedestrian_street.jpg" alt="Glavna pješačka ulica"></a>
@@ -174,7 +174,7 @@
                     </tr>
                     <tr>
                         <td>Katolička crkva</td>
-                        <td></td>
+                        <td><i></i></td>
                         <td><a href="#" class="btn btn-link" role="button" data-toggle="modal"
                                 data-target="#Modal03"><img class="img-thumbnail rounded-lg"
                                     src="images/favtown/catholic_church.jpg" alt="Katolička crkva"></a>
@@ -182,14 +182,14 @@
                     </tr>
                     <tr>
                         <td>Biblioteka &quot;Veljko Petrović&quot;</td>
-                        <td></td>
+                        <td><i></i></td>
                         <td><a href="#" class="btn btn-link" role="button" data-toggle="modal"
                                 data-target="#Modal04"><img class="img-thumbnail rounded-lg"
                                     src="images/favtown/library.jpg" alt="Biblioteka 'Veljko Petrović'"></a></td>
                     </tr>
                     <tr>
                         <td>Sportsko-rekreativni centar &quot;Tikvara&quot;</td>
-                        <td></td>
+                        <td><i></i></td>
                         <td><a href="#" class="btn btn-link" role="button" data-toggle="modal"
                                 data-target="#Modal05"><img class="img-thumbnail rounded-lg"
                                     src="images/favtown/src_tikvara.jpg" alt="SRC 'Tikvara'"></a></td>
@@ -220,9 +220,9 @@
     </footer>
     <script>
         $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
-        $("div.modal-dialog:eq(2),div.modal-dialog:eq(3)").removeClass("modal-lg");
+        $("div.modal-dialog").slice(2, 4).removeClass("modal-lg");
         $("td").addClass("align-middle");
-        $("td:eq(1),td:eq(4),td:eq(7),td:eq(10),td:eq(13)").html("<i class='fa-sharp fa-solid fa-xmark fa-1x text-danger'></i>");
+        $("td").find("i").addClass("fa-sharp fa-solid fa-xmark fa-1x text-danger");
     </script>
 </body>
 

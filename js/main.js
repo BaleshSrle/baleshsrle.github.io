@@ -37,7 +37,7 @@ $(document).ready(function () {
     $("body").addClass("d-flex flex-column h-100");
     $("main").addClass("flex-shrink-0 mb-3 pb-5");
     $("header.jumbotron.jumbotron-fluid").addClass("mb-0 py-0 overflow-hidden");
-    $("div.col-sm-10:first").addClass("py-md-4");
+    $("div.col-sm-10").first().addClass("py-md-4");
     $("i.fa-home,i.fa-gift,i.fa-film,i.fa-city,i.fa-wrench,i.fa-images,i.fa-gamepad,i.fa-sitemap").addClass("pr-2");
     $("div[class*='container']").addClass("py-2 mx-auto");
     $("img[src*='simpleicons']").width(32).height(32);
@@ -55,7 +55,7 @@ $(document).ready(function () {
         ride: 'carousel',
         touch: false
     });
-    $(".carousel-item:first").addClass("active");
+    $(".carousel-item").first().addClass("active");
     $("img[src*='slika']").addClass("d-block w-100 h-auto rounded-lg");
     $("footer").addClass("container-fluid bg-primary text-center text-white mt-auto mb-0 py-0 overflow-hidden fixed-bottom");
     $("#datum").text(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
@@ -119,6 +119,5 @@ function provjeraOdgovora() {
         incorrect++
     }
 
-    $("#rezultat").html("Broj tačnih odgovora: " + correct + ", broj pogrešnih odgovora: " + incorrect + ".");
-    $("#rezultat").addClass(" alert alert-info w-50 text-center mt-2 mx-auto");
+    $("#rezultat").html("Broj tačnih odgovora: " + correct + ", broj pogrešnih odgovora: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
 }

@@ -200,8 +200,8 @@
     <script>
         $("img[src*='simpleicons']").addClass("mr-1");
         $("div.card").addClass("my-2 w-100");
-        $("p.card-text:lt(2)").addClass("pl-2");
-        $("p.card-text:gt(2)").addClass("text-justify");
+        $("p.card-text").slice(0, 2).addClass("pl-2");
+        $("p.card-text").slice(3).addClass("text-justify");
         $("div.col-sm-2,div.col-sm-9").addClass("pr-md-2");
         $("div.col-sm-10:eq(1),div.col-sm-3").addClass("pl-md-2");
     </script>
