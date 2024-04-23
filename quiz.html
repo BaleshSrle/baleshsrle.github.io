@@ -8,7 +8,8 @@
     <meta name="description" content="Ovdje možete provjeriti koliko dobro me poznajete">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
-    <title>.::Balešević Srđan:: - ::Kviz::.</title>
+    <title lang="sr">.::Balešević Srđan:: - ::Kviz::.</title>
+    <title lang="en">.::Baleshevich Srdjan:: - ::Quiz::.</title>
     <!-- <style>
         @media only screen and (min-height: 1366px) {
             body {
@@ -36,8 +37,8 @@
                     <img src="images/logo.png" class="mx-auto d-block img-fluid" alt="Moj logo">
                 </div>
                 <div class="col-sm-10">
-                    <h1>Dobro došli na sajt</h1>
-                    <p>Na ovom sajt možete saznati mnogo dodatni informacija o meni</p>
+                    <h1 id="welcome"></h1>
+                    <p id="subtext"></p>
                 </div>
             </div>
         </header>
@@ -47,34 +48,33 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html"><i
-                                class="fas fa-home fa-lg"></i>Početna</a></li>
+                                class="fas fa-home fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="birthdaypresent.html"><i
-                                class="fas fa-gift fa-lg"></i>Rođendanski poklon</a></li>
+                                class="fas fa-gift fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="favmovie.html"><i
-                                class="fas fa-film fa-lg"></i>Omiljeni
-                            film</a></li>
+                                class="fas fa-film fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="favtown.html"><i
-                                class="fas fa-city fa-lg"></i>Omiljeni
-                            grad</a></li>
+                                class="fas fa-city fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="hobby.html"><i
-                                class="fas fa-wrench fa-lg"></i>Hobi</a></li>
+                                class="fas fa-wrench fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html"><i
-                                class="far fa-images fa-lg"></i>Galerija</a>
-                    </li>
+                                class="far fa-images fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="quiz.html"><i
-                                class="fas fa-gamepad fa-lg"></i>Kviz</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sitemap.xml"><i class="fas fa-sitemap fa-lg"></i>Mapa
-                            sajta</a></li>
+                                class="fas fa-gamepad fa-lg"></i><span></span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="sitemap.xml"><i
+                                class="fas fa-sitemap fa-lg"></i><span></span></a></li>
                 </ul>
             </div>
         </nav>
         <div class="container-fluid">
-            <p style="font: 25px Arial;">Koliko dobro me poznajete?</p>
+            <p style="font: 25px Arial;"><span lang="sr">Koliko dobro me poznajete?</span><span lang="en">How well do
+                    you know me?</span></p>
 
             <form class="card-columns">
 
                 <div class="card">
-                    <div class="card-header">1&#10089; Moj omiljeni grad?</div>
+                    <div class="card-header">1&#10089; <span lang="sr">Moj omiljeni grad?</span><span lang="en">My
+                            favourite town?</span></div>
                     <div class="card-body">
                         <div class="form-check">
                             <input type="radio" name="pitanje1" id="ogrovor11" value="BL">
@@ -86,30 +86,32 @@
                         </div>
                         <div class="form-check">
                             <input type="radio" name="pitanje1" id="ogrovor13" value="BGD">
-                            <label for="ogrovor13">Beograd</label>
+                            <label for="ogrovor13"><span lang="sr">Beograd</span><span lang="en">Belgrade</span></label>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header">2&#10089; Koliko posjedujem diploma iz srednje škole?
+                    <div class="card-header">2&#10089; <span lang="sr">Koliko posjedujem diploma iz srednje
+                            škole?</span><span lang="en">How many diplomas do I have from secondary school?</span>
                     </div>
                     <div class="card-body">
                         <div class="form-check">
                             <input type="radio" name="pitanje2" id="ogrovor21" value="Tri">
-                            <label for="ogrovor21">Tri</label>
+                            <label for="ogrovor21"><span lang="sr">Tri</span><span lang="en">Three</span></label>
                         </div>
                         <div class="form-check">
                             <input type="radio" name="pitanje2" id="ogrovor22" value="Jednu">
-                            <label for="ogrovor22">Jednu</label>
+                            <label for="ogrovor22"><span lang="sr">Jednu</span><span lang="en">One</span></label>
                         </div>
                         <div class="form-check">
                             <input type="radio" name="pitanje2" id="ogrovor23" value="Dvije">
-                            <label for="ogrovor23">Dvije</label>
+                            <label for="ogrovor23"><span lang="sr">Dvije</span><span lang="en">Two</span></label>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header">3&#10089; Koji od tri ponuđena računara mogu izabrati?
+                    <div class="card-header">3&#10089; <span lang="sr">Koji od tri ponuđena laptopa mogu
+                            izabrati?</span><span lang="en">Which of the three offered laptops should I choose?</span>
                     </div>
                     <div class="card-body">
                         <div class="form-check">
@@ -118,35 +120,42 @@
                         </div>
                         <div class="form-check">
                             <input type="radio" name="pitanje3" id="ogrovor32" value="Bilo koji">
-                            <label for="ogrovor32">Bilo koji</label>
+                            <label for="ogrovor32"><span lang="sr">Bilo koji</span><span lang="en">Either
+                                    one</span></label>
                         </div>
                         <div class="form-check">
                             <input type="radio" name="pitanje3" id="ogrovor33" value="FSC">
-                            <label for="ogrovor33">Neki od <abbr
-                                    title="Kompanija koja je u periodu od 1999. do 2009. poslovala pod imenom &quot;Fujitsu Siemens Computers&quot;">FSC</abbr></label>
+                            <label for="ogrovor33"><span lang="sr">Neki od <abbr
+                                        title="Kompanija koja je u periodu od 1999. do 2009. poslovala pod imenom &quot;Fujitsu Siemens Computers&quot;">FSC</abbr></span><span
+                                    lang="en">Anyone from <abbr
+                                        title="A company that operated form 1999. up untill 2009. under the name &quot;Fujitsu Siemens Computers&quot;">FSC</abbr></span></label>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header">4&#10089; Koje mjesto sam osvojio u takmičenju m:tel
-                        AppBuilder Lige za 2014. godinu?</div>
+                    <div class="card-header">4&#10089; <span lang="sr">Koje mjesto sam osvojio u takmičenju m:tel
+                            AppBuilder Lige za 2014. godinu u kategoriji &quot;Edukacija i društvena
+                            odgovornost&quot;?</span><span lang="en">What place did I win in the 2014 m:tel AppBuilder
+                            League competition in the "Education and Social Responsibility" category?</span></div>
                     <div class="card-body">
                         <div class="form-check">
                             <input type="radio" name="pitanje4" id="ogrovor41" value="Trece">
-                            <label for="ogrovor41">Treće</label>
+                            <label for="ogrovor41"><span lang="sr">Treće</span><span lang="en">Third</span>
+                            </label>
                         </div>
                         <div class="form-check">
                             <input type="radio" name="pitanje4" id="ogrovor42" value="Prvo">
-                            <label for="ogrovor42">Prvo</label>
+                            <label for="ogrovor42"><span lang="sr">Prvo</span><span lang="en">First</span></label>
                         </div>
                         <div class="form-check">
                             <input type="radio" name="pitanje4" id="ogrovor43" value="Drugo">
-                            <label for="ogrovor43">Drugo</label>
+                            <label for="ogrovor43"><span lang="sr">Drugo</span><span lang="en">Second</span></label>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header">5&#10089; Koje godine je objavljen moj omiljeni film?
+                    <div class="card-header">5&#10089; <span lang="sr">Koje godine je objavljen moj omiljeni
+                            film?</span><span lang="en">What year was my favorite movie released?</span>
                     </div>
                     <div class="card-body">
                         <div class="form-check">
@@ -164,25 +173,28 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header">6&#10089; Koliko puta su me šili na hirurškom odjeljenju
-                        dobojske bolnice?</div>
+                    <div class="card-header">6&#10089; <span lang="sr">Koliko puta su me šili na hirurškom odjeljenju
+                            dobojske bolnice?</span><span lang="en">How many times did I got stitched up by the surgeons
+                            in Doboj's Hospital surgical department?</span></div>
                     <div class="card-body">
                         <div class="form-check">
                             <input type="radio" name="pitanje6" id="ogrovor61" value="Cetiri">
-                            <label for="ogrovor61">Četiti</label>
+                            <label for="ogrovor61"><span lang="sr">Četiri</span><span lang="en">Four</span></label>
                         </div>
                         <div class="form-check">
                             <input type="radio" name="pitanje6" id="ogrovor62" value="Dva">
-                            <label for="ogrovor62">Dva</label>
+                            <label for="ogrovor62"><span lang="sr">Dva</span><span lang="en">Two</span></label>
                         </div>
                         <div class="form-check">
                             <input type="radio" name="pitanje6" id="ogrovor63" value="Tri">
-                            <label for="ogrovor63">Tri</label>
+                            <label for="ogrovor63"><span lang="sr">Tri</span><span lang="en">Three</span></label>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header">7&#10089; Od kojeg pisca sam pročitao navjeći broj književnih djela?</div>
+                    <div class="card-header">7&#10089; <span lang="sr">Od kojeg pisca sam pročitao najveći broj
+                            književnih djela?</span><span lang="en">By which writer have I read the most books?</span>
+                    </div>
                     <div class="card-body">
                         <div class="form-check">
                             <input type="radio" name="pitanje7" id="ogrovor71" value="VladaArsic">
@@ -199,7 +211,8 @@
                     </div>
                 </div>
 
-                <button type="button" class="btn btn-primary" onclick="provjeraOdgovora()">Sačuvaj</button>
+                <button type="button" class="btn btn-primary" onclick="provjeraOdgovora()"><span
+                        lang="sr">Sačuvaj</span><span lang="en">Save</span></button>
                 <button type="reset" class="btn btn-secondary">Reset</button>
             </form>
             <p></p>
@@ -207,7 +220,7 @@
         </div>
     </main>
     <footer>
-        <h3 class="font-italic">Balešević Srđan</h3>
+        <h3></h3>
         <span id="datum"></span>
     </footer>
     <script>

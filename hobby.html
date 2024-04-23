@@ -12,7 +12,8 @@
     <!-- <link rel="prefetch" href="https://www.delfi.rs/_img/artikli/"> -->
     <!--<link rel="prefetch" href="https://carobnaknjiga.rs/">-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
-    <title>.::Balešević Srđan:: - ::Hobi::.</title>
+    <title lang="sr">.::Balešević Srđan:: - ::Hobi::.</title>
+    <title lang="en">.::Balešević Srđan:: - ::Hobby::.</title>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js" async></script>
@@ -33,8 +34,8 @@
                     <img src="images/logo.png" class="mx-auto d-block img-fluid" alt="Moj logo">
                 </div>
                 <div class="col-sm-10">
-                    <h1>Dobro došli na sajt</h1>
-                    <p>Na ovom sajt možete saznati mnogo dodatni informacija o meni</p>
+                    <h1 id="welcome"></h1>
+                    <p id="subtext"></p>
                 </div>
             </div>
         </header>
@@ -44,299 +45,378 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html"><i
-                                class="fa-solid fa-home fa-lg"></i>Početna</a></li>
+                                class="fa-solid fa-home fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="birthdaypresent.html"><i
-                                class="fa-solid fa-gift fa-lg"></i>Rođendanski poklon</a></li>
+                                class="fa-solid fa-gift fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="favmovie.html"><i
-                                class="fa-solid fa-film fa-lg"></i>Omiljeni
-                            film</a></li>
+                                class="fa-solid fa-film fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="favtown.html"><i
-                                class="fa-solid fa-city fa-lg"></i>Omiljeni
-                            grad</a></li>
+                                class="fa-solid fa-city fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="hobby.html"><i
-                                class="fa-solid fa-wrench fa-lg"></i>Hobi</a></li>
+                                class="fa-solid fa-wrench fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html"><i
-                                class="fa-regular fa-images fa-lg"></i>Galerija</a>
-                    </li>
+                                class="fa-regular fa-images fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="quiz.html"><i
-                                class="fa-solid fa-gamepad fa-lg"></i>Kviz</a></li>
+                                class="fa-solid fa-gamepad fa-lg"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="sitemap.xml"><i
-                                class="fa-solid fa-sitemap fa-lg"></i>Mapa sajta</a></li>
+                                class="fa-solid fa-sitemap fa-lg"></i><span></span></a></li>
                 </ul>
             </div>
         </nav>
         <div class="container-fluid">
-            <div class="card-deck">
-                <div class="card ml-md-3 mr-md-1">
-                    <div class="card-body">
-                        <p class="card-text">Pored povremenog čitanja knjiga, vožnje i održavanja VW Golfa
-                            19E (od kojeg sam stariji skoro 3 godine), održavanja dvorišta oko vikendice (i još čega sve
-                            ne), postoje određeni hobiji koje volim sa guštom da obavljam.</p>
-                        <p class="card-text">Ti hobiji su:</p>
-                        <ul class="list-group text-left">
-                            <li class="list-group-item">Čačkanje po računaru (pretraživanje po Internetu; komunikacija
-                                preko
-                                elektronske pošte, <i class="fa-brands fa-skype fa-2x align-middle"></i> , <i
-                                    class="fa-brands fa-viber fa-2x align-middle"></i> , <i
-                                    class="fa-brands fa-telegram fa-2x align-middle"></i> i <i
-                                    class="fa-brands fa-whatsapp fa-2x align-middle"></i> , čišćenje i održavanje)</li>
-                            <li class="list-group-item">Vođenje bloga (valjda uspješno), koji možete da posjetite klikom
-                                na
-                                Wordpress ikonicu na početnoj stranici</li>
-                            <li class="list-group-item">Uređivanje ličnih projekata (koje možete posjetiti na <span
-                                    class="d-none"><a href="https://goo.gl/R3fW4" target="_blank">Projekat01</a> i
-                                </span><a href="https://goo.gl/Ztw24" target="_blank">Projekat01</a>)</li>
-                            <li class="list-group-item">Projekti tipa DIY (neke od njih možete pronaći na mom Facebook
-                                profilu u
-                                foto-albumu &quot;Mini električarski zahvati&quot;)</li>
-                        </ul>
-                    </div>
+            <div class="card">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs" id="hobbyList" role="tablist">
+                        <li class="nav-item">
+                            <a href="#hobbylist" class="nav-link active" aria-controls="HobbyList"
+                                aria-selected="true"><span lang="sr">Lista hobija</span><span lang="en">List of
+                                    hobbies</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#readbook" class="nav-link" aria-controls="ReadBooks" aria-selected="false"><span
+                                    lang="sr">Pročitane knjige</span><span lang="en">Books read</span></a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="card ml-md-1 mr-md-3">
-                    <div class="card-header h6">Knjige koje su pročitane do sada</div>
-                    <div class="card-body p-1">
-                        <div id="BookReadCarousel" class="carousel slide my-1">
-                            <div class="carousel-inner">
-                                <div class="carousel-item">
-                                    <img src="https://www.samizdatb92.rs/cached/www.samizdatb92.rs/Images/Dark-market-00000111580.jpg"
-                                        loading="eager" class="d-block mx-auto rounded-lg"
-                                        alt="Miša Gleni - Darkmarket">
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="hobbylist">
+                            <p class="card-text">
+                                <span lang="sr">Pored povremenog čitanja knjiga, vožnje i održavanja VW Golfa 19E (od
+                                    kojeg sam stariji skoro 3 godine), održavanja dvorišta oko vikendice (i još čega sve
+                                    ne), postoje određeni hobiji koje volim sa guštom da obavljam</span>
+                                <span lang="en">Besides occasional book reading, driving and maintaining a VW Golf 19E
+                                    (a car that is almost 3 years younger than me), maintaining the yard around the
+                                    cottage (and what not), there are certain hobbies that I like to do with
+                                    gusto</span>.
+                            </p>
+                            <div class="card">
+                                <div class="card-header h6">
+                                    <span lang="sr">Još neki moji hobiji</span>
+                                    <span lang="en">Some more of my hobbies</span>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/3176/darknet_u_digitalnom_podzemlju-dzejmi_bartlet_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Džejmi Bartlet - Darknet">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/3561/e_bas_vam_hvala-marko_vidojkovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Marko Vidojković - E baš vam hvala">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/1078/konstantinovo_raskrsce-dejan_stojiljkovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Dejan Stojiljković - Konstantinovo raskršće">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/2552/kainov_oziljak-vladimir_kecmanovic-_dejan_stojiljkovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Dejan Stojiljković, Vladimir Kecmanović - Kainov ožiljak">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://laguna.rs/_img/korice/2784/kisni_psi-dejan_stojiljkovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Dejan Stojiljković - Kišni psi">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/1861/duge_noci_i_crne_zastave_duge_noci_i_crne_zastave-dejan_stojiljkovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Dejan Stojiljković - Duge noći i crne zastave">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/3559/olujni_bedem-dejan_stojiljkovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Dejan Stojiljković - Olujni bedem">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/4745/dukat_za_ladjara-dejan_stojiljkovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Dejan Stojiljković - Dukat za lađara">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/5800/milutinov_greh_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Vanja Bulić - Milutinov greh">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.delfi.rs/_img/artikli/2014/04/dosije_snouden_vv.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Luk Harding - Dosije Snouden">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.delfi.rs/_img/artikli/2014/11/crveni_odred_vv.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Džejms Paterson, Maršal Karp - Crveni odred">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.delfi.rs/_img/artikli/2017/05/crveni_odred_2_vv.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Džejms Paterson, Maršal Karp - Crveni odred 2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.delfi.rs/_img/artikli/2014/03/stani_na_crtu_vv.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Džejms Paterson, Majkl Ledvidž - Stani na crtu">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://s.cdnmpro.com/215449972/p/m/5/sudija-i-porota-dzejms-paterson-endrju-gros~5625.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Džejms Paterson,Endru Gros - Sudija i porota">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.delfi.rs/_img/artikli/knjige/68/vv/delfi_digitalna_tvrdjava_den_braun.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Den Braun - Digitalna tvrđava">
-                                </div>
-                                <div class="carousel-item">
-                                    <!-- <img src="https://www.vbz.hr/wp-content/uploads/2019/01/prorocanstvo_romanovima.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Stiv Beri - Proročanstvo Romanovima"> -->
-                                    <img src="images/stiv_beri-prorocanstvo_romanovima.jpg" loading="lazy"
-                                        class="d-block mx-auto rounded-lg" alt="Stiv Beri - Proročanstvo Romanovima">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.delfi.rs/_img/artikli/2014/09/treci_metak_vv.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Milan Veruović,Nikola Vrzić - Treći metak">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://laguna.rs/_img/korice/2379/brodolom-vlada_arsic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg" alt="Vlada Arsić - Brodolom">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://laguna.rs/_img/korice/3270/noc_arhangela-vlada_arsic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Vlada Arsić - Noć arhangela">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/4569/osinje_gnezdo-vlada_arsic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Vlada Arsić - Osinje gnezdo">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.delfi.rs/_img/artikli/2021/03/1414_vv.jpg" loading="lazy"
-                                        class="d-block mx-auto rounded-lg" alt="Vlada Arsić - 14:14">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://carobnaknjiga.rs/chest/pimg/1592570489_pucanj.jpg" loading="lazy"
-                                        class="d-block mx-auto rounded-lg"
-                                        alt="Zoran S. Stojanović - Pucanj u Prištini">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/4722/sluzba-goran_zivaljevic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Goran Živaljević - Služba">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://laguna.rs/_img/korice/5596/sluzba_2-goran_zivaljevic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Goran Živaljević - Služba 2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/3268/apisov_apostol-slavisa_pavlovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Slaviša Pavlović - Apisov aspostol">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/4822/himerina_krv-slavisa_pavlovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Slaviša Pavlović - Himerina krv">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/3442/ko_je_ubio_katarinu-vuk_draskovic_s.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Vuk Drašković - Ko je ubio Katarinu">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/3094/ubistvo_u_kapetan_misinoj-nenad_novak_stefanovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Nenad Novak Stefanović - Ubistvo u Kapetan Mišinoj">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/4056/jedno_ubistvo_u_patrijarsiji-nenad_novak_stefanovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Nenad Novak Stefanović - Jedno ubistvo u Patrijaršiji">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.delfi.rs/_img/artikli/2020/12/sinisa_moj_otac_vv.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Viktorija Mihajlović - Siniša, moj otac">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/3465/slucaj_vinca-goran_milasinovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Goran Milašinović - Slučaj Vinča">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/5659/muk-goran_milasinovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg" alt="Goran Milašinović - Muk">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/4466/hipokratova_deca-mladen_stevanovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Mladen Stevanović - Hipokratova deca">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/4010/black_light-miomir_petrovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Miomir Petrović - Black light">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://laguna.rs/_img/korice/4230/minhen-robert_heris_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg" alt="Robert Heris - Minhen">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://laguna.rs/_img/korice/4134/umreti_u_prolece-ralf_rotman_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Ralf Rotman - Umreti u proleće">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/1652/grad_tajni-zoran_lj_nikolic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Zoran Lj. Nikolić - Grad tajni">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://laguna.rs/_img/korice/1647/o_vukovima_i_senkama-branislav_jankovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Branislav Janković - O vukovima i senkama">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://laguna.rs/_img/korice/2719/vetrovi_zla-branislav_jankovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Branislav Janković - Vetrovi zla">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/4225/gvozdeni_oblaci-branislav_jankovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Branislav Janković - Gvozdeni oblaci">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://laguna.rs/_img/korice/5058/zidanje_ambisa-branislav_jankovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Branislav Janković - Zidanje ambisa">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://laguna.rs/_img/korice/2967/peta_zica-branislav_jankovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Branislav Janković - Peta žica">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://laguna.rs/_img/korice/5328/suze_svetog_nikole_-_cirilica-branislav_jankovic_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Branislav Janković - Suze Svetog Nikole">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://laguna.rs/_img/korice/5239/kremanska_straza_v.jpg" loading="lazy"
-                                        class="d-block mx-auto rounded-lg" alt="Aleksandar Gajić - Kremanska straža">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.laguna.rs/_img/korice/5774/vizantijski_sultan-seldzuk_altun_v.jpg"
-                                        loading="lazy" class="d-block mx-auto rounded-lg"
-                                        alt="Seldžuk Altun - Vizantijski sultan">
+                                <ul class="list-group list-group-flush text-left">
+                                    <li class="list-group-item">
+                                        <span lang="sr">Čačkanje po računaru (pretraživanje po Internetu; komunikacija
+                                            preko elektronske pošte, <i
+                                                class="fa-brands fa-discord fa-2x align-middle"></i> , <i
+                                                class="fa-brands fa-skype fa-2x align-middle"></i> , <i
+                                                class="fa-brands fa-telegram fa-2x align-middle"></i> , <i
+                                                class="fa-brands fa-twitch fa-2x align-middle"></i> , <i
+                                                class="fa-brands fa-viber fa-2x align-middle"></i> i <i
+                                                class="fa-brands fa-whatsapp fa-2x align-middle"></i> , čišćenje i
+                                            održavanje)</span>
+                                        <span lang="en">Tinkering arround computers (browsing / searching the Internet;
+                                            communicating via e-mail, <i
+                                                class="fa-brands fa-discord fa-2x align-middle"></i> , <i
+                                                class="fa-brands fa-skype fa-2x align-middle"></i> , <i
+                                                class="fa-brands fa-telegram fa-2x align-middle"></i> , <i
+                                                class="fa-brands fa-twitch fa-2x align-middle"></i> , <i
+                                                class="fa-brands fa-viber fa-2x align-middle"></i> &amp; <i
+                                                class="fa-brands fa-whatsapp fa-2x align-middle"></i> , cleaning &amp;
+                                            maintenance)</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span lang="sr">Vođenje bloga (valjda uspješno), koji možete da posjetite klikom
+                                            na Wordpress ikonicu na početnoj stranici</span>
+                                        <span lang="en">Running a blog (successfully, I guess), which you can visit by
+                                            by clicking on WordPress icon on my home page</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span lang="sr">Uređivanje ličnih projekata (koje možete posjetiti na <span
+                                                class="d-none"><a href="https://goo.gl/R3fW4"
+                                                    target="_blank">Projekat01</a> i </span><a
+                                                href="https://goo.gl/Ztw24" target="_blank">Projekat01</a>)</span>
+                                        <span lang="en">Maintaining personal projects (some of them you can visit at
+                                            <span class="d-none"><a href="https://goo.gl/R3fW4"
+                                                    target="_blank">Projekat01</a> &amp; </span><a
+                                                href="https://goo.gl/Ztw24" target="_blank">Project01</a>)</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span lang="sr">Projekti tipa DIY (neke od njih možete pronaći na mom Facebook
+                                            profilu u foto-albumu &quot;Mini električarski zahvati&quot;)</span>
+                                        <span lang="en">DIY projects (some of them can be found on my
+                                            Facebook profile in the photo album &quot;Mini electrical
+                                            projects&quot;)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="readbook">
+                            <p class="card-text">
+                                <span lang="sr">Ovdje možete da vidite knjige koje sam pročitao do sada.</span>
+                                <span lang="en">Here you can see the books that I have read until now.</span>
+                            </p>
+                            <div id="BookReadCarousel" class="carousel slide my-1">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item">
+                                        <img src="https://www.samizdatb92.rs/cached/www.samizdatb92.rs/Images/Dark-market-00000111580.jpg"
+                                            loading="eager" class="d-block mx-auto rounded-lg"
+                                            alt="Miša Gleni - Darkmarket">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/3176/darknet_u_digitalnom_podzemlju-dzejmi_bartlet_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Džejmi Bartlet - Darknet">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/3561/e_bas_vam_hvala-marko_vidojkovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Marko Vidojković - E baš vam hvala">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/1078/konstantinovo_raskrsce-dejan_stojiljkovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Dejan Stojiljković - Konstantinovo raskršće">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/2552/kainov_oziljak-vladimir_kecmanovic-_dejan_stojiljkovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Dejan Stojiljković, Vladimir Kecmanović - Kainov ožiljak">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://laguna.rs/_img/korice/2784/kisni_psi-dejan_stojiljkovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Dejan Stojiljković - Kišni psi">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/1861/duge_noci_i_crne_zastave_duge_noci_i_crne_zastave-dejan_stojiljkovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Dejan Stojiljković - Duge noći i crne zastave">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/3559/olujni_bedem-dejan_stojiljkovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Dejan Stojiljković - Olujni bedem">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/4745/dukat_za_ladjara-dejan_stojiljkovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Dejan Stojiljković - Dukat za lađara">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/5800/milutinov_greh_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Vanja Bulić - Milutinov greh">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.delfi.rs/_img/artikli/2014/04/dosije_snouden_vv.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Luk Harding - Dosije Snouden">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.delfi.rs/_img/artikli/2014/11/crveni_odred_vv.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Džejms Paterson, Maršal Karp - Crveni odred">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.delfi.rs/_img/artikli/2017/05/crveni_odred_2_vv.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Džejms Paterson, Maršal Karp - Crveni odred 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.delfi.rs/_img/artikli/2014/03/stani_na_crtu_vv.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Džejms Paterson, Majkl Ledvidž - Stani na crtu">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://s.cdnmpro.com/215449972/p/m/5/sudija-i-porota-dzejms-paterson-endrju-gros~5625.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Džejms Paterson,Endru Gros - Sudija i porota">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.delfi.rs/_img/artikli/knjige/68/vv/delfi_digitalna_tvrdjava_den_braun.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Den Braun - Digitalna tvrđava">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <!-- <img src="https://www.vbz.hr/wp-content/uploads/2019/01/prorocanstvo_romanovima.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Stiv Beri - Proročanstvo Romanovima"> -->
+                                        <img src="images/stiv_beri-prorocanstvo_romanovima.jpg" loading="lazy"
+                                            class="d-block mx-auto rounded-lg"
+                                            alt="Stiv Beri - Proročanstvo Romanovima">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.delfi.rs/_img/artikli/2014/09/treci_metak_vv.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Milan Veruović,Nikola Vrzić - Treći metak">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://laguna.rs/_img/korice/2379/brodolom-vlada_arsic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Vlada Arsić - Brodolom">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://laguna.rs/_img/korice/3270/noc_arhangela-vlada_arsic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Vlada Arsić - Noć arhangela">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/4569/osinje_gnezdo-vlada_arsic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Vlada Arsić - Osinje gnezdo">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.delfi.rs/_img/artikli/2021/03/1414_vv.jpg" loading="lazy"
+                                            class="d-block mx-auto rounded-lg" alt="Vlada Arsić - 14:14">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://carobnaknjiga.rs/chest/pimg/1592570489_pucanj.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Zoran S. Stojanović - Pucanj u Prištini">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/4722/sluzba-goran_zivaljevic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Goran Živaljević - Služba">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://laguna.rs/_img/korice/5596/sluzba_2-goran_zivaljevic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Goran Živaljević - Služba 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/3268/apisov_apostol-slavisa_pavlovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Slaviša Pavlović - Apisov aspostol">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/4822/himerina_krv-slavisa_pavlovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Slaviša Pavlović - Himerina krv">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/3442/ko_je_ubio_katarinu-vuk_draskovic_s.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Vuk Drašković - Ko je ubio Katarinu">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/3094/ubistvo_u_kapetan_misinoj-nenad_novak_stefanovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Nenad Novak Stefanović - Ubistvo u Kapetan Mišinoj">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/4056/jedno_ubistvo_u_patrijarsiji-nenad_novak_stefanovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Nenad Novak Stefanović - Jedno ubistvo u Patrijaršiji">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.delfi.rs/_img/artikli/2020/12/sinisa_moj_otac_vv.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Viktorija Mihajlović - Siniša, moj otac">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/3465/slucaj_vinca-goran_milasinovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Goran Milašinović - Slučaj Vinča">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/5659/muk-goran_milasinovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Goran Milašinović - Muk">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/4466/hipokratova_deca-mladen_stevanovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Mladen Stevanović - Hipokratova deca">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/4010/black_light-miomir_petrovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Miomir Petrović - Black light">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://laguna.rs/_img/korice/4230/minhen-robert_heris_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Robert Heris - Minhen">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://laguna.rs/_img/korice/4134/umreti_u_prolece-ralf_rotman_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Ralf Rotman - Umreti u proleće">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/1652/grad_tajni-zoran_lj_nikolic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Zoran Lj. Nikolić - Grad tajni">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://laguna.rs/_img/korice/1647/o_vukovima_i_senkama-branislav_jankovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Branislav Janković - O vukovima i senkama">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://laguna.rs/_img/korice/2719/vetrovi_zla-branislav_jankovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Branislav Janković - Vetrovi zla">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/4225/gvozdeni_oblaci-branislav_jankovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Branislav Janković - Gvozdeni oblaci">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://laguna.rs/_img/korice/5058/zidanje_ambisa-branislav_jankovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Branislav Janković - Zidanje ambisa">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://laguna.rs/_img/korice/2967/peta_zica-branislav_jankovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Branislav Janković - Peta žica">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://laguna.rs/_img/korice/5328/suze_svetog_nikole_-_cirilica-branislav_jankovic_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Branislav Janković - Suze Svetog Nikole">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://laguna.rs/_img/korice/5239/kremanska_straza_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Aleksandar Gajić - Kremanska straža">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.laguna.rs/_img/korice/5774/vizantijski_sultan-seldzuk_altun_v.jpg"
+                                            loading="lazy" class="d-block mx-auto rounded-lg"
+                                            alt="Seldžuk Altun - Vizantijski sultan">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- <div class="card-deck">
+                <div class="card ml-md-3 mr-md-1">
+                    <div class="card-body">
+                        <p class="card-text">Pored povremenog čitanja knjiga, vožnje i održavanja VW Golfa
+                            19E (od kojeg sam stariji skoro 3 godine), održavanja dvorišta oko vikendice (i još čega sve
+                            ne), postoje određeni hobiji koje volim sa guštom da obavljam.</p>
+                        <p class="card-text">Ti hobiji su:</p>
+
+                    </div>
+                </div>
+                <div class="card ml-md-1 mr-md-3">
+                    <div class="card-header h6">Knjige koje su pročitane do sada</div>
+                    <div class="card-body p-1">
+
+                    </div>
+                </div>
+            </div> -->
         </div>
     </main>
     <footer>
-        <h3 class="font-italic">Balešević Srđan</h3>
+        <h3></h3>
         <span id="datum"></span>
     </footer>
     <script>
+        $('#hobbyList a').on('click', function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
         $("div.card").addClass("mx-auto mw-100");
+        $("a.nav-link").slice(8).attr("role", "tab");
         $("p.card-text").eq(0).addClass("text-justify");
     </script>
 </body>

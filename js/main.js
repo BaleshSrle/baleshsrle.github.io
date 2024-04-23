@@ -1,5 +1,35 @@
 $(document).ready(function () {
     //$("html").attr("lang", navigator.language);
+    var BrowserLang = navigator.language;
+    if (BrowserLang.includes("sr") || BrowserLang.includes("hr") || BrowserLang.includes("bs")) {
+        $("h1#welcome").text("Dobrodošli na sajt");
+        $("p#subtext").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni");
+        $("li.nav-item a span").eq(0).text("Početna");
+        $("li.nav-item a span").eq(1).text("Rođendanski poklon");
+        $("li.nav-item a span").eq(2).text("Omiljeni film");
+        $("li.nav-item a span").eq(3).text("Omiljeni grad");
+        $("li.nav-item a span").eq(4).text("Hobi");
+        $("li.nav-item a span").eq(5).text("Galerija");
+        $("li.nav-item a span").eq(6).text("Kviz");
+        $("li.nav-item a span").eq(7).text("Mapa sajta");
+        $("footer").children("h3").addClass("font-italic").text("Balešević Srđan");
+        $("[lang='sr']").show(1);
+        $("[lang='en']").hide(1);
+    } else {
+        $("h1#welcome").text("Welcome to the website");
+        $("p#subtext").text("A lot of additional information can be found about me on this website");
+        $("li.nav-item a span").eq(0).text("Home");
+        $("li.nav-item a span").eq(1).text("Birthday present");
+        $("li.nav-item a span").eq(2).text("Favourite movie");
+        $("li.nav-item a span").eq(3).text("Favourite town");
+        $("li.nav-item a span").eq(4).text("Hobby");
+        $("li.nav-item a span").eq(5).text("Gallery");
+        $("li.nav-item a span").eq(6).text("Quiz");
+        $("li.nav-item a span").eq(7).text("Site Map");
+        $("footer").children("h3").addClass("font-italic").text("Baleshevich Srdjan");
+        $("[lang='en']").show(1);
+        $("[lang='sr']").hide(1);
+    }
     switch (location.pathname) {
         case "/birthdaypresent.html":
         case "/favmovie.html":
@@ -41,7 +71,7 @@ $(document).ready(function () {
     $("i.fa-home,i.fa-gift,i.fa-film,i.fa-city,i.fa-wrench,i.fa-images,i.fa-gamepad,i.fa-sitemap").addClass("pr-2");
     $("div[class*='container']").addClass("py-2 mx-auto");
     $("img[src*='simpleicons']").width(32).height(32);
-    $("div.card").addClass("shadow");
+    $("div.card").addClass("shadow-sm");
     $("#lenovoThinkPadX230_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-434-detail");
     $("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsc-lifebook-s752-detail");
     $("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
@@ -58,16 +88,19 @@ $(document).ready(function () {
     $(".carousel-item").first().addClass("active");
     $("img[src*='slika']").addClass("d-block w-100 h-auto rounded-lg");
     $("footer").addClass("container-fluid bg-primary text-center text-white mt-auto mb-0 py-0 overflow-hidden fixed-bottom");
+    $("footer").children("h3[lang='sr']").addClass("font-italic").text("Balešević Srđan");
     $("#datum").text(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
 });
 
 function mqResults() {
     var a = $('#odgovor').val();
 
-    if (a == "akcioni horor") {
-        $("#rezultat").text("Odgovor je tačan.").addClass("alert alert-success mw-100 text-center mt-2");
+    if (a == "akcioni horor" || a == "action horror") {
+        $("#rezultat").attr("lang", "sr").text("Odgovor je tačan.").addClass("alert alert-success mw-100 text-center mt-2");
+        $("#rezultat").attr("lang", "en").text("The answer is correct.").addClass("alert alert-success mw-100 text-center mt-2");
     } else {
         $("#rezultat").html("Odgovor je netačan. <br> Upišite neki drugi odgovor (ili pronađite rješenje na Wikipediji ili IMDb-u).").addClass("alert alert-danger mw-100 text-center mt-2");
+        $("#rezultat").attr("lang", "en").html("The answer is incorrect. <br> Type another answer (or search for the answer to the question on Wikipedia or IMDb).").addClass("alert alert-danger mw-100 text-center mt-2");
     }
 }
 
@@ -84,40 +117,69 @@ function provjeraOdgovora() {
     var incorrect = 0;
 
     if (b != "BGD") {
+        $("div.card").eq(0).addClass("border-success");
+        $("div.card-body").eq(0).addClass("text-success");
         correct++
     } else {
+        $("div.card").eq(0).addClass("border-danger");
+        $("div.card-body").eq(0).addClass("text-danger");
         incorrect++
     }
     if (c == "Dvije") {
+        $("div.card").eq(1).addClass("border-success");
+        $("div.card-body").eq(1).addClass("text-success");
         correct++
     } else {
+        $("div.card").eq(1).addClass("border-danger");
+        $("div.card-body").eq(1).addClass("text-danger");
         incorrect++
     }
     if (d == "Bilo koji") {
+        $("div.card").eq(2).addClass("border-success");
+        $("div.card-body").eq(2).addClass("text-success");
         correct++
     } else {
+        $("div.card").eq(2).addClass("border-danger");
+        $("div.card-body").eq(2).addClass("text-danger");
         incorrect++
     }
     if (e == "Trece") {
+        $("div.card").eq(3).addClass("border-success");
+        $("div.card-body").eq(3).addClass("text-success");
         correct++
     } else {
+        $("div.card").eq(3).addClass("border-danger");
+        $("div.card-body").eq(3).addClass("text-danger");
         incorrect++
     }
     if (f == "1999") {
+        $("div.card").eq(4).addClass("border-success");
+        $("div.card-body").eq(4).addClass("text-success");
         correct++
     } else {
+        $("div.card").eq(4).addClass("border-danger");
+        $("div.card-body").eq(4).addClass("text-danger");
         incorrect++
     }
     if (g == "Tri") {
+        $("div.card").eq(5).addClass("border-success");
+        $("div.card-body").eq(5).addClass("text-success");
         correct++
     } else {
+        $("div.card").eq(5).addClass("border-danger");
+        $("div.card-body").eq(5).addClass("text-danger");
         incorrect++
     }
     if (h != "VladaArsic") {
+        $("div.card").eq(6).addClass("border-success");
+        $("div.card-body").eq(6).addClass("text-success");
         correct++
     } else {
+        $("div.card").eq(6).addClass("border-danger");
+        $("div.card-body").eq(6).addClass("text-danger");
         incorrect++
     }
 
-    $("#rezultat").html("Broj tačnih odgovora: " + correct + ", broj pogrešnih odgovora: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
+    $("#rezultat").attr("lang", "sr").html("Broj tačnih odgovora: " + correct + ", broj pogrešnih odgovora: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
+    $("#rezultat").attr("lang", "en").html("Number of currect answers: " + correct + ", number of wrong answers: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
 }
