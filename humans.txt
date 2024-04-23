@@ -21,7 +21,7 @@
 		Location: Deutschland / Germany	
 	
 /* SITE */
-		Last update: 2024/04/11
+		Last update: 2024/04/23
 		Language: Serbian
 		Standards: HTML5, CSS, JavaScript
 		Components: jQuery, Bootstrap

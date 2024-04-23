@@ -2,8 +2,8 @@ $(document).ready(function () {
     //$("html").attr("lang", navigator.language);
     var BrowserLang = navigator.language;
     if (BrowserLang.includes("sr") || BrowserLang.includes("hr") || BrowserLang.includes("bs")) {
-        $("h1#welcome").text("Dobrodošli na sajt");
-        $("p#subtext").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni");
+        $("[lang='sr']").show(1);
+        $("[lang='en']").hide(1);
         $("li.nav-item a span").eq(0).text("Početna");
         $("li.nav-item a span").eq(1).text("Rođendanski poklon");
         $("li.nav-item a span").eq(2).text("Omiljeni film");
@@ -12,12 +12,9 @@ $(document).ready(function () {
         $("li.nav-item a span").eq(5).text("Galerija");
         $("li.nav-item a span").eq(6).text("Kviz");
         $("li.nav-item a span").eq(7).text("Mapa sajta");
-        $("footer").children("h3").addClass("font-italic").text("Balešević Srđan");
-        $("[lang='sr']").show(1);
-        $("[lang='en']").hide(1);
     } else {
-        $("h1#welcome").text("Welcome to the website");
-        $("p#subtext").text("A lot of additional information can be found about me on this website");
+        $("[lang='en']").show(1);
+        $("[lang='sr']").hide(1);
         $("li.nav-item a span").eq(0).text("Home");
         $("li.nav-item a span").eq(1).text("Birthday present");
         $("li.nav-item a span").eq(2).text("Favourite movie");
@@ -26,9 +23,6 @@ $(document).ready(function () {
         $("li.nav-item a span").eq(5).text("Gallery");
         $("li.nav-item a span").eq(6).text("Quiz");
         $("li.nav-item a span").eq(7).text("Site Map");
-        $("footer").children("h3").addClass("font-italic").text("Baleshevich Srdjan");
-        $("[lang='en']").show(1);
-        $("[lang='sr']").hide(1);
     }
     switch (location.pathname) {
         case "/birthdaypresent.html":
