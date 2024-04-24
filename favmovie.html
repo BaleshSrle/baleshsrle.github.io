@@ -35,7 +35,7 @@
                 <div class="col-sm-2">
                     <img src="images/logo.png" class="mx-auto d-block img-fluid" alt="Moj logo">
                 </div>
-                <div class="col-sm-10">
+                <div class="col-sm-9">
                     <h1 id="welcome">
                         <span lang="sr">Dobrodošli na sajt</span>
                         <span lang="en">Welcome to the website</span>
@@ -44,6 +44,10 @@
                         <span lang="sr">Na ovom sajt možete saznati mnogo dodatnih informacija o meni</span>
                         <span lang="en">A lot of additional information can be found about me on this website</span>
                     </p>
+                </div>
+                <div class="col-sm-1">
+                    <span class="fi fi-rs" lang="sr"></span>
+                    <span class="fi fi-gb-eng" lang="en"></span>
                 </div>
             </div>
         </header>
@@ -88,7 +92,7 @@
                         </p>
                         <p class="card-text">
                             <span class="font-weight-bold h6 pr-2">
-                                <span lang=" sr">Godina objavljivanja filma</span>
+                                <span lang="sr">Godina objavljivanja filma</span>
                                 <span lang="en">Release year</span>
                             </span>1999.
                         </p>
@@ -232,10 +236,10 @@
     <script>
         $("img[src*='simpleicons']").addClass("mr-1");
         $("div.card").addClass("my-2 w-100");
-        $("p.card-text").slice(0, 2).addClass("pl-2");
+        $("p.card-text").slice(0, 2).addClass("pl-2 pt-1");
         $("p.card-text").slice(3).addClass("text-justify");
-        $("div.col-sm-2,div.col-sm-9").addClass("pr-md-2");
-        $("div.col-sm-10:eq(1),div.col-sm-3").addClass("pl-md-2");
+        $("div.col-sm-2:eq(1),div.col-sm-9:eq(1)").addClass("pr-md-2");
+        $("div.col-sm-10,div.col-sm-3").addClass("pl-md-2");
     </script>
 </body>
 

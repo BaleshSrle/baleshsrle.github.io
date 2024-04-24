@@ -57,11 +57,15 @@ $(document).ready(function () {
     $("head").append("<link rel='preconnect' href='https://cdn.jsdelivr.net/'>");
     $("head").append("<link rel='icon' href='images/logo.png' type='image/png'>");
     $("head").append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css'>");
+    $("head").append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>");
     $("[rel~='preconnect'],[rel~='stylesheet'],[src$='jquery.slim.min.js'],[src$='bootstrap.bundle.min.js'],[src$='jquery.typewriter.min.js'],[src$='jquery.countdown.min.js']").attr("crossorigin", "anonymous");
     $("body").addClass("d-flex flex-column h-100");
     $("main").addClass("flex-shrink-0 mb-3 pb-5");
     $("header.jumbotron.jumbotron-fluid").addClass("mb-0 py-0 overflow-hidden");
-    $("div.col-sm-10").first().addClass("py-md-4");
+    $("div.col-sm-2").eq(0).addClass("order-1 order-md-0");
+    $("div.col-sm-9").eq(0).addClass("py-md-4 order-2 order-md-1");
+    $("div.col-sm-1").addClass("order-0 order-md-2");
+    $("span.fi").addClass("float-right m-1 border border-warning");
     $("i.fa-home,i.fa-gift,i.fa-film,i.fa-city,i.fa-wrench,i.fa-images,i.fa-gamepad,i.fa-sitemap").addClass("pr-2");
     $("div[class*='container']").addClass("py-2 mx-auto");
     $("img[src*='simpleicons']").width(32).height(32);
