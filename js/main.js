@@ -1,8 +1,7 @@
 $(document).ready(function () {
     //$("html").attr("lang", navigator.language);
     var BrowserLang = navigator.language;
-    const LangList = new Array(["sr", "hr", "bs"]);
-    if (BrowserLang.includes(LangList)) {
+    if (BrowserLang.includes("sr") || BrowserLang.includes("hr") || BrowserLang.includes("bs")) {
         $("[lang='sr']").show(1);
         $("[lang='en']").hide(1);
         $("li.nav-item a span").eq(0).text("Početna");
