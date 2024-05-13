@@ -12,7 +12,7 @@ This site is ![Website](https://img.shields.io/website?url=https%3A%2F%2Fbaleshs
 ## Built With
 This project assignment is created by [![Bootstrap Badge](https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&color=7952b3
 )](https://github.com/twbs/bootstrap)
- , [![jQuery Badge](https://img.shields.io/github/v/release/jquery/jquery?filter=3.7.*&logo=jquery&logoColor=white&label=jQuery&color=0769ad)](https://github.com/jquery/jquery)
+ , [![jQuery Badge](https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&color=0769ad)](https://github.com/jquery/jquery)
  & [![Font Awesome Badge](https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&label=Font%20Awesome&color=528dd7)](https://github.com/FortAwesome/Font-Awesome)
  via [![jsDelivr Badge](https://img.shields.io/badge/jsDelivr-e84d3d?logo=jsdelivr&logoColor=white&labelColor=555555)](https://github.com/jsdelivr/jsdelivr)
  CDN servers and hosted by [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?logo=github&logoColor=white&labelColor=555555)](https://github.com/pages).
