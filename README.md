@@ -15,5 +15,5 @@ This project assignment is created by [![Bootstrap Badge](https://img.shields.io
  , [![jQuery Badge](https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&color=0769ad)](https://github.com/jquery/jquery)
  & [![Font Awesome Badge](https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&label=Font%20Awesome&color=528dd7)](https://github.com/FortAwesome/Font-Awesome)
  via [![jsDelivr Badge](https://img.shields.io/badge/jsDelivr-e84d3d?logo=jsdelivr&logoColor=white&labelColor=555555)](https://github.com/jsdelivr/jsdelivr)
- CDN servers and hosted by [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?logo=github&logoColor=white&labelColor=555555)](https://github.com/pages).
+ CDN servers and hosted by [![GitHub Pages](https://img.shields.io/badge/by%20GitHub-181717?logo=githubpages&logoColor=white&logoSize=auto&labelColor=222222)](https://github.com/pages).
 

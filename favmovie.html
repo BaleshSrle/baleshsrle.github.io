@@ -16,7 +16,7 @@
             }
         }
     </style> -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js" async></script>
     <script>
@@ -210,14 +210,15 @@
                                     <form class="input-group mb-3 mx-auto">
                                         <input type="text" id="odgovor" class="form-control">
                                         <div class="input-group-append">
-                                            <button type="button" class="btn btn-primary" onclick="mqResults()">
+                                            <button id="movieAnswerCheckBtn">
                                                 <span lang="sr">Pošalji</span>
                                                 <span lang="en">Send</span>
                                             </button>
-                                            <button type="reset" class="btn btn-secondary">Reset</button>
+                                            <button id="movieAnswerResetBtn">Reset</button>
                                         </div>
                                     </form>
-                                    <p id="rezultat" class="mx-auto"></p>
+                                    <p id="rezultat" lang="sr"></p>
+                                    <p id="rezultat" lang="en"></p>
                                 </div>
                             </div>
                         </div>
