@@ -162,7 +162,7 @@ $(document).ready(function () {
     $("button#resetQuiz").on("click", function () {
         $("div.card").removeClass("border-success border-danger");
         $("div.card-body").removeClass("text-success text-danger");
-        return location.reload();
+        $("p#rezultat.alert").alert("close");
     }).attr("type", "reset").addClass("btn btn-secondary");
     $("footer").addClass("container-fluid bg-primary text-center text-white mt-auto mb-0 py-0 overflow-hidden fixed-bottom");
     //$("footer").children("h3[lang='sr']").addClass("font-italic").text("Balešević Srđan");
