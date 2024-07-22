@@ -47,7 +47,7 @@ $(document).ready(function () {
     $("span.fi").addClass("float-right m-1 border border-warning");
     $("li.nav-item").find("i").addClass("pr-2");
     $("div[class*='container']").addClass("py-2 mx-auto");
-    //$("img[src*='simpleicons']").width(32).height(32);
+    $("img[src*='simpleicons']").width(32).height(32);
     $("td[colspan]").last().find("img").addClass("m-1").width(32).height(32);
     $("div.card").addClass("shadow-sm");
     $("#lenovoThinkPadX230_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-434-detail");
