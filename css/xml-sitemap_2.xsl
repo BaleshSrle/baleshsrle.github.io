@@ -33,11 +33,11 @@
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
-								<th style="width: 60%;" class="align-middle">URL</th>
-								<th style="width: 5%;" class="align-middle text-center">Prioritet</th>
-								<th style="width: 4%;" class="align-middle text-center">Slike</th>
-								<th style="width: 13%;" class="text-center">Učestalost izmjena</th>
-								<th style="width: 13%" class="text-center">Poslednja izmjena</th>
+								<th>URL</th>
+								<th style="width: 5%;">Prioritet</th>
+								<th style="width: 4%;">Slike</th>
+								<th>Učestalost izmjena</th>
+								<th>Poslednja izmjena</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -45,7 +45,7 @@
 							<xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
 							<xsl:for-each select="sitemap:urlset/sitemap:url">
 								<tr>
-									<td class="align-middle">
+									<td>
 										<xsl:variable name="itemURL">
 											<xsl:value-of select="sitemap:loc"/>
 										</xsl:variable>
@@ -53,16 +53,16 @@
 											<xsl:value-of select="sitemap:loc"/>
 										</a>
 									</td>										
-									<td class="align-middle text-center">
+									<td>
 										<xsl:value-of select="concat(sitemap:priority*100,'%')"/>
 									</td>
-									<td class="align-middle text-center">
+									<td>
 										<xsl:value-of select="count(image:image)"/>
 									</td>
-									<td class="align-middle text-center">
+									<td>
 										<xsl:value-of select="concat(translate(substring(sitemap:changefreq, 1, 1),concat($lower, $upper),concat($upper, $lower)),substring(sitemap:changefreq, 2))"/>
 									</td>
-									<td class="align-middle text-center">
+									<td>
 										<xsl:value-of select="concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)))"/>
 									</td>
 								</tr>
@@ -71,10 +71,19 @@
 					</table>
 					</div>
 					<p>
-						<a href="https://validator.w3.org/check?uri=https%3A%2F%2Fbaleshevich.dobojcaffe.com/itp100/sitemap.xml" target="_blank"><img src="https://validator.w3.org/images/valid_icons/valid-xml10-blue" alt="Valid XML 1.0 !" class="float-left"></img></a>
+						<a href="https://validator.w3.org/check?uri=https%3A%2F%2Fbaleshsrle.github.io/sitemap.xml" target="_blank"><img src="https://validator.w3.org/images/valid_icons/valid-xml10-blue" alt="Valid XML 1.0 !" class="float-left"></img></a>
 					</p>
 				</div>
 			</body>
+			<script>
+				$(document).ready(function () {
+					$("link[rel='stylesheet'],script[src]:lt(2)").attr("crossorigin", "anonymous");
+					$("th:lt(3):gt(0),td:not(:eq(0),:eq(5),:eq(10),:eq(15),:eq(20),:eq(25),:eq(30))").addClass("align-middle text-center");
+					$("th").eq(0).css("width", "60%").addClass("align-middle");
+					$("th").slice(3).css("width", "13%").addClass("text-center");
+					$("td").filter(":eq(0),:eq(5),:eq(10),:eq(15),:eq(20),:eq(25),:eq(30)").addClass("align-middle");
+				});
+			</script>
 		</html>
 	</xsl:template>
 </xsl:stylesheet>
