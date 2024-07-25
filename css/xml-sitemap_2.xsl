@@ -18,7 +18,7 @@
 				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 			</head>
 			<body>
-				<div class="container-fluid">
+				<div>
 					<h1>XML Mapa sajta</h1>
 					<p>
 						Generisano pomoću <a href="https://yoast.com/" target="_blank">Yoast</a>-ovog WordPress SEO dodatka, ovo je XML Mapa sajta, namjenjena za korištenje od strane pretraživača.
@@ -71,12 +71,13 @@
 						</table>
 					</div>
 				</div>
-				<footer class="container-fluid">
+				<footer>
 					<a href="https://validator.w3.org/check?uri=https%3A%2F%2Fbaleshsrle.github.io/sitemap.xml" target="_blank"><img src="https://validator.w3.org/images/valid_icons/valid-xml10-blue" alt="Valid XML 1.0 !" class="float-left"></img></a>
 				</footer>
 				<script>
 					$(document).ready(function () {
 						$("link[rel='stylesheet'],script[src]:lt(2)").attr("crossorigin", "anonymous");
+						$("div:eq(0),footer").addClass("container-fluid");
 						$("a:lt(2)").addClass("font-weight-bold text-danger");
 						$("th:eq(0)").css("width", "60%").addClass("align-middle");
 						$("th:lt(3):gt(0),td:not(:eq(0),:eq(5),:eq(10),:eq(15),:eq(20),:eq(25),:eq(30))").addClass("align-middle text-center");
