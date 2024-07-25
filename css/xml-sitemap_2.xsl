@@ -21,66 +21,67 @@
 				<div class="container-fluid">
 					<h1>XML Mapa sajta</h1>
 					<p>
-						Generisano pomoću <a href="https://yoast.com/" target="_blank" class="font-weight-bold text-danger">Yoast</a>-ovog WordPress SEO dodatka, ovo je XML Mapa sajta, namjenjena za korištenje od strane pretraživača.
+						Generisano pomoću <a href="https://yoast.com/" target="_blank">Yoast</a>-ovog WordPress SEO dodatka, ovo je XML Mapa sajta, namjenjena za korištenje od strane pretraživača.
 					</p>
 					<p>
-						Više informacija o XML mapama sajtova možete pronaći na <a href="https://www.sitemaps.org" target="_blank" class="font-weight-bold text-danger">sitemaps.org</a>.
+						Više informacija o XML mapama sajtova možete pronaći na <a href="https://www.sitemaps.org" target="_blank">sitemaps.org</a>.
 					</p>
 					<p>
 						Ova mapa sajta sadrži <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/> URL adresa.
 					</p>
 					<div class="table-responsive">
-					<table class="table table-striped table-hover">
-						<thead>
-							<tr>
-								<th>URL</th>
-								<th style="width: 5%;">Prioritet</th>
-								<th style="width: 4%;">Slike</th>
-								<th>Učestalost izmjena</th>
-								<th>Poslednja izmjena</th>
-							</tr>
-						</thead>
-						<tbody>
-							<xsl:variable name="lower" select="'abcdefghijklmnopqrstuvwxyz'"/>
-							<xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
-							<xsl:for-each select="sitemap:urlset/sitemap:url">
+						<table class="table table-striped table-hover">
+							<thead>
 								<tr>
-									<td>
-										<xsl:variable name="itemURL">
-											<xsl:value-of select="sitemap:loc"/>
-										</xsl:variable>
-										<a href="{$itemURL}" target="_blank">
-											<xsl:value-of select="sitemap:loc"/>
-										</a>
-									</td>										
-									<td>
-										<xsl:value-of select="concat(sitemap:priority*100,'%')"/>
-									</td>
-									<td>
-										<xsl:value-of select="count(image:image)"/>
-									</td>
-									<td>
-										<xsl:value-of select="concat(translate(substring(sitemap:changefreq, 1, 1),concat($lower, $upper),concat($upper, $lower)),substring(sitemap:changefreq, 2))"/>
-									</td>
-									<td>
-										<xsl:value-of select="concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)))"/>
-									</td>
+									<th>URL</th>
+									<th style="width: 5%;">Prioritet</th>
+									<th style="width: 4%;">Slike</th>
+									<th>Učestalost izmjena</th>
+									<th>Poslednja izmjena</th>
 								</tr>
-							</xsl:for-each>
-						</tbody>
-					</table>
+							</thead>
+							<tbody>
+								<xsl:variable name="lower" select="'abcdefghijklmnopqrstuvwxyz'"/>
+								<xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
+								<xsl:for-each select="sitemap:urlset/sitemap:url">
+									<tr>
+										<td>
+											<xsl:variable name="itemURL">
+												<xsl:value-of select="sitemap:loc"/>
+											</xsl:variable>
+											<a href="{$itemURL}" target="_blank">
+												<xsl:value-of select="sitemap:loc"/>
+											</a>
+										</td>										
+										<td>
+											<xsl:value-of select="concat(sitemap:priority*100,'%')"/>
+										</td>
+										<td>
+											<xsl:value-of select="count(image:image)"/>
+										</td>
+										<td>
+											<xsl:value-of select="concat(translate(substring(sitemap:changefreq, 1, 1),concat($lower, $upper),concat($upper, $lower)),substring(sitemap:changefreq, 2))"/>
+										</td>
+										<td>
+											<xsl:value-of select="concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)))"/>
+										</td>
+									</tr>
+								</xsl:for-each>
+							</tbody>
+						</table>
 					</div>
-					<p>
-						<a href="https://validator.w3.org/check?uri=https%3A%2F%2Fbaleshsrle.github.io/sitemap.xml" target="_blank"><img src="https://validator.w3.org/images/valid_icons/valid-xml10-blue" alt="Valid XML 1.0 !" class="float-left"></img></a>
-					</p>
 				</div>
+				<footer class="container-fluid">
+					<a href="https://validator.w3.org/check?uri=https%3A%2F%2Fbaleshsrle.github.io/sitemap.xml" target="_blank"><img src="https://validator.w3.org/images/valid_icons/valid-xml10-blue" alt="Valid XML 1.0 !" class="float-left"></img></a>
+				</footer>
 			</body>
 			<script>
 				$(document).ready(function () {
 					$("link[rel='stylesheet'],script[src]:lt(2)").attr("crossorigin", "anonymous");
+					$("a:lt(2)").addClass("font-weight-bold text-danger");
+					$("th:eq(0)").css("width", "60%").addClass("align-middle");
 					$("th:lt(3):gt(0),td:not(:eq(0),:eq(5),:eq(10),:eq(15),:eq(20),:eq(25),:eq(30))").addClass("align-middle text-center");
-					$("th").eq(0).css("width", "60%").addClass("align-middle");
-					$("th").slice(3).css("width", "13%").addClass("text-center");
+					$("th:gt(2)").css("width", "13%").addClass("text-center");
 					$("td").filter(":eq(0),:eq(5),:eq(10),:eq(15),:eq(20),:eq(25),:eq(30)").addClass("align-middle");
 				});
 			</script>
