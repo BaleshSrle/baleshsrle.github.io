@@ -74,17 +74,17 @@
 				<footer class="container-fluid">
 					<a href="https://validator.w3.org/check?uri=https%3A%2F%2Fbaleshsrle.github.io/sitemap.xml" target="_blank"><img src="https://validator.w3.org/images/valid_icons/valid-xml10-blue" alt="Valid XML 1.0 !" class="float-left"></img></a>
 				</footer>
-			</body>
-			<script>
-				$(document).ready(function () {
-					$("link[rel='stylesheet'],script[src]:lt(2)").attr("crossorigin", "anonymous");
-					$("a:lt(2)").addClass("font-weight-bold text-danger");
-					$("th:eq(0)").css("width", "60%").addClass("align-middle");
-					$("th:lt(3):gt(0),td:not(:eq(0),:eq(5),:eq(10),:eq(15),:eq(20),:eq(25),:eq(30))").addClass("align-middle text-center");
-					$("th:gt(2)").css("width", "13%").addClass("text-center");
-					$("td").filter(":eq(0),:eq(5),:eq(10),:eq(15),:eq(20),:eq(25),:eq(30)").addClass("align-middle");
-				});
+				<script>
+					$(document).ready(function () {
+						$("link[rel='stylesheet'],script[src]:lt(2)").attr("crossorigin", "anonymous");
+						$("a:lt(2)").addClass("font-weight-bold text-danger");
+						$("th:eq(0)").css("width", "60%").addClass("align-middle");
+						$("th:lt(3):gt(0),td:not(:eq(0),:eq(5),:eq(10),:eq(15),:eq(20),:eq(25),:eq(30))").addClass("align-middle text-center");
+						$("th:gt(2)").css("width", "13%").addClass("text-center");
+						$("td").filter(":eq(0),:eq(5),:eq(10),:eq(15),:eq(20),:eq(25),:eq(30)").addClass("align-middle");
+					});
 			</script>
+			</body>
 		</html>
 	</xsl:template>
 </xsl:stylesheet>
