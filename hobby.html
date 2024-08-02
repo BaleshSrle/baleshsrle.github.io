@@ -386,8 +386,8 @@
     <script>
         $('#hobbyList a').on('click', function (e) {
             e.preventDefault()
-            $(this).tab('show')
-        })
+            $(this).tab('show');
+        });
         $("div.card").addClass("mx-auto mw-100");
         $("a.nav-link").slice(8).attr("role", "tab");
         $("p.card-text").eq(0).addClass("text-justify");

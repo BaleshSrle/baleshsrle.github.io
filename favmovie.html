@@ -77,31 +77,34 @@
         </nav>
         <div class="container-fluid overflow-hidden">
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-md-4 col-lg-3 col-xl-2">
                     <div class="card">
                         <div class="card-header">
                             <h5 class="font-weight-bold mb-0">End of Days</h5>
                         </div>
                         <img src="images/End_Of_Days.jpg" class="card-img-top" alt="'End of Days' Movie Poster">
-                        <p class="card-text">
-                            <span class="font-weight-bold h6 align-middle">
-                                <span lang="sr">Ocjena filma sa IMDb-a</span>
-                                <span lang="en">Movie rating from IMDb</span>
-                            </span>
-                            <i class="fa-solid fa-star fa-2x text-warning px-2 align-middle"></i>5,7
-                        </p>
-                        <p class="card-text">
-                            <span class="font-weight-bold h6 pr-2">
-                                <span lang="sr">Godina objavljivanja filma</span>
-                                <span lang="en">Release year</span>
-                            </span>1999.
-                        </p>
-                        <div class="btn-group m-2" role="group">
-                            <a href="https://www.imdb.com/title/tt0146675/" target="_blank" class="btn btn-light"
-                                role="button"><img src="https://cdn.simpleicons.org/imdb" alt="IMDb">IMDb</a>
+                        <div class="card-body p-1">
+                            <p class="card-text mb-2">
+                                <span class="font-weight-bold h6 align-middle">
+                                    <span lang="sr">Ocjena filma sa IMDb-a</span>
+                                    <span lang="en">Movie rating from IMDb</span>
+                                </span>
+                                <i class="fa-solid fa-star fa-2x text-warning px-2 align-middle"></i>5,7
+                            </p>
+                            <p class="card-text">
+                                <span class="font-weight-bold h6 pr-2">
+                                    <span lang="sr">Godina objavljivanja filma</span>
+                                    <span lang="en">Release year</span>
+                                </span>1999.
+                            </p>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <a href="https://www.imdb.com/title/tt0146675/" target="_blank"
+                                class="list-group-item list-group-item-action" role="button"><img
+                                    src="https://cdn.simpleicons.org/imdb" alt="IMDb">IMDb</a>
                             <a href="https://en.wikipedia.org/wiki/End_of_Days_(film)" target="_blank"
-                                class="btn btn-light" role="button"><img src="https://cdn.simpleicons.org/wikipedia"
-                                    alt="Wikipedia">Wikipedia</a>
+                                class="list-group-item list-group-item-action" role="button"><img
+                                    src="https://cdn.simpleicons.org/wikipedia" alt="Wikipedia">Wikipedia</a>
                         </div>
                     </div>
                     <div class="card">
@@ -134,12 +137,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-10">
+                <div class="col-sm-10 col-md-8 col-lg-9 col-xl-10">
                     <div class="embed-responsive embed-responsive-16by9 my-2">
                         <iframe src="https://www.youtube.com/embed/_a_mquMR6-Y" class="embed-responsive-item"></iframe>
                     </div>
                     <div class="row">
-                        <div class="col-sm-9">
+                        <div class="col-sm-9 col-md col-xl">
                             <div class="card">
                                 <div class="card-header">
                                     <h5 class="font-weight-bold mb-0">
@@ -178,7 +181,7 @@
                                             Bobby Chicago, he works as security for a banker, whose body is possessed by
                                             Satan</span>.
                                     </p>
-                                    <p>
+                                    <p class="card-text">
                                         <span lang="sr">Jednom prilikom, Džeriko uspije spasiti mladu ženu od napadača
                                             koji su joj provalili u dom. Uskoro donaznaje da se zove Kristina, te da
                                             cijeloga života pati od uznemirujućih vizija koja je progone. Uoči dočeka
@@ -196,7 +199,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-3 col-md-5 col-xl-3">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">
@@ -207,15 +210,15 @@
                                         <span lang="sr">U koji žanr spada ovaj film?</span>
                                         <span lang="en">What movie genre does this movie belong to?</span>
                                     </p>
-                                    <form class="input-group mb-3 mx-auto">
-                                        <input type="text" id="odgovor" class="form-control">
-                                        <div class="input-group-append">
-                                            <button id="movieAnswerCheckBtn">
-                                                <span lang="sr">Pošalji</span>
-                                                <span lang="en">Send</span>
-                                            </button>
-                                            <button id="movieAnswerResetBtn">Reset</button>
+                                    <form class="mb-3 mx-auto">
+                                        <div class="form-group">
+                                            <input type="text" id="odgovor" class="form-control">
                                         </div>
+                                        <button id="movieAnswerCheckBtn">
+                                            <span lang="sr">Pošalji</span>
+                                            <span lang="en">Send</span>
+                                        </button>
+                                        <button id="movieAnswerResetBtn">Reset</button>
                                     </form>
                                     <p id="rezultat" lang="sr"></p>
                                     <p id="rezultat" lang="en"></p>
@@ -237,8 +240,8 @@
     <script>
         $("img[src*='simpleicons']").addClass("mr-1");
         $("div.card").addClass("my-2 w-100");
-        $("p.card-text").slice(0, 2).addClass("pl-2 pt-1");
-        $("p.card-text").slice(3).addClass("text-justify");
+        $("div.card-body").children("p.card-text").slice(0, 2).addClass("pl-2 pt-1");
+        $("div.card-body").children("p.card-text").slice(2).addClass("text-justify");
         $("div.col-sm-2:eq(1),div.col-sm-9:eq(1)").addClass("pr-md-2");
         $("div.col-sm-10,div.col-sm-3").addClass("pl-md-2");
     </script>
