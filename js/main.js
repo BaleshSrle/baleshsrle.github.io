@@ -41,20 +41,26 @@ $(document).ready(function () {
     $("body").addClass("d-flex flex-column h-100");
     $("main").addClass("flex-shrink-0 mb-3 pb-5");
     $("header.jumbotron.jumbotron-fluid").addClass("mb-0 py-0 overflow-hidden");
-    $("div.col-sm-2").eq(0).addClass("order-1 order-md-0");
-    $("div.col-sm-9").eq(0).addClass("py-md-4 order-2 order-md-1");
-    $("div.col-sm-1").addClass("order-0 order-md-2");
+    $("header").find("div.col-sm-2").eq(0).addClass("order-1 order-md-0");
+    $("header").find("div.col-sm-9").addClass("py-md-4 order-2 order-md-1");
+    $("header").find("div.col-sm-1").addClass("order-0 order-md-2");
     $("span.fi").addClass("float-right m-1 border border-warning");
-    $("li.nav-item").find("i").addClass("pr-2");
+    $("li.nav-item").find("i").addClass("fa-lg pr-2");
     $("div[class*='container']").addClass("py-2 mx-auto");
     $("img[src*='simpleicons']").width(32).height(32);
     $("td[colspan]").last().find("img").addClass("m-1").width(32).height(32);
     $("div.card").addClass("shadow-sm");
+    $("ul.nav.nav-tabs").parent("div.card-header").addClass("pt-2");
+    $("ul[id$='List']").find("a").on("click", function (e) {
+        e.preventDefault()
+        $(this).tab("show");
+    }).attr("role", "tab");
     $("#lenovoThinkPadX230_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-434-detail");
     $("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsc-lifebook-s752-detail");
     $("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
     $("iframe.embed-responsive-item").addClass("border-0 rounded-lg").attr("allowfullscreen", "true");
     $("img.img-thumbnail").width(250);
+    $("p.card-text").addClass("text-justify");
     $("div#BookReadCarousel").find("img").width(280).addClass("d-block mx-auto h-auto rounded-lg");
     $(".carousel").addClass("carousel-fade").carousel({
         interval: 3500,
