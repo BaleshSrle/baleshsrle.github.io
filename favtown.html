@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, nofollow, noarchive, notranslate, noimageindex">
     <meta name="description" content="Ovdje možete saznati koji je moj omiljeni grad">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
     <title>.::Balešević Srđan:: - ::Omiljeni grad::.</title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js" async></script>
+    <!-- <script src="js/main.js" async></script> -->
     <script>
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -107,71 +106,65 @@
                         href="https://backapalanka.rs/" target="_blank">Official web presentation of the municipality of
                         Bačka Palanka</a></span>.
             </p>
-            <div class="modal fade" id="Modal01" aria-hidden="true">
+            <div class="modal" id="Modal01">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img src="images/favtown/city_hall.jpg" class="d-block mx-auto img-fluid"
-                                alt="Gradska vijećnica">
+                            <img src="images/favtown/city_hall.jpg" alt="Gradska vijećnica">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="Modal02" aria-hidden="true">
+            <div class="modal" id="Modal02">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img src="images/favtown/main_pedestrian_street.jpg" class="d-block mx-auto img-fluid"
-                                alt="Glavna pješačka ulica">
+                            <img src="images/favtown/main_pedestrian_street.jpg" alt="Glavna pješačka ulica">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="Modal03" aria-hidden="true">
+            <div class="modal" id="Modal03">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img src="images/favtown/catholic_church.jpg" class="d-block mx-auto img-fluid"
-                                alt="Katolička crkva">
+                            <img src="images/favtown/catholic_church.jpg" alt="Katolička crkva">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="Modal04" aria-hidden="true">
+            <div class="modal" id="Modal04">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img src="images/favtown/library.jpg" class="d-block mx-auto img-fluid"
-                                alt="Biblioteka 'Veljko Petrović'">
+                            <img src="images/favtown/library.jpg" alt="Biblioteka 'Veljko Petrović'">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="Modal05" aria-hidden="true">
+            <div class="modal" id="Modal05">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img src="images/favtown/src_tikvara.jpg" class="d-block mx-auto img-fluid"
-                                alt="SRC 'Tikvara'">
+                            <img src="images/favtown/src_tikvara.jpg" alt="SRC 'Tikvara'">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="Modal06" aria-hidden="true">
+            <div class="modal" id="Modal06">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img src="images/favtown/panorama.jpg" class="d-block mx-auto img-fluid"
-                                alt="Panorama grada">
+                            <img src="images/favtown/panorama.jpg" alt="Panorama grada">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="Modal07" aria-hidden="true">
+            <div class="modal" id="Modal07">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img src="images/favtown/stadion_slavko_maletin_vava.jpg" class="d-block mx-auto img-fluid"
+                            <img src="images/favtown/stadion_slavko_maletin_vava.jpg"
                                 alt="Stadion 'Slavko Maletin - Vava'">
                         </div>
                     </div>
@@ -200,10 +193,12 @@
                             <span lang="sr">Gradska vijećnica</span>
                             <span lang="en">City Hall</span>
                         </td>
-                        <td><i></i></td>
-                        <td><a href="#" class="btn btn-link" role="button" data-toggle="modal"
-                                data-target="#Modal01"><img class="img-thumbnail rounded-lg"
-                                    src="images/favtown/city_hall.jpg" alt="Gradska vijećnica"></a>
+                        <td>
+                            <i></i>
+                        </td>
+                        <td><a href="#" class="btn btn-link" data-toggle="modal" data-target="#Modal01"><img
+                                    class="img-thumbnail" src="images/favtown/city_hall.jpg"
+                                    alt="Gradska vijećnica"></a>
                         </td>
                     </tr>
                     <tr>
@@ -211,10 +206,13 @@
                             <span lang="sr">Glavna pješačka ulica</span>
                             <span lang="en">Main pedestrian street</span>
                         </td>
-                        <td><i></i></td>
-                        <td><a href="#" class="btn btn-link" role="button" data-toggle="modal"
-                                data-target="#Modal02"><img class="img-thumbnail rounded-lg"
-                                    src="images/favtown/main_pedestrian_street.jpg" alt="Glavna pješačka ulica"></a>
+                        <td>
+                            <i></i>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-link" data-toggle="modal" data-target="#Modal02"><img
+                                    class="img-thumbnail" src="images/favtown/main_pedestrian_street.jpg"
+                                    alt="Glavna pješačka ulica"></a>
                         </td>
                     </tr>
                     <tr>
@@ -222,10 +220,13 @@
                             <span lang="sr">Katolička crkva</span>
                             <span lang="en">Catholic church</span>
                         </td>
-                        <td><i></i></td>
-                        <td><a href="#" class="btn btn-link" role="button" data-toggle="modal"
-                                data-target="#Modal03"><img class="img-thumbnail rounded-lg"
-                                    src="images/favtown/catholic_church.jpg" alt="Katolička crkva"></a>
+                        <td>
+                            <i></i>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-link" data-toggle="modal" data-target="#Modal03"><img
+                                    class="img-thumbnail" src="images/favtown/catholic_church.jpg"
+                                    alt="Katolička crkva"></a>
                         </td>
                     </tr>
                     <tr>
@@ -233,20 +234,27 @@
                             <span lang="sr">Biblioteka &quot;Veljko Petrović&quot;</span>
                             <span lang="en">&quot;Veljko Petrović&quot; Library</span>
                         </td>
-                        <td><i></i></td>
-                        <td><a href="#" class="btn btn-link" role="button" data-toggle="modal"
-                                data-target="#Modal04"><img class="img-thumbnail rounded-lg"
-                                    src="images/favtown/library.jpg" alt="Biblioteka 'Veljko Petrović'"></a></td>
+                        <td>
+                            <i></i>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-link" data-toggle="modal" data-target="#Modal04"><img
+                                    class="img-thumbnail" src="images/favtown/library.jpg"
+                                    alt="Biblioteka 'Veljko Petrović'"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td>
                             <span lang="sr">Sportsko-rekreativni centar &quot;Tikvara&quot;</span>
                             <span lang="en">Sports and recreation center &quot;Tikvara&quot;</span>
                         </td>
-                        <td><i></i></td>
-                        <td><a href="#" class="btn btn-link" role="button" data-toggle="modal"
-                                data-target="#Modal05"><img class="img-thumbnail rounded-lg"
-                                    src="images/favtown/src_tikvara.jpg" alt="SRC 'Tikvara'"></a></td>
+                        <td>
+                            <i></i>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-link" data-toggle="modal" data-target="#Modal05"><img
+                                    class="img-thumbnail" src="images/favtown/src_tikvara.jpg" alt="SRC 'Tikvara'"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -259,9 +267,10 @@
                             <span lang="en">Panorama of the city showing the Orthodox church dedicated to Saint John The
                                 Baptist</span>
                         </td>
-                        <td><a href="#" class="btn btn-link" role="button" data-toggle="modal"
-                                data-target="#Modal06"><img class="img-thumbnail rounded-lg"
-                                    src="images/favtown/panorama.jpg" alt="Panorama grada"></a></td>
+                        <td>
+                            <a href="#" class="btn btn-link" data-toggle="modal" data-target="#Modal06"><img
+                                    class="img-thumbnail" src="images/favtown/panorama.jpg" alt="Panorama grada"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -272,10 +281,11 @@
                             <span lang="sr">Stadion na kojem FK Bačka igra svoje utakmice</span>
                             <span lang="en">The stadium where Football Club Bačka play its home matches</span>
                         </td>
-                        <td><a href="#" class="btn btn-link" role="button" data-toggle="modal"
-                                data-target="#Modal07"><img class="img-thumbnail rounded-lg"
-                                    src="images/favtown/stadion_slavko_maletin_vava.jpg"
-                                    alt="Stadion 'Slavko Maletin - Vava'"></a></td>
+                        <td>
+                            <a href="#" class="btn btn-link" data-toggle="modal" data-target="#Modal07"><img
+                                    class="img-thumbnail" src="images/favtown/stadion_slavko_maletin_vava.jpg"
+                                    alt="Stadion 'Slavko Maletin - Vava'"></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -289,10 +299,16 @@
         <span id="datum"></span>
     </footer>
     <script>
+        $(document).ready(function () {
+            $.getScript("js/main.js");
+        });
+        $("div.modal").addClass("fade").attr("aria-hidden", "true");
         $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
         $("div.modal-dialog").slice(2, 4).removeClass("modal-lg");
+        $("div.modal-body").children("img").addClass("d-block mx-auto img-fluid");
         $("td").addClass("align-middle");
-        $("td").find("i").addClass("fa-solid fa-xmark fa-1x text-danger");
+        $("td").children("i").addClass("fa-solid fa-xmark fa-1x text-danger");
+        $("td").children("a").attr("role", "button");
     </script>
 </body>
 

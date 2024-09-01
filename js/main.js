@@ -35,7 +35,7 @@ $(document).ready(function () {
         //$("head").prepend("<meta http-equiv='Content-Security-Policy' content='default-src https:'>");
     }
     $("head").append("<meta name='author' content='Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com'>", "<meta name='designer' content='BaleshSrle'>", "<meta name='reply-to' content='srdjan.balesevic%40yahoo.com'>", "<meta name='language' content='sr'>", "<meta name='host' content='pages.github.com'>", "<meta name='geo.region' content='BA-SRP'>", "<meta name='geo.placename' content='Добој'>", "<meta name='twitter:creator' content='@BaleshSrle'>", "<meta name='twitter:site' content='@BaleshSrle'>");
-    $("head").append("<meta name='MSThemeCompatible' content='yes'>", "<meta http-equiv='cleartype' content='on'>", "<meta http-equiv='x-dns-prefetch-control' content='on'>", "<meta http-equiv='Cache-control' content='no-cache'>", "<meta http-equiv='Pragma' content='no-cache'>", "<meta http-equiv='Expires' content='-1'>");
+    $("head").append("<meta name='MSThemeCompatible' content='yes'>", "<meta http-equiv='cleartype' content='on'>", "<meta http-equiv='X-UA-Compatible' content='ie=edge'>", "<meta http-equiv='x-dns-prefetch-control' content='on'>", "<meta http-equiv='Cache-control' content='no-cache'>", "<meta http-equiv='Pragma' content='no-cache'>", "<meta http-equiv='Expires' content='-1'>");
     $("head").append("<link rel='dns-prefetch' href='https://cdn.jsdelivr.net/'>", "<link rel='preconnect' href='https://cdn.jsdelivr.net/'>", "<link rel='icon' href='images/logo.png' type='image/png'>", "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css'>", "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>");
     $("[rel~='preconnect'],[rel~='stylesheet'],[src$='jquery.slim.min.js'],[src$='bootstrap.bundle.min.js'],[src$='jquery.typewriter.min.js'],[src$='jquery.countdown.min.js']").attr("crossorigin", "anonymous");
     $("body").addClass("d-flex flex-column h-100");
@@ -47,8 +47,8 @@ $(document).ready(function () {
     $("span.fi").addClass("float-right m-1 border border-warning");
     $("li.nav-item").find("i").addClass("fa-lg pr-2");
     $("div[class*='container']").addClass("py-2 mx-auto");
-    $("img[src*='simpleicons']").width(32).height(32);
-    $("td[colspan]").last().find("img").addClass("m-1").width(32).height(32);
+    $("img[src*='simpleicons'],img[src*='simple-icons']").width(32).height(32);
+    //$("td[colspan]").last().find("img").addClass("m-1").width(32).height(32);
     $("div.card").addClass("shadow-sm");
     $("ul.nav.nav-tabs").parent("div.card-header").addClass("pt-2");
     $("ul[id$='List']").find("a").on("click", function (e) {
@@ -59,17 +59,19 @@ $(document).ready(function () {
     $("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsc-lifebook-s752-detail");
     $("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
     $("iframe.embed-responsive-item").addClass("border-0 rounded-lg").attr("allowfullscreen", "true");
-    $("img.img-thumbnail").width(250);
+    $("img.img-thumbnail").width(250).addClass("rounded-lg");
     $("p.card-text").addClass("text-justify");
     $("div#BookReadCarousel").find("img").width(280).addClass("d-block mx-auto h-auto rounded-lg");
-    $(".carousel").addClass("carousel-fade").carousel({
+    $("div.carousel").addClass("carousel-fade").carousel({
         interval: 3500,
         keyboard: false,
         pause: false,
         ride: 'carousel',
         touch: false
     });
-    $(".carousel-item").first().addClass("active");
+    $("div.carousel-item").first().addClass("active");
+    $("div.carousel-item").children("img").first().attr("loading", "eager");
+    $("div.carousel-item").children("img").slice(1).attr("loading", "lazy");
     $("img[src*='slika']").addClass("d-block w-100 h-auto rounded-lg");
     $("button#movieAnswerCheckBtn").on("click", function () {
         var a = $('#odgovor').val();
