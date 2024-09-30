@@ -21,8 +21,8 @@
 		Location: Deutschland / Germany	
 	
 /* SITE */
-		Last update: 2024/09/01
-		Language: Serbian
+		Last update: 2024/09/30
+		Language: Serbian , English
 		Standards: HTML5, CSS, JavaScript
 		Components: jQuery, Bootstrap
 		Software: Visual Studio Code, Notepad++, FileZilla, Photoshop
