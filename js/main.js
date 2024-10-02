@@ -13,7 +13,6 @@ $(document).ready(function () {
             $(this).eq(5).find("span").text("Galerija");
             $(this).eq(6).find("span").text("Kviz");
             $(this).eq(7).find("span").text("Mapa sajta");
-            $(this).children("a.nav-link").filter("[href='" + location.pathname.slice(1) + "']").addClass("active");
         });
     } else {
         $("[lang='en']").show(1);
