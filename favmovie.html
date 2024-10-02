@@ -18,7 +18,7 @@
     </style> -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js" async></script>
+    <!-- <script src="js/main.js" async></script> -->
     <script>
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -60,7 +60,7 @@
                                 class="fa-solid fa-home"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="birthdaypresent.html"><i
                                 class="fa-solid fa-gift"></i><span></span></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="favmovie.html"><i
+                    <li class="nav-item"><a class="nav-link" href="favmovie.html"><i
                                 class="fa-solid fa-film"></i><span></span></a></li>
                     <li class="nav-item"><a class="nav-link" href="favtown.html"><i
                                 class="fa-solid fa-city"></i><span></span></a></li>
@@ -240,6 +240,9 @@
         <span id="datum"></span>
     </footer>
     <script>
+        $(document).ready(function () {
+            $.getScript("js/main.js");
+        });
         $("img[src*='simpleicons']").addClass("mr-1");
         $("div.card").addClass("my-2 w-100");
         $("div.card").children("div.list-group").addClass("list-group-flush");
