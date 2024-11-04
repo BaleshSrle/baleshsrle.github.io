@@ -55,7 +55,7 @@ $(document).ready(function () {
     $("img[src*='simpleicons'],img[src*='simple-icons']").width(32).height(32);
     //$("td[colspan]").last().find("img").addClass("m-1").width(32).height(32);
     $("div.card").addClass("shadow-sm");
-    $("ul.nav.nav-tabs").parent("div.card-header").addClass("pt-2");
+    $("ul.nav.nav-tabs").parent("div.card-header").addClass("pt-1");
     $("ul[id$='List']").find("a").on("click", function (e) {
         e.preventDefault()
         $(this).tab("show");
