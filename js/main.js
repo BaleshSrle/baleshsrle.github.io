@@ -32,7 +32,7 @@ $(document).ready(function () {
         case "/gallery.html":
         case "/quiz.html":
             $("head").prepend("<meta name='google-site-verification' content='HcgjQ9u13iaWAG1FyF9yFp6-f9QYrwstKoKPNrRbbqM'>", "<meta name='google-site-verification' content='YXXACXsZjuu041kl41yKLww4xdiiudN1S0IEtdEeGSE'>", "<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>", "<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>", "<meta name='wot-verification' content='cee6cf583ee362cd666b'>", "<meta name='norton-safeweb-site-verification' content='AE1KUNZ8BFEIRXCIVRMN7804CZR-WK4ER0C3CPJO8W9N0ZVGHX9R2BJ4RNAG2DCL6SBHR6U7BDTD9VH3JKZG3FLO1EGE5E3CVLLQO4E1FM13PDFWE0RX9GUQ8SJWKLEW'>");
-        //$("head").prepend("<meta http-equiv='Content-Security-Policy' content='default-src https:'>");
+            //$("head").prepend("<meta http-equiv='Content-Security-Policy' content='default-src https:'>");
             $("a.nav-link[href='"+location.pathname.slice(1)+"']").addClass("active");
     }
     $("head").each(function () {
