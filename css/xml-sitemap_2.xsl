@@ -80,7 +80,7 @@
 						$("div:eq(0),footer").addClass("container-fluid");
 						$("a:lt(2)").addClass("font-weight-bold text-danger");
 						$("th:eq(0)").css("width", "60%").addClass("align-middle");
-						$("th:lt(3):gt(0),td:gt(0).addClass("align-middle text-center");
+						$("th:lt(3):gt(0),td:gt(0)").addClass("align-middle text-center");
 						$("th:gt(2)").css("width", "13%").addClass("text-center");
 						$("td").eq(0).addClass("align-middle");
 					});

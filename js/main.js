@@ -55,11 +55,19 @@ $(document).ready(function () {
     $("img[src*='simpleicons'],img[src*='simple-icons']").width(32).height(32);
     //$("td[colspan]").last().find("img").addClass("m-1").width(32).height(32);
     $("div.card").addClass("shadow-sm");
-    $("ul.nav.nav-tabs").parent("div.card-header").addClass("pt-1 px-3");
-    $("ul[id$='List']").find("a").on("click", function (e) {
+	$("ul.nav.nav-tabs[id$='List']").each(function () {
+		$(this).parent("div.card-header").addClass("pt-1 px-3");
+		$(this).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-x": "auto", "overflow-y": "hidden" }).attr("role", "tablist");
+		$(this).find("a").on("click", function (e) {
+			e.preventDefault()
+			$(this).tab("show");
+		}).attr("role", "tab");
+	});
+    //$("ul.nav.nav-tabs").parent("div.card-header").addClass("pt-1 px-3");
+    /*$("ul[id$='List']").find("a").on("click", function (e) {
         e.preventDefault()
         $(this).tab("show");
-    }).attr("role", "tab");
+    }).attr("role", "tab");*/
     $("#lenovoThinkPadX230_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-434-detail");
     $("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsc-lifebook-s752-detail");
     $("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
