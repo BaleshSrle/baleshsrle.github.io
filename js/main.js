@@ -1,28 +1,33 @@
 $(document).ready(function () {
-    //$("html").attr("lang", navigator.language);
     var BrowserLang = navigator.language;
     if (BrowserLang.includes("sr") || BrowserLang.includes("hr") || BrowserLang.includes("bs")) {
-        $("[lang='sr']").show(1);
         $("[lang='en']").hide(1);
-        $("li.nav-item").eq(0).find("span").text("Početna");
-        $("li.nav-item").eq(1).find("span").text("Rođendanski poklon");
-        $("li.nav-item").eq(2).find("span").text("Omiljeni film");
-        $("li.nav-item").eq(3).find("span").text("Omiljeni grad");
-        $("li.nav-item").eq(4).find("span").text("Hobi");
-        $("li.nav-item").eq(5).find("span").text("Galerija");
-        $("li.nav-item").eq(6).find("span").text("Kviz");
-        $("li.nav-item").eq(7).find("span").text("Mapa sajta");
+        $("h1#welcome").children("span").text("Dobrodošli na sajt");
+        $("p#subtext").children("span").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni");
+        $("div.col-sm-1").children("span").addClass("fi fi-rs float-right m-1 border border-warning");
+        $("i.fa-home").siblings("span").text("Početna");
+        $("i.fa-gift").siblings("span").text("Rođendanski poklon");
+        $("i.fa-film").siblings("span").text("Omiljeni film");
+        $("i.fa-city").siblings("span").text("Omiljeni grad");
+        $("i.fa-wrench").siblings("span").text("Hobi");
+        $("i.fa-images").siblings("span").text("Galerija");
+        $("i.fa-gamepad").siblings("span").text("Kviz");
+        $("i.fa-sitemap").siblings("span").text("Mapa sajta");
+        $("footer").children("h3#vlasnik").addClass("font-italic").text("Balešević Srđan");
     } else {
-        $("[lang='en']").show(1);
         $("[lang='sr']").hide(1);
-        $("li.nav-item").eq(0).find("span").text("Home");
-        $("li.nav-item").eq(1).find("span").text("Birthday present");
-        $("li.nav-item").eq(2).find("span").text("Favourite movie");
-        $("li.nav-item").eq(3).find("span").text("Favourite town");
-        $("li.nav-item").eq(4).find("span").text("Hobby");
-        $("li.nav-item").eq(5).find("span").text("Gallery");
-        $("li.nav-item").eq(6).find("span").text("Quiz");
-        $("li.nav-item").eq(7).find("span").text("Site Map");
+        $("h1#welcome").children("span").text("Welcome to the website");
+        $("p#subtext").children("span").text("A lot of additional information can be found about me on this website");
+        $("div.col-sm-1").children("span").addClass("fi fi-gb-eng float-right m-1 border border-warning");
+        $("i.fa-home").siblings("span").text("Home");
+        $("i.fa-gift").siblings("span").text("Birthday present");
+        $("i.fa-film").siblings("span").text("Favourite movie");
+        $("i.fa-city").siblings("span").text("Favourite town");
+        $("i.fa-wrench").siblings("span").text("Hobby");
+        $("i.fa-images").siblings("span").text("Gallery");
+        $("i.fa-gamepad").siblings("span").text("Quiz");
+        $("i.fa-sitemap").siblings("span").text("Site Map");
+        $("footer").children("h3#vlasnik").addClass("font-italic").text("Baleshevich Srdjan");
     }
     switch (location.pathname) {
         case "/birthdaypresent.html":
@@ -33,7 +38,7 @@ $(document).ready(function () {
         case "/quiz.html":
             $("head").prepend("<meta name='google-site-verification' content='HcgjQ9u13iaWAG1FyF9yFp6-f9QYrwstKoKPNrRbbqM'>", "<meta name='google-site-verification' content='YXXACXsZjuu041kl41yKLww4xdiiudN1S0IEtdEeGSE'>", "<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>", "<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>", "<meta name='wot-verification' content='cee6cf583ee362cd666b'>", "<meta name='norton-safeweb-site-verification' content='AE1KUNZ8BFEIRXCIVRMN7804CZR-WK4ER0C3CPJO8W9N0ZVGHX9R2BJ4RNAG2DCL6SBHR6U7BDTD9VH3JKZG3FLO1EGE5E3CVLLQO4E1FM13PDFWE0RX9GUQ8SJWKLEW'>");
             //$("head").prepend("<meta http-equiv='Content-Security-Policy' content='default-src https:'>");
-            $("a.nav-link[href='"+location.pathname.slice(1)+"']").addClass("active");
+            $("a.nav-link[href='" + location.pathname.slice(1) + "']").addClass("active");
     }
     $("head").each(function () {
         $(this).append("<meta name='author' content='Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com'>", "<meta name='designer' content='BaleshSrle'>", "<meta name='reply-to' content='srdjan.balesevic%40yahoo.com'>", "<meta name='language' content='sr'>", "<meta name='host' content='pages.github.com'>", "<meta name='geo.region' content='BA-SRP'>", "<meta name='geo.placename' content='Добој'>", "<meta name='twitter:creator' content='@BaleshSrle'>", "<meta name='twitter:site' content='@BaleshSrle'>");
@@ -49,25 +54,18 @@ $(document).ready(function () {
         $(this).find("div.col-sm-9").addClass("py-md-4 order-2 order-md-1");
         $(this).find("div.col-sm-1").addClass("order-0 order-md-2");
     });
-    $("span.fi").addClass("float-right m-1 border border-warning");
     $("li.nav-item").find("i").addClass("fa-lg pr-2");
     $("div[class*='container']").addClass("py-2 mx-auto");
     $("img[src*='simpleicons'],img[src*='simple-icons']").width(32).height(32);
-    //$("td[colspan]").last().find("img").addClass("m-1").width(32).height(32);
     $("div.card").addClass("shadow-sm");
-	$("ul.nav.nav-tabs[id$='List']").each(function () {
-		$(this).parent("div.card-header").addClass("pt-1 px-3");
-		$(this).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-x": "auto", "overflow-y": "hidden" }).attr("role", "tablist");
-		$(this).find("a").on("click", function (e) {
-			e.preventDefault()
-			$(this).tab("show");
-		}).attr("role", "tab");
-	});
-    //$("ul.nav.nav-tabs").parent("div.card-header").addClass("pt-1 px-3");
-    /*$("ul[id$='List']").find("a").on("click", function (e) {
-        e.preventDefault()
-        $(this).tab("show");
-    }).attr("role", "tab");*/
+    $("ul.nav.nav-tabs[id$='List']").each(function () {
+        $(this).parent("div.card-header").addClass("pt-1 px-3");
+        $(this).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-x": "auto", "overflow-y": "hidden" }).attr("role", "tablist");
+        $(this).find("a").on("click", function (e) {
+            e.preventDefault()
+            $(this).tab("show");
+        }).attr("role", "tab");
+    });
     $("#lenovoThinkPadX230_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-434-detail");
     $("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsc-lifebook-s752-detail");
     $("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
@@ -99,6 +97,7 @@ $(document).ready(function () {
     }).attr("type", "button").addClass("btn btn-primary");
     $("button#movieAnswerResetBtn").on("click", function () {
         $("p#rezultat.alert").alert("close");
+        return location.reload();
     }).attr("type", "reset").addClass("btn btn-secondary");
     $("button#quizAnswerCheckBtn").on("click", function () {
         const form = document.forms[0];
@@ -184,8 +183,8 @@ $(document).ready(function () {
         $("div.card").removeClass("border-success border-danger");
         $("div.card-body").removeClass("text-success text-danger");
         $("p#rezultat.alert").alert("close");
+        location.reload();
     }).attr("type", "reset").addClass("btn btn-secondary");
     $("footer").addClass("container-fluid bg-primary text-center text-white mt-auto mb-0 py-0 overflow-hidden fixed-bottom");
-    //$("footer").children("h3[lang='sr']").addClass("font-italic").text("Balešević Srđan");
     $("#datum").text(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
 });
