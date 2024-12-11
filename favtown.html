@@ -298,7 +298,7 @@
             $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
             $("div.modal-dialog").filter(":eq(2),:eq(3)").removeClass("modal-lg");
         });
-        $("div.modal-body").children("img").addClass("d-block mx-auto img-fluid");
+        $("div.modal-body").children("img").addClass("d-block mx-auto img-fluid").attr("loading", "lazy");
         $("td").each(function () {
             $(this).addClass("align-middle");
             $(this).children("i").addClass("fa-solid fa-xmark fa-1x text-danger");

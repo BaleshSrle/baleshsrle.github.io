@@ -280,11 +280,11 @@
         $("img[alt='GitHub']:first,td:odd:lt(3)").addClass("align-middle");
         $("div").filter(".card-body, .list-group").addClass("px-3 py-2");
         $("a.dropdown-toggle").on("click", function () {
-            $("div.dropdown-menu").addClass("mb-n2 py-1");
+            $("div.dropdown-menu").addClass("mb-md-n2 py-1");
         });
         $("div.dropdown-menu").each(function () {
             $(this).children("a").attr("target", "_blank").addClass("dropdown-item px-3");
-            $(this).find("img").addClass("mr-2");
+            $(this).find("img").addClass("mr-2").attr("loading", "lazy");
         });
     </script>
 </body>
