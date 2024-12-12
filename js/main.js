@@ -41,7 +41,7 @@ $(document).ready(function () {
             $("a.nav-link[href='" + location.pathname.slice(1) + "']").addClass("active");
     }
     $("head").each(function () {
-        $(this).prepend("<title>.::Balešević Srđan:: - ::"+$("ul.navbar-nav").find("a.nav-link.active").text()+"::.</title>");
+        $(this).prepend("<title>.::"+$("footer").children("h3").text()+":: - ::"+$("ul.navbar-nav").find("a.nav-link.active").text()+"::.</title>");
         $(this).append("<meta name='author' content='Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com'>", "<meta name='designer' content='BaleshSrle'>", "<meta name='reply-to' content='srdjan.balesevic%40yahoo.com'>", "<meta name='language' content='sr'>", "<meta name='host' content='pages.github.com'>", "<meta name='geo.region' content='BA-SRP'>", "<meta name='geo.placename' content='Добој'>", "<meta name='twitter:creator' content='@BaleshSrle'>", "<meta name='twitter:site' content='@BaleshSrle'>");
         $(this).append("<meta name='MSThemeCompatible' content='yes'>", "<meta http-equiv='cleartype' content='on'>", "<meta http-equiv='X-UA-Compatible' content='ie=edge'>", "<meta http-equiv='x-dns-prefetch-control' content='on'>", "<meta http-equiv='Cache-control' content='no-cache'>", "<meta http-equiv='Pragma' content='no-cache'>", "<meta http-equiv='Expires' content='-1'>");
         $(this).append("<link rel='dns-prefetch' href='https://cdn.jsdelivr.net/'>", "<link rel='preconnect' href='https://cdn.jsdelivr.net/'>", "<link rel='icon' href='images/logo.png' type='image/png'>", "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css'>", "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>");
