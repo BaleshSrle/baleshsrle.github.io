@@ -95,11 +95,10 @@
                             </p>
                         </div>
                         <div class="list-group">
-                            <a href="https://www.imdb.com/title/tt0146675/" target="_blank" class="list-group-item"><img
+                            <a href="https://www.imdb.com/title/tt0146675/" class="list-group-item"><img
                                     src="https://cdn.simpleicons.org/imdb" alt="IMDb">IMDb</a>
-                            <a href="https://en.wikipedia.org/wiki/End_of_Days_(film)" target="_blank"
-                                class="list-group-item"><img src="https://cdn.simpleicons.org/wikipedia"
-                                    alt="Wikipedia">Wikipedia</a>
+                            <a href="https://en.wikipedia.org/wiki/End_of_Days_(film)" class="list-group-item"><img
+                                    src="https://cdn.simpleicons.org/wikipedia" alt="Wikipedia">Wikipedia</a>
                         </div>
                     </div>
                     <div class="card">
@@ -197,27 +196,21 @@
                                 </div>
                                 <div class="tab-pane" id="movieCast">
                                     <div class="list-group list-group-horizontal-xl">
-                                        <a href="https://www.imdb.com/name/nm0000216/" target="_blank"
-                                            class="list-group-item">Arnold Schwarzenegger</a>
-                                        <a href="https://www.imdb.com/name/nm0000677/" target="_blank"
-                                            class="list-group-item">Robin
+                                        <a href="https://www.imdb.com/name/nm0000216/" class="list-group-item">Arnold
+                                            Schwarzenegger</a>
+                                        <a href="https://www.imdb.com/name/nm0000677/" class="list-group-item">Robin
                                             Tunney</a>
-                                        <a href="https://www.imdb.com/name/nm0001768/" target="_blank"
-                                            class="list-group-item">Rod
+                                        <a href="https://www.imdb.com/name/nm0001768/" class="list-group-item">Rod
                                             Steiger</a>
-                                        <a href="https://www.imdb.com/name/nm0001629/" target="_blank"
-                                            class="list-group-item">Kevin
+                                        <a href="https://www.imdb.com/name/nm0001629/" class="list-group-item">Kevin
                                             Pollak</a>
-                                        <a href="https://www.imdb.com/name/nm0001634/" target="_blank"
-                                            class="list-group-item">CCH
+                                        <a href="https://www.imdb.com/name/nm0001634/" class="list-group-item">CCH
                                             Pounder</a>
-                                        <a href="https://www.imdb.com/name/nm0001424/" target="_blank"
-                                            class="list-group-item">Udo
+                                        <a href="https://www.imdb.com/name/nm0001424/" class="list-group-item">Udo
                                             Kier</a>
-                                        <a href="https://www.imdb.com/name/nm0000321/" target="_blank"
-                                            class="list-group-item">Gabriel Byrn</a>
-                                        <a href="https://www.imdb.com/name/nm0546816/" target="_blank"
-                                            class="list-group-item">Miriam
+                                        <a href="https://www.imdb.com/name/nm0000321/" class="list-group-item">Gabriel
+                                            Byrn</a>
+                                        <a href="https://www.imdb.com/name/nm0546816/" class="list-group-item">Miriam
                                             Margolyes</a>
                                     </div>
                                 </div>
@@ -235,18 +228,18 @@
     <script>
         $(document).ready(function () {
             $.getScript("js/main.js");
+            $("div.container-fluid").each(function () {
+                $(this).find("div.col-sm-3").addClass("pr-md-2");
+                $(this).find("div.col-sm-9").addClass("pl-md-2");
+            });
+            $("div.card").each(function () {
+                $(this).addClass("my-2 w-100");
+                $(this).children("div.list-group").addClass("list-group-flush");
+            });
+            $("div.list-group").children("a.list-group-item").addClass("list-group-item-action").attr("target", "_blank");
+            $("img[src*='simpleicons']").addClass("mr-1");
+            $("p.card-text").slice(0, 2).addClass("pl-2 pt-1").removeClass("text-justify");
         });
-        $("img[src*='simpleicons']").addClass("mr-1");
-        $("div.card").each(function () {
-            $(this).addClass("my-2 w-100");
-            $(this).children("div.list-group").addClass("list-group-flush");
-        });
-        $("div.container-fluid").each(function () {
-            $(this).find("div.col-sm-3").addClass("pr-md-2");
-            $(this).find("div.col-sm-9").addClass("pl-md-2");
-        });
-        $("div.list-group").children("a.list-group-item").addClass("list-group-item-action");
-        $("p.card-text").slice(0, 2).addClass("pl-2 pt-1").removeClass("text-justify");
     </script>
 </body>
 

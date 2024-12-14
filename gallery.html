@@ -140,9 +140,9 @@
     <script>
         $(document).ready(function () {
             $.getScript("js/main.js");
+            $("div#carouselGallery").children("button").attr({ "type": "button", "data-target": "#carouselGallery" });
+            $("ol.carousel-indicators").children("li").attr("data-target", "#carouselGallery");
         });
-        $("div#carouselGallery").children("button").attr({ "type": "button", "data-target": "#carouselGallery" });
-        $("ol.carousel-indicators").children("li").attr("data-target", "#carouselGallery");
     </script>
 </body>
 

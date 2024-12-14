@@ -290,18 +290,18 @@
     <script>
         $(document).ready(function () {
             $.getScript("js/main.js");
-        });
-        $("span").children("a").attr("target", "_blank");
-        $("div.modal").addClass("fade").attr("aria-hidden", "true");
-        $("div.modal-dialog").each(function () {
-            $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
-            $("div.modal-dialog").filter(":eq(2),:eq(3)").removeClass("modal-lg");
-        });
-        $("div.modal-body").children("img").addClass("d-block mx-auto img-fluid").attr("loading", "lazy");
-        $("td").each(function () {
-            $(this).addClass("align-middle");
-            $(this).children("i").addClass("fa-solid fa-xmark fa-1x text-danger");
-            $(this).children("a").attr({ "data-toggle": "modal", "role": "button" }).addClass("btn btn-link");
+            $("span").children("a").attr("target", "_blank");
+            $("div.modal").addClass("fade").attr("aria-hidden", "true");
+            $("div.modal-dialog").each(function () {
+                $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
+                $("div.modal-dialog").filter(":eq(2),:eq(3)").removeClass("modal-lg");
+            });
+            $("div.modal-body").children("img").addClass("d-block mx-auto img-fluid").attr("loading", "lazy");
+            $("td").each(function () {
+                $(this).addClass("align-middle");
+                $(this).children("i").addClass("fa-solid fa-xmark fa-1x text-danger");
+                $(this).children("a").attr({ "data-toggle": "modal", "role": "button" }).addClass("btn btn-link");
+            });
         });
     </script>
 </body>

@@ -266,25 +266,25 @@
     <script>
         $(document).ready(function () {
             $.getScript("js/main.js");
+            $("img[alt='GitHub']:first,td:odd:lt(3)").addClass("align-middle");
+            $("div.card-body").addClass("px-3 py-2");
+            $("td:even").addClass("font-weight-bold");
+            $(".h5").typeWrite({
+                speed: 40,
+                repeat: false,
+                cursor: true,
+                color: 'black'
+            });
+            $("a.protect-me").addClass("float-left");
+            $("a.dropdown-toggle").on("click", function () {
+                $("div.dropdown-menu").addClass("mb-md-n2 py-1");
+            });
+            $("div.dropdown-menu").each(function () {
+                $(this).children("a").attr("target", "_blank").addClass("dropdown-item px-3");
+                $(this).find("img").addClass("mr-2").attr("loading", "lazy");
+            });
         });
         spamguard(".protect-me");
-        $("a.protect-me").addClass("float-left");
-        $(".h5").typeWrite({
-            speed: 40,
-            repeat: false,
-            cursor: true,
-            color: 'black'
-        });
-        $("td:even").addClass("font-weight-bold");
-        $("img[alt='GitHub']:first,td:odd:lt(3)").addClass("align-middle");
-        $("div").filter(".card-body, .list-group").addClass("px-3 py-2");
-        $("a.dropdown-toggle").on("click", function () {
-            $("div.dropdown-menu").addClass("mb-md-n2 py-1");
-        });
-        $("div.dropdown-menu").each(function () {
-            $(this).children("a").attr("target", "_blank").addClass("dropdown-item px-3");
-            $(this).find("img").addClass("mr-2").attr("loading", "lazy");
-        });
     </script>
 </body>
 
