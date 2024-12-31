@@ -190,5 +190,5 @@ $(document).ready(function () {
     $("footer").children("div").eq(0).find("img").css("margin-left","1px");
     $("footer").children("div").eq(1).addClass("text-center text-white");
     $("#date").text(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
-    $("footer").children("div").eq(2).addClass("mx-md-2").html("<a id='wot-badge1' class='wot-badge_dark' href='https://www.mywot.com/scorecard/baleshsrle.github.io?wot_badge=1_black' target='_blank'><div class='wot-logo'></div><div class='wot-shield-container'><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p></div><p class='wot-report'>See Report</p></a>");
+    $("footer").children("div").eq(2).addClass("wot mx-md-2").html("<a id='wot-badge1' class='wot-badge_dark' href='https://www.mywot.com/scorecard/baleshsrle.github.io?wot_badge=1_black' target='_blank'><div class='wot-logo'></div><div class='wot-shield-container'><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p></div><p class='wot-report'>See Report</p></a>");
 });
