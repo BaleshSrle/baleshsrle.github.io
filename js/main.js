@@ -47,7 +47,7 @@ $(document).ready(function () {
     });
     $("[rel~='preconnect'],[rel~='stylesheet'],[src$='jquery.min.js'],[src$='bootstrap.bundle.min.js'],[src$='jquery.typewriter.min.js'],[src$='jquery.countdown.min.js'],[src$='5aafa1a155.js']").attr("crossorigin", "anonymous");
     $("body").addClass("d-flex flex-column h-100");
-    $("main").addClass("flex-shrink-0 mb-3 pb-5");
+    //$("main").addClass("flex-shrink-0 mb-3 pb-5");
     $("header").each(function () {
         $(this).filter(".jumbotron.jumbotron-fluid").addClass("mb-0 py-0 overflow-hidden");
         $(this).find("div.col-sm-2").eq(0).addClass("order-1 order-md-0");
@@ -185,10 +185,11 @@ $(document).ready(function () {
         $("p#rezultat.alert").alert("close");
         location.reload();
     }).attr("type", "reset").addClass("btn btn-secondary");
-    $("footer").addClass("jumbotron jumbotron-fluid bg-primary d-sm-flex flex-sm-row align-items-center mb-0 py-0 overflow-hidden fixed-bottom");
+    //$("footer").addClass("jumbotron jumbotron-fluid bg-primary d-sm-flex flex-sm-row align-items-center mb-0 py-0 overflow-hidden fixed-bottom");
+    $("footer").addClass("jumbotron jumbotron-fluid bg-primary d-sm-flex flex-sm-row align-items-center text-center");
     $("footer").children("div").eq(0).addClass("d-flex flex-wrap flex-sm-column mx-md-2").html("<div><img src='https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3' alt='Bootstrap'></div><div><img src='https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad' alt='jQuery'></div><div><img src='https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&label=Font%20Awesome&labelColor=538dd7&color=538dd7' alt='Font Awesome'></div><div><img src='https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600' alt='jsDelivr CDN'></div>");
     $("footer").children("div").eq(0).find("img").css("margin-left", "1px");
-    $("footer").children("div").eq(1).addClass("text-center text-white");
+    $("footer").children("div").eq(1).addClass("text-white");
     $("#date").text(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
     $("footer").children("div").eq(2).addClass("wot mx-md-2").html("<a id='wot-badge0' class='wot-badge mx-auto' href='https://www.mywot.com/scorecard/baleshsrle.github.io?wot_badge=0_white' target='_blank'><div class='wot-logo'></div><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p><div class='wot-vertical'></div><p class='wot-report'>See Report</p></a>");
 });
