@@ -13,7 +13,7 @@ $(document).ready(function () {
         $("i.fa-images").siblings("span").text("Galerija");
         $("i.fa-gamepad").siblings("span").text("Kviz");
         $("i.fa-sitemap").siblings("span").text("Mapa sajta");
-        $("footer").find("h3#owner").addClass("font-italic").text("Balešević Srđan");
+        $("footer").children("h3#owner").addClass("font-italic text-center text-white").text("Balešević Srđan");
     } else {
         $("[lang='sr']").hide(1);
         $("h1#welcome").children("span").text("Welcome to the website");
@@ -27,7 +27,7 @@ $(document).ready(function () {
         $("i.fa-images").siblings("span").text("Gallery");
         $("i.fa-gamepad").siblings("span").text("Quiz");
         $("i.fa-sitemap").siblings("span").text("Site Map");
-        $("footer").find("h3#owner").addClass("font-italic").text("Baleshevich Srdjan");
+        $("footer").children("h3#owner").addClass("font-italic text-center text-white").text("Baleshevich Srdjan");
     }
     switch (location.pathname) {
         case "/birthdaypresent.html":
@@ -36,24 +36,24 @@ $(document).ready(function () {
         case "/hobby.html":
         case "/gallery.html":
         case "/quiz.html":
-            $("head").prepend("<meta name='google-site-verification' content='HcgjQ9u13iaWAG1FyF9yFp6-f9QYrwstKoKPNrRbbqM'>", "<meta name='google-site-verification' content='YXXACXsZjuu041kl41yKLww4xdiiudN1S0IEtdEeGSE'>", "<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>", "<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>", "<meta name='wot-verification' content='cee6cf583ee362cd666b'>", "<meta name='norton-safeweb-site-verification' content='AE1KUNZ8BFEIRXCIVRMN7804CZR-WK4ER0C3CPJO8W9N0ZVGHX9R2BJ4RNAG2DCL6SBHR6U7BDTD9VH3JKZG3FLO1EGE5E3CVLLQO4E1FM13PDFWE0RX9GUQ8SJWKLEW'>", "<meta name='siteguarding-tools' content='f7a27dcd3b94ff4d3cd7d37eaecff01a'>", "<title>.::" + $("footer").find("h3").text() + ":: - ::" + $("ul.navbar-nav").find("a.nav-link[href='" + location.pathname.slice(1) + "']").text() + "::.</title>");
+            $("head").prepend("<meta name='google-site-verification' content='HcgjQ9u13iaWAG1FyF9yFp6-f9QYrwstKoKPNrRbbqM'>", "<meta name='google-site-verification' content='YXXACXsZjuu041kl41yKLww4xdiiudN1S0IEtdEeGSE'>", "<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>", "<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>", "<meta name='wot-verification' content='cee6cf583ee362cd666b'>", "<meta name='norton-safeweb-site-verification' content='AE1KUNZ8BFEIRXCIVRMN7804CZR-WK4ER0C3CPJO8W9N0ZVGHX9R2BJ4RNAG2DCL6SBHR6U7BDTD9VH3JKZG3FLO1EGE5E3CVLLQO4E1FM13PDFWE0RX9GUQ8SJWKLEW'>", "<meta name='siteguarding-tools' content='f7a27dcd3b94ff4d3cd7d37eaecff01a'>", "<title>.::" + $("footer").children("h3").text() + ":: - ::" + $("ul.navbar-nav").find("a.nav-link[href='" + location.pathname.slice(1) + "']").text() + "::.</title>");
         //$("head").prepend("<meta http-equiv='Content-Security-Policy' content='default-src https:'>");
         //$("a.nav-link[href='" + location.pathname.slice(1) + "']").addClass("active");
     }
     $("head").each(function () {
         $(this).append("<meta name='author' content='Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com'>", "<meta name='designer' content='BaleshSrle'>", "<meta name='reply-to' content='srdjan.balesevic%40yahoo.com'>", "<meta name='language' content='sr'>", "<meta name='host' content='pages.github.com'>", "<meta name='geo.region' content='BA-SRP'>", "<meta name='geo.placename' content='Добој'>", "<meta name='twitter:creator' content='@BaleshSrle'>", "<meta name='twitter:site' content='@BaleshSrle'>");
         $(this).append("<meta name='MSThemeCompatible' content='yes'>", "<meta http-equiv='cleartype' content='on'>", "<meta http-equiv='X-UA-Compatible' content='ie=edge'>", "<meta http-equiv='x-dns-prefetch-control' content='on'>", "<meta http-equiv='Cache-control' content='no-cache'>", "<meta http-equiv='Pragma' content='no-cache'>", "<meta http-equiv='Expires' content='-1'>");
-        $(this).append("<link rel='dns-prefetch' href='https://cdn.jsdelivr.net/'>", "<link rel='preconnect' href='https://cdn.jsdelivr.net/'>", "<link rel='icon' href='images/logo.png' type='image/png'>"/*, "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css'>"*/, "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>", "<script src='https://kit.fontawesome.com/5aafa1a155.js'></script>", "<scrip src='https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js' async></script>");
+        $(this).append("<link rel='dns-prefetch' href='https://cdn.jsdelivr.net/'>", "<link rel='preconnect' href='https://cdn.jsdelivr.net/'>", "<link rel='icon' href='images/logo.png' type='image/png'>"/*, "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css'>"*/, "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>", "<script src='https://kit.fontawesome.com/5aafa1a155.js'></script>");
     });
     $("[rel~='preconnect'],[rel~='stylesheet'],[src$='jquery.min.js'],[src$='bootstrap.bundle.min.js'],[src$='jquery.typewriter.min.js'],[src$='jquery.countdown.min.js'],[src$='5aafa1a155.js']").attr("crossorigin", "anonymous");
     $("body").addClass("d-flex flex-column h-100");
-    //$("main").addClass("flex-shrink-0 mb-3 pb-5");
+    $("main").addClass("flex-shrink-0 mb-3 pb-5");
     $("header").each(function () {
-        $(this).filter(".jumbotron.jumbotron-fluid").addClass("mb-0 py-0 overflow-hidden");
         $(this).find("div.col-sm-2").eq(0).addClass("order-1 order-md-0");
         $(this).find("div.col-sm-9").addClass("py-md-4 order-2 order-md-1");
         $(this).find("div.col-sm-1").addClass("order-0 order-md-2");
     });
+    $("header, footer").addClass("jumbotron jumbotron-fluid mb-0 py-0 overflow-hidden")
     $("li.nav-item").find("i").addClass("fa-lg pr-2");
     $("div[class*='container']").addClass("py-2 mx-auto");
     $("img[src*='simpleicons'],img[src*='simple-icons']").width(32).height(32);
@@ -185,11 +185,7 @@ $(document).ready(function () {
         $("p#rezultat.alert").alert("close");
         location.reload();
     }).attr("type", "reset").addClass("btn btn-secondary");
-    //$("footer").addClass("jumbotron jumbotron-fluid bg-primary d-sm-flex flex-sm-row align-items-center mb-0 py-0 overflow-hidden fixed-bottom");
-    $("footer").addClass("jumbotron jumbotron-fluid bg-primary d-sm-flex flex-sm-row align-items-center text-center");
-    $("footer").children("div").eq(0).addClass("d-flex flex-wrap flex-sm-column mx-md-2").html("<div><img src='https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3' alt='Bootstrap'></div><div><img src='https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad' alt='jQuery'></div><div><img src='https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&label=Font%20Awesome&labelColor=538dd7&color=538dd7' alt='Font Awesome'></div><div><img src='https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600' alt='jsDelivr CDN'></div>");
-    $("footer").children("div").eq(0).find("img").css("margin-left", "1px");
-    $("footer").children("div").eq(1).addClass("text-white");
-    $("#date").text(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
-    $("footer").children("div").eq(2).addClass("wot mx-md-2").html("<a id='wot-badge0' class='wot-badge mx-auto' href='https://www.mywot.com/scorecard/baleshsrle.github.io?wot_badge=0_white' target='_blank'><div class='wot-logo'></div><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p><div class='wot-vertical'></div><p class='wot-report'>See Report</p></a>");
+    $("footer").addClass("bg-primary mt-auto fixed-bottom");
+    $("#date").addClass("text-center text-white").html(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
+
 });
