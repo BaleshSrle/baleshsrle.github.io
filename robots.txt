@@ -14,3 +14,4 @@ Disallow: /images/favtown/
 Disallow: /images/gallery/
 Disallow: /css/
 Disallow: /documents/
+Disallow: /.well-known/
