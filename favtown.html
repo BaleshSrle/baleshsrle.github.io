@@ -352,6 +352,9 @@
         $(document).ready(function () {
             $.getScript("js/main.js");
             $("span").children("a").attr("target", "_blank");
+            $("a[href*='rs']").attr("hreflang", "sr-RS");
+            $("a[href*='hr']").attr("hreflang", "hr");
+            $("a[href*='en']").slice(1).attr("hreflang", "en");
             $("div.modal").addClass("fade").attr("aria-hidden", "true");
             $("div.modal-dialog").each(function () {
                 $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
