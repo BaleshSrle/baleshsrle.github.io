@@ -2,32 +2,32 @@ $(document).ready(function () {
     var BrowserLang = navigator.language;
     if (BrowserLang.includes("sr") || BrowserLang.includes("hr") || BrowserLang.includes("bs")) {
         $("[lang='en']").hide(1);
-        $("h1#welcome").children("span").text("Dobrodošli na sajt");
-        $("p#subtext").children("span").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni");
-        $("div.col-sm-1").children("span").addClass("fi fi-rs float-right m-1 border border-warning");
-        $("i.fa-home").siblings("span").text("Početna");
-        $("i.fa-gift").siblings("span").text("Rođendanski poklon");
-        $("i.fa-film").siblings("span").text("Omiljeni film");
-        $("i.fa-city").siblings("span").text("Omiljeni grad");
-        $("i.fa-wrench").siblings("span").text("Hobi");
-        $("i.fa-images").siblings("span").text("Galerija");
-        $("i.fa-gamepad").siblings("span").text("Kviz");
-        $("i.fa-sitemap").siblings("span").text("Mapa sajta");
-        $("footer").find("h3#owner").addClass("font-italic").text("Balešević Srđan");
+        $("h1#welcome > span").text("Dobrodošli na sajt");
+        $("p#subtext > span").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni");
+        $("div.col-sm-1 > span").addClass("fi fi-rs float-right m-1 border border-warning");
+        $("i.fa-home ~ span").text("Početna");
+        $("i.fa-gift ~ span").text("Rođendanski poklon");
+        $("i.fa-film ~ span").text("Omiljeni film");
+        $("i.fa-city ~ span").text("Omiljeni grad");
+        $("i.fa-wrench ~ span").text("Hobi");
+        $("i.fa-images ~ span").text("Galerija");
+        $("i.fa-gamepad ~ span").text("Kviz");
+        $("i.fa-sitemap ~ span").text("Mapa sajta");
+        $("footer h3#owner").addClass("font-italic").text("Balešević Srđan");
     } else {
         $("[lang='sr']").hide(1);
-        $("h1#welcome").children("span").text("Welcome to the website");
-        $("p#subtext").children("span").text("A lot of additional information can be found about me on this website");
-        $("div.col-sm-1").children("span").addClass("fi fi-gb-eng float-right m-1 border border-warning");
-        $("i.fa-home").siblings("span").text("Home");
-        $("i.fa-gift").siblings("span").text("Birthday present");
-        $("i.fa-film").siblings("span").text("Favourite movie");
-        $("i.fa-city").siblings("span").text("Favourite town");
-        $("i.fa-wrench").siblings("span").text("Hobby");
-        $("i.fa-images").siblings("span").text("Gallery");
-        $("i.fa-gamepad").siblings("span").text("Quiz");
-        $("i.fa-sitemap").siblings("span").text("Site Map");
-        $("footer").find("h3#owner").addClass("font-italic").text("Baleshevich Srdjan");
+        $("h1#welcome > span").text("Welcome to the website");
+        $("p#subtext > span").text("A lot of additional information can be found about me on this website");
+        $("div.col-sm-1 > span").addClass("fi fi-gb-eng float-right m-1 border border-warning");
+        $("i.fa-home ~ span").text("Home");
+        $("i.fa-gift ~ span").text("Birthday present");
+        $("i.fa-film ~ span").text("Favourite movie");
+        $("i.fa-city ~ span").text("Favourite town");
+        $("i.fa-wrench ~ span").text("Hobby");
+        $("i.fa-images ~ span").text("Gallery");
+        $("i.fa-gamepad ~ span").text("Quiz");
+        $("i.fa-sitemap ~ span").text("Site Map");
+        $("footer h3#owner").addClass("font-italic").text("Baleshevich Srdjan");
     }
     switch (location.pathname) {
         case "/birthdaypresent.html":
@@ -36,7 +36,7 @@ $(document).ready(function () {
         case "/hobby.html":
         case "/gallery.html":
         case "/quiz.html":
-            $("head").prepend("<meta name='google-site-verification' content='HcgjQ9u13iaWAG1FyF9yFp6-f9QYrwstKoKPNrRbbqM'>", "<meta name='google-site-verification' content='YXXACXsZjuu041kl41yKLww4xdiiudN1S0IEtdEeGSE'>", "<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>", "<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>", "<meta name='wot-verification' content='cee6cf583ee362cd666b'>", "<meta name='norton-safeweb-site-verification' content='AE1KUNZ8BFEIRXCIVRMN7804CZR-WK4ER0C3CPJO8W9N0ZVGHX9R2BJ4RNAG2DCL6SBHR6U7BDTD9VH3JKZG3FLO1EGE5E3CVLLQO4E1FM13PDFWE0RX9GUQ8SJWKLEW'>", "<meta name='siteguarding-tools' content='f7a27dcd3b94ff4d3cd7d37eaecff01a'>", "<title>.::" + $("footer").find("h3").text() + ":: - ::" + $("a[href='" + location.pathname.slice(1) + "']").children("span").text() + "::.</title>");
+            $("head").prepend("<meta name='google-site-verification' content='HcgjQ9u13iaWAG1FyF9yFp6-f9QYrwstKoKPNrRbbqM'>", "<meta name='google-site-verification' content='YXXACXsZjuu041kl41yKLww4xdiiudN1S0IEtdEeGSE'>", "<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>", "<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>", "<meta name='wot-verification' content='cee6cf583ee362cd666b'>", "<meta name='norton-safeweb-site-verification' content='AE1KUNZ8BFEIRXCIVRMN7804CZR-WK4ER0C3CPJO8W9N0ZVGHX9R2BJ4RNAG2DCL6SBHR6U7BDTD9VH3JKZG3FLO1EGE5E3CVLLQO4E1FM13PDFWE0RX9GUQ8SJWKLEW'>", "<meta name='siteguarding-tools' content='f7a27dcd3b94ff4d3cd7d37eaecff01a'>", "<title>.::" + $("footer h3").text() + ":: - ::" + $("a[href='" + location.pathname.slice(1) + "'] > span").text() + "::.</title>");
         //$("head").prepend("<meta http-equiv='Content-Security-Policy' content='default-src https:'>");
         //$("a.nav-link[href='" + location.pathname.slice(1) + "']").addClass("active");
     }
@@ -77,7 +77,7 @@ $(document).ready(function () {
     $("iframe.embed-responsive-item").addClass("border-0 rounded-lg").attr("allowfullscreen", "true");
     $("img.img-thumbnail").width(240).addClass("rounded-lg");
     $("p.card-text").addClass("text-justify");
-    $("div#BookReadCarousel").find("img").width(280).addClass("d-block mx-auto h-auto rounded-lg");
+    $("div#BookReadCarousel img").width(280).addClass("d-block mx-auto h-auto rounded-lg");
     $("div.carousel").addClass("carousel-fade").carousel({
         interval: 3500,
         keyboard: false,
@@ -86,8 +86,8 @@ $(document).ready(function () {
         touch: false
     });
     $("div.carousel-item").first().addClass("active");
-    $("div.carousel-item").children("img").first().attr("loading", "eager");
-    $("div.carousel-item").children("img").slice(1).attr("loading", "lazy");
+    $("div.carousel-item > img").first().attr("loading", "eager");
+    $("div.carousel-item > img").slice(1).attr("loading", "lazy");
     $("img[src*='slika']").addClass("d-block w-100 h-auto rounded-lg");
     $("button#movieAnswerCheckBtn").on("click", function () {
         var a = $('#odgovor').val();
@@ -192,14 +192,14 @@ $(document).ready(function () {
     }).attr("type", "reset").addClass("btn btn-secondary");
     $("footer").addClass("d-sm-flex justify-content-around align-items-center bg-primary mt-auto fixed-bottom");
     //$("footer").children("div").eq(0).addClass("d-flex flex-wrap flex-sm-column mx-md-2");
-    $("footer").children("div").eq(0).addClass("d-flex justify-content-center flex-wrap mx-2 mx-auto").css("max-width", "292px");
-    $("footer").children("div").eq(0).find("div").slice(0, -1).addClass("mr-1");
-    $("footer").children("div").eq(0).find("img").eq(0).attr("src", "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&logoSize=auto&label=Bootstrap&labelColor=7952b3&color=7952b3");
-    $("footer").children("div").eq(0).find("img").eq(1).attr("src", "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&logoSize=auto&labelColor=0769ad&color=0769ad");
-    $("footer").children("div").eq(0).find("img").eq(2).attr("src", "https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&logoSize=auto&label=Font%20Awesome&labelColor=0769ad&color=0769ad");
-    $("footer").children("div").eq(0).find("img").eq(3).attr("src", "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&logoSize=auto&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600");
-    $("footer").children("div").eq(1).addClass("flex-grow-1 text-center text-white");
-    $("footer").children("div").eq(2).addClass("mx-2").html("<a id='wot-badge0' class='wot-badge mx-auto mb-1 mb-md-0' href='https://www.mywot.com/scorecard/baleshsrle.github.io?wot_badge=0_white' target='_blank'><div class='wot-logo'></div><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p><div class='wot-vertical'></div><p class='wot-report'>See Report</p></a>");
+    $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-2 mx-auto").css("max-width", "292px");
+    $("footer > div:eq(0) div").slice(0, -1).addClass("mr-1");
+    $("footer > div:eq(0) img:eq(0)").attr("src", "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&logoSize=auto&label=Bootstrap&labelColor=7952b3&color=7952b3");
+    $("footer > div:eq(0) img:eq(1)").attr("src", "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&logoSize=auto&labelColor=0769ad&color=0769ad");
+    $("footer > div:eq(0) img:eq(2)").attr("src", "https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&logoSize=auto&label=Font%20Awesome&labelColor=0769ad&color=0769ad");
+    $("footer > div:eq(0) img:eq(3)").attr("src", "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&logoSize=auto&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600");
+    $("footer > div:eq(1)").addClass("flex-grow-1 text-center text-white");
+    $("footer > div:eq(2)").addClass("mx-2").html("<a id='wot-badge0' class='wot-badge mx-auto mb-1 mb-md-0' href='https://www.mywot.com/scorecard/baleshsrle.github.io?wot_badge=0_white' target='_blank'><div class='wot-logo'></div><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p><div class='wot-vertical'></div><p class='wot-report'>See Report</p></a>");
     $("#date").html(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
 
 });

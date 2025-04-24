@@ -138,7 +138,6 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img>
                         </div>
                     </div>
                 </div>
@@ -147,7 +146,6 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img>
                         </div>
                     </div>
                 </div>
@@ -156,7 +154,6 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img>
                         </div>
                     </div>
                 </div>
@@ -165,7 +162,6 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img>
                         </div>
                     </div>
                 </div>
@@ -174,7 +170,6 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img>
                         </div>
                     </div>
                 </div>
@@ -192,8 +187,6 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img src="images/favtown/stadion_slavko_maletin_vava.jpg"
-                                alt="Stadion 'Slavko Maletin - Vava'">
                         </div>
                     </div>
                 </div>
@@ -323,7 +316,6 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
     </main>
     <footer>
@@ -351,7 +343,7 @@
     <script>
         $(document).ready(function () {
             $.getScript("js/main.js");
-            $("span").children("a").attr("target", "_blank");
+            $("span > a").attr("target", "_blank");
             $("a[href*='rs']").attr("hreflang", "sr-RS");
             $("a[href*='hr']").attr("hreflang", "hr");
             $("a[href*='en']").slice(1).attr("hreflang", "en");
@@ -360,7 +352,7 @@
                 $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
                 $("div.modal-dialog").filter(":eq(2),:eq(3)").removeClass("modal-lg");
             });
-            $("div.modal-body").children("img").addClass("d-block mx-auto img-fluid").attr("loading", "lazy");
+            $("div.modal-body").append($("<img>").addClass("d-block mx-auto img-fluid").attr("loading", "lazy"));
             $("td").each(function () {
                 $(this).addClass("align-middle");
                 $(this).children("i").addClass("fa-solid fa-xmark fa-1x text-danger");

@@ -286,7 +286,7 @@
                 $(this).addClass("my-2 w-100");
                 $(this).children("div.list-group").addClass("list-group-flush");
             });
-            $("div.list-group").children("a.list-group-item").addClass("list-group-item-action").attr("target", "_blank");
+            $("div.list-group > a.list-group-item").addClass("list-group-item-action").attr("target", "_blank");
             $("img[src*='simpleicons']").addClass("mr-1");
             $("p.card-text").slice(0, 2).addClass("pl-2 pt-1").removeClass("text-justify");
         });
