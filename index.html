@@ -45,26 +45,21 @@
     <main>
         <header class="jumbotron jumbotron-fluid">
             <div class="row">
-                <div class="col-sm-2">
-                    <img>
-                </div>
+                <div class="col-sm-2"></div>
                 <div class="col-sm-9">
-                    <h1 id="welcome">
-                        <span></span>
-                    </h1>
-                    <p id="subtext">
-                        <span></span>
-                    </p>
+                    <h1 id="welcome"></h1>
+                    <p id="subtext"></p>
                 </div>
                 <div class="col-sm-1">
                     <span></span>
                 </div>
             </div>
         </header>
-        <nav class="navbar navbar-expand-md bg-primary navbar-dark">
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"><span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <nav class="navbar">
+            <button class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div>
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a href="index.html">
@@ -118,14 +113,14 @@
             </div>
         </nav>
         <div class="container-fluid">
-            <div class="alert alert-info alert-dismissible fade show text-center mb-1 mx-auto"
-                style="max-width: 470px;">
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <div class="alert text-center mb-1" style="max-width: 470px;">
                 <span lang="sr">HTML kod ove stranice možete vidjeti na</span>
-                <span lang="en">You can see the HTML code of this site on</span>
-                <a href="https://github.com/BaleshSrle/baleshsrle.github.io" target="_blank"><img
-                        src="https://img.shields.io/badge/GitHub-181717?logo=github&labelColor=555555" alt="GitHub"
-                        class="px-1"></a>.
+                <span lang="en">You can see the HTML code of this site on</span><object
+                    data="https://img.shields.io/badge/GitHub-181717?logo=github&labelColor=555555&link=https%3A%2F%2Fgithub.com%2FBaleshSrle%2Fbaleshsrle.github.io"
+                    class="px-1" name="GitHub"></object>.
+                <!-- <a href="https://github.com/BaleshSrle/baleshsrle.github.io" target="_blank">
+                    <img src="https://img.shields.io/badge/GitHub-181717?logo=github&labelColor=555555" alt="GitHub"
+                        class="px-1"></a> -->
             </div>
             <div class="card my-2 mw-100 mx-auto rounded-lg">
                 <div class="row no-gutters align-items-center">
@@ -312,13 +307,12 @@
             <h3 id="owner"></h3>
             <div id="date"></div>
         </div>
-        <div>
-        </div>
+        <div></div>
     </footer>
     <script>
         $(document).ready(function () {
             $.getScript("js/main.js");
-            $("img[alt='GitHub']:first,td:odd:lt(3)").addClass("align-middle");
+            $("object,td:odd:lt(3)").addClass("align-middle");
             $("div.card-body").addClass("px-3 py-2");
             $("td:even").addClass("font-weight-bold");
             $(".h5").typeWrite({

@@ -23,26 +23,21 @@
     <main>
         <header class="jumbotron jumbotron-fluid">
             <div class="row">
-                <div class="col-sm-2">
-                    <img>
-                </div>
+                <div class="col-sm-2"></div>
                 <div class="col-sm-9">
-                    <h1 id="welcome">
-                        <span></span>
-                    </h1>
-                    <p id="subtext">
-                        <span></span>
-                    </p>
+                    <h1 id="welcome"></h1>
+                    <p id="subtext"></p>
                 </div>
                 <div class="col-sm-1">
                     <span></span>
                 </div>
             </div>
         </header>
-        <nav class="navbar navbar-expand-md bg-primary navbar-dark">
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"><span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <nav class="navbar">
+            <button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="index.html">
@@ -336,8 +331,7 @@
             <h3 id="owner"></h3>
             <div id="date"></div>
         </div>
-        <div>
-        </div>
+        <div></div>
     </footer>
     <script>
         $(document).ready(function () {
@@ -353,10 +347,9 @@
             });
             $("div.modal-body").append($("<img>").addClass("d-block mx-auto img-fluid").attr("loading", "lazy"));
             $("td").each(function () {
-                $(this).addClass("align-middle");
                 $(this).children("i").addClass("fa-solid fa-xmark fa-1x text-danger");
                 $(this).children("a").attr({ "data-toggle": "modal", "role": "button" }).addClass("btn btn-link");
-            });
+            }).addClass("align-middle");
             $("img:eq(1),img:eq(8)").attr({ "src": "images/favtown/city_hall.jpg", "alt": "Gradska vijećnica" });
             $("img:eq(2),img:eq(9)").attr({ "src": "images/favtown/main_pedestrian_street.jpg", "alt": "Glavna pješačka ulica" });
             $("img:eq(3),img:eq(10)").attr({ "src": "images/favtown/catholic_church.jpg", "alt": "Katolička crkva" });

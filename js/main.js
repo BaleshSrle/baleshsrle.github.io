@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    var BrowserLang = navigator.language;
-    if (BrowserLang.includes("sr") || BrowserLang.includes("hr") || BrowserLang.includes("bs")) {
+    var exYuLang = ['sr', 'hr', 'bs'];
+    if (exYuLang.includes(navigator.language)) {
         $("[lang='en']").hide(1);
-        $("h1#welcome > span").text("Dobrodošli na sajt");
-        $("p#subtext > span").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni");
+        $("h1#welcome").text("Dobrodošli na sajt");
+        $("p#subtext").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni");
         $("div.col-sm-1 > span").addClass("fi fi-rs float-right m-1 border border-warning");
         $("i.fa-home ~ span").text("Početna");
         $("i.fa-gift ~ span").text("Rođendanski poklon");
@@ -16,8 +16,8 @@ $(document).ready(function () {
         $("footer h3#owner").addClass("font-italic").text("Balešević Srđan");
     } else {
         $("[lang='sr']").hide(1);
-        $("h1#welcome > span").text("Welcome to the website");
-        $("p#subtext > span").text("A lot of additional information can be found about me on this website");
+        $("h1#welcome").text("Welcome to the website");
+        $("p#subtext").text("A lot of additional information can be found about me on this website");
         $("div.col-sm-1 > span").addClass("fi fi-gb-eng float-right m-1 border border-warning");
         $("i.fa-home ~ span").text("Home");
         $("i.fa-gift ~ span").text("Birthday present");
@@ -49,18 +49,23 @@ $(document).ready(function () {
     $("body").addClass("d-flex flex-column h-100");
     $("main").addClass("flex-shrink-0 mb-3 pb-5");
     $("header").each(function () {
-        $(this).find("div.col-sm-2").eq(0).addClass("order-1 order-md-0");
-        $(this).find("img").addClass("mx-auto d-block img-fluid").attr({ "src": "images/logo.png", "alt": "Moj logo" });
+        $(this).find("div.col-sm-2").addClass("order-1 order-md-0").append($("<img>").attr({ "src": "images/logo.png", "alt": "Moj logo" }).addClass("mx-auto d-block img-fluid"));
         $(this).find("div.col-sm-9").addClass("py-md-4 order-2 order-md-1");
         $(this).find("div.col-sm-1").addClass("order-0 order-md-2");
     });
-    $("header, footer").addClass("jumbotron jumbotron-fluid mb-0 py-0 overflow-hidden")
+    $("header, footer").addClass("jumbotron jumbotron-fluid mb-0 py-0 overflow-hidden");
+    $("nav.navbar").each(function () {
+        $(this).addClass("navbar-expand-md navbar-dark bg-primary");
+        $(this).children("button").addClass("navbar-toggler").attr({ "type": "button", "data-toggle": "collapse", "data-target": "#collapsibleNavbar" });
+        $(this).children("div").addClass("collapse navbar-collapse").attr("id", "collapsibleNavbar");
+    });
     $("li.nav-item").each(function () {
         //$("li.nav-item").eq(0).html("<a href='index.html' class='nav-link'><i class='fa-solid fa-home fa-lg pr-2'></i><span></span></a>");
         $(this).children("a").addClass("nav-link");
         $(this).find("i").addClass("fa-solid fa-lg pr-2");
     })
     $("div[class*='container']").addClass("py-2 mx-auto");
+    $("div.alert").addClass("alert-info alert-dismissible fade show mx-auto").attr("role", "alert").prepend($("<button></button>").addClass("close").attr({ "type": "button", "data-dismiss": "alert", "aria-label": "Close" }).html("<span aria-hidden='true'>&times;</span>"));
     $("img[src*='simpleicons'],img[src*='simple-icons']").width(32).height(32);
     $("div.card").addClass("shadow-sm");
     $("ul.nav.nav-tabs[id$='List']").each(function () {
@@ -192,12 +197,13 @@ $(document).ready(function () {
     }).attr("type", "reset").addClass("btn btn-secondary");
     $("footer").addClass("d-sm-flex justify-content-around align-items-center bg-primary mt-auto fixed-bottom");
     //$("footer").children("div").eq(0).addClass("d-flex flex-wrap flex-sm-column mx-md-2");
-    $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-2 mx-auto").css("max-width", "292px");
-    $("footer > div:eq(0) div").slice(0, -1).addClass("mr-1");
-    $("footer > div:eq(0) img:eq(0)").attr("src", "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&logoSize=auto&label=Bootstrap&labelColor=7952b3&color=7952b3");
-    $("footer > div:eq(0) img:eq(1)").attr("src", "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&logoSize=auto&labelColor=0769ad&color=0769ad");
-    $("footer > div:eq(0) img:eq(2)").attr("src", "https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&logoSize=auto&label=Font%20Awesome&labelColor=0769ad&color=0769ad");
-    $("footer > div:eq(0) img:eq(3)").attr("src", "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&logoSize=auto&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600");
+    $("footer > div:eq(0)").each(function () {
+        $(this).children("div:even").addClass("mr-1");
+        $(this).find("img:eq(0)").attr("src", "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&logoSize=auto&label=Bootstrap&labelColor=7952b3&color=7952b3");
+        $(this).find("img:eq(1)").attr("src", "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&logoSize=auto&labelColor=0769ad&color=0769ad");
+        $(this).find("img:eq(2)").attr("src", "https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&logoSize=auto&label=Font%20Awesome&labelColor=538dd7&color=538dd7");
+        $(this).find("img:eq(3)").attr("src", "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&logoSize=auto&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600");
+    }).addClass("d-flex justify-content-center flex-wrap mx-2 mx-auto").css("max-width", "292px");
     $("footer > div:eq(1)").addClass("flex-grow-1 text-center text-white");
     $("footer > div:eq(2)").addClass("mx-2").html("<a id='wot-badge0' class='wot-badge mx-auto mb-1 mb-md-0' href='https://www.mywot.com/scorecard/baleshsrle.github.io?wot_badge=0_white' target='_blank'><div class='wot-logo'></div><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p><div class='wot-vertical'></div><p class='wot-report'>See Report</p></a>");
     $("#date").html(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
