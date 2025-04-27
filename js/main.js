@@ -2,8 +2,9 @@ $(document).ready(function () {
     var exYuLang = ['sr', 'hr', 'bs'];
     if (exYuLang.includes(navigator.language)) {
         $("[lang='en']").hide(1);
-        $("h1#welcome").text("Dobrodošli na sajt");
-        $("p#subtext").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni");
+        $("header div.col-sm-9").append($("<h1></h1>").text("Dobrodošli na sajt"), $("<p></p>").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni"));
+        //$("h1#welcome").text("Dobrodošli na sajt");
+        //$("p#subtext").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni");
         $("div.col-sm-1 > span").addClass("fi fi-rs float-right m-1 border border-warning");
         $("i.fa-home ~ span").text("Početna");
         $("i.fa-gift ~ span").text("Rođendanski poklon");
@@ -13,11 +14,10 @@ $(document).ready(function () {
         $("i.fa-images ~ span").text("Galerija");
         $("i.fa-gamepad ~ span").text("Kviz");
         $("i.fa-sitemap ~ span").text("Mapa sajta");
-        $("footer h3#owner").addClass("font-italic").text("Balešević Srđan");
+        $("footer > div:eq(1)").prepend($("<h3></h3>").attr("id", "owner").addClass("font-italic").text("Balešević Srđan"));
     } else {
         $("[lang='sr']").hide(1);
-        $("h1#welcome").text("Welcome to the website");
-        $("p#subtext").text("A lot of additional information can be found about me on this website");
+        $("header div.col-sm-9").append($("<h1></h1>").text("Welcome to the website"), $("<p></p>").text("A lot of additional information can be found about me on this website"));
         $("div.col-sm-1 > span").addClass("fi fi-gb-eng float-right m-1 border border-warning");
         $("i.fa-home ~ span").text("Home");
         $("i.fa-gift ~ span").text("Birthday present");
@@ -27,7 +27,7 @@ $(document).ready(function () {
         $("i.fa-images ~ span").text("Gallery");
         $("i.fa-gamepad ~ span").text("Quiz");
         $("i.fa-sitemap ~ span").text("Site Map");
-        $("footer h3#owner").addClass("font-italic").text("Baleshevich Srdjan");
+        $("footer > div:eq(1)").prepend($("<h3></h3>").attr("id", "owner").addClass("font-italic").text("Baleshevich Srdjan"));
     }
     switch (location.pathname) {
         case "/birthdaypresent.html":
@@ -199,10 +199,10 @@ $(document).ready(function () {
     //$("footer").children("div").eq(0).addClass("d-flex flex-wrap flex-sm-column mx-md-2");
     $("footer > div:eq(0)").each(function () {
         $(this).children("div:even").addClass("mr-1");
-        $(this).find("img:eq(0)").attr("src", "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&logoSize=auto&label=Bootstrap&labelColor=7952b3&color=7952b3");
-        $(this).find("img:eq(1)").attr("src", "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&logoSize=auto&labelColor=0769ad&color=0769ad");
-        $(this).find("img:eq(2)").attr("src", "https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&logoSize=auto&label=Font%20Awesome&labelColor=538dd7&color=538dd7");
-        $(this).find("img:eq(3)").attr("src", "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&logoSize=auto&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600");
+        $(this).children("div:eq(0)").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&logoSize=auto&label=Bootstrap&labelColor=7952b3&color=7952b3", "alt": "Bootstrap" }));
+        $(this).children("div:eq(1)").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&logoSize=auto&labelColor=0769ad&color=0769ad", "alt": "jQuery" }));
+        $(this).children("div:eq(2)").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&logoSize=auto&label=Font%20Awesome&labelColor=538dd7&color=538dd7", "alt": "Font Awesome" }));
+        $(this).children("div:eq(3)").append($("<img>").attr({ "src": "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&logoSize=auto&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", "alt": "jsDelivr CDN" }));
     }).addClass("d-flex justify-content-center flex-wrap mx-2 mx-auto").css("max-width", "292px");
     $("footer > div:eq(1)").addClass("flex-grow-1 text-center text-white");
     $("footer > div:eq(2)").addClass("mx-2").html("<a id='wot-badge0' class='wot-badge mx-auto mb-1 mb-md-0' href='https://www.mywot.com/scorecard/baleshsrle.github.io?wot_badge=0_white' target='_blank'><div class='wot-logo'></div><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p><div class='wot-vertical'></div><p class='wot-report'>See Report</p></a>");
