@@ -36,16 +36,17 @@ $(document).ready(function () {
         case "/hobby.html":
         case "/gallery.html":
         case "/quiz.html":
-            $("head").prepend("<meta name='google-site-verification' content='HcgjQ9u13iaWAG1FyF9yFp6-f9QYrwstKoKPNrRbbqM'>", "<meta name='google-site-verification' content='YXXACXsZjuu041kl41yKLww4xdiiudN1S0IEtdEeGSE'>", "<meta name='msvalidate.01' content='6605C60582C09EBF05D19C7AA9FF5496'>", "<meta name='msvalidate.01' content='78FE17549C9303A86665F2ECA50117F0'>", "<meta name='wot-verification' content='cee6cf583ee362cd666b'>", "<meta name='norton-safeweb-site-verification' content='AE1KUNZ8BFEIRXCIVRMN7804CZR-WK4ER0C3CPJO8W9N0ZVGHX9R2BJ4RNAG2DCL6SBHR6U7BDTD9VH3JKZG3FLO1EGE5E3CVLLQO4E1FM13PDFWE0RX9GUQ8SJWKLEW'>", "<meta name='siteguarding-tools' content='f7a27dcd3b94ff4d3cd7d37eaecff01a'>", "<title>.::" + $("footer h3").text() + ":: - ::" + $("a[href='" + location.pathname.slice(1) + "'] > span").text() + "::.</title>");
+            $("head").prepend($("<meta>").attr({ "name": "google-site-verification", "content": "HcgjQ9u13iaWAG1FyF9yFp6-f9QYrwstKoKPNrRbbqM" }), $("<meta>").attr({ "name": "google-site-verification", "content": "YXXACXsZjuu041kl41yKLww4xdiiudN1S0IEtdEeGSE" }), $("<meta>").attr({ "name": "msvalidate.01", "content": "6605C60582C09EBF05D19C7AA9FF5496" }), $("<meta>").attr({ "name": "msvalidate.01", "content": "78FE17549C9303A86665F2ECA50117F0" }), $("<meta>").attr({ "name": "wot-verification", "content": "cee6cf583ee362cd666b" }), $("<meta>").attr({ "name": "norton-safeweb-site-verification", "content": "AE1KUNZ8BFEIRXCIVRMN7804CZR-WK4ER0C3CPJO8W9N0ZVGHX9R2BJ4RNAG2DCL6SBHR6U7BDTD9VH3JKZG3FLO1EGE5E3CVLLQO4E1FM13PDFWE0RX9GUQ8SJWKLEW" }), $("<meta>").attr({ "name": "siteguarding-tools", "content": "f7a27dcd3b94ff4d3cd7d37eaecff01a" }), "<title>.::" + $("footer h3").text() + ":: - ::" + $("a[href='" + location.pathname.slice(1) + "'] > span").text() + "::.</title>");
         //$("head").prepend("<meta http-equiv='Content-Security-Policy' content='default-src https:'>");
         //$("a.nav-link[href='" + location.pathname.slice(1) + "']").addClass("active");
     }
     $("head").each(function () {
-        $(this).append("<meta name='author' content='Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com'>", "<meta name='designer' content='BaleshSrle'>", "<meta name='reply-to' content='srdjan.balesevic%40yahoo.com'>", "<meta name='language' content='sr'>", "<meta name='host' content='pages.github.com'>", "<meta name='geo.region' content='BA-SRP'>", "<meta name='geo.placename' content='Добој'>", "<meta name='twitter:creator' content='@BaleshSrle'>", "<meta name='twitter:site' content='@BaleshSrle'>");
-        $(this).append("<meta name='MSThemeCompatible' content='yes'>", "<meta http-equiv='cleartype' content='on'>", "<meta http-equiv='X-UA-Compatible' content='ie=edge'>", "<meta http-equiv='x-dns-prefetch-control' content='on'>", "<meta http-equiv='Cache-control' content='no-cache'>", "<meta http-equiv='Pragma' content='no-cache'>", "<meta http-equiv='Expires' content='-1'>");
-        $(this).append("<link rel='dns-prefetch' href='https://cdn.jsdelivr.net/'>", "<link rel='preconnect' href='https://cdn.jsdelivr.net/'>", "<link rel='icon' href='images/logo.png' type='image/png'>"/*, "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css'>"*/, "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css'>", $.getScript("https://kit.fontawesome.com/5aafa1a155.js"), $.getScript("https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js"));
+        $(this).append($("<meta>").attr({ "name": "author", "content": "Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com" }), $("<meta>").attr({ "name": "designer", "content": "BaleshSrle" }), $("<meta>").attr({ "name": "reply-to", "content": "srdjan.balesevic%40yahoo.com" }), $("<meta>").attr({ "name": "language", "content": "sr" }), $("<meta>").attr({ "name": "host", "content": "pages.github.com" }), $("<meta>").attr({ "name": "geo.region", "content": "BA-SRP" }), $("<meta>").attr({ "name": "geo.placename", "content": "Добој" }), $("<meta>").attr({ "name": "twitter:creator", "content": "@BaleshSrle" }), $("<meta>").attr({ "name": "twitter:site", "content": "@BaleshSrle" }));
+        $(this).append($("<meta>").attr({ "name": "MSThemeCompatible", "content": "yes" }), $("<meta>").attr({ "http-equiv": "cleartype", "content": "on" }), $("<meta>").attr({ "http-equiv": "X-UA-Compatible", "content": "ie=edge" }), $("<meta>").attr({ "http-equiv": "x-dns-prefetch-control", "content": "on" }), $("<meta>").attr({ "http-equiv": "Cache-control", "content": "no-cache" }), $("<meta>").attr({ "http-equiv": "Pragma", "content": "no-cache" }), $("<meta>").attr({ "http-equiv": "Expires", "content": "-1" }));
+        $(this).append($("<link>").attr({ "rel": "dns-prefetch", "href": "https://cdn.jsdelivr.net/" }), $("<link>").attr({ "rel": "preconnect", "href": "https://cdn.jsdelivr.net/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "icon", "href": "images/logo.png" })/*, $("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css", "crossorigin": "anonymous" })*/, $("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css", "crossorigin": "anonymous" }),/* $("<script></script>").attr({ "src": "https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js", "crossorigin": "anonymous" }),*/ $.getScript("https://kit.fontawesome.com/5aafa1a155.js"), $.getScript("https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js"));
+        $(this).children("[src$='jquery.min.js'],[src$='bootstrap.bundle.min.js'],[src$='jquery.typewriter.min.js'],[src$='jquery.countdown.min.js'],[src$='5aafa1a155.js']").attr("crossorigin", "anonymous");
     });
-    $("[rel~='preconnect'],[rel~='stylesheet'],[src$='jquery.min.js'],[src$='bootstrap.bundle.min.js'],[src$='jquery.typewriter.min.js'],[src$='jquery.countdown.min.js'],[src$='5aafa1a155.js']").attr("crossorigin", "anonymous");
+    $("meta:last").after($("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css", "crossorigin": "anonymous" }));
     $("body").addClass("d-flex flex-column h-100");
     $("main").addClass("flex-shrink-0 mb-3 pb-5");
     $("header").each(function () {
@@ -66,7 +67,11 @@ $(document).ready(function () {
     })
     $("div[class*='container']").addClass("py-2 mx-auto");
     $("div.alert").addClass("alert-info alert-dismissible fade show mx-auto").attr("role", "alert").prepend($("<button></button>").addClass("close").attr({ "type": "button", "data-dismiss": "alert", "aria-label": "Close" }).html("<span aria-hidden='true'>&times;</span>"));
-    $("img[src*='simpleicons'],img[src*='simple-icons']").width(32).height(32);
+    $("img").each(function () {
+        $("img").filter("[src*='simpleicons'],[src*='simple-icons']").width(32).height(32);
+        $("img").filter("[alt='Facebook'],[alt='Instagram'],[alt$='Mastodon'],[alt^='X']").parent("a").attr("rel", "me");
+        $("img").filter("[src*='slika']").addClass("d-block w-100 h-auto rounded-lg");
+    });
     $("div.card").addClass("shadow-sm");
     $("ul.nav.nav-tabs[id$='List']").each(function () {
         $(this).parent("div.card-header").addClass("pt-1 px-3");
@@ -82,18 +87,19 @@ $(document).ready(function () {
     $("iframe.embed-responsive-item").addClass("border-0 rounded-lg").attr("allowfullscreen", "true");
     $("img.img-thumbnail").width(240).addClass("rounded-lg");
     $("p.card-text").addClass("text-justify");
-    $("div#BookReadCarousel img").width(280).addClass("d-block mx-auto h-auto rounded-lg");
-    $("div.carousel").addClass("carousel-fade").carousel({
+    $("div#BookReadCarousel, div#carouselGallery").carousel({
         interval: 3500,
         keyboard: false,
         pause: false,
-        ride: 'carousel',
+        ride: "carousel",
         touch: false
-    });
+    }).addClass("slide carousel-fade");
+    $("div#BookReadCarousel img").width(280).addClass("d-block mx-auto h-auto rounded-lg");
     $("div.carousel-item").first().addClass("active");
-    $("div.carousel-item > img").first().attr("loading", "eager");
-    $("div.carousel-item > img").slice(1).attr("loading", "lazy");
-    $("img[src*='slika']").addClass("d-block w-100 h-auto rounded-lg");
+    $("div.carousel img").each(function () {
+        $("div.carousel img").eq(0).attr("loading", "eager");
+        $("div.carousel img").slice(1).attr("loading", "lazy");
+    });
     $("button#movieAnswerCheckBtn").on("click", function () {
         var a = $('#odgovor').val();
 
@@ -197,15 +203,8 @@ $(document).ready(function () {
     }).attr("type", "reset").addClass("btn btn-secondary");
     $("footer").addClass("d-sm-flex justify-content-around align-items-center bg-primary mt-auto fixed-bottom");
     //$("footer").children("div").eq(0).addClass("d-flex flex-wrap flex-sm-column mx-md-2");
-    $("footer > div:eq(0)").each(function () {
-        $(this).children("div:even").addClass("mr-1");
-        $(this).children("div:eq(0)").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&logoSize=auto&label=Bootstrap&labelColor=7952b3&color=7952b3", "alt": "Bootstrap" }));
-        $(this).children("div:eq(1)").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&logoSize=auto&labelColor=0769ad&color=0769ad", "alt": "jQuery" }));
-        $(this).children("div:eq(2)").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&logoSize=auto&label=Font%20Awesome&labelColor=538dd7&color=538dd7", "alt": "Font Awesome" }));
-        $(this).children("div:eq(3)").append($("<img>").attr({ "src": "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&logoSize=auto&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", "alt": "jsDelivr CDN" }));
-    }).addClass("d-flex justify-content-center flex-wrap mx-2 mx-auto").css("max-width", "292px");
-    $("footer > div:eq(1)").addClass("flex-grow-1 text-center text-white");
-    $("footer > div:eq(2)").addClass("mx-2").html("<a id='wot-badge0' class='wot-badge mx-auto mb-1 mb-md-0' href='https://www.mywot.com/scorecard/baleshsrle.github.io?wot_badge=0_white' target='_blank'><div class='wot-logo'></div><div class='wot-shield'></div><p class='wot-secured'>Verified Website</p><div class='wot-vertical'></div><p class='wot-report'>See Report</p></a>");
-    $("#date").html(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + ".");
+    $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-auto").css("max-width", "292px").append($("<div></div>").addClass("mr-1").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3", "alt": "Bootstrap" })), $("<div></div>").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad", "alt": "jQuery" })), $("<div></div>").addClass("mr-1").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&logoSize=auto&label=Font%20Awesome&labelColor=538dd7&color=538dd7", "alt": "Font Awesome" })), $("<div></div>").append($("<img>").attr({ "src": "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", "alt": "jsDelivr CDN" })));
+    $("footer > div:eq(1)").addClass("flex-grow-1 text-center text-white").append($("<div></div>").html(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + "."));
+    $("footer > div:eq(2)").addClass("mx-md-2").append($("<a></a>").attr({ "id": "wot-badge0", "href": "https://www.mywot.com/scorecard/baleshsrle.github.io?wot_badge=0_white", "hreflang": "en-US", "target": "_blank" }).addClass("wot-badge mx-auto mb-1 mb-md-0").append($("<div></div>").addClass("wot-logo"), $("<div></div>").addClass("wot-shield"), $("<p></p>").addClass("wot-secured").text("Verified Website"), $("<div></div>").addClass("wot-vertical"), $("<p></p>").addClass("wot-report").text("See Report")));
 
 });
