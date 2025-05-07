@@ -81,7 +81,8 @@ $(document).ready(function () {
             $(this).tab("show");
         }).attr("role", "tab");
     });
-    $("a[href^='skype']").addClass("disabled");
+    $("a[href^='skype']").addClass("disabled d-none");
+    $("a[href^='https']").not(".wotbadge").attr("target", "_blank");    
     $("#lenovoThinkPadX230_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-434-detail");
     $("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsc-lifebook-s752-detail");
     $("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
