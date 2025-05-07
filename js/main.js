@@ -70,7 +70,6 @@ $(document).ready(function () {
     $("img").each(function () {
         $("img").filter("[src*='simpleicons'],[src*='simple-icons']").width(32).height(32);
         $("img").filter("[alt='Facebook'],[alt='Instagram'],[alt^='X']").parent("a").attr("rel", "me");
-        //$("img").filter("[alt='Skype']").parent("a").addClass("disabled");
         $("img").filter("[src*='slika']").addClass("d-block w-100 h-auto rounded-lg");
     });
     $("div.card").addClass("shadow-sm");
@@ -82,6 +81,7 @@ $(document).ready(function () {
             $(this).tab("show");
         }).attr("role", "tab");
     });
+    $("a[href^='skype']").addClass("disabled");
     $("#lenovoThinkPadX230_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-434-detail");
     $("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsc-lifebook-s752-detail");
     $("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
