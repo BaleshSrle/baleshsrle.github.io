@@ -14,6 +14,9 @@ $(document).ready(function () {
         $("i.fa-images ~ span").text("Galerija");
         $("i.fa-gamepad ~ span").text("Kviz");
         $("i.fa-sitemap ~ span").text("Mapa sajta");
+        $("input#FirstName").val("Srđan");
+        $("input#LastName").val("Balešević");
+        $("textarea#ShortBio").text("Rođeni Dobojlija. U rodnom gradu završio osnovu, srednju elektro školu (posjeduje dvije diplome iz srednje) i Saobraćajni fakultet u Doboju - smjer Logistika.\n\nOd svoje 10. godine (možda čak i ranije) pokazivao afinitete prema infomaciono-komunikacionim tehnologijama.\n\nOd 2007. se amaterski bavi pravljenjem web-sajtova (prvo u Simple Machines Forum-u, pa u WordPress-u, da bi kasnije prešao na Joomla-u).\n\n U periodu avgust - oktobar 2014. učestvovao u takmičenju m:tel AppBuilder Liga, gdje je osvojio 3. mjesto u kategoriji 'Edukacija i društvena odgovornost'.\n\nOd februara 2012. ponosni ujak jednom preslatkom djevojčurku.");
         $("footer > div:eq(1)").prepend($("<h3></h3>").attr("id", "owner").addClass("font-italic").text("Balešević Srđan"));
     } else {
         $("[lang='sr']").hide(1);
@@ -27,6 +30,10 @@ $(document).ready(function () {
         $("i.fa-images ~ span").text("Gallery");
         $("i.fa-gamepad ~ span").text("Quiz");
         $("i.fa-sitemap ~ span").text("Site Map");
+        $("i.fa-sitemap ~ span").text("Mapa sajta");
+        $("input#FirstName").val("Srdjan");
+        $("input#LastName").val("Baleshevich");
+        $("textarea#ShortBio").text("Born and raised in Doboj. In his hometown, he completed primary school education, secondary electrical school education (from there he has two secondary school diplomas) and is a Member of Alumni organisation of Faculty of Transport and Traffic Engineering in Doboj.\n\nSince the age of 10 (maybe even earlier) he showed an affinities for information & communication technologies.\n\nSince 2007, he's been building websites as an amateur (first in Simple Machines Forum, then in WordPress, and later switched to Joomla).\n\nIn the time period from August to October 2014, he participated in the m:tel AppBuilder League competition, where he won 3rd place in the category 'Education and social responsibility'.\n\nProud uncle to an adorable girl since the February of 2012.");
         $("footer > div:eq(1)").prepend($("<h3></h3>").attr("id", "owner").addClass("font-italic").text("Baleshevich Srdjan"));
     }
     switch (location.pathname) {
@@ -70,7 +77,7 @@ $(document).ready(function () {
     $("img").each(function () {
         $("img").filter("[src*='simpleicons'],[src*='simple-icons']").width(32).height(32);
         $("img").filter("[alt='Facebook'],[alt='Instagram'],[alt^='X']").parent("a").attr("rel", "me");
-        $("img").filter("[src*='slika']").addClass("d-block w-100 h-auto rounded-lg");
+        $("img[src*='gallery']").addClass("d-block w-100 h-auto rounded-lg");
     });
     $("div.card").addClass("shadow-sm");
     $("ul.nav.nav-tabs[id$='List']").each(function () {
@@ -81,15 +88,18 @@ $(document).ready(function () {
             $(this).tab("show");
         }).attr("role", "tab");
     });
+    $("input#DoB").val("1988-09-07");
+    $("input#eMail").val("srdjan.baleshevich@engineer.com")
     $("a[href^='skype']").addClass("disabled d-none");
-    $("a[href^='https']").not(".wotbadge").attr("target", "_blank");    
+    $("a[href^='https']").not(".wotbadge").attr("target", "_blank");
     $("#lenovoThinkPadX230_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-434-detail");
     $("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsc-lifebook-s752-detail");
     $("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
-    $("iframe.embed-responsive-item").addClass("border-0 rounded-lg").attr("allowfullscreen", "true");
-    $("img.img-thumbnail").width(240).addClass("rounded-lg");
+    $("iframe").addClass("embed-responsive-item border-0 rounded-lg").attr("allowfullscreen", "true").wrap($("<div></div>").addClass("embed-responsive embed-responsive-16by9"));
+    $("table.table").wrap($("<div></div>").addClass("table-responsive")).addClass("m-auto");
+    $("img.img-thumbnail").width(250).addClass("rounded-lg");
     $("p.card-text").addClass("text-justify");
-    $("div#BookReadCarousel, div#carouselGallery").carousel({
+    $("div").filter("#BookReadCarousel,#carouselGallery").carousel({
         interval: 3500,
         keyboard: false,
         pause: false,
@@ -97,6 +107,8 @@ $(document).ready(function () {
         touch: false
     }).addClass("slide carousel-fade");
     $("div#BookReadCarousel img").width(280).addClass("d-block mx-auto h-auto rounded-lg");
+    $("div").filter("#BookReadCarousel,#carouselGallery").find("img").wrap($("<div></div>").addClass("carousel-item"));
+    $("div.carousel-item").wrapAll($("<div></div>").addClass("carousel-inner"));
     $("div.carousel-item").first().addClass("active");
     $("div.carousel img").each(function () {
         $("div.carousel img").eq(0).attr("loading", "eager");
