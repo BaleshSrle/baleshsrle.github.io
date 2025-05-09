@@ -126,25 +126,53 @@
                         Bačka Palanka</a></span>.
             </p>
             <div class="modal" id="Modal01">
-                <div class="modal-dialog"></div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body"></div>
+                    </div>
+                </div>
             </div>
             <div class="modal" id="Modal02">
-                <div class="modal-dialog"></div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body"></div>
+                    </div>
+                </div>
             </div>
             <div class="modal" id="Modal03">
-                <div class="modal-dialog"></div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body"></div>
+                    </div>
+                </div>
             </div>
             <div class="modal" id="Modal04">
-                <div class="modal-dialog"></div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body"></div>
+                    </div>
+                </div>
             </div>
             <div class="modal" id="Modal05">
-                <div class="modal-dialog"></div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body"></div>
+                    </div>
+                </div>
             </div>
             <div class="modal" id="Modal06">
-                <div class="modal-dialog"></div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body"></div>
+                    </div>
+                </div>
             </div>
             <div class="modal" id="Modal07">
-                <div class="modal-dialog"></div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body"></div>
+                    </div>
+                </div>
             </div>
             <table class="table table-sm table-striped table-hover text-center">
                 <thead>
@@ -287,8 +315,6 @@
                 $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
                 $("div.modal-dialog").filter(":eq(2),:eq(3)").removeClass("modal-lg");
             });
-            $("div.modal-dialog").append($("<div></div>").addClass("modal-content"));
-            $("div.modal-content").append($("<div></div>").addClass("modal-body"));
             $("div.modal-body").append($("<img>").addClass("d-block mx-auto img-fluid").attr("loading", "lazy"));
             $("td").each(function () {
                 $(this).children("i").addClass("fa-solid fa-xmark fa-1x text-danger");
