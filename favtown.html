@@ -320,7 +320,7 @@
                 $(this).children("i").addClass("fa-solid fa-xmark fa-1x text-danger");
                 $(this).children("a").attr({ "data-toggle": "modal", "role": "button" }).addClass("btn btn-link");
             }).addClass("align-middle");
-            $("img:eq(1),img:eq(8)").attr({ "src": "images/favtown/city_hall.jpg", "alt": "Gradska vijećnica" });
+            $("img").filter(":eq(1), :eq(8)").attr({ "src": "images/favtown/city_hall.jpg", "alt": "Gradska vijećnica" });
             $("img:eq(2),img:eq(9)").attr({ "src": "images/favtown/main_pedestrian_street.jpg", "alt": "Glavna pješačka ulica" });
             $("img:eq(3),img:eq(10)").attr({ "src": "images/favtown/catholic_church.jpg", "alt": "Katolička crkva" });
             $("img:eq(4),img:eq(11)").attr({ "src": "images/favtown/library.jpg", "alt": "Biblioteka 'Veljko Petrović'" });
