@@ -286,8 +286,9 @@
             $("div.modal-dialog").each(function () {
                 $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
                 $("div.modal-dialog").filter(":eq(2),:eq(3)").removeClass("modal-lg");
-            }).wrapInner($("<div></div>").addClass("modal-content"));
-            $("div.modal-content").wrapInner($("<div></div>").addClass("modal-body"));
+            });
+            $("div.modal-dialog").append($("<div></div>").addClass("modal-content"));
+            $("div.modal-content").append($("<div></div>").addClass("modal-body"));
             $("div.modal-body").append($("<img>").addClass("d-block mx-auto img-fluid").attr("loading", "lazy"));
             $("td").each(function () {
                 $(this).children("i").addClass("fa-solid fa-xmark fa-1x text-danger");
