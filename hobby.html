@@ -228,6 +228,8 @@
                                     alt="Zoran S. Stojanović - Pucanj u Prištini">
                                 <img src="https://carobnaknjiga.rs/chest/pimg/1617436109_Kljuc.jpg"
                                     alt="Zoran S. Stojanović - Ključ">
+                                <img src="https://carobnaknjiga.rs/chest/pimg/1693989004_Best_eastern_01naslovna.jpg"
+                                    alt="Zoran S. Stojanović - Best Easter-Vetrovi Moskve">
                                 <img src="https://www.laguna.rs/_img/korice/4722/sluzba-goran_zivaljevic_v.jpg"
                                     alt="Goran Živaljević - Služba">
                                 <img src="https://laguna.rs/_img/korice/5596/sluzba_2-goran_zivaljevic_v.jpg"
@@ -311,7 +313,7 @@
             $.getScript("js/main.js");
             $("div.card").addClass("mx-auto mw-100");
             $("li.list-group-item").wrapAll($("<ul></ul>").addClass("list-group list-group-flush text-left"));
-            $("img[alt$='Proročanstvo Romanovima']").on("error", function () { this.src = 'images/stiv_beri-prorocanstvo_romanovima.jpg'; });
+            $("img[alt$='Proročanstvo Romanovima']").on("error", function () { $(this).attr("src", "images/stiv_beri-prorocanstvo_romanovima.jpg"); });
             $("li.list-group-item i").addClass("align-middle");
             $("div.github-box").wrap($("<div></div>").addClass("col p-1"));
             $("div.col").wrapAll($("<div></div>").addClass("row row-cols-1 row-cols-md-4"));
