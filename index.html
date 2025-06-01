@@ -333,7 +333,6 @@
                             </div>
                         </div>
                         <!-- <div class="btn-group" role="group">
-                            
                             <div class="btn-group dropup" role="group">
                                 <a href="#" class="btn btn-link dropdown-toggle" role="button" data-toggle="dropdown"
                                     aria-expanded="false">
@@ -341,7 +340,6 @@
                                     <span lang="en">Social media links</span>
                                 </a>
                                 <div class="dropdown-menu">
-                                    
                                     **<a href="https://www.youtube.com/@srlebalesh"><img
                                         src="https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/youtube.svg"
                                         alt="YouTube">YouTube</a>**
@@ -375,18 +373,18 @@
                 color: 'black'
             });*/
             //$("a.protect-me").addClass("float-left");
-            $("a.dropdown-toggle").on("click", function () {
+            /* $("a.dropdown-toggle").on("click", function () {
                 $("div.dropdown-menu").addClass("mb-md-n2 py-1");
-            });
+            }); */
             $("div.btn-group:eq(1)").addClass("d-flex flex-wrap");
             $("div.btn-group:eq(1) > a").addClass("btn btn-link");
             $("img[alt]").each(function () {
                 $(this).parent("a").attr("title", $(this).attr("alt"));
             });
-            $("div.dropdown-menu").each(function () {
+            /* $("div.dropdown-menu").each(function () {
                 $(this).children("a").addClass("dropdown-item px-3");
                 $(this).find("img").addClass("mr-2").attr("loading", "lazy");
-            });
+            });*/
         });
         //spamguard(".protect-me");
     </script>

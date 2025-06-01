@@ -102,8 +102,7 @@
         $("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsc-lifebook-s752-detail");
         $("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
         $("iframe").addClass("embed-responsive-item border-0 rounded-lg").attr("allowfullscreen", true).wrap($("<div></div>").addClass("embed-responsive embed-responsive-16by9"));
-        $("table.table").wrap($("<div></div>").addClass("table-responsive"));
-        $("table.table").addClass("m-auto");
+        $("table.table").addClass("table-sm table-striped table-hover text-center m-auto").wrap($("<div></div>").addClass("table-responsive"));
         $("p.card-text").addClass("text-justify");
         $("div").filter("#BookReadCarousel,#carouselGallery").carousel({
             interval: 3500,

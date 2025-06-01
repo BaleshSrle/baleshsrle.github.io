@@ -123,11 +123,11 @@
 
                 <!-- Left and right controls -->
                 <button class="carousel-control-prev" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-prev-icon"></span>
                     <span class="sr-only">Prethodna</span>
                 </button>
                 <button class="carousel-control-next" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-next-icon"></span>
                     <span class="sr-only">Sledeća</span>
                 </button>
 
@@ -144,6 +144,7 @@
             $.getScript("js/main.js");
             $("div#carouselGallery > button").attr({ "type": "button", "data-target": "#carouselGallery" });
             $("ol.carousel-indicators > li").attr("data-target", "#carouselGallery");
+            $("button > span:odd").attr("aria-hidden", true);
         });
     </script>
 </body>

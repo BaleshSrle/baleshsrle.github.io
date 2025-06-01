@@ -174,7 +174,7 @@
                     </div>
                 </div>
             </div>
-            <table class="table table-sm table-striped table-hover text-center">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>
@@ -201,9 +201,7 @@
                             <i></i>
                         </td>
                         <td>
-                            <a href="#" data-target="#Modal01">
-                                <img class="img-thumbnail">
-                            </a>
+                            <a href="#" data-target="#Modal01"></a>
                         </td>
                     </tr>
                     <tr>
@@ -215,9 +213,7 @@
                             <i></i>
                         </td>
                         <td>
-                            <a href="#" data-target="#Modal02">
-                                <img class="img-thumbnail">
-                            </a>
+                            <a href="#" data-target="#Modal02"></a>
                         </td>
                     </tr>
                     <tr>
@@ -229,9 +225,7 @@
                             <i></i>
                         </td>
                         <td>
-                            <a href="#" data-target="#Modal03">
-                                <img class="img-thumbnail">
-                            </a>
+                            <a href="#" data-target="#Modal03"></a>
                         </td>
                     </tr>
                     <tr>
@@ -243,9 +237,7 @@
                             <i></i>
                         </td>
                         <td>
-                            <a href="#" data-target="#Modal04">
-                                <img class="img-thumbnail">
-                            </a>
+                            <a href="#" data-target="#Modal04"></a>
                         </td>
                     </tr>
                     <tr>
@@ -257,9 +249,7 @@
                             <i></i>
                         </td>
                         <td>
-                            <a href="#" data-target="#Modal05">
-                                <img class="img-thumbnail">
-                            </a>
+                            <a href="#" data-target="#Modal05"></a>
                         </td>
                     </tr>
                     <tr>
@@ -275,9 +265,7 @@
                                 Baptist</span>
                         </td>
                         <td>
-                            <a href="#" data-target="#Modal06">
-                                <img class="img-thumbnail">
-                            </a>
+                            <a href="#" data-target="#Modal06"></a>
                         </td>
                     </tr>
                     <tr>
@@ -290,9 +278,7 @@
                             <span lang="en">The stadium where Football Club Bačka play its home matches</span>
                         </td>
                         <td>
-                            <a href="#" data-target="#Modal07">
-                                <img class="img-thumbnail">
-                            </a>
+                            <a href="#" data-target="#Modal07"></a>
                         </td>
                     </tr>
                 </tbody>
@@ -310,7 +296,7 @@
             $("a[href*='rs']").attr("hreflang", "sr-RS");
             $("a[href*='hr']").attr("hreflang", "hr");
             $("a[href*='en']").slice(1).attr("hreflang", "en");
-            $("div.modal").addClass("fade").attr("aria-hidden", "true");
+            $("div.modal").addClass("fade").attr("aria-hidden", true);
             $("div.modal-dialog").each(function () {
                 $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
                 $("div.modal-dialog").filter(":eq(2),:eq(3)").removeClass("modal-lg");
@@ -318,7 +304,7 @@
             $("div.modal-body").append($("<img>").addClass("d-block mx-auto img-fluid").attr("loading", "lazy"));
             $("td").each(function () {
                 $(this).children("i").addClass("fa-solid fa-xmark fa-1x text-danger");
-                $(this).children("a").attr("data-toggle", "modal");
+                $(this).children("a").attr("data-toggle", "modal").wrapInner($("<img>").addClass("img-thumbnail"));
             }).addClass("align-middle");
             $("a > img:eq(0), div.modal-body:eq(0) > img").attr({ "src": "images/favtown/city_hall.jpg", "alt": "Gradska vijećnica" });
             $("a > img:eq(1), div.modal-body:eq(1) > img").attr({ "src": "images/favtown/main_pedestrian_street.jpg", "alt": "Glavna pješačka ulica" });
