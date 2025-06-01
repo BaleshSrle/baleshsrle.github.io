@@ -8,7 +8,7 @@
     <meta name="description" content="Ovdje možete saznati koji je moj omiljeni grad">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js" async></script>
+    <!-- <script src="js/main.js" async></script> -->
     <script>
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -306,7 +306,7 @@
     </footer>
     <script>
         $(document).ready(function () {
-            // $.getScript("js/main.js");
+            $.getScript("js/main.js");
             $("a[href*='rs']").attr("hreflang", "sr-RS");
             $("a[href*='hr']").attr("hreflang", "hr");
             $("a[href*='en']").slice(1).attr("hreflang", "en");
@@ -320,13 +320,13 @@
                 $(this).children("i").addClass("fa-solid fa-xmark fa-1x text-danger");
                 $(this).children("a").attr("data-toggle", "modal");
             }).addClass("align-middle");
-            $("img:eq(8),img:eq(1)").attr({ "src": "images/favtown/city_hall.jpg", "alt": "Gradska vijećnica" });
-            $("img:eq(9),img:eq(2)").attr({ "src": "images/favtown/main_pedestrian_street.jpg", "alt": "Glavna pješačka ulica" });
-            $("img:eq(10),img:eq(3)").attr({ "src": "images/favtown/catholic_church.jpg", "alt": "Katolička crkva" });
-            $("img:eq(11),img:eq(4)").attr({ "src": "images/favtown/library.jpg", "alt": "Biblioteka 'Veljko Petrović'" });
-            $("img:eq(12),img:eq(5)").attr({ "src": "images/favtown/panorama.jpg", "alt": "Panorama grada" });
-            $("img:eq(13),img:eq(6)").attr({ "src": "images/favtown/src_tikvara.jpg", "alt": "SRC 'Tikvara'" });
-            $("img:eq(14),img:eq(7)").attr({ "src": "images/favtown/stadion_slavko_maletin_vava.jpg", "alt": "Stadion 'Slavko Maletin - Vava'" });
+            $("a > img:eq(0), div.modal-body:eq(0) > img").attr({ "src": "images/favtown/city_hall.jpg", "alt": "Gradska vijećnica" });
+            $("a > img:eq(1), div.modal-body:eq(1) > img").attr({ "src": "images/favtown/main_pedestrian_street.jpg", "alt": "Glavna pješačka ulica" });
+            $("a > img:eq(2), div.modal-body:eq(2) > img").attr({ "src": "images/favtown/catholic_church.jpg", "alt": "Katolička crkva" });
+            $("a > img:eq(3), div.modal-body:eq(3) > img").attr({ "src": "images/favtown/library.jpg", "alt": "Biblioteka 'Veljko Petrović'" });
+            $("a > img:eq(4), div.modal-body:eq(4) > img").attr({ "src": "images/favtown/panorama.jpg", "alt": "Panorama grada" });
+            $("a > img:eq(5), div.modal-body:eq(5) > img").attr({ "src": "images/favtown/src_tikvara.jpg", "alt": "SRC 'Tikvara'" });
+            $("a > img:eq(6), div.modal-body:eq(6) > img").attr({ "src": "images/favtown/stadion_slavko_maletin_vava.jpg", "alt": "Stadion 'Slavko Maletin - Vava'" });
         });
     </script>
 </body>
