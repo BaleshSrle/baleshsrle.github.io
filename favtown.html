@@ -121,7 +121,7 @@
                         Palanaka</a></span>
                 <span lang="en">You can find more about this city on <a
                         href="https://hr.wikipedia.org/wiki/Ba%C4%8Dka_Palanka">Wikipedia HR</a>, <a
-                        href="https://en.wikipedia.org/wiki/Ba%C4%8Dka_Palanka">Wikipedia ENG</a> i <a
+                        href="https://en.wikipedia.org/wiki/Ba%C4%8Dka_Palanka">Wikipedia ENG</a> and <a
                         href="https://backapalanka.rs/">Official web presentation of the municipality of
                         Bačka Palanka</a></span>.
             </p>
@@ -318,9 +318,9 @@
             $("div.modal-body").append($("<img>").addClass("d-block mx-auto img-fluid").attr("loading", "lazy"));
             $("td").each(function () {
                 $(this).children("i").addClass("fa-solid fa-xmark fa-1x text-danger");
-                $(this).children("a").attr({ "data-toggle": "modal", "role": "button" }).addClass("btn btn-link");
+                $(this).children("a").attr("data-toggle", "modal");
             }).addClass("align-middle");
-            $("img").filter(":eq(1), :eq(8)").attr({ "src": "images/favtown/city_hall.jpg", "alt": "Gradska vijećnica" });
+            $("img:eq(1),img:eq(8)").attr({ "src": "images/favtown/city_hall.jpg", "alt": "Gradska vijećnica" });
             $("img:eq(2),img:eq(9)").attr({ "src": "images/favtown/main_pedestrian_street.jpg", "alt": "Glavna pješačka ulica" });
             $("img:eq(3),img:eq(10)").attr({ "src": "images/favtown/catholic_church.jpg", "alt": "Katolička crkva" });
             $("img:eq(4),img:eq(11)").attr({ "src": "images/favtown/library.jpg", "alt": "Biblioteka 'Veljko Petrović'" });

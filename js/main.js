@@ -75,13 +75,16 @@
             $(this).children("a").addClass("nav-link");
             $(this).find("i").addClass("fa-solid fa-lg pr-2");
         })
-        $("div[class*='container']").addClass("py-2 mx-auto");
+        $("div[class*='container']").addClass("mb-5 mb-md-0 pt-2 pb-5 pd-sm-0 pb-md-2 mx-auto");
         $("div.alert").addClass("alert-info alert-dismissible fade show mx-auto").attr("role", "alert").prepend($("<button></button>").addClass("close").attr({ "type": "button", "data-dismiss": "alert", "aria-label": "Close" }).html("<span aria-hidden='true'>&times;</span>"));
         $("img").each(function () {
             $("img").filter("[src*='simpleicons'],[src*='simple-icons']").width(32).height(32);
             $("img").filter("[alt='Facebook'],[alt='Instagram'],[alt^='X']").parent("a").attr("rel", "me");
             $("img[src*='gallery']").addClass("d-block w-100 h-auto rounded-lg");
+            $("img.img-thumbnail").width(250).addClass("rounded-lg");
         });
+        $("div.btn-group,td").children("a").addClass("btn btn-link").attr("role", "button");
+
         $("div.card").addClass("shadow-sm");
         $("ul.nav.nav-tabs[id$='List']").each(function () {
             $(this).parent("div.card-header").addClass("pt-1 px-3");
@@ -98,10 +101,9 @@
         $("#lenovoThinkPadX230_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-434-detail");
         $("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsc-lifebook-s752-detail");
         $("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
-        $("iframe").addClass("embed-responsive-item border-0 rounded-lg").attr("allowfullscreen", "true").wrap($("<div></div>").addClass("embed-responsive embed-responsive-16by9"));
+        $("iframe").addClass("embed-responsive-item border-0 rounded-lg").attr("allowfullscreen", true).wrap($("<div></div>").addClass("embed-responsive embed-responsive-16by9"));
         $("table.table").wrap($("<div></div>").addClass("table-responsive"));
         $("table.table").addClass("m-auto");
-        $("img.img-thumbnail").width(250).addClass("rounded-lg");
         $("p.card-text").addClass("text-justify");
         $("div").filter("#BookReadCarousel,#carouselGallery").carousel({
             interval: 3500,
