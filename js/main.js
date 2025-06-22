@@ -53,7 +53,7 @@
         $("head").each(function () {
             $(this).append($("<meta>").attr({ "name": "author", "content": "Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com" }), $("<meta>").attr({ "name": "designer", "content": "BaleshSrle" }), $("<meta>").attr({ "name": "reply-to", "content": "srdjan.balesevic%40yahoo.com" }), $("<meta>").attr({ "name": "language", "content": "sr" }), $("<meta>").attr({ "name": "host", "content": "pages.github.com" }), $("<meta>").attr({ "name": "geo.region", "content": "BA-SRP" }), $("<meta>").attr({ "name": "geo.placename", "content": "Добој" }), $("<meta>").attr({ "name": "fediverse:creator", "content": "@baleshsrle@vivaldi.net" }), $("<meta>").attr({ "name": "twitter:creator", "content": "@BaleshSrle" }), $("<meta>").attr({ "name": "twitter:site", "content": "@BaleshSrle" }));
             $(this).append($("<meta>").attr({ "name": "MSThemeCompatible", "content": "yes" }), $("<meta>").attr({ "http-equiv": "cleartype", "content": "on" }), $("<meta>").attr({ "http-equiv": "X-UA-Compatible", "content": "ie=edge" }), $("<meta>").attr({ "http-equiv": "x-dns-prefetch-control", "content": "on" }), $("<meta>").attr({ "http-equiv": "Cache-control", "content": "no-cache" }), $("<meta>").attr({ "http-equiv": "Pragma", "content": "no-cache" }), $("<meta>").attr({ "http-equiv": "Expires", "content": "-1" }));
-            $(this).append($("<link>").attr({ "rel": "dns-prefetch", "href": "https://cdn.jsdelivr.net/" }), $("<link>").attr({ "rel": "preconnect", "href": "https://cdn.jsdelivr.net/", "crossorigin": "anonymous" })/*, $("<link>").attr({ "rel": "icon", "href": "images/logo.png" }), $("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css", "crossorigin": "anonymous" })*/, $("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css", "crossorigin": "anonymous" }),/* $("<script></script>").attr({ "src": "https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js", "crossorigin": "anonymous" }),*/ $.getScript("https://kit.fontawesome.com/5aafa1a155.js"), $.getScript("https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js"));
+            $(this).append($("<link>").attr({ "rel": "dns-prefetch", "href": "https://cdn.jsdelivr.net/" }), $("<link>").attr({ "rel": "preconnect", "href": "https://cdn.jsdelivr.net/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "icon", "href": "logo.png" })/*, $("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css", "crossorigin": "anonymous" })*/, $("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css", "crossorigin": "anonymous" }),/* $("<script></script>").attr({ "src": "https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js", "crossorigin": "anonymous" }),*/ $.getScript("https://kit.fontawesome.com/5aafa1a155.js"), $.getScript("https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js"));
             $(this).children("[src$='jquery.min.js'],[src$='bootstrap.bundle.min.js'],[src$='jquery.typewriter.min.js'],[src$='jquery.countdown.min.js'],[src$='5aafa1a155.js']").attr("crossorigin", "anonymous");
         });
         $("meta:last").after($("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css", "crossorigin": "anonymous" }));
@@ -84,7 +84,6 @@
             $("img.img-thumbnail").width(250).addClass("rounded-lg");
         });
         $("div.btn-group,td").children("a").addClass("btn btn-link").attr("role", "button");
-
         $("div.card").addClass("shadow-sm");
         $("ul.nav.nav-tabs[id$='List']").each(function () {
             $(this).parent("div.card-header").addClass("pt-1 px-3");
@@ -93,6 +92,12 @@
                 e.preventDefault()
                 $(this).tab("show");
             }).attr("role", "tab");
+        });
+        $("div.tab-content").each(function (i) {
+            $("div.tab-content").eq(i).attr("id", $("ul.nav.nav-tabs").eq(i).attr("id")+"Content");
+        });
+        $("div.tab-pane").each(function (i) {
+            $("div.tab-pane").eq(i).attr({ "role": "tabpanel", "aria-labelledby": $("div.tab-pane").eq(i).attr("id") + "-tab" });
         });
         $("input#DoB").val("1988-09-07");
         $("input#eMail").val("srdjan.baleshevich@engineer.com")
