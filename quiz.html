@@ -266,7 +266,7 @@
                 <div class="card">
                     <div class="card-header">
                         7&#10089; <span lang="sr">Od kojeg pisca sam pročitao najveći broj književnih djela?</span>
-                        <span lang="en">By which writer have I read the most books?</span>
+                        <span lang="en">From which writer I read most of the books?</span>
                     </div>
                     <div class="card-body">
                         <div class="form-check">
@@ -282,6 +282,7 @@
                             <label for="odgovor73">Branislav Janković</label>
                         </div>
                     </div>
+                    <div class="card-footer text-muted small px-3 py-2"></div>
                 </div>
 
                 <button id="quizAnswerCheckBtn"><span lang="sr">Sačuvaj</span><span lang="en">Save</span></button>
@@ -298,12 +299,26 @@
     </footer>
     <script>
         $(document).ready(function () {
-            $.getScript("js/main.js");
+            // $.getScript("js/main.js");
+            // $("div.card:eq(6)").on("load", loadXMLDoc("https://baleshsrle.github.io/hobby.html"));
+            $("div.card:eq(6)").on("load", loadXMLDoc("hobby.html"));
             $("div.card-header").addClass("font-weight-bold");
             $("div.card-body").addClass("py-2");
             $("input[type='radio']").addClass("form-check-input");
             $("label").addClass("form-check-label");
         });
+        function loadXMLDoc(url) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200 && navigator.language.includes("sr") || navigator.language.includes("hr") || navigator.language.includes("bs")) {
+                    $("div.card-footer").html("Odgovor na ovo pitanje je bazirano na osnovu poslednje izmjene koja je objavljena " + new Date(this.getResponseHeader("Last-Modified")).toLocaleString("sr-Latn-BA", { dateStyle: "long", timeStyle: "short" }));
+                } else {
+                    $("div.card-footer").html("The answer to this question is based on the last update that was published on " + new Date(this.getResponseHeader("Last-Modified")).toLocaleString("en", { dateStyle: "long", timeStyle: "short" }));
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
     </script>
 </body>
 

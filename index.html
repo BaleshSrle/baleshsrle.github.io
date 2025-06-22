@@ -273,10 +273,30 @@
                         </div>
                         <div class="btn-toolbar" role="toolbar">
                             <div class="btn-group mr-2" role="group">
-                                <a href="documents/cv.pdf" target="_blank">
+                                <!-- <a href="documents/cv.pdf" target="_blank">
                                     <i class="fa-regular fa-file-pdf fa-2x align-middle pr-1"></i>
                                     <span lang="sr">Moja biografija</span>
-                                    <span lang="en">My biography</span></a>
+                                    <span lang="en">My biography</span></a> -->
+                                <button type="button" class="btn btn-link" data-toggle="modal"
+                                    data-target="#cvPDFModal">
+                                    <i class="fa-regular fa-file-pdf fa-2x align-middle pr-1"></i>
+                                    <span lang="sr">Moja biografija</span>
+                                    <span lang="en">My biography</span>
+                                </button>
+                                <div class="modal fade" id="cvPDFModal" aria-labelledby="cvPDFModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <object data="documents/cv.pdf" type="application/pdf">
+                                                    <p>Izgleda da nemate dodatak za gledanje PDF-a za ovaj Web
+                                                        pregledač. Možete <a href="document/cv.pdf" download>kliknuti
+                                                            ovdje da preuzmete PDF fajl</a>.</p>
+                                                </object>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="btn-group" role="group">
                                 <a href="https://www.facebook.com/srdjan.balesevic">
@@ -360,7 +380,8 @@
         $(document).ready(function () {
             $.getScript("js/main.js");
             //$("div.container-fluid").toggleClass("mb-5 pb-5");
-            $("object").addClass("align-middle");
+            $("object:eq(0)").addClass("align-middle");
+            $("object:eq(1)").addClass("w-100 rounded border-dark border-right border-bottom").height(800);
             $("div.card-body").addClass("p-2 px-md-3");
             //$("div.d-table-row > div.d-table-cell:first-child").addClass("font-weight-bold").width(138);
             //$("object,div.d-table-row > div.d-table-cell:lt(6)").addClass("align-middle");
