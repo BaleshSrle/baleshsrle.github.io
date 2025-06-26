@@ -20,7 +20,7 @@
             $("input#FirstName").val("Srđan");
             $("input#LastName").val("Balešević");
             $("textarea#ShortBio").text("Rođeni Dobojlija. U rodnom gradu završio osnovu, srednju elektro školu (posjeduje dvije diplome iz srednje) i Saobraćajni fakultet u Doboju - smjer Logistika.\n\nOd svoje 10. godine (možda čak i ranije) pokazivao afinitete prema infomaciono-komunikacionim tehnologijama.\n\nOd 2007. se amaterski bavi pravljenjem web-sajtova (prvo u Simple Machines Forum-u, pa u WordPress-u, da bi kasnije prešao na Joomla-u).\n\n U periodu avgust - oktobar 2014. učestvovao u takmičenju m:tel AppBuilder Liga, gdje je osvojio 3. mjesto u kategoriji 'Edukacija i društvena odgovornost'.\n\nOd februara 2012. ponosni ujak jednom preslatkom djevojčurku.");
-            $("footer > div:eq(1)").prepend($("<h3></h3>").attr("id", "owner").addClass("font-italic").text("Balešević Srđan"));
+            $("footer > div:eq(1)").prepend($("<h3></h3>").addClass("font-italic").text("Balešević Srđan"));
         } else {
             $("[lang='sr']").hide(1);
             $("header div.col-sm-9").append($("<h1></h1>").text("Welcome to the website"), $("<p></p>").text("A lot of additional information can be found about me on this website"));
@@ -37,7 +37,7 @@
             $("input#FirstName").val("Srdjan");
             $("input#LastName").val("Baleshevich");
             $("textarea#ShortBio").text("Born and raised in Doboj. In his hometown, he completed primary school education, secondary electrical school education (from there he has two secondary school diplomas) and is a Member of Alumni organisation of Faculty of Transport and Traffic Engineering in Doboj.\n\nSince the age of 10 (maybe even earlier) he showed an affinities for information & communication technologies.\n\nSince 2007, he's been building websites as an amateur (first in Simple Machines Forum, then in WordPress, and later switched to Joomla).\n\nIn the time period from August to October 2014, he participated in the m:tel AppBuilder League competition, where he won 3rd place in the category 'Education and social responsibility'.\n\nProud uncle to an adorable girl since the February of 2012.");
-            $("footer > div:eq(1)").prepend($("<h3></h3>").attr("id", "owner").addClass("font-italic").text("Baleshevich Srdjan"));
+            $("footer > div:eq(1)").prepend($("<h3></h3>").addClass("font-italic").text("Baleshevich Srdjan"));
         }
         switch (location.pathname) {
             case "/birthdaypresent.html":
@@ -94,7 +94,7 @@
             }).attr("role", "tab");
         });
         $("div.tab-content").each(function (i) {
-            $("div.tab-content").eq(i).attr("id", $("ul.nav.nav-tabs").eq(i).attr("id")+"Content");
+            $("div.tab-content").eq(i).attr("id", $("ul.nav.nav-tabs").eq(i).attr("id") + "Content");
         });
         $("div.tab-pane").each(function (i) {
             $("div.tab-pane").eq(i).attr({ "role": "tabpanel", "aria-labelledby": $("div.tab-pane").eq(i).attr("id") + "-tab" });
@@ -107,6 +107,7 @@
         $("#fujitsuLifeBookS752_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fsc-lifebook-s752-detail");
         $("#fujitsuLifeBookS761_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/fujitsulifebooks761-detail");
         $("iframe").addClass("embed-responsive-item border-0 rounded-lg").attr("allowfullscreen", true).wrap($("<div></div>").addClass("embed-responsive embed-responsive-16by9"));
+        $("iframe[src*='maps']").attr({"aria-hidden": false, "tabindex": "0", "loading": "lazy", "referrerpolicy": "no-referrer-when-downgrade"});
         $("table.table").addClass("table-sm table-striped table-hover text-center m-auto").wrap($("<div></div>").addClass("table-responsive"));
         $("p.card-text").addClass("text-justify");
         $("div").filter("#BookReadCarousel,#carouselGallery").carousel({
@@ -228,7 +229,8 @@
         $("footer").addClass("d-sm-flex justify-content-around align-items-center bg-primary mt-auto fixed-bottom");
         //$("footer").children("div").eq(0).addClass("d-flex flex-wrap flex-sm-column mx-md-2");
         $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-auto").css("max-width", "292px").append($("<div></div>").addClass("mr-1").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3", "alt": "Bootstrap" })), $("<div></div>").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad", "alt": "jQuery" })), $("<div></div>").addClass("mr-1").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=6.*&logo=fontawesome&logoColor=white&logoSize=auto&label=Font%20Awesome&labelColor=538dd7&color=538dd7", "alt": "Font Awesome" })), $("<div></div>").append($("<img>").attr({ "src": "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", "alt": "jsDelivr CDN" })));
-        $("footer > div:eq(1)").addClass("flex-grow-1 text-center text-white").append($("<div></div>").html(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + "."));
+        //$("footer > div:eq(1)").addClass("flex-grow-1 text-center text-white").append($("<div></div>").html(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + "."));
+        $("footer > div:eq(1)").addClass("flex-grow-1 text-center text-white").append($("<div></div>").html(new Date().toLocaleDateString(navigator.language, { year: "numeric", month: "2-digit", day: "2-digit" })));
         $("footer > div:eq(2)").addClass("mx-md-2").append($("<a></a>").attr({ "id": "wot-badge0", "href": "https://www.mywot.com/scorecard/baleshsrle.github.io?wot_badge=0_white", "hreflang": "en-US", "target": "_blank" }).addClass("wot-badge mx-auto mb-1 mb-md-0").append($("<div></div>").addClass("wot-logo"), $("<div></div>").addClass("wot-shield"), $("<p></p>").addClass("wot-secured").text("Verified Website"), $("<div></div>").addClass("wot-vertical"), $("<p></p>").addClass("wot-report").text("See Report")));
         document.normalize();
     });
