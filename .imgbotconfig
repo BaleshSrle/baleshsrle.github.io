@@ -2,6 +2,7 @@
     "ignoredFiles": [
     	"*.png"
     ],
+    "aggressiveCompression" : "true",
     "compressWiki": "false",
     "minKBReduced" 100
 }
