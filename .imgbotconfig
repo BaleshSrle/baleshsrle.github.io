@@ -1,0 +1,7 @@
+{
+    "ignoredFiles": [
+    	"*.png"
+    ],
+    "compressWiki": "false",
+    "minKBReduced" 100
+}
