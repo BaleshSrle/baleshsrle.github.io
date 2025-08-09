@@ -17,8 +17,8 @@
             $("i.fa-images ~ span").text("Galerija");
             $("i.fa-gamepad ~ span").text("Kviz");
             $("i.fa-sitemap ~ span").text("Mapa sajta");
-            $("input#FirstName").val("Srđan");
-            $("input#LastName").val("Balešević");
+            $("input#FirstName").attr("autocomplete", "given-name").val("Srđan");
+            $("input#LastName").attr("autocomplete", "family-name").val("Balešević");
             $("textarea#ShortBio").text("Rođeni Dobojlija. U rodnom gradu završio osnovu, srednju elektro školu (posjeduje dvije diplome iz srednje) i Saobraćajni fakultet u Doboju - smjer Logistika.\n\nOd svoje 10. godine (možda čak i ranije) pokazivao afinitete prema infomaciono-komunikacionim tehnologijama.\n\nOd 2007. se amaterski bavi pravljenjem web-sajtova (prvo u Simple Machines Forum-u, pa u WordPress-u, da bi kasnije prešao na Joomla-u).\n\n U periodu avgust - oktobar 2014. učestvovao u takmičenju m:tel AppBuilder Liga, gdje je osvojio 3. mjesto u kategoriji 'Edukacija i društvena odgovornost'.\n\nOd februara 2012. ponosni ujak jednom preslatkom djevojčurku.");
             $("footer > div:eq(1)").prepend($("<h3></h3>").addClass("font-italic").text("Balešević Srđan"));
         } else {
@@ -34,8 +34,8 @@
             $("i.fa-gamepad ~ span").text("Quiz");
             $("i.fa-sitemap ~ span").text("Site Map");
             $("i.fa-sitemap ~ span").text("Mapa sajta");
-            $("input#FirstName").val("Srdjan");
-            $("input#LastName").val("Baleshevich");
+            $("input#FirstName").attr("autocomplete", "given-name").val("Srdjan");
+            $("input#LastName").attr("autocomplete", "family-name").val("Baleshevich");
             $("textarea#ShortBio").text("Born and raised in Doboj. In his hometown, he completed primary school education, secondary electrical school education (from there he has two secondary school diplomas) and is a Member of Alumni organisation of Faculty of Transport and Traffic Engineering in Doboj.\n\nSince the age of 10 (maybe even earlier) he showed an affinities for information & communication technologies.\n\nSince 2007, he's been building websites as an amateur (first in Simple Machines Forum, then in WordPress, and later switched to Joomla).\n\nIn the time period from August to October 2014, he participated in the m:tel AppBuilder League competition, where he won 3rd place in the category 'Education and social responsibility'.\n\nProud uncle to an adorable girl since the February of 2012.");
             $("footer > div:eq(1)").prepend($("<h3></h3>").addClass("font-italic").text("Baleshevich Srdjan"));
         }
@@ -99,8 +99,8 @@
         $("div.tab-pane").each(function (i) {
             $("div.tab-pane").eq(i).attr({ "role": "tabpanel", "aria-labelledby": $("div.tab-pane").eq(i).attr("id") + "-tab" });
         });
-        $("input#DoB").val("1988-09-07");
-        $("input#eMail").val("srdjan.baleshevich@engineer.com")
+        $("input#DoB").attr("autocomplete", "bday").val("1988-09-07");
+        $("input#eMail").attr("autocomplete", "email").val("srdjan.baleshevich@engineer.com")
         $("a[href^='skype']").addClass("disabled d-none");
         $("a[href^='https']").not(".wotbadge").attr("target", "_blank");
         $("#lenovoThinkPadX230_link").attr("href", "https://mediamarket.rs.ba/index.php/laptopi/koristeni-laptopi/lenovothinkpadx230-434-detail");
