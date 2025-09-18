@@ -21,7 +21,7 @@
 				<div>
 					<h1>XML Mapa sajta</h1>
 					<p>
-						Generisano pomoću<img class="ShieldsIoBadge">-ovog WordPress SEO dodatka, ovo je XML Mapa sajta, namjenjena za korištenje od strane pretraživača.
+						Generisano pomoću<img class="ShieldsIoBadge" />-ovog WordPress SEO dodatka, ovo je XML Mapa sajta, namjenjena za korištenje od strane pretraživača.
 					</p>
 					<p>
 						Više informacija o XML mapama sajtova možete pronaći na <a href="https://www.sitemaps.org" target="_blank">sitemaps.org</a>.
@@ -72,7 +72,7 @@
 					</div>
 				</div>
 				<footer>
-					<img>
+					<img />
 				</footer>
 				<script>
 					document.scripts[0].onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
