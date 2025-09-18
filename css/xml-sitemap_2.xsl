@@ -86,7 +86,8 @@
 						$("th:eq(0)").css("width", "60%");
 						$("th:lt(3),td").addClass("align-middle text-center");
 						$("th:gt(2)").css("width", "13%").addClass("text-center");
-						$("footer img").attr({"src":"https://validator.w3.org/images/valid_icons/valid-xml10-blue", "alt":"Valid XML 1.0 !"}).addClass("float-left img-fluid").wrap($("<a></a>").attr({"href":"https://validator.w3.org/check?uri="+encodeURIComponent(location.href)+, "target":"_blank"}))
+						/*$("footer").html("<a href='https://validator.w3.org/check?uri=https://validator.w3.org/check?uri=https%3A%2F%2Fbaleshsrle.github.io%2Fsitemap.xml'><img src='https://validator.w3.org/images/valid_icons/valid-xml10-blue' alt='Valid XML 1.0 !' class='float-left img-fluid' /></a>");*/
+						$("footer img").attr({"src":"https://validator.w3.org/images/valid_icons/valid-xml10-blue", "alt":"Valid XML 1.0 !"}).addClass("float-left img-fluid").wrap($("<a></a>").attr({"href":"https://validator.w3.org/check?uri="+encodeURIComponent(location.href), "target":"_blank"}));
 					});
 			</script>
 			</body>
