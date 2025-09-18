@@ -29,47 +29,45 @@
 					<p>
 						Ova mapa sajta sadrži <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/> URL adresa.
 					</p>
-					<div class="table-responsive">
-						<table class="table table-striped table-hover">
-							<thead>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>URL</th>
+								<th style="width: 5%;">Prioritet</th>
+								<th style="width: 4%;">Slike</th>
+								<th>Učestalost izmjena</th>
+								<th>Poslednja izmjena</th>
+							</tr>
+						</thead>
+						<tbody>
+							<xsl:variable name="lower" select="'abcdefghijklmnopqrstuvwxyz'"/>
+							<xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
+							<xsl:for-each select="sitemap:urlset/sitemap:url">
 								<tr>
-									<th>URL</th>
-									<th style="width: 5%;">Prioritet</th>
-									<th style="width: 4%;">Slike</th>
-									<th>Učestalost izmjena</th>
-									<th>Poslednja izmjena</th>
+									<td>
+										<xsl:variable name="itemURL">
+											<xsl:value-of select="sitemap:loc"/>
+										</xsl:variable>
+										<a href="{$itemURL}" target="_blank">
+											<xsl:value-of select="sitemap:loc"/>
+										</a>
+									</td>										
+									<td>
+										<xsl:value-of select="concat(sitemap:priority*100,'%')"/>
+									</td>
+									<td>
+										<xsl:value-of select="count(image:image)"/>
+									</td>
+									<td>
+										<xsl:value-of select="concat(translate(substring(sitemap:changefreq, 1, 1),concat($lower, $upper),concat($upper, $lower)),substring(sitemap:changefreq, 2))"/>
+									</td>
+									<td>
+										<xsl:value-of select="concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)))"/>
+									</td>
 								</tr>
-							</thead>
-							<tbody>
-								<xsl:variable name="lower" select="'abcdefghijklmnopqrstuvwxyz'"/>
-								<xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
-								<xsl:for-each select="sitemap:urlset/sitemap:url">
-									<tr>
-										<td>
-											<xsl:variable name="itemURL">
-												<xsl:value-of select="sitemap:loc"/>
-											</xsl:variable>
-											<a href="{$itemURL}" target="_blank">
-												<xsl:value-of select="sitemap:loc"/>
-											</a>
-										</td>										
-										<td>
-											<xsl:value-of select="concat(sitemap:priority*100,'%')"/>
-										</td>
-										<td>
-											<xsl:value-of select="count(image:image)"/>
-										</td>
-										<td>
-											<xsl:value-of select="concat(translate(substring(sitemap:changefreq, 1, 1),concat($lower, $upper),concat($upper, $lower)),substring(sitemap:changefreq, 2))"/>
-										</td>
-										<td>
-											<xsl:value-of select="concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)))"/>
-										</td>
-									</tr>
-								</xsl:for-each>
-							</tbody>
-						</table>
-					</div>
+							</xsl:for-each>
+						</tbody>
+					</table>
 				</div>
 				<footer>
 					<img />
@@ -83,13 +81,13 @@
 						$("div:eq(0),footer").addClass("container-fluid");
 						$("img.ShieldsIoBadge").attr("src","https://img.shields.io/badge/Yoast-a61e69?logo=yoast&amp;logoSize=auto").addClass("ml-1 align-middle img-fluid").wrap($("<a></a>").attr({"href":"https://yoast.com/", "hreflang":"en", "target":"_blank"}));
 						$("a:lt(2)").addClass("font-weight-bold text-danger");
+						$("table.table").addClass("table-striped table-hover").wrap($("<div></div>").addClass("table-responsive"));
 						$("th:eq(0)").css("width", "60%");
 						$("th:lt(3),td").addClass("align-middle text-center");
 						$("th:gt(2)").css("width", "13%").addClass("text-center");
-						/*$("footer").html("<a href='https://validator.w3.org/check?uri=https://validator.w3.org/check?uri=https%3A%2F%2Fbaleshsrle.github.io%2Fsitemap.xml'><img src='https://validator.w3.org/images/valid_icons/valid-xml10-blue' alt='Valid XML 1.0 !' class='float-left img-fluid' /></a>");*/
 						$("footer img").attr({"src":"https://validator.w3.org/images/valid_icons/valid-xml10-blue", "alt":"Valid XML 1.0 !"}).addClass("float-left img-fluid").wrap($("<a></a>").attr({"href":"https://validator.w3.org/check?uri="+encodeURIComponent(location.href), "target":"_blank"}));
 					});
-			</script>
+				</script>
 			</body>
 		</html>
 	</xsl:template>
