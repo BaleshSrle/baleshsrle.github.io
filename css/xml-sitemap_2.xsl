@@ -21,7 +21,7 @@
 				<div>
 					<h1>XML Mapa sajta</h1>
 					<p>
-						Generisano pomoću<img class="">-ovog WordPress SEO dodatka, ovo je XML Mapa sajta, namjenjena za korištenje od strane pretraživača.
+						Generisano pomoću<img class="ShieldsIoBadge">-ovog WordPress SEO dodatka, ovo je XML Mapa sajta, namjenjena za korištenje od strane pretraživača.
 					</p>
 					<p>
 						Više informacija o XML mapama sajtova možete pronaći na <a href="https://www.sitemaps.org" target="_blank">sitemaps.org</a>.
@@ -81,7 +81,7 @@
 						$("script[src*='bootstrap@4]").on("error", function (){ this.src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"; });
 						$("link[rel='stylesheet'],script[src]:lt(2)").attr("crossorigin", "anonymous");
 						$("div:eq(0),footer").addClass("container-fluid");
-						$("img.ShieldsIoBadge").attr("src","https://img.shields.io/badge/Yoast-a61e69?logo=yoast&mp;logoSize=auto").addClass("ml-1 align-middle img-fluid").wrap($("<a></a>").attr({"href":"https://yoast.com/", "hreflang":"en", "target":"_blank"}));
+						$("img.ShieldsIoBadge").attr("src","https://img.shields.io/badge/Yoast-a61e69?logo=yoast&amp;logoSize=auto").addClass("ml-1 align-middle img-fluid").wrap($("<a></a>").attr({"href":"https://yoast.com/", "hreflang":"en", "target":"_blank"}));
 						$("a:lt(2)").addClass("font-weight-bold text-danger");
 						$("th:eq(0)").css("width", "60%");
 						$("th:lt(3),td").addClass("align-middle text-center");
