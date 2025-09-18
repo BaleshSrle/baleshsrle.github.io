@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, nofollow, noarchive, notranslate, noimageindex">
     <meta name="description" content="Ovdje možete saznati koji je moj rođendanski poklon i gdje ga možete nabaviti">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"
-        onerror="this.src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"
-        onerror="this.src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js'"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-countdown@2/dist/jquery.countdown.min.js"
         onerror="this.src='https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js'"></script>
     <!-- <script src="js/main.js" async></script> -->
@@ -160,6 +158,7 @@
         <div></div>
     </footer>
     <script>
+        document.scripts[1].onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
         $(document).ready(function () {
             $.getScript("js/main.js");
             $("div.card").slice(0, 3).addClass("mx-auto mw-100");

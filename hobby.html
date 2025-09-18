@@ -13,10 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-badge/assets/base.min.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.repos.js@1/css/repos.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/build.css"> -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"
-        onerror="this.src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"
-        onerror="this.src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js'"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/github-badge/src/github-badge.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/jquery.repos.js@1/js/jquery.repos.js"></script> -->
     <!-- <script src="js/main.js" async></script> -->
@@ -161,11 +159,11 @@
                                     <span lang="sr">Uređivanje ličnih projekata (koje možete posjetiti na <!-- <span><a
                                                     href="https://goo.gl/R3fW4">Projekat01</a> i </span> --><a
                                             href="https://goo.gl/Ztw24">Projekat01</a> i <a
-                                            href="https://baleshsrle.github.io/SFDobojWebAppCollection">Projekat02</a>)</span>
+                                            href="https://bit.ly/4cuU243">Projekat02</a>)</span>
                                     <span lang="en">Maintaining personal projects (some of them you can visit at
                                         <!-- <span><a href="https://goo.gl/R3fW4">Projekat01</a> &amp; </span> --><a
                                             href="https://goo.gl/Ztw24">Project01</a> &amp; <a
-                                            href="https://baleshsrle.github.io/SFDobojWebAppCollection">Project02</a>)</span>
+                                            href="https://bit.ly/4cuU243">Project02</a>)</span>
                                 </li>
                                 <li class="list-group-item">
                                     <span lang="sr">Projekti tipa DIY (neke od njih možete pronaći na mom Facebook
@@ -311,6 +309,7 @@
         <div></div>
     </footer>
     <script>
+        document.scripts[1].onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
         $(document).ready(function () {
             $.getScript("js/main.js");
             $("div.card").addClass("mx-auto mw-100");

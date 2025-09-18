@@ -19,9 +19,13 @@
 		Fourth: jsDelivr - A free, fast, and reliable Open Source CDN
 		Twitter: @jsDelivr
 		Location: Deutschland / Germany	
+
+		Fifth: cdnjs - The #1 free and open source CDN built to make life easier for developers, powered by Cloudflare
+		Twitter: @cdnjs
+		Location: Brisbane, Australia	
 	
 /* SITE */
-		Last update: 2025/08/27
+		Last update: 2025/09/18
 		Language: Serbian , English
 		Standards: HTML5, CSS, JavaScript
 		Components: jQuery, Bootstrap

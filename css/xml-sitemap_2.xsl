@@ -21,7 +21,7 @@
 				<div>
 					<h1>XML Mapa sajta</h1>
 					<p>
-						Generisano pomoću <a href="https://yoast.com/" target="_blank">Yoast</a>-ovog WordPress SEO dodatka, ovo je XML Mapa sajta, namjenjena za korištenje od strane pretraživača.
+						Generisano pomoću<img class="">-ovog WordPress SEO dodatka, ovo je XML Mapa sajta, namjenjena za korištenje od strane pretraživača.
 					</p>
 					<p>
 						Više informacija o XML mapama sajtova možete pronaći na <a href="https://www.sitemaps.org" target="_blank">sitemaps.org</a>.
@@ -72,16 +72,21 @@
 					</div>
 				</div>
 				<footer>
-					<a href="https://validator.w3.org/check?uri=https%3A%2F%2Fbaleshsrle.github.io/sitemap.xml" target="_blank"><img src="https://validator.w3.org/images/valid_icons/valid-xml10-blue" alt="Valid XML 1.0 !" class="float-left"></img></a>
+					<img>
 				</footer>
 				<script>
+					document.scripts[0].onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
 					$(document).ready(function () {
+						$("link[href*='bootstrap@4']").on("error", function (){ this.href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css"; });
+						$("script[src*='bootstrap@4]").on("error", function (){ this.src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"; });
 						$("link[rel='stylesheet'],script[src]:lt(2)").attr("crossorigin", "anonymous");
 						$("div:eq(0),footer").addClass("container-fluid");
+						$("img.ShieldsIoBadge").attr("src","https://img.shields.io/badge/Yoast-a61e69?logo=yoast&mp;logoSize=auto").addClass("ml-1 align-middle img-fluid").wrap($("<a></a>").attr({"href":"https://yoast.com/", "hreflang":"en", "target":"_blank"}));
 						$("a:lt(2)").addClass("font-weight-bold text-danger");
 						$("th:eq(0)").css("width", "60%");
 						$("th:lt(3),td").addClass("align-middle text-center");
 						$("th:gt(2)").css("width", "13%").addClass("text-center");
+						$("footer img").attr({"src":"https://validator.w3.org/images/valid_icons/valid-xml10-blue", "alt":"Valid XML 1.0 !"}).addClass("float-left img-fluid").wrap($("<a></a>").attr({"href":"https://validator.w3.org/check?uri="+encodeURIComponent(location.href)+, "target":"_blank"}))
 					});
 			</script>
 			</body>

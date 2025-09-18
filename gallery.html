@@ -19,10 +19,8 @@
             }
         }
     </style> -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"
-        onerror="this.src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"
-        onerror="this.src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js'"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="js/main.js" async></script> -->
 </head>
 
@@ -142,6 +140,7 @@
         <div></div>
     </footer>
     <script>
+        document.scripts[0].onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
         $(document).ready(function () {
             $.getScript("js/main.js");
             $("div#carouselGallery > button").attr({ "type": "button", "data-target": "#carouselGallery" });
