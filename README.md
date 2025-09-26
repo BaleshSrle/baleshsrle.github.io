@@ -3,6 +3,8 @@
 [![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fbaleshsrle.github.io%2F&label=W3C%20Validation%20-%20HTML)](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbaleshsrle.github.io%2F)
 [![pages-build-deployment](https://github.com/BaleshSrle/baleshsrle.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/BaleshSrle/baleshsrle.github.io/actions/workflows/pages/pages-build-deployment)
 ![GitHub repo size](https://img.shields.io/github/repo-size/baleshsrle/baleshsrle.github.io?logo=github)
+[![Codeac](https://static.codeac.io/badges/2-202413019.svg "Codeac")](https://app.codeac.io/github/BaleshSrle/baleshsrle.github.io)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f1d85657ae1547d2888a8d1c193ca906)](https://app.codacy.com/gh/BaleshSrle/baleshsrle.github.io/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 # ICBL_Project_Assignment_01
 My first assignment on ITRetraining100 for [Innovation Centre Banja Luka](https://icbl.ba/).
