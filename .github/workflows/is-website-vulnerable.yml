@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test for public javascript library vulnerabilities 
-        uses: lirantal/is-website-vulnerable@main
+        # uses: lirantal/is-website-vulnerable@main
+        uses: lirantal/is-website-vulnerable@9c2cf8861ed1cd1a510508e630f0fa5a866e085b
         with:
           scan-url: "https://baleshsrle.github.io"
