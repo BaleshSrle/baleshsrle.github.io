@@ -197,9 +197,7 @@
                             <span lang="sr">Gradska vijećnica</span>
                             <span lang="en">City Hall</span>
                         </td>
-                        <td>
-                            <i></i>
-                        </td>
+                        <td></td>
                         <td>
                             <a href="#" data-target="#Modal01"></a>
                         </td>
@@ -209,9 +207,7 @@
                             <span lang="sr">Glavna pješačka ulica</span>
                             <span lang="en">Main pedestrian street</span>
                         </td>
-                        <td>
-                            <i></i>
-                        </td>
+                        <td></td>
                         <td>
                             <a href="#" data-target="#Modal02"></a>
                         </td>
@@ -221,9 +217,7 @@
                             <span lang="sr">Katolička crkva</span>
                             <span lang="en">Catholic church</span>
                         </td>
-                        <td>
-                            <i></i>
-                        </td>
+                        <td></td>
                         <td>
                             <a href="#" data-target="#Modal03"></a>
                         </td>
@@ -233,9 +227,7 @@
                             <span lang="sr">Biblioteka &quot;Veljko Petrović&quot;</span>
                             <span lang="en">&quot;Veljko Petrović&quot; Library</span>
                         </td>
-                        <td>
-                            <i></i>
-                        </td>
+                        <td></td>
                         <td>
                             <a href="#" data-target="#Modal04"></a>
                         </td>
@@ -245,9 +237,7 @@
                             <span lang="sr">Sportsko-rekreativni centar &quot;Tikvara&quot;</span>
                             <span lang="en">Sports and recreation center &quot;Tikvara&quot;</span>
                         </td>
-                        <td>
-                            <i></i>
-                        </td>
+                        <td></td>
                         <td>
                             <a href="#" data-target="#Modal05"></a>
                         </td>
@@ -304,7 +294,7 @@
             });
             $("div.modal-body").append($("<img>").addClass("d-block mx-auto img-fluid").attr("loading", "lazy"));
             $("td").each(function () {
-                $(this).children("i").addClass("fa-solid fa-xmark fa-1x text-danger");
+                $(this).filter(":empty").wrapInner($("<i></i>").addClass("fa-solid fa-xmark fa-1x text-danger"));
                 $(this).children("a").attr("data-toggle", "modal").wrapInner($("<img>").addClass("img-thumbnail"));
             }).addClass("align-middle");
             $("a > img:eq(0), div.modal-body:eq(0) > img").attr({ "src": "images/favtown/city_hall.jpg", "alt": "Gradska vijećnica" });

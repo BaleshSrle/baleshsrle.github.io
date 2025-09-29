@@ -8,7 +8,7 @@
 		Twitter: @_ICBL_
 		Location: Banja Luka, Republic of Srpska, Bosnia and Herzegovina
 		
-		Secound: Government of Republic of Srpska - Ministry for Scientific and Technological Development, Higher Education and Information Society
+		Second: Government of Republic of Srpska - Ministry for Scientific and Technological Development, Higher Education and Information Society
 		Twitter: @mnrvoid_rs
 		Location: Banja Luka, Republic of Srpska, Bosnia and Herzegovina
 
@@ -25,7 +25,7 @@
 		Location: Brisbane, Australia	
 	
 /* SITE */
-		Last update: 2025/09/18
+		Last update: 2025/09/29
 		Language: Serbian , English
 		Standards: HTML5, CSS, JavaScript
 		Components: jQuery, Bootstrap
