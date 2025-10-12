@@ -360,11 +360,11 @@
     </footer>
     <script>
         document.scripts[1].onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
-        $(document).ready(function () {
+        $(document).ready(() => {
             $.getScript("js/main.js");
             //$("div.container-fluid").toggleClass("mb-5 pb-5");
             //$("object:eq(0)").addClass("align-middle");
-            $("div.alert img").attr({"src":"https://img.shields.io/badge/GitHub-181717?logo=github&logoSize=auto&labelColor=555555","alt":"GitHub"}).on("error", function(){this.src="https://badgen.net/badge/icon/GitHub?icon=github&label=&color=181717";}).addClass("mx-1 aling-middle img-fluid").wrap($("<a></a>").attr({"href":"https://github.com/BaleshSrle/baleshsrle.github.io","target":"_blank"}));
+            $("div.alert img").attr({ src: "https://img.shields.io/badge/GitHub-181717?logo=github&logoSize=auto&labelColor=555555", alt: "GitHub" }).on("error", function () { this.src = "https://badgen.net/badge/icon/GitHub?icon=github&label=&color=181717"; }).addClass("mx-1 aling-middle img-fluid").wrap($("<a></a>").attr({ href: "https://github.com/BaleshSrle/baleshsrle.github.io", "target": "_blank" }));
             $("object").addClass("w-100 rounded border-dark border-right border-bottom").height(800);
             $("div.card-body").addClass("p-2 px-md-3");
             //$("div.d-table-row > div.d-table-cell:first-child").addClass("font-weight-bold").width(138);
@@ -381,11 +381,11 @@
             /* $("a.dropdown-toggle").on("click", function () {
                 $("div.dropdown-menu").addClass("mb-md-n2 py-1");
             }); */
-            $("div.btn-group:eq(1)").addClass("d-flex flex-wrap");
-            $("div.btn-group:eq(1) > a").addClass("btn btn-link");
-            $("img.SocialImg").each(function () {
-                const imgName = $(this).data("img-name");
-                $(this).attr("src", "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/" + imgName + ".svg").width(32).height(32).parent("a").attr("title", $(this).attr("alt"));
+            $("div.btn-group:eq(1)").addClass("d-flex flex-wrap").children("a").addClass("btn btn-link");
+            //$("div.btn-group:eq(1) > a").addClass("btn btn-link");
+            $("img.SocialImg").each((i, e) => {
+                const imgName = $(e).data("img-name");
+                $(e).attr({ src: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/" + imgName + ".svg", crossorigin: "anonymous" }).width(32).height(32).parent("a").attr("title", $(e).attr("alt"));
             });
             /* $("div.dropdown-menu").each(function () {
                 $(this).children("a").addClass("dropdown-item px-3");

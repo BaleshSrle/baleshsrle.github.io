@@ -1,7 +1,7 @@
-(function ($) {
+(($) => {
     "use strict";
 
-    $(document).ready(function () {
+    $(document).ready(() => {
         var exYuLang = ['sr', 'hr', 'bs'];
         if (exYuLang.includes(navigator.language)) {
             $("[lang='en']").hide(1);
@@ -50,56 +50,57 @@
             //$("head").prepend("<meta http-equiv='Content-Security-Policy' content='default-src https:'>");
             //$("a.nav-link[href='" + location.pathname.slice(1) + "']").addClass("active");
         }
-        $("head").each(function () {
-            $(this).append($("<meta>").attr({ "name": "author", "content": "Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com" }), $("<meta>").attr({ "name": "designer", "content": "BaleshSrle" }), $("<meta>").attr({ "name": "reply-to", "content": "srdjan.balesevic%40yahoo.com" }), $("<meta>").attr({ "name": "language", "content": "sr" }), $("<meta>").attr({ "name": "host", "content": "pages.github.com" }), $("<meta>").attr({ "name": "geo.region", "content": "BA-SRP" }), $("<meta>").attr({ "name": "geo.placename", "content": "Добој" }), $("<meta>").attr({ "name": "fediverse:creator", "content": "@baleshsrle@vivaldi.net" }), $("<meta>").attr({ "name": "twitter:creator", "content": "@BaleshSrle" }), $("<meta>").attr({ "name": "twitter:site", "content": "@BaleshSrle" }));
-            $(this).append($("<meta>").attr({ "name": "MSThemeCompatible", "content": "yes" }), $("<meta>").attr({ "http-equiv": "cleartype", "content": "on" }), $("<meta>").attr({ "http-equiv": "X-UA-Compatible", "content": "ie=edge" }), $("<meta>").attr({ "http-equiv": "x-dns-prefetch-control", "content": "on" }), $("<meta>").attr({ "http-equiv": "Cache-control", "content": "no-cache" }), $("<meta>").attr({ "http-equiv": "Pragma", "content": "no-cache" }), $("<meta>").attr({ "http-equiv": "Expires", "content": "-1" }));
-            $(this).append($("<link>").attr({ "rel": "dns-prefetch", "href": "https://cdn.jsdelivr.net/" }), $("<link>").attr({ "rel": "preconnect", "href": "https://cdn.jsdelivr.net/", "crossorigin": "anonymous" }), $("<link>").attr({ "rel": "icon", "href": "logo.png" })/*, $("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css", "crossorigin": "anonymous" })*/, $("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css", "crossorigin": "anonymous" }).on("error", function () { this.href = "https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.5.0/css/flag-icons.min.css"; }),/* $("<script></script>").attr({ "src": "https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js", "crossorigin": "anonymous" }),*/ $.getScript("https://kit.fontawesome.com/5aafa1a155.js"), $.getScript("https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js"));
-            $(this).children("[src$='jquery.min.js'],[src$='bootstrap.bundle.min.js'],[src$='jquery.typewriter.min.js'],[src$='jquery.countdown.min.js'],[src$='5aafa1a155.js']").attr("crossorigin", "anonymous");
+        $("head").each((i, e) => {
+            $(e).append($("<meta>").attr({ "name": "author", "content": "Baleševi&#263; Sr&#273;an, srdjan.b269%40gmail.com" }), $("<meta>").attr({ "name": "designer", "content": "BaleshSrle" }), $("<meta>").attr({ "name": "reply-to", "content": "srdjan.balesevic%40yahoo.com" }), $("<meta>").attr({ "name": "language", "content": "sr" }), $("<meta>").attr({ "name": "host", "content": "pages.github.com" }), $("<meta>").attr({ "name": "geo.region", "content": "BA-SRP" }), $("<meta>").attr({ "name": "geo.placename", "content": "Добој" }), $("<meta>").attr({ "name": "fediverse:creator", "content": "@baleshsrle@vivaldi.net" }), $("<meta>").attr({ "name": "twitter:creator", "content": "@BaleshSrle" }), $("<meta>").attr({ "name": "twitter:site", "content": "@BaleshSrle" }));
+            $(e).append($("<meta>").attr({ "name": "MSThemeCompatible", "content": "yes" }), $("<meta>").attr({ "http-equiv": "cleartype", "content": "on" }), $("<meta>").attr({ "http-equiv": "X-UA-Compatible", "content": "ie=edge" }), $("<meta>").attr({ "http-equiv": "x-dns-prefetch-control", "content": "on" }), $("<meta>").attr({ "http-equiv": "Cache-control", "content": "no-cache" }), $("<meta>").attr({ "http-equiv": "Pragma", "content": "no-cache" }), $("<meta>").attr({ "http-equiv": "Expires", "content": "-1" }));
+            $(e).append($("<link>").attr({ rel: "dns-prefetch", "href": "https://cdn.jsdelivr.net/" }), $("<link>").attr({ rel: "preconnect", "href": "https://cdn.jsdelivr.net/", "crossorigin": "anonymous" }), $("<link>").attr({ rel: "icon", "href": "logo.png" })/*, $("<link>").attr({ rel: "stylesheet", "href": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css", "crossorigin": "anonymous" })*/, $("<link>").attr({ rel: "stylesheet", "href": "https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css", "crossorigin": "anonymous" }).on("error", function () { this.href = "https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.5.0/css/flag-icons.min.css"; }),/* $("<script></script>").attr({ src: "https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js", "crossorigin": "anonymous" }),*/ $.getScript("https://kit.fontawesome.com/5aafa1a155.js"), $.getScript("https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js"));
+            $(e).children("[src$='jquery.min.js'],[src$='bootstrap.bundle.min.js'],[src$='jquery.typewriter.min.js'],[src$='jquery.countdown.min.js'],[src$='5aafa1a155.js']").attr("crossorigin", "anonymous");
         });
-        $("meta:last").after($("<link>").attr({ "rel": "stylesheet", "href": "https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css", "crossorigin": "anonymous" }).on("error", function () { this.href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" }));
+        $("meta:last").after($("<link>").attr({ rel: "stylesheet", "href": "https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css", "crossorigin": "anonymous" }).on("error", function () { this.href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" }));
         $("script[src*='bootstrap@4]").on("error", function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"; });
         $("script[src*='countdown@2]").on("error", function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"; });
         $("body").addClass("d-flex flex-column h-100");
         $("main").addClass("flex-shrink-0 mb-3 pb-5");
-        $("header").each(function () {
-            $(this).find("div.col-sm-2").addClass("order-1 order-md-0").append($("<img>").attr({ "src": "logo.png", "alt": "Moj logo" }).addClass("mx-auto d-block img-fluid"));
-            $(this).find("div.col-sm-9").addClass("py-md-4 order-2 order-md-1");
-            $(this).find("div.col-sm-1").addClass("order-0 order-md-2");
+        $("header").each((i, e) => {
+            $(e).find("div.col-sm-2").addClass("order-1 order-md-0").append($("<img>").attr({ src: "logo.png", alt: "Moj logo" }).addClass("mx-auto d-block img-fluid"));
+            $(e).find("div.col-sm-9").addClass("py-md-4 order-2 order-md-1");
+            $(e).find("div.col-sm-1").addClass("order-0 order-md-2");
         });
         $("header, footer").addClass("jumbotron jumbotron-fluid mb-0 py-0 overflow-hidden");
-        $("nav.navbar").each(function () {
-            $(this).addClass("navbar-expand-md navbar-dark bg-primary");
-            $(this).children("button").addClass("navbar-toggler").attr({ "type": "button", "data-toggle": "collapse", "data-target": "#collapsibleNavbar" });
-            $(this).children("div").addClass("collapse navbar-collapse").attr("id", "collapsibleNavbar");
+        $("nav.navbar").each((i, e) => {
+            $(e).addClass("navbar-expand-md navbar-dark bg-primary");
+            $(e).children("button").addClass("navbar-toggler").attr({ "type": "button", "data-toggle": "collapse", "data-target": "#collapsibleNavbar" });
+            $(e).children("div").addClass("collapse navbar-collapse").attr("id", "collapsibleNavbar");
         });
-        $("li.nav-item").each(function () {
+        $("li.nav-item").each((i, e) => {
             //$("li.nav-item").eq(0).html("<a href='index.html' class='nav-link'><i class='fa-solid fa-home fa-lg pr-2'></i><span></span></a>");
-            $(this).children("a").addClass("nav-link");
-            $(this).find("i").addClass("fa-solid fa-lg pr-2");
-        })
+            $(e).children("a").addClass("nav-link");
+            $(e).find("i").addClass("fa-solid fa-lg pr-2");
+        });
         $("div[class*='container']").addClass("mb-5 mb-md-0 pt-2 pb-5 pd-sm-0 pb-md-2 mx-auto");
         $("div.alert").addClass("alert-info alert-dismissible fade show mx-auto").attr("role", "alert").prepend($("<button></button>").addClass("close").attr({ "type": "button", "data-dismiss": "alert", "aria-label": "Close" }).html("<span aria-hidden='true'>&times;</span>"));
-        $("img").each(function () {
+        $("img").each(() => {
             //$("img[src*='simple-icons']").width(32).height(32);
-            $("img[src*='simpleicons']").width(32).height(32);
-            //$("img").filter("[alt='Facebook'],[alt='Instagram'],[alt^='X']").parent("a").attr("rel", "me");
+            //$("img[src*='simpleicons']").width(32).height(32);
+            //$("img").filter("[alt='Facebook'],[alt='Instagram'],[alt^='X']").parent("a").attr(rel, "me");
             $("img[src*='gallery']").addClass("d-block w-100 h-auto rounded-lg");
-            $("img.img-thumbnail").width(250).addClass("rounded-lg");
+            //$("img.img-thumbnail").width(250).addClass("rounded-lg");
         });
         $("div.btn-group,td").children("a").addClass("btn btn-link").attr("role", "button");
         $("div.card").addClass("shadow-sm");
         $("ul.nav.nav-tabs[id$='List']").each(function () {
             $(this).parent("div.card-header").addClass("pt-1 px-3");
             $(this).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-x": "auto", "overflow-y": "hidden" }).attr("role", "tablist");
-            $(this).find("a").on("click", function (e) {
+            //$(this).find("a").on("click", function (e) {
+            $(this).on("click", "li > a", function (e) {
                 e.preventDefault()
                 $(this).tab("show");
-            }).attr("role", "tab");
+            }).find("a").attr("role", "tab");
         });
-        $("div.tab-content").each(function (i) {
+        $("div.tab-content").each((i) => {
             $("div.tab-content").eq(i).attr("id", $("ul.nav.nav-tabs").eq(i).attr("id") + "Content");
         });
-        $("div.tab-pane").each(function (i) {
+        $("div.tab-pane").each((i) => {
             $("div.tab-pane").eq(i).attr({ "role": "tabpanel", "aria-labelledby": $("div.tab-pane").eq(i).attr("id") + "-tab" });
         });
         $("input#DoB").attr("autocomplete", "bday").val("1988-09-07");
@@ -120,15 +121,15 @@
             ride: "carousel",
             touch: false
         }).addClass("slide carousel-fade");
-        $("div#BookReadCarousel img").width(280).addClass("d-block mx-auto h-auto rounded-lg");
+        //$("div#BookReadCarousel img").width(280).addClass("d-block mx-auto h-auto rounded-lg");
         $("div").filter("#BookReadCarousel,#carouselGallery").find("img").wrap($("<div></div>").addClass("carousel-item"));
         $("div.carousel-item").wrapAll($("<div></div>").addClass("carousel-inner"));
         $("div.carousel-item").first().addClass("active");
-        $("div.carousel img").each(function () {
+        $("div.carousel img").each(() => {
             $("div.carousel img").eq(0).attr("loading", "eager");
             $("div.carousel img").slice(1).attr("loading", "lazy");
         });
-        $("button#movieAnswerCheckBtn").on("click", function () {
+        $("button#movieAnswerCheckBtn").on("click", () => {
             var a = $('#odgovor').val();
 
             if (a == "akcioni horor" || a == "action horror") {
@@ -139,11 +140,11 @@
                 $("p#rezultat[lang='en']").html("The answer is incorrect. <br> Type another answer (or search for the answer to the question on Wikipedia or IMDb).").addClass("alert alert-danger mw-100 text-center mt-2");
             }
         }).attr("type", "button").addClass("btn btn-primary");
-        $("button#movieAnswerResetBtn").on("click", function () {
+        $("button#movieAnswerResetBtn").on("click", () => {
             $("p#rezultat.alert").alert("close");
             return location.reload();
         }).attr("type", "reset").addClass("btn btn-secondary");
-        $("button#quizAnswerCheckBtn").on("click", function () {
+        $("button#quizAnswerCheckBtn").on("click", () => {
             const form = document.forms[0];
             var b = form.pitanje1.value;
             var c = form.pitanje2.value;
@@ -223,7 +224,7 @@
             $("#rezultat").attr("lang", "en").html("Number of currect answers: " + correct + ", number of wrong answers: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
 
         }).attr("type", "button").addClass("btn btn-primary");
-        $("button#resetQuiz").on("click", function () {
+        $("button#resetQuiz").on("click", () => {
             $("div.card").removeClass("border-success border-danger");
             $("div.card-body").removeClass("text-success text-danger");
             $("p#rezultat.alert").alert("close");
@@ -231,10 +232,10 @@
         }).attr("type", "reset").addClass("btn btn-secondary");
         $("footer").addClass("d-sm-flex justify-content-around align-items-center bg-primary mt-auto fixed-bottom");
         //$("footer").children("div").eq(0).addClass("d-flex flex-wrap flex-sm-column mx-md-2");
-        $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-auto").css("max-width", "292px").append($("<div></div>").addClass("mr-1").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3", "alt": "Bootstrap" }).on("error", function () { this.src = "https://badgen.net/jsdelivr/v/npm/bootstrap@4?color=7952b3&label=Bootstrap"; })), $("<div></div>").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad", "alt": "jQuery" }).on("error", function () { this.src = "https://badgen.net/jsdelivr/v/npm/jquery@3?color=0769ad&label=jQuery" })), $("<div></div>").addClass("mr-1").append($("<img>").attr({ "src": "https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=7.*&logo=fontawesome&logoColor=white&logoSize=auto&label=Font%20Awesome&labelColor=538dd7&color=538dd7", "alt": "Font Awesome" }).on("error", function () { this.src = "https://badgen.net/npm/v/@fortawesome/fontawesome-free?color=538dd7&label=Font%20Awesome"; })), $("<div></div>").append($("<img>").attr({ "src": "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", "alt": "jsDelivr CDN" })));
+        $("footer > div:eq(0)").addClass("d-flex justify-content-center flex-wrap mx-auto").css("max-width", "292px").append($("<div></div>").addClass("mr-1").append($("<img>").attr({ src: "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v4.*&logo=bootstrap&logoColor=white&label=Bootstrap&labelColor=7952b3&color=7952b3", alt: "Bootstrap", crossorigin: "anonymous" }).on("error", function () { this.src = "https://badgen.net/jsdelivr/v/npm/bootstrap@4?color=7952b3&label=Bootstrap"; })), $("<div></div>").append($("<img>").attr({ src: "https://img.shields.io/github/v/release/jquery/jquery?filter=3.*&logo=jquery&logoColor=white&label=jQuery&labelColor=0769ad&color=0769ad", alt: "jQuery", crossorigin: "anonymous" }).on("error", function () { this.src = "https://badgen.net/jsdelivr/v/npm/jquery@3?color=0769ad&label=jQuery" })), $("<div></div>").addClass("mr-1").append($("<img>").attr({ src: "https://img.shields.io/github/v/release/fortawesome/font-awesome?filter=7.*&logo=fontawesome&logoColor=white&logoSize=auto&label=Font%20Awesome&labelColor=538dd7&color=538dd7", alt: "Font Awesome", crossorigin: "anonymous" }).on("error", function () { this.src = "https://badgen.net/npm/v/@fortawesome/fontawesome-free?color=538dd7&label=Font%20Awesome"; })), $("<div></div>").append($("<img>").attr({ src: "https://img.shields.io/website?url=https%3A%2F%2Fcdn.jsdelivr.net%2F&logo=jsdelivr&logoColor=white&label=jsDelivr%20CDN&labelColor=e84d3d&cacheSeconds=600", alt: "jsDelivr CDN", crossorigin: "anonymous" })));
         //$("footer > div:eq(1)").addClass("flex-grow-1 text-center text-white").append($("<div></div>").html(new Date().getDate() + "." + (new Date().getMonth() + 1) + "." + new Date().getFullYear() + "."));
         $("footer > div:eq(1)").addClass("flex-grow-1 text-center text-white").append($("<div></div>").html(new Date().toLocaleDateString(navigator.language, { year: "numeric", month: "2-digit", day: "2-digit" })));
-        $("footer > div:eq(2)").addClass("mx-md-2").append($("<a></a>").attr({ "id": "wot-badge0", "href": "https://www.mywot.com/scorecard/baleshsrle.github.io?wot_badge=0_white", "hreflang": "en-US", "target": "_blank" }).addClass("wot-badge mx-auto mb-1 mb-md-0").append($("<div></div>").addClass("wot-logo"), $("<div></div>").addClass("wot-shield"), $("<p></p>").addClass("wot-secured").text("Verified Website"), $("<div></div>").addClass("wot-vertical"), $("<p></p>").addClass("wot-report").text("See Report")));
+        $("footer > div:eq(2)").addClass("mx-md-2").append($("<a></a>").attr({ "id": "wot-badge0", href: "https://www.mywot.com/scorecard/" + location.host + "?wot_badge=0_white", hreflang: "en-US", target: "_blank" }).addClass("wot-badge mx-auto mb-1 mb-md-0").append($("<div></div>").addClass("wot-logo"), $("<div></div>").addClass("wot-shield"), $("<p></p>").addClass("wot-secured").text("Verified Website"), $("<div></div>").addClass("wot-vertical"), $("<p></p>").addClass("wot-report").text("See Report")));
         document.normalize();
     });
 })(jQuery);

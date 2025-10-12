@@ -116,10 +116,10 @@
                                 </span>1999.
                             </p>
                         </div>
-                        <a href="https://www.imdb.com/title/tt0146675/" class="list-group-item">
-                            <img src="https://cdn.simpleicons.org/imdb" alt="IMDb">IMDb</a>
-                        <a href="https://en.wikipedia.org/wiki/End_of_Days_(film)" class="list-group-item">
-                            <img src="https://cdn.simpleicons.org/wikipedia" alt="Wikipedia">Wikipedia</a>
+                        <a href="https://www.imdb.com/title/tt0146675/">
+                            <img data-icon="imdb" alt="IMDb">IMDb</a>
+                        <a href="https://en.wikipedia.org/wiki/End_of_Days_(film)">
+                            <img data-icon="wikipedia" alt="Wikipedia">Wikipedia</a>
                     </div>
                     <div class="card">
                         <div class="card-body">
@@ -228,22 +228,14 @@
                                     </p>
                                 </div>
                                 <div class="tab-pane" id="movieCast">
-                                    <a href="https://www.imdb.com/name/nm0000216/" class="list-group-item">Arnold
-                                        Schwarzenegger</a>
-                                    <a href="https://www.imdb.com/name/nm0000677/" class="list-group-item">Robin
-                                        Tunney</a>
-                                    <a href="https://www.imdb.com/name/nm0001768/" class="list-group-item">Rod
-                                        Steiger</a>
-                                    <a href="https://www.imdb.com/name/nm0001629/" class="list-group-item">Kevin
-                                        Pollak</a>
-                                    <a href="https://www.imdb.com/name/nm0001634/" class="list-group-item">CCH
-                                        Pounder</a>
-                                    <a href="https://www.imdb.com/name/nm0001424/" class="list-group-item">Udo
-                                        Kier</a>
-                                    <a href="https://www.imdb.com/name/nm0000321/" class="list-group-item">Gabriel
-                                        Byrn</a>
-                                    <a href="https://www.imdb.com/name/nm0546816/" class="list-group-item">Miriam
-                                        Margolyes</a>
+                                    <a data-actorid="nm0000216">Arnold Schwarzenegger</a>
+                                    <a data-actorid="nm0000677">Robin Tunney</a>
+                                    <a data-actorid="nm0001768">Rod Steiger</a>
+                                    <a data-actorid="nm0001629">Kevin Pollak</a>
+                                    <a data-actorid="nm0001634">CCH Pounder</a>
+                                    <a data-actorid="nm0001424">Udo Kier</a>
+                                    <a data-actorid="nm0000321">Gabriel Byrn</a>
+                                    <a data-actorid="nm0546816">Miriam Margolyes</a>
                                 </div>
                             </div>
                         </div>
@@ -259,20 +251,27 @@
     </footer>
     <script>
         document.scripts[1].onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
-        $(document).ready(function () {
+        $(document).ready(() => {
             $.getScript("js/main.js");
-            $("div.container-fluid").each(function () {
-                $(this).find("div.col-sm-3").addClass("pr-md-2");
-                $(this).find("div.col-sm-9").addClass("pl-md-2");
+            $("div.container-fluid").each((i, e) => {
+                $(e).find("div.col-sm-3").addClass("pr-md-2");
+                $(e).find("div.col-sm-9").addClass("pl-md-2");
             });
             $("div.card").addClass("my-2 w-100")/*.each(function () {
                 $(this).children("div.list-group").addClass("list-group-flush");
             })*/;
-            //$("div.list-group > a.list-group-item").addClass("list-group-item-action");
-            $("a.list-group-item").addClass("list-group-item-action").slice(0, 2).wrapAll($("<div></div>").addClass("list-group list-group-flush"));
-            $("a.list-group-item").addClass("list-group-item-action").slice(2).wrapAll($("<div></div>").addClass("list-group list-group-horizontal-xl"));
+            $("div.card:first a").each((i, e) => {
+                $(e).addClass("list-group-item list-group-item-action");
+            }).wrapAll($("<div></div>").addClass("list-group list-group-flush"));
+            $("div.card:first a > img").each((i, e) => {
+                const Icon = $(e).data("icon");
+                $(e).attr({ src: "https://cdn.simpleicons.org/" + Icon, crossorigin: "anonymous" }).addClass("mr-1").width(32).height(32);
+            });
+            $("div#movieCast a").each((i, e) => {
+                const ActorID = $(e).data("actorid");
+                $(e).attr("href", "https://www.imdb.com/name/" + ActorID + "/").addClass("list-group-item list-group-item-action");
+            }).wrapAll($("<div></div>").addClass("list-group list-group-horizontal-xl"));
             $("div.embed-responsive").addClass("my-2");
-            $("img[src*='simpleicons']").addClass("mr-1");
             $("p.card-text").slice(0, 2).addClass("pl-2 pt-1").removeClass("text-justify");
         });
     </script>

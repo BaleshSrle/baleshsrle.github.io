@@ -288,22 +288,25 @@
             $("a[href*='hr']").attr("hreflang", "hr");
             $("a[href*='en']").slice(1).attr("hreflang", "en");
             $("div.modal").addClass("fade").attr("aria-hidden", true);
-            $("div.modal-dialog").each(function () {
-                $("div.modal-dialog").addClass("modal-dialog-centered modal-lg");
-                $("div.modal-dialog").filter(":eq(2),:eq(3)").removeClass("modal-lg");
-            });
+            $("div.modal-dialog").addClass("modal-dialog-centered modal-lg").filter(":eq(2),:eq(3)").removeClass("modal-lg");
             $("div.modal-body").append($("<img>").addClass("d-block mx-auto img-fluid").attr("loading", "lazy"));
-            $("td").each(function () {
-                $(this).filter(":empty").wrapInner($("<i></i>").addClass("fa-solid fa-xmark fa-1x text-danger"));
-                $(this).children("a").attr("data-toggle", "modal").wrapInner($("<img>").addClass("img-thumbnail"));
+            $("td").each((i, e) => {
+                if ($(e).is(":empty")) {
+                    $(e).wrapInner($("<i></i>").addClass("fa-solid fa-xmark fa-1x text-danger"));
+                }
+                $(e).children("a").attr("data-toggle", "modal").wrapInner($("<img>").addClass("img-thumbnail").width(250).addClass("rounded-lg"));
             }).addClass("align-middle");
-            $("a > img:eq(0), div.modal-body:eq(0) > img").attr({ "src": "images/favtown/city_hall.jpg", "alt": "Gradska vijećnica" });
-            $("a > img:eq(1), div.modal-body:eq(1) > img").attr({ "src": "images/favtown/main_pedestrian_street.jpg", "alt": "Glavna pješačka ulica" });
-            $("a > img:eq(2), div.modal-body:eq(2) > img").attr({ "src": "images/favtown/catholic_church.jpg", "alt": "Katolička crkva" });
-            $("a > img:eq(3), div.modal-body:eq(3) > img").attr({ "src": "images/favtown/library.jpg", "alt": "Biblioteka 'Veljko Petrović'" });
-            $("a > img:eq(4), div.modal-body:eq(4) > img").attr({ "src": "images/favtown/panorama.jpg", "alt": "Panorama grada" });
-            $("a > img:eq(5), div.modal-body:eq(5) > img").attr({ "src": "images/favtown/src_tikvara.jpg", "alt": "SRC 'Tikvara'" });
-            $("a > img:eq(6), div.modal-body:eq(6) > img").attr({ "src": "images/favtown/stadion_slavko_maletin_vava.jpg", "alt": "Stadion 'Slavko Maletin - Vava'" });
+            const FavTownImg = [
+                { src: "images/favtown/city_hall.jpg", alt: "Gradska vijećnica" },
+                { src: "images/favtown/main_pedestrian_street.jpg", alt: "Glavna pješačka ulica" },
+                { src: "images/favtown/catholic_church.jpg", alt: "Katolička crkva" },
+                { src: "images/favtown/library.jpg", alt: "Biblioteka 'Veljko Petrović'" },
+                { src: "images/favtown/panorama.jpg", alt: "Panorama grada" },
+                { src: "images/favtown/src_tikvara.jpg", alt: "SRC 'Tikvara'" },
+                { src: "images/favtown/stadion_slavko_maletin_vava.jpg", alt: "Stadion 'Slavko Maletin - Vava'" }];
+            FavTownImg.forEach((img, i) => {
+                $("a > img:eq(" + i + "), div.modal-body:eq(" + i + ") > img").attr(img);
+            });
         });
     </script>
 </body>

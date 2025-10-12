@@ -140,8 +140,8 @@
         <div></div>
     </footer>
     <script>
-        document.scripts[0].onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
-        $(document).ready(function () {
+        document.scripts[0].onerror = () => { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
+        $(document).ready(() => {
             $.getScript("js/main.js");
             $("div#carouselGallery > button").attr({ "type": "button", "data-target": "#carouselGallery" });
             $("ol.carousel-indicators > li").attr("data-target", "#carouselGallery");
