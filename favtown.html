@@ -307,6 +307,24 @@
             FavTownImg.forEach((img, i) => {
                 $("a > img:eq(" + i + "), div.modal-body:eq(" + i + ") > img").attr(img);
             });
+            $(window).on("resize load", () => {
+               switch (screen.width) {
+                    case 1920:
+                        $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "34.4vw");
+                        break;
+                    case 1366:
+                        $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "33vw");
+                        break;
+                    case 1024:
+                        $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "44.1vw");
+                        break;
+                    case 800:
+                        $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "40.7vw");
+                        break;
+                    case 720:
+                        $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "95vw");
+                }
+            }); 
         });
     </script>
 </body>

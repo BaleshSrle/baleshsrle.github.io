@@ -90,7 +90,9 @@
         });
         $("div.btn-group,td").children("a").addClass("btn btn-link").attr("role", "button");
         $("div.card").addClass("shadow-sm");
-        $("div.modal").addClass("fade").attr({ "role": "dialog", "aria-labelledby": $("div.modal").attr("id") + "Label", "aria-hidden": true });
+        $("div.modal").each((i) => {
+            $("div.modal:eq(" + i + ")").attr({ "role": "dialog", "aria-labelledby": $("div.modal:eq(" + i + ")").attr("id") + "Label", "aria-hidden": true });
+        }).addClass("fade");
         $("ul.nav.nav-tabs[id$='List']").each(function () {
             $(this).parent("div.card-header").addClass("pt-1 px-3");
             $(this).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-x": "auto", "overflow-y": "hidden" }).attr("role", "tablist");
@@ -101,10 +103,10 @@
             }).find("a").attr("role", "tab");
         });
         $("div.tab-content").each((i) => {
-            $("div.tab-content").eq(i).attr("id", $("ul.nav.nav-tabs").eq(i).attr("id") + "Content");
+            $("div.tab-content:eq(" + i + ")").attr("id", $("ul.nav.nav-tabs:eq(" + i + ")").attr("id") + "Content");
         });
         $("div.tab-pane").each((i) => {
-            $("div.tab-pane").eq(i).attr({ "role": "tabpanel", "aria-labelledby": $("div.tab-pane").eq(i).attr("id") + "-tab" });
+            $("div.tab-pane:eq(" + i + ")").attr({ "role": "tabpanel", "aria-labelledby": $("div.tab-pane:eq(" + i + ")").attr("id") + "-tab" });
         });
         $("input#DoB").attr("autocomplete", "bday").val("1988-09-07");
         $("input#eMail").attr("autocomplete", "email").val("srdjan.baleshevich@engineer.com")
@@ -129,8 +131,8 @@
         $("div.carousel-item").wrapAll($("<div></div>").addClass("carousel-inner"));
         $("div.carousel-item").first().addClass("active");
         $("div.carousel img").each(() => {
-            $("div.carousel img").eq(0).attr("loading", "eager");
-            $("div.carousel img").slice(1).attr("loading", "lazy");
+            $("div.carousel img:eq(0)").attr("loading", "eager");
+            $("div.carousel img:gt(0)").attr("loading", "lazy");
         });
         $("button#movieAnswerCheckBtn").on("click", () => {
             var a = $('#odgovor').val();
@@ -170,8 +172,8 @@
             ];
             CheckAnswers.forEach((isCorrect, i) => {
                 const status = isCorrect ? "success" : "danger";
-                $("div.card").eq(i).addClass("border-" + status);
-                $("div.card-body").eq(i).addClass("text-" + status);
+                $("div.card:eq(" + i + ")").addClass("border-" + status);
+                $("div.card-body:eq(" + i + ")").addClass("text-" + status);
                 isCorrect ? correct++ : incorrect++;
             });
             $("#rezultat").attr("lang", "sr").html("Broj tačnih odgovora: " + correct + ", broj pogrešnih odgovora: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
