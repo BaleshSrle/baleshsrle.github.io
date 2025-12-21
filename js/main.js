@@ -5,6 +5,7 @@
         var exYuLang = ['sr', 'hr', 'bs'];
         if (exYuLang.includes(navigator.language)) {
             $("[lang='en']").hide(1);
+            $("html").attr("lang","sr-BA");
             $("header div.col-sm-9").append($("<h1></h1>").text("Dobrodošli na sajt"), $("<p></p>").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni"));
             //$("h1#welcome").text("Dobrodošli na sajt");
             //$("p#subtext").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni");
@@ -23,6 +24,7 @@
             $("footer > div:eq(1)").prepend($("<h3></h3>").addClass("font-italic").text("Balešević Srđan"));
         } else {
             $("[lang='sr']").hide(1);
+            $("html").attr("en");
             $("header div.col-sm-9").append($("<h1></h1>").text("Welcome to the website"), $("<p></p>").text("A lot of additional information can be found about me on this website"));
             $("div.col-sm-1 > span").addClass("fi fi-gb-eng float-right m-1 border border-warning");
             $("i.fa-home ~ span").text("Home");
@@ -88,6 +90,7 @@
         });
         $("div.btn-group,td").children("a").addClass("btn btn-link").attr("role", "button");
         $("div.card").addClass("shadow-sm");
+        $("div.modal").addClass("fade").attr({ "role": "dialog", "aria-labelledby": $("div.modal").attr("id")+"Label", "aria-hidden": true });
         $("ul.nav.nav-tabs[id$='List']").each(function () {
             $(this).parent("div.card-header").addClass("pt-1 px-3");
             $(this).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-x": "auto", "overflow-y": "hidden" }).attr("role", "tablist");
@@ -156,7 +159,16 @@
             var correct = 0;
             var incorrect = 0;
 
-            if (b != "BGD") {
+            const questions = [
+                { value: b, answer: "BGD", type: "not" },
+                { value: c, answer: "Dvije", type: "equal" },
+                { value: d, answer: "Trece", type: "equal" },
+                { value: e, answer: "1999", type: "equal" },
+                { value: e, answer: "Tri", type: "equal" },
+                { value: e, answer: "VladaArsic", type: "not" },
+            ];
+
+            /* if (b != "BGD") {
                 $("div.card").eq(0).addClass("border-success");
                 $("div.card-body").eq(0).addClass("text-success");
                 correct++
@@ -218,10 +230,23 @@
                 $("div.card").eq(6).addClass("border-danger");
                 $("div.card-body").eq(6).addClass("text-danger");
                 incorrect++
-            }
+            }*/
 
-            $("#rezultat").attr("lang", "sr").html("Broj tačnih odgovora: " + correct + ", broj pogrešnih odgovora: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
-            $("#rezultat").attr("lang", "en").html("Number of currect answers: " + correct + ", number of wrong answers: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
+            questions.forEach((q, index) => {
+                const isCorrect = (q.type === "equal") ? q.value === q.correct : q.value !== q.correct;
+                if (isCorrect) {
+                    $("div.card").eq(6).addClass("border-success");
+                    $("div.card-body").eq(6).addClass("text-success");
+                    correct++;
+                } else {
+                    $("div.card").eq(6).addClass("border-danger");
+                    $("div.card-body").eq(6).addClass("text-danger");
+                    incorrect++;
+                }
+            });
+
+            $(".movieQuestionResult").attr("lang", "sr").html("Broj tačnih odgovora: " + correct + ", broj pogrešnih odgovora: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
+            $(".movieQuestionResult").attr("lang", "en").html("Number of currect answers: " + correct + ", number of wrong answers: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
 
         }).attr("type", "button").addClass("btn btn-primary");
         $("button#resetQuiz").on("click", () => {

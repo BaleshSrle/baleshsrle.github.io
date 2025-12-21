@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sr-BA">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -287,7 +287,7 @@
             $("a[href*='rs']").attr("hreflang", "sr-RS");
             $("a[href*='hr']").attr("hreflang", "hr");
             $("a[href*='en']").slice(1).attr("hreflang", "en");
-            $("div.modal").addClass("fade").attr("aria-hidden", true);
+            //$("div.modal").addClass("fade").attr("aria-hidden", true);
             $("div.modal-dialog").addClass("modal-dialog-centered modal-lg").filter(":eq(2),:eq(3)").removeClass("modal-lg");
             $("div.modal-body").append($("<img>").addClass("d-block mx-auto img-fluid").attr("loading", "lazy"));
             $("td").each((i, e) => {

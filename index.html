@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sr-BA">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -280,8 +280,9 @@
                                     <span lang="sr">Moja biografija</span>
                                     <span lang="en">My biography</span>
                                 </button>
-                                <div class="modal fade" id="cvPDFModal" aria-labelledby="cvPDFModalLabel"
-                                    aria-hidden="true">
+                                <div class="modal" id="cvPDFModal">
+                                    <!-- <div class="modal fade" id="cvPDFModal" aria-labelledby="cvPDFModalLabel"
+                                    aria-hidden="true"> -->
                                     <div class="modal-dialog modal-dialog-centered modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-body">
@@ -297,41 +298,40 @@
                             </div>
                             <div class="btn-group" role="group">
                                 <a href="https://www.facebook.com/srdjan.balesevic" rel="me">
-                                    <img class="SocialImg" data-img-name="facebook" alt="Facebook"></a>
+                                    <img class="SocialImg" data-name="facebook" alt="Facebook"></a>
                                 <a href="https://github.com/BaleshSrle">
-                                    <img class="SocialImg" data-img-name="github" alt="GitHub"></a>
+                                    <img class="SocialImg" data-name="github" alt="GitHub"></a>
                                 <a href="https://www.goodreads.com/baleshsrle">
-                                    <img class="SocialImg" data-img-name="goodreads" alt="Goodreads"></a>
+                                    <img class="SocialImg" data-name="goodreads" alt="Goodreads"></a>
                                 <a href="https://instagram.com/srlebaleshpuhovski" rel="me">
-                                    <img class="SocialImg" data-img-name="instagram" alt="Instagram"></a>
+                                    <img class="SocialImg" data-name="instagram" alt="Instagram"></a>
                                 <a href="https://ba.linkedin.com/in/srdjanbaleshevich">
-                                    <img class="SocialImg" data-img-name="linkedin" alt="LinkedIn"></a>
+                                    <img class="SocialImg" data-name="linkedin" alt="LinkedIn"></a>
                                 <a href="https://social.vivaldi.net/@baleshsrle" rel="me">
-                                    <img class="SocialImg" data-img-name="mastodon"
-                                        alt="Vivaldi Social by Mastodon"></a>
+                                    <img class="SocialImg" data-name="mastodon" alt="Vivaldi Social by Mastodon"></a>
                                 <a href="https://m.me/srdjan.balesevic">
-                                    <img class="SocialImg" data-img-name="messenger" alt="Messenger"></a>
+                                    <img class="SocialImg" data-name="messenger" alt="Messenger"></a>
                                 <a href="skype:srdjan.baleshevich?call">
-                                    <img class="SocialImg" data-img-name="skype" alt="Skype"></a>
+                                    <img class="SocialImg" data-name="skype" alt="Skype"></a>
                                 <a href="https://www.snapchat.com/add/baleshsrle?locale=sr-Latn-BA">
-                                    <img class="SocialImg" data-img-name="snapchat" alt="Snapchat"></a>
+                                    <img class="SocialImg" data-name="snapchat" alt="Snapchat"></a>
                                 <a
                                     href="https://open.spotify.com/user/bvfuuxdysiks1nnpwal3iyaa2?si=msIIL4yHQ0SpK5m6jjFWWw">
-                                    <img class="SocialImg" data-img-name="spotify" alt="Spotify"></a>
+                                    <img class="SocialImg" data-name="spotify" alt="Spotify"></a>
                                 <a href="https://steamcommunity.com/id/BaleshSrle">
-                                    <img class="SocialImg" data-img-name="steam" alt="Steam"></a>
+                                    <img class="SocialImg" data-name="steam" alt="Steam"></a>
                                 <a href="https://baleshsrle.t.me/">
-                                    <img class="SocialImg" data-img-name="telegram" alt="Telegram"></a>
+                                    <img class="SocialImg" data-name="telegram" alt="Telegram"></a>
                                 <a href="https://threads.net/@srlebaleshpuhovski">
-                                    <img class="SocialImg" data-img-name="threads" alt="Threads"></a>
+                                    <img class="SocialImg" data-name="threads" alt="Threads"></a>
                                 <a href="https://x.com/BaleshSrle" rel="me">
-                                    <img class="SocialImg" data-img-name="x" alt="X (former Twitter)"></a>
+                                    <img class="SocialImg" data-name="x" alt="X (former Twitter)"></a>
                                 <a href="https://vk.com/baleshsrle">
-                                    <img class="SocialImg" data-img-name="vk" alt="VK"></a>
+                                    <img class="SocialImg" data-name="vk" alt="VK"></a>
                                 <a href="https://wa.me/38766340286">
-                                    <img class="SocialImg" data-img-name="whatsapp" alt="WhatsApp"></a>
+                                    <img class="SocialImg" data-name="whatsapp" alt="WhatsApp"></a>
                                 <a href="https://wp.me/2brNg">
-                                    <img class="SocialImg" data-img-name="wordpress" alt="Wordpress"></a>
+                                    <img class="SocialImg" data-name="wordpress" alt="Wordpress"></a>
                             </div>
                         </div>
                         <!-- <div class="btn-group" role="group">
@@ -343,7 +343,7 @@
                                 </a>
                                 <div class="dropdown-menu">
                                     **<a href="https://www.youtube.com/@srlebalesh"><img
-                                        data-img-name="youtube.svg"
+                                        data-name="youtube.svg"
                                         alt="YouTube">YouTube</a>**
                                 </div>
                             </div>
@@ -364,7 +364,7 @@
             $.getScript("js/main.js");
             //$("div.container-fluid").toggleClass("mb-5 pb-5");
             //$("object:eq(0)").addClass("align-middle");
-            $("div.alert img").attr({ src: "https://img.shields.io/badge/GitHub-181717?logo=github&logoSize=auto&labelColor=555555", alt: "GitHub" }).on("error", function () { this.src = "https://badgen.net/badge/icon/GitHub?icon=github&label=&color=181717"; }).addClass("mx-1 aling-middle img-fluid").wrap($("<a></a>").attr({ href: "https://github.com/BaleshSrle/baleshsrle.github.io", "target": "_blank" }));
+            $("div.alert img").attr({ src: "https://img.shields.io/badge/GitHub-181717?logo=github&logoSize=auto&labelColor=555555", alt: "GitHub" }).on("error", function () { this.src = "https://badgen.net/badge/icon/GitHub?icon=github&label=&color=181717"; }).addClass("mx-1 aling-middle img-fluid").wrap($("<a></a>").attr({ href: "https://github.com/BaleshSrle/" + location.host, "hreflang": "en", "target": "_blank" }));
             $("object").addClass("w-100 rounded border-dark border-right border-bottom").height(800);
             $("div.card-body").addClass("p-2 px-md-3");
             //$("div.d-table-row > div.d-table-cell:first-child").addClass("font-weight-bold").width(138);
@@ -384,7 +384,7 @@
             $("div.btn-group:eq(1)").addClass("d-flex flex-wrap").children("a").addClass("btn btn-link");
             //$("div.btn-group:eq(1) > a").addClass("btn btn-link");
             $("img.SocialImg").each((i, e) => {
-                const imgName = $(e).data("img-name");
+                const imgName = $(e).data("name");
                 $(e).attr({ src: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/" + imgName + ".svg", crossorigin: "anonymous" }).width(32).height(32).parent("a").attr("title", $(e).attr("alt"));
             });
             /* $("div.dropdown-menu").each(function () {

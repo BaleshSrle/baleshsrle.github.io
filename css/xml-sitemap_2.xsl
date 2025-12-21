@@ -24,7 +24,7 @@
 						Generisano pomoću<img class="ShieldsIoBadge" />-ovog WordPress SEO dodatka, ovo je XML Mapa sajta, namjenjena za korištenje od strane pretraživača.
 					</p>
 					<p>
-						Više informacija o XML mapama sajtova možete pronaći na <a href="https://www.sitemaps.org" target="_blank">sitemaps.org</a>.
+						Više informacija o XML mapama sajtova možete pronaći na <a href="https://www.sitemaps.org" hreflang="en" target="_blank">sitemaps.org</a>.
 					</p>
 					<p>
 						Ova mapa sajta sadrži <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/> URL adresa.
@@ -85,7 +85,7 @@
 						$("th:eq(0)").css("width", "60%");
 						$("th:lt(3),td").addClass("align-middle text-center");
 						$("th:gt(2)").css("width", "13%").addClass("text-center");
-						$("footer img").attr({"src":"https://validator.w3.org/images/valid_icons/valid-xml10-blue", "alt":"Valid XML 1.0 !"}).addClass("float-left img-fluid").wrap($("<a></a>").attr({"href":"https://validator.w3.org/check?uri="+encodeURIComponent(location.href), "target":"_blank"}));
+						$("footer img").attr({"src":"https://validator.w3.org/images/valid_icons/valid-xml10-blue", "alt":"Valid XML 1.0 !"}).addClass("float-left img-fluid").wrap($("<a></a>").attr({"href":"https://validator.w3.org/check?uri="+encodeURIComponent(location.href), "hreflang":"en", "target":"_blank"}));
 					});
 				</script>
 			</body>

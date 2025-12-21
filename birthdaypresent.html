@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sr-BA">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -91,12 +91,12 @@
         <div class="container-fluid">
             <div class="alert mb-2">
                 <h5 class="text-center mb-1">
-                    <span lang="sr">Ostalo je još <span id="bday" lang="sr"></span> do mog rođendana.</span>
-                    <span lang="en">There are <span id="bday" lang="en"></span> left until my birthday.</span>
+                    <span lang="sr">Ostalo je još <span class="bday" lang="sr"></span> do mog rođendana.</span>
+                    <span lang="en">There are <span class="bday" lang="en"></span> left until my birthday.</span>
                 </h5>
                 <script>
-                    $("#bday[lang='sr']").countdown("2019/09/07 05:55:00", function (event) { $(this).text(event.strftime('%D dan(a) i %H:%M:%S')); });
-                    $("#bday[lang='en']").countdown("2019/09/07 05:55:00", function (event) { $(this).text(event.strftime('%D day(s) & %H:%M:%S')); });
+                    $(".bday[lang='sr']").countdown("2019/09/07 05:55:00", function (event) { $(this).text(event.strftime('%D dan(a) i %H:%M:%S')); });
+                    $(".bday[lang='en']").countdown("2019/09/07 05:55:00", function (event) { $(this).text(event.strftime('%D day(s) & %H:%M:%S')); });
                 </script>
             </div>
             <div class="row align-items-center mx-auto">
