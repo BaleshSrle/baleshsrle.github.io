@@ -5,7 +5,7 @@
         var exYuLang = ['sr', 'hr', 'bs'];
         if (exYuLang.includes(navigator.language)) {
             $("[lang='en']").hide(1);
-            $("html").attr("lang","sr-BA");
+            $("html").attr("lang", "sr-BA");
             $("header div.col-sm-9").append($("<h1></h1>").text("Dobrodošli na sajt"), $("<p></p>").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni"));
             //$("h1#welcome").text("Dobrodošli na sajt");
             //$("p#subtext").text("Na ovom sajt možete saznati mnogo dodatnih informacija o meni");
@@ -90,7 +90,7 @@
         });
         $("div.btn-group,td").children("a").addClass("btn btn-link").attr("role", "button");
         $("div.card").addClass("shadow-sm");
-        $("div.modal").addClass("fade").attr({ "role": "dialog", "aria-labelledby": $("div.modal").attr("id")+"Label", "aria-hidden": true });
+        $("div.modal").addClass("fade").attr({ "role": "dialog", "aria-labelledby": $("div.modal").attr("id") + "Label", "aria-hidden": true });
         $("ul.nav.nav-tabs[id$='List']").each(function () {
             $(this).parent("div.card-header").addClass("pt-1 px-3");
             $(this).addClass("d-flex flex-nowrap text-nowrap").css({ "overflow-x": "auto", "overflow-y": "hidden" }).attr("role", "tablist");
@@ -136,11 +136,11 @@
             var a = $('#odgovor').val();
 
             if (a == "akcioni horor" || a == "action horror") {
-                $("p#rezultat[lang='sr']").text("Odgovor je tačan.").addClass("alert alert-success mw-100 text-center mt-2");
-                $("p#rezultat[lang='en']").text("The answer is correct.").addClass("alert alert-success mw-100 text-center mt-2");
+                $("p.movieQuestionResult[lang='sr']").text("Odgovor je tačan.").addClass("alert alert-success mw-100 text-center mt-2");
+                $("p.movieQuestionResult[lang='en']").text("The answer is correct.").addClass("alert alert-success mw-100 text-center mt-2");
             } else {
-                $("p#rezultat[lang='sr']").html("Odgovor je netačan. <br> Upišite neki drugi odgovor (ili pronađite rješenje na Wikipediji ili IMDb-u).").addClass("alert alert-danger mw-100 text-center mt-2");
-                $("p#rezultat[lang='en']").html("The answer is incorrect. <br> Type another answer (or search for the answer to the question on Wikipedia or IMDb).").addClass("alert alert-danger mw-100 text-center mt-2");
+                $("p.movieQuestionResult[lang='sr']").html("Odgovor je netačan. <br> Upišite neki drugi odgovor (ili pronađite rješenje na Wikipediji ili IMDb-u).").addClass("alert alert-danger mw-100 text-center mt-2");
+                $("p.movieQuestionResult[lang='en']").html("The answer is incorrect. <br> Type another answer (or search for the answer to the question on Wikipedia or IMDb).").addClass("alert alert-danger mw-100 text-center mt-2");
             }
         }).attr("type", "button").addClass("btn btn-primary");
         $("button#movieAnswerResetBtn").on("click", () => {
@@ -159,94 +159,23 @@
             var correct = 0;
             var incorrect = 0;
 
-            const questions = [
-                { value: b, answer: "BGD", type: "not" },
-                { value: c, answer: "Dvije", type: "equal" },
-                { value: d, answer: "Trece", type: "equal" },
-                { value: e, answer: "1999", type: "equal" },
-                { value: e, answer: "Tri", type: "equal" },
-                { value: e, answer: "VladaArsic", type: "not" },
+            const CheckAnswers = [
+                b !== "BGD",
+                c === "Dvije",
+                d === "Bilo koji",
+                e === "Trece",
+                f === "1999",
+                g === "Tri",
+                h !== "VladaArsic"
             ];
-
-            /* if (b != "BGD") {
-                $("div.card").eq(0).addClass("border-success");
-                $("div.card-body").eq(0).addClass("text-success");
-                correct++
-            } else {
-                $("div.card").eq(0).addClass("border-danger");
-                $("div.card-body").eq(0).addClass("text-danger");
-                incorrect++
-            }
-            if (c == "Dvije") {
-                $("div.card").eq(1).addClass("border-success");
-                $("div.card-body").eq(1).addClass("text-success");
-                correct++
-            } else {
-                $("div.card").eq(1).addClass("border-danger");
-                $("div.card-body").eq(1).addClass("text-danger");
-                incorrect++
-            }
-            if (d == "Bilo koji") {
-                $("div.card").eq(2).addClass("border-success");
-                $("div.card-body").eq(2).addClass("text-success");
-                correct++
-            } else {
-                $("div.card").eq(2).addClass("border-danger");
-                $("div.card-body").eq(2).addClass("text-danger");
-                incorrect++
-            }
-            if (e == "Trece") {
-                $("div.card").eq(3).addClass("border-success");
-                $("div.card-body").eq(3).addClass("text-success");
-                correct++
-            } else {
-                $("div.card").eq(3).addClass("border-danger");
-                $("div.card-body").eq(3).addClass("text-danger");
-                incorrect++
-            }
-            if (f == "1999") {
-                $("div.card").eq(4).addClass("border-success");
-                $("div.card-body").eq(4).addClass("text-success");
-                correct++
-            } else {
-                $("div.card").eq(4).addClass("border-danger");
-                $("div.card-body").eq(4).addClass("text-danger");
-                incorrect++
-            }
-            if (g == "Tri") {
-                $("div.card").eq(5).addClass("border-success");
-                $("div.card-body").eq(5).addClass("text-success");
-                correct++
-            } else {
-                $("div.card").eq(5).addClass("border-danger");
-                $("div.card-body").eq(5).addClass("text-danger");
-                incorrect++
-            }
-            if (h != "VladaArsic") {
-                $("div.card").eq(6).addClass("border-success");
-                $("div.card-body").eq(6).addClass("text-success");
-                correct++
-            } else {
-                $("div.card").eq(6).addClass("border-danger");
-                $("div.card-body").eq(6).addClass("text-danger");
-                incorrect++
-            }*/
-
-            questions.forEach((q, index) => {
-                const isCorrect = (q.type === "equal") ? q.value === q.correct : q.value !== q.correct;
-                if (isCorrect) {
-                    $("div.card").eq(6).addClass("border-success");
-                    $("div.card-body").eq(6).addClass("text-success");
-                    correct++;
-                } else {
-                    $("div.card").eq(6).addClass("border-danger");
-                    $("div.card-body").eq(6).addClass("text-danger");
-                    incorrect++;
-                }
+            CheckAnswers.forEach((isCorrect, i) => {
+                const status = isCorrect ? "success" : "danger";
+                $("div.card").eq(i).addClass("border-" + status);
+                $("div.card-body").eq(i).addClass("text-" + status);
+                isCorrect ? correct++ : incorrect++;
             });
-
-            $(".movieQuestionResult").attr("lang", "sr").html("Broj tačnih odgovora: " + correct + ", broj pogrešnih odgovora: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
-            $(".movieQuestionResult").attr("lang", "en").html("Number of currect answers: " + correct + ", number of wrong answers: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
+            $("#rezultat").attr("lang", "sr").html("Broj tačnih odgovora: " + correct + ", broj pogrešnih odgovora: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
+            $("#rezultat").attr("lang", "en").html("Number of currect answers: " + correct + ", number of wrong answers: " + incorrect + ".").addClass("alert alert-info w-50 text-center mt-2 mx-auto");
 
         }).attr("type", "button").addClass("btn btn-primary");
         $("button#resetQuiz").on("click", () => {
