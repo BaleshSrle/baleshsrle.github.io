@@ -303,7 +303,7 @@
                                     <img class="SocialImg" data-name="github" alt="GitHub"></a>
                                 <a href="https://www.goodreads.com/baleshsrle">
                                     <img class="SocialImg" data-name="goodreads" alt="Goodreads"></a>
-                                <a href="https://instagram.com/srlebaleshpuhovski" rel="me">
+                                <a href="https://instagram.com/srlebaleshpuhovski?hl=sr" rel="me">
                                     <img class="SocialImg" data-name="instagram" alt="Instagram"></a>
                                 <a href="https://ba.linkedin.com/in/srdjanbaleshevich">
                                     <img class="SocialImg" data-name="linkedin" alt="LinkedIn"></a>
@@ -364,7 +364,7 @@
             $.getScript("js/main.js");
             //$("div.container-fluid").toggleClass("mb-5 pb-5");
             //$("object:eq(0)").addClass("align-middle");
-            $("div.alert img").attr({ src: "https://img.shields.io/badge/GitHub-181717?logo=github&logoSize=auto&labelColor=555555", alt: "GitHub" }).on("error", function () { this.src = "https://badgen.net/badge/icon/GitHub?icon=github&label=&color=181717"; }).addClass("mx-1 aling-middle img-fluid").wrap($("<a></a>").attr({ href: "https://github.com/BaleshSrle/" + location.host, "hreflang": "en", "target": "_blank" }));
+            $("div.alert img").attr({ src: "https://img.shields.io/badge/GitHub-181717?logo=github&logoSize=auto&labelColor=555555", alt: "GitHub" }).on("error", function () { this.src = "https://badgen.net/badge/icon/GitHub?icon=github&label=&color=181717"; }).addClass("mx-1 aling-middle img-fluid").wrap($("<a></a>").attr({ href: "https://github.com/BaleshSrle/" + location.host, "hreflang": "en", "target": "_blank", "rel": "external" }));
             $("object").addClass("w-100 rounded border-dark border-right border-bottom").height(800);
             $("div.card-body").addClass("p-2 px-md-3");
             //$("div.d-table-row > div.d-table-cell:first-child").addClass("font-weight-bold").width(138);
@@ -386,6 +386,7 @@
             $("img.SocialImg").each((i, e) => {
                 const imgName = $(e).data("name");
                 $(e).attr({ src: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/" + imgName + ".svg", crossorigin: "anonymous" }).width(32).height(32).parent("a").attr("title", $(e).attr("alt"));
+                $(e).parent("a[rel!='me']").attr("rel", "external");
             });
             /* $("div.dropdown-menu").each(function () {
                 $(this).children("a").addClass("dropdown-item px-3");

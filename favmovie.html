@@ -269,7 +269,7 @@
             });
             $("div#movieCast a").each((i, e) => {
                 const ActorID = $(e).data("actorid");
-                $(e).attr("href", "https://www.imdb.com/name/" + ActorID + "/").addClass("list-group-item list-group-item-action");
+                $(e).attr({ "href": "https://www.imdb.com/name/" + ActorID + "/", "rel": "external" }).addClass("list-group-item list-group-item-action");
             }).wrapAll($("<div></div>").addClass("list-group list-group-horizontal-xl"));
             $("div.embed-responsive").addClass("my-2");
             $("p.card-text").slice(0, 2).addClass("pl-2 pt-1").removeClass("text-justify");

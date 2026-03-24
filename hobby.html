@@ -204,6 +204,8 @@
                                     alt="Dejan Stojiljković - Dukat za lađara">
                                 <img data-publisher="Laguna" data-cover="5800/milutinov_greh_v.jpg"
                                     alt="Vanja Bulić - Milutinov greh">
+                                <img data-publisher="Laguna" data-cover="7068/madonin_soko-vanja_bulic_v.png"
+                                    alt="Vanja Bulić - Madonin soko">
                                 <img data-publisher="Delfi" data-cover="2014/04/dosije_snouden_vv.jpg"
                                     alt="Luk Harding - Dosije Snouden">
                                 <img data-publisher="Delfi" data-cover="2014/11/crveni_odred_vv.jpg"
@@ -305,6 +307,7 @@
                             <div data-repo="BaleshSrle/Katalon_Tests"></div>
                             <div data-repo="BaleshSrle/Postman"></div>
                             <div data-repo="BaleshSrle/autoconfig"></div>
+                            <div data-repo="BaleshSrle/IPTV"></div>
                             <div data-repo="BaleshSrle/FeedEk"></div>
                             <div data-repo="BaleshSrle/plg_system_fontawesome"></div>
                         </div>
@@ -325,8 +328,8 @@
             $("div.card").addClass("mx-auto mw-100");
             $("li.list-group-item").wrapAll($("<ul></ul>").addClass("list-group list-group-flush text-left"));
             $("div.carousel img").each((i, e) => {
-                const Publisher = $(e).data("publisher");
-                const FrontCover = $(e).data("cover");
+                const $img = $(e);
+                const { Publisher, FrontCover } = { Publisher: $img.data("publisher"), FrontCover: $img.data("cover") };
                 switch (Publisher) {
                     case "CarobnaKnjiga":
                         $(e).attr("src", "https://carobnaknjiga.rs/chest/pimg/" + FrontCover);
@@ -340,8 +343,9 @@
             }).addClass("d-block mx-auto h-auto rounded-lg").width(280);
             $("img[alt$='Proročanstvo Romanovima']").on("error", function () { $(this).attr("src", "images/stiv_beri-prorocanstvo_romanovima.jpg"); });
             $("li.list-group-item i").addClass("align-middle");
-            $("div.github-box").wrap($("<div></div>").addClass("col p-1"));
-            $("div.col").wrapAll($("<div></div>").addClass("row row-cols-1 row-cols-md-4"));
+            $("div.github-box").addClass("m-1").width(278).eq(0).addClass("align-self-center").end().wrapAll($("<div></div>").addClass("d-flex flex-sm-row justify-content-center flex-wrap"));
+            //$("div.github-box").wrap($("<div></div>").addClass("col p-1"));
+            //$("div.col").wrapAll($("<div></div>").addClass("row row-cols-1 row-cols-md-4"));
             /* $("div.ghrepos").repos({
                 username: 'BaleshSrle',
                 count: 6

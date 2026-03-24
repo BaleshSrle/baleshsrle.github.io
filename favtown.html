@@ -291,9 +291,7 @@
             $("div.modal-dialog").addClass("modal-dialog-centered modal-lg").filter(":eq(2),:eq(3)").removeClass("modal-lg");
             $("div.modal-body").append($("<img>").addClass("d-block mx-auto img-fluid").attr("loading", "lazy"));
             $("td").each((i, e) => {
-                if ($(e).is(":empty")) {
-                    $(e).wrapInner($("<i></i>").addClass("fa-solid fa-xmark fa-1x text-danger"));
-                }
+                ($(e).is(":empty")) ? $(e).wrapInner($("<i></i>").addClass("fa-solid fa-xmark fa-1x text-danger")) : null;
                 $(e).children("a").attr("data-toggle", "modal").wrapInner($("<img>").addClass("img-thumbnail").width(250).addClass("rounded-lg"));
             }).addClass("align-middle");
             const FavTownImg = [
@@ -308,7 +306,7 @@
                 $("a > img:eq(" + i + "), div.modal-body:eq(" + i + ") > img").attr(img);
             });
             $(window).on("resize load", () => {
-               switch (screen.width) {
+                switch (screen.width) {
                     case 1920:
                         $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "34.4vw");
                         break;
@@ -324,7 +322,7 @@
                     case 720:
                         $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "95vw");
                 }
-            }); 
+            });
         });
     </script>
 </body>
