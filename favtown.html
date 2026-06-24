@@ -281,49 +281,7 @@
         <div></div>
     </footer>
     <script>
-        document.scripts[1].onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
-        $(document).ready(function () {
-            $.getScript("js/main.js");
-            $("a[href*='rs']").attr("hreflang", "sr-RS");
-            $("a[href*='hr']").attr("hreflang", "hr");
-            $("a[href*='en']").slice(1).attr("hreflang", "en");
-            //$("div.modal").addClass("fade").attr("aria-hidden", true);
-            $("div.modal-dialog").addClass("modal-dialog-centered modal-lg").filter(":eq(2),:eq(3)").removeClass("modal-lg");
-            $("div.modal-body").append($("<img>").addClass("d-block mx-auto img-fluid").attr("loading", "lazy"));
-            $("td").each((i, e) => {
-                ($(e).is(":empty")) ? $(e).wrapInner($("<i></i>").addClass("fa-solid fa-xmark fa-1x text-danger")) : null;
-                $(e).children("a").attr("data-toggle", "modal").wrapInner($("<img>").addClass("img-thumbnail").width(250).addClass("rounded-lg"));
-            }).addClass("align-middle");
-            const FavTownImg = [
-                { src: "images/favtown/city_hall.jpg", alt: "Gradska vijećnica" },
-                { src: "images/favtown/main_pedestrian_street.jpg", alt: "Glavna pješačka ulica" },
-                { src: "images/favtown/catholic_church.jpg", alt: "Katolička crkva" },
-                { src: "images/favtown/library.jpg", alt: "Biblioteka 'Veljko Petrović'" },
-                { src: "images/favtown/panorama.jpg", alt: "Panorama grada" },
-                { src: "images/favtown/src_tikvara.jpg", alt: "SRC 'Tikvara'" },
-                { src: "images/favtown/stadion_slavko_maletin_vava.jpg", alt: "Stadion 'Slavko Maletin - Vava'" }];
-            FavTownImg.forEach((img, i) => {
-                $("a > img:eq(" + i + "), div.modal-body:eq(" + i + ") > img").attr(img);
-            });
-            $(window).on("resize load", () => {
-                switch (screen.width) {
-                    case 1920:
-                        $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "34.4vw");
-                        break;
-                    case 1366:
-                        $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "33vw");
-                        break;
-                    case 1024:
-                        $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "44.1vw");
-                        break;
-                    case 800:
-                        $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "40.7vw");
-                        break;
-                    case 720:
-                        $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "95vw");
-                }
-            });
-        });
+        document.querySelector("script[src*='jquery@3']").onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }; $(document).ready(function () { $.getScript("js/main.js"); $("a[href*='rs']").attr("hreflang", "sr-RS"); $("a[href*='hr']").attr("hreflang", "hr"); $("a[href*='en']").slice(1).attr("hreflang", "en"); $("div.modal-dialog").addClass("modal-dialog-centered modal-lg").filter(":eq(2),:eq(3)").removeClass("modal-lg"); $("div.modal-body").append($("<img>").addClass("d-block mx-auto img-fluid").attr("loading", "lazy")); $("td").each((i, e) => { ($(e).is(":empty")) ? $(e).wrapInner($("<i></i>").addClass("fa-solid fa-xmark fa-1x text-danger")) : null; $(e).children("a").attr("data-toggle", "modal").wrapInner($("<img>").addClass("img-thumbnail").width(250).addClass("rounded-lg")); }).addClass("align-middle"); const FavTownImg = [{ src: "images/favtown/city_hall.jpg", alt: "Gradska vijećnica" }, { src: "images/favtown/main_pedestrian_street.jpg", alt: "Glavna pješačka ulica" }, { src: "images/favtown/catholic_church.jpg", alt: "Katolička crkva" }, { src: "images/favtown/library.jpg", alt: "Biblioteka 'Veljko Petrović'" }, { src: "images/favtown/panorama.jpg", alt: "Panorama grada" }, { src: "images/favtown/src_tikvara.jpg", alt: "SRC 'Tikvara'" }, { src: "images/favtown/stadion_slavko_maletin_vava.jpg", alt: "Stadion 'Slavko Maletin-Vava'" }]; FavTownImg.forEach((img, i) => { $("a>img:eq(" + i + "),div.modal-body:eq(" + i + ")>img").attr(img); }); $(window).on("resize load", () => { switch (screen.width) { case 1920: $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "34.4vw"); break; case 1366: $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "33vw"); break; case 1024: $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "44.1vw"); break; case 800: $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "40.7vw"); break; case 720: $("div.modal#Modal03,div.modal#Modal04").children("div.modal-dialog").css("max-width", "95vw"); } }); });
     </script>
 </body>
 

@@ -250,30 +250,7 @@
         <div></div>
     </footer>
     <script>
-        document.scripts[1].onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
-        $(document).ready(() => {
-            $.getScript("js/main.js");
-            $("div.container-fluid").each((i, e) => {
-                $(e).find("div.col-sm-3").addClass("pr-md-2");
-                $(e).find("div.col-sm-9").addClass("pl-md-2");
-            });
-            $("div.card").addClass("my-2 w-100")/*.each(function () {
-                $(this).children("div.list-group").addClass("list-group-flush");
-            })*/;
-            $("div.card:first a").each((i, e) => {
-                $(e).addClass("list-group-item list-group-item-action");
-            }).wrapAll($("<div></div>").addClass("list-group list-group-flush"));
-            $("div.card:first a > img").each((i, e) => {
-                const Icon = $(e).data("icon");
-                $(e).attr({ src: "https://cdn.simpleicons.org/" + Icon, crossorigin: "anonymous" }).addClass("mr-1").width(32).height(32);
-            });
-            $("div#movieCast a").each((i, e) => {
-                const ActorID = $(e).data("actorid");
-                $(e).attr({ "href": "https://www.imdb.com/name/" + ActorID + "/", "rel": "external" }).addClass("list-group-item list-group-item-action");
-            }).wrapAll($("<div></div>").addClass("list-group list-group-horizontal-xl"));
-            $("div.embed-responsive").addClass("my-2");
-            $("p.card-text").slice(0, 2).addClass("pl-2 pt-1").removeClass("text-justify");
-        });
+        document.querySelector("script[src*='jquery@3']").onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }; $(document).ready(() => { $.getScript("js/main.js"); $("div.container-fluid").each((i, e) => { $(e).find("div.col-sm-3").addClass("pr-md-2"); $(e).find("div.col-sm-9").addClass("pl-md-2"); }); $("div.card").addClass("my-2 w-100"); $("div.card:first a").each((i, e) => { $(e).addClass("list-group-item list-group-item-action"); }).wrapAll($("<div></div>").addClass("list-group list-group-flush")); $("div.card:first a>img").each((i, e) => { const Icon = $(e).data("icon"); $(e).attr({ src: "https://cdn.simpleicons.org/" + Icon, "loading": (i === 0) ? "eager" : "lazy", "crossorigin": "anonymous" }).addClass("mr-1").width(32).height(32); }); $("div#movieCast a").each((i, e) => { const ActorID = $(e).data("actorid"); $(e).attr({ "href": "https://www.imdb.com/name/" + ActorID + "/", "rel": "external" }).addClass("list-group-item list-group-item-action"); }).wrapAll($("<div></div>").addClass("list-group list-group-horizontal-xl")); $("div.embed-responsive").addClass("my-2"); $("p.card-text").slice(0, 2).addClass("pl-2 pt-1").removeClass("text-justify"); });
     </script>
 </body>
 

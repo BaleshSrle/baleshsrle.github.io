@@ -158,11 +158,7 @@
         <div></div>
     </footer>
     <script>
-        document.scripts[1].onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
-        $(document).ready(() => {
-            $.getScript("js/main.js");
-            $("div.card").slice(0, 3).addClass("mx-auto mw-100");
-        });
+        document.querySelector("script[src*='jquery@3']").onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }; $(document).ready(() => { $.getScript("js/main.js"); $("div.card").slice(0, 3).addClass("mx-auto mw-100"); });
     </script>
 </body>
 

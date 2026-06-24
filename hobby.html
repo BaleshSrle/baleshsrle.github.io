@@ -307,14 +307,17 @@
                                 <img data-publisher="Laguna"
                                     data-cover="bad74bfc-f93e-4e5e-9c34-9a66562cd2ac/Zidanje-ambisa-w280.avif"
                                     alt="Branislav Janković - Zidanje ambisa">
-                                <img data-publisher="Laguna" data-cover="c5aab968-1f1b-4981-8a25-6833094e2f93/peta-zica-branislav-jankovic-m-w280.avif"
+                                <img data-publisher="Laguna"
+                                    data-cover="c5aab968-1f1b-4981-8a25-6833094e2f93/peta-zica-branislav-jankovic-m-w280.avif"
                                     alt="Branislav Janković - Peta žica">
                                 <img data-publisher="Laguna"
                                     data-cover="b038c57f-a3c8-493f-b0d5-216f9c264a74/Suze-Svetog-Nikole-CIRILICA-w280.avif"
                                     alt="Branislav Janković - Suze Svetog Nikole">
-                                <img data-publisher="Laguna" data-cover="1e562560-ea0a-401f-8381-9e786accd3fb/Kremanska-straza-w280.avif"
+                                <img data-publisher="Laguna"
+                                    data-cover="1e562560-ea0a-401f-8381-9e786accd3fb/Kremanska-straza-w280.avif"
                                     alt="Aleksandar Gajić - Kremanska straža">
-                                <img data-publisher="Laguna" data-cover="810871a4-8afd-4401-8b20-d53df60520c2/Vizantijski-sultan-w280.avif"
+                                <img data-publisher="Laguna"
+                                    data-cover="810871a4-8afd-4401-8b20-d53df60520c2/Vizantijski-sultan-w280.avif"
                                     alt="Seldžuk Altun - Vizantijski sultan">
                                 <img data-publisher="Delfi" data-cover="2013/11/lenova_pustinja_vv.jpg"
                                     alt="Džerard Vilijams - Lenova pustinja">
@@ -348,43 +351,7 @@
         <div></div>
     </footer>
     <script>
-        document.scripts[1].onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }
-        $(document).ready(() => {
-            $.getScript("js/main.js");
-            $("div.card").addClass("mx-auto mw-100");
-            $("li.list-group-item").wrapAll($("<ul></ul>").addClass("list-group list-group-flush text-left"));
-            $("div.carousel img").each((i, e) => {
-                const $img = $(e);
-                const { Publisher, FrontCover } = { Publisher: $img.data("publisher"), FrontCover: $img.data("cover") };
-                switch (Publisher) {
-                    case "CarobnaKnjiga":
-                        $img.attr("src", "https://carobnaknjiga.rs/chest/pimg/" + FrontCover);
-                        break;
-                    case "Delfi":
-                        $img.attr("src", "https://delfi.rs/_img/artikli/" + FrontCover);
-                        break;
-                    case "Laguna":
-                        $img.attr("src", "https://laguna.oozmi-cdn.com/images/" + FrontCover);
-                    // $img.attr("src", "https://laguna.rs/_img/korice/" + FrontCover);
-                }
-            }).addClass("d-block mx-auto h-auto rounded-lg").width(280);
-            $("img[alt$='Proročanstvo Romanovima']").on("error", function () { $(this).attr("src", "images/stiv_beri-prorocanstvo_romanovima.jpg"); });
-            $("li.list-group-item i").addClass("align-middle");
-            $("div.github-box").addClass("m-1").width(278).eq(0).addClass("align-self-center").end().wrapAll($("<div></div>").addClass("d-flex flex-sm-row justify-content-center flex-wrap"));
-            //$("div.github-box").wrap($("<div></div>").addClass("col p-1"));
-            //$("div.col").wrapAll($("<div></div>").addClass("row row-cols-1 row-cols-md-4"));
-            /* $("div.ghrepos").repos({
-                username: 'BaleshSrle',
-                count: 6
-            }); */
-        });
-        GHBadges.create("[data-repo]", {
-            iconStars: false,
-            iconWatchers: false,
-            iconForks: true,
-            iconIssues: false,
-            dateFormat: "D/M/Y"
-        });
+        document.querySelector("script[src*='jquery@3']").onerror = function () { this.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"; }; $(document).ready(() => { $.getScript("js/main.js"); $("div.card").addClass("mx-auto mw-100"); $("li.list-group-item").wrapAll($("<ul></ul>").addClass("list-group list-group-flush text-left")); $("div.carousel img").each((i, e) => { const $img = $(e); const { Publisher, FrontCover } = { Publisher: $img.data("publisher"), FrontCover: $img.data("cover") }; switch (Publisher) { case "CarobnaKnjiga": $img.attr("src", "https://carobnaknjiga.rs/chest/pimg/" + FrontCover); break; case "Delfi": $img.attr("src", "https://delfi.rs/_img/artikli/" + FrontCover); break; case "Laguna": $img.attr("src", "https://laguna.oozmi-cdn.com/images/" + FrontCover); } }).addClass("d-block mx-auto h-auto rounded-lg").width(280); $("img[alt$='Proročanstvo Romanovima']").on("error", function () { $(this).attr("src", "images/stiv_beri-prorocanstvo_romanovima.jpg"); }); $("li.list-group-item i").addClass("align-middle"); $("div.github-box").addClass("m-1").width(278).eq(0).addClass("align-self-center").end().wrapAll($("<div></div>").addClass("d-flex flex-sm-row justify-content-center flex-wrap")); }); GHBadges.create("[data-repo]", { iconStars: false, iconWatchers: false, iconForks: true, iconIssues: false, dateFormat: "D/M/Y" });
     </script>
 </body>
 
