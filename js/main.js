@@ -61,7 +61,7 @@
             $(e).children("[src$='min.js'],[src$='5aafa1a155.js']").attr("crossorigin", "anonymous");
         });
         $("<link>").attr({ rel: "stylesheet", "href": Url.CDN[0] + "npm/bootstrap@4/dist/css/bootstrap.min.css", "crossorigin": "anonymous" }).one("error", function () { this.href = Url.CDN[1] + "ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" }).insertAfter("meta:last");
-        $.getScript(Url.CDN[0] + "npm/jquery-migrate@4/dist/jquery-migrate.min.js").fail(function (jqxhr, settings, exceptions) { $.getScript(UrlCDN[1] + "ajax/libs/jquery-migrate/4.0.2/jquery-migrate.min.js") }).insertAfter("script[src*='jquery@3'],script[src*='3.7.1']");
+        // $.getScript(Url.CDN[0] + "npm/jquery-migrate@4/dist/jquery-migrate.min.js").fail(function (jqxhr, settings, exceptions) { $.getScript(UrlCDN[1] + "ajax/libs/jquery-migrate/4.0.2/jquery-migrate.min.js") }).insertAfter("script[src*='jquery@3'],script[src*='3.7.1']");
         $("script[src*='bootstrap@4]").one("error", function () { this.src = Url.CDN[1] + "ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"; });
         $("script[src*='countdown@2]").one("error", function () { this.src = Url.CDN[1] + "ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"; });
         $("body").addClass("d-flex flex-column h-100");
